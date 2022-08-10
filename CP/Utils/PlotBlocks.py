@@ -3,6 +3,7 @@ import matplotlib.patches as patches
 from matplotlib.collections import PatchCollection
 import numpy as np
 import random
+from pathlib import Path
 
 
 def get_cmap(n, name='hsv'):

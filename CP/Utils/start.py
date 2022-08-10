@@ -1,4 +1,4 @@
-from minizinc import Instance, Model, Solver, Status
+from minizinc import Instance, Model, Solver, Status, MiniZincError
 import io
 import os
 import time
@@ -35,15 +35,15 @@ def retrive_data(result):
     return total_res
 
 
-dir_instance = "Instances Dzn" 
-model_name = 'VLSI model.mzn'
+dir_instance = "CP/CP Instances/Instances Dzn" 
+model_name = 'CP/VLSI model.mzn'
 solver_name = 'chuffed'  # 'gecode'
 
 start_cwd = os.getcwd()
 
 times=[]
-for i in range(27,31): #40
-    out_file = open('{}/out/out-{}.txt'.format(start_cwd,i+1), 'w')
+for i in range(40): #40
+    out_file = open('{}/{}/out-{}.txt'.format(start_cwd,dir_instance, i+1), 'w')
     name = './' + dir_instance +  '/ins-{}.dzn'.format(i+1)
     vlsi = Model("./" + model_name)
     vlsi.add_file(name)
@@ -51,9 +51,10 @@ for i in range(27,31): #40
     instance = Instance(chuffed, vlsi)
 
     start = time.time()
-    
-    result = instance.solve(timeout=timedelta(seconds=10))
-    
+    try:
+        result = instance.solve(timeout=timedelta(seconds=300))
+    except MiniZincError as e:
+        print(e)
     end = time.time()
 
     print(name + '\t' + '{:.2f}'.format(end - start))
@@ -72,6 +73,6 @@ for i in range(27,31): #40
         out_file.write(str(w) + ' ' + str(h) + ' ' + str(cx) + ' ' + str(cy) + '\n')
     out_file.close()
     
-    out_file2 = open('{}/out/TIMES.txt'.format(start_cwd), 'w')
+    out_file2 = open('{}/TIMES.txt'.format(start_cwd), 'w')
     out_file2.write(str(times))
     out_file2.close()
