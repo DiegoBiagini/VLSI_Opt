@@ -40,6 +40,9 @@ class VLSI_Instance():
             split = lines[i+2].split()
             self.circuits.append((int(split[0]), int(split[1])))
 
+        # Order them according to the width, it will be useful later
+        self.circuits = sorted(self.circuits, reverse=True)
+
     def __str__(self) -> str:
         s = f"Instance Name: {self.name}\n"
         s += f"Max Width:{self.max_width}\n"
@@ -54,35 +57,53 @@ class VLSI_Instance():
     
     def get_c_width(self, circuit):
         return self.circuits[circuit][0]
+    
+    def get_max_dim(self, circuit):
+        return max(self.circuits[circuit])
 
-    def register_solution(self, solution, cornerx_vars, cornery_vars, makespan):
+    def register_solution(self, solution, cornerx_vars, cornery_vars, makespan, rotations = None):
         self.solution = {}
         self.solution["corner_x"] = [solution[cx].as_long() for cx in cornerx_vars]
         self.solution["corner_y"] = [solution[cx].as_long() for cx in cornery_vars]
         self.solution["makespan"] = solution[makespan].as_long()
 
-    def solution_to_output_format(self) -> str:
+        if not rotations is None:
+            self.solution["rotations"] = [solution[r] for r in rotations]
+
+    def solution_to_output_format(self, rot = False) -> str:
         if self.solution is None:
             raise ValueError("No solution was registered")
         out_str = f"{self.max_width} {self.solution['makespan']}\n"
         out_str += f"{self.n_circuits}\n"
         for i in range(self.n_circuits):
-            out_str += f"{self.circuits[i][0]} {self.circuits[i][1]} {self.solution['corner_x'][i]} {self.solution['corner_y'][i]}\n"
+            if rot:
+                w = self.circuits[i][0] if not self.solution["rotations"][i] else self.circuits[i][1]
+                h = self.circuits[i][1] if not self.solution["rotations"][i] else self.circuits[i][0]
+            else:
+                w = self.circuits[i][0]
+                h = self.circuits[i][1]
+
+            out_str += f"{w} {h} {self.solution['corner_x'][i]} {self.solution['corner_y'][i]}\n"
         out_str = out_str[:-1]
         return out_str
     
-    def solution_to_txt(self, out_folder):
-        sol = self.solution_to_output_format()
+    def solution_to_txt(self, out_folder, rot = False):
+        sol = self.solution_to_output_format(rot)
         with open(out_folder / (self.name + "_sol.txt"), "w") as f:
             f.writelines(sol)
 
-    def solution_to_img(self, out_folder):
+    def solution_to_img(self, out_folder, rot = False):
         if self.solution is None:
             raise ValueError("No solution was registered")
         n_blocks = self.n_circuits
 
-        heights = [c[1] for c in self.circuits]
-        widths = [c[0] for c in self.circuits]
+        if rot:
+            heights = [self.circuits[i][0] if self.solution["rotations"][i] else self.circuits[i][1] for i in range(self.n_circuits)]
+            widths =  [self.circuits[i][1] if self.solution["rotations"][i] else self.circuits[i][0] for i in range(self.n_circuits)]
+        else:
+            heights = [c[1] for c in self.circuits]
+            widths = [c[0] for c in self.circuits]
+
         cornerx = self.solution["corner_x"]
         cornery = self.solution["corner_y"]
 
@@ -119,4 +140,31 @@ class VLSI_Instance():
         plt.grid()
         out_path = out_folder / (self.name + "_sol")
         fig.savefig(out_path)
-        
+
+
+def BL_algorithm(instance : VLSI_Instance):
+    # Will contain a list like [((w,h),(x,y)), ...]
+    positions_list = []
+
+    sorted_rects = sorted(instance.circuits, reverse=True)
+
+    max_h = int(np.sum([r[1] for r in sorted_rects]))
+    taken_array = np.zeros((max_h, instance.max_width))
+
+    while len(sorted_rects) > 0:
+        r = sorted_rects.pop(0)
+        for i in range(max_h):
+            for j in range(instance.max_width):
+                if taken_array[i][j] == 1:
+                    continue
+                # Containment
+                if j + r[0] < instance.max_width:
+                    # Emptiness
+                    if not np.any(taken_array[i:i+r[1],j:j+r[0]]):
+                        positions_list.append((r,(j,i)))
+                        taken_array[i:i+r[1],j:j+r[0]]=1
+                        break
+            else:
+                continue
+            break
+    return positions_list

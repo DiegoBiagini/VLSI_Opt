@@ -1,45 +1,22 @@
 from argparse import ArgumentParser
 from pathlib import Path
 import glob
-from smt_utils import VLSI_Instance, BL_algorithm
+from smt_utils import VLSI_Instance
 import logging
 import os
-import multiprocessing
-import time
 import math
 import numpy as np
+import json
 
-from z3 import Int, Optimize, Or, And, Implies, IntVector, IntSort, ArraySort, If, Bool, Sum, Ast, Z3_benchmark_to_smtlib_string, Solver
-
-def start_solving(instance : VLSI_Instance, timeout : int):
-    print("-"*20)
-    print("Solving " + instance.name)
-
-    p = multiprocessing.Process(target=solve_instance, args=(instance,))
-
-    p.start()
-    start_time = time.time()
-    p.join(timeout)
-
-    # If thread is still active kill it
-    if p.is_alive():
-        print("Solving took longer than the allotted time, aborting")
-        p.kill()
-        p.join()
-    
-    print(f"Time elapsed: {time.time() - start_time:.2f}")
+from z3 import Int, Or, And, Implies, IntVector, IntSort, ArraySort, If, Bool, Sum, Ast, Z3_benchmark_to_smtlib_string, Solver
 
 
-def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__).parent / "out"):
-    naive_sol = BL_algorithm(instance)
-    # Compute upper bound from naive solution
-    ub = int(np.max([s[0][1]+s[1][1] for s in naive_sol]))
-
+def write_smtlib(instance: VLSI_Instance, output_folder : Path = Path(__file__).parent / "smtlib_decl"):
     # Capacity lower bound
     lb = math.ceil(np.sum([instance.get_c_width(i)*instance.get_c_height(i)/instance.max_width for i in range(instance.n_circuits)]))
 
     # Naive upper bound
-    # ub = int(np.sum([instance.get_c_height(i) for i in range(instance.n_circuits)]))
+    ub = int(np.sum([instance.get_c_height(i) for i in range(instance.n_circuits)]))
 
     ###########
     # Variables
@@ -48,48 +25,55 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
 
     makespan = Int("makespan")
 
+    # Find the widest block
+    widest_idx = np.argmax([s[1] for s in instance.circuits])
+    widest = instance.get_c_width(widest_idx)
 
     #############
     # Constraints
-    opt = Optimize()
+    solv = Solver()
 
-    opt.add(lb <= makespan)
-    opt.add(makespan <= ub)
+    solv.add(lb <= makespan)
+    solv.add(makespan <= ub)
+
+
+    # Put the widest block in the bottom left corner if it's bigger than max_width/2
+    if widest > instance.max_width /2:
+        solv.add_soft(corner_x[widest_idx] == 0)
+        solv.add_soft(corner_y[widest_idx] == 0)
+
 
     # Element-wise constraints
     for i in range(instance.n_circuits):
-        opt.add(corner_y[i]+instance.get_c_height(i) <= makespan)
-        opt.add(corner_x[i]+instance.get_c_width(i) <= instance.max_width)
+        solv.add(corner_y[i]+instance.get_c_height(i) <= makespan)
+        solv.add(corner_x[i]+instance.get_c_width(i) <= instance.max_width)
 
 
-        opt.add(corner_x[i] >= 0)
+        solv.add(corner_x[i] >= 0)
         # Make use of bounds
-        opt.add(corner_y[i] <= ub - instance.get_c_height(i))
-        opt.add(corner_y[i] >= 0)
+        solv.add(corner_y[i] <= ub - instance.get_c_height(i))
+        solv.add(corner_y[i] >= 0)
 
 
     # Pairwise constraints
     for i in range(instance.n_circuits):
         for j in range(i+1, instance.n_circuits):
             # Non overlapping constraints
-            opt.add(Or(
+            solv.add(Or(
                 corner_x[i]+instance.get_c_width(i) <= corner_x[j],
                 corner_y[i]+instance.get_c_height(i) <= corner_y[j],
                 corner_x[j]+instance.get_c_width(j) <= corner_x[i],
                 corner_y[j]+instance.get_c_height(j) <= corner_y[i],
             ))
+            """
             # Symmetry breaking constraints
+            solv.add(Implies(And(corner_x[i]==corner_x[j], instance.get_c_width(i)==instance.get_c_width(j)), corner_y[i] <= corner_y[j]))
+            solv.add(Implies(And(corner_y[i]==corner_y[j], instance.get_c_height(i)==instance.get_c_height(j)), corner_x[i] <= corner_x[j]))
             """
-            if instance.get_c_width(i) == instance.get_c_width(j):
-                opt.add(Implies(corner_x[i]==corner_x[j], corner_y[i] <= corner_y[j]))
-            if instance.get_c_height(i) == instance.get_c_height(j):
-                opt.add(Implies(corner_y[i]==corner_y[j], corner_x[i] <= corner_x[j]))
-            """
-
     # Cumulative constraints
     for i in range(ub):
         for j in range(instance.n_circuits):
-            opt.add(
+            solv.add(
                 Sum([If(And(corner_y[j]<= i, i <= corner_y[j]+instance.get_c_height(j)), 
                         instance.get_c_width(j), 
                         0)])
@@ -98,37 +82,27 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
     
     for i in range(instance.max_width):
         for j in range(instance.n_circuits):
-            opt.add(
+            solv.add(
                 Sum([If(And(corner_x[j]<= i, i <= corner_x[j]+instance.get_c_width(j)), 
                         instance.get_c_height(j), 
                         0)])
                 <= makespan
             )
+    out_smtlib = output_folder / (instance.name +".smt2")
 
-    opt.minimize(makespan)
+    with open(out_smtlib, "w") as f:
+        f.writelines(solv.to_smt2())
 
-    # Set the initial solution found by the simple solver as a set of soft constraints
-    """
-    for c in range(len(naive_sol)):
-        opt.add_soft(corner_x[c] == naive_sol[c][1][0])
-        opt.add_soft(corner_y[c] == naive_sol[c][1][1])
-    """
-
-    print(opt.check())
-    m = opt.model()
-    instance.register_solution(m, corner_x, corner_y, makespan)
-
-    sol_out = instance.solution_to_output_format()
-
-    instance.solution_to_txt(output_folder)
-    instance.solution_to_img(output_folder)
-    return m
+    json_info = {"obj_var":"makespan", "initial_bound":ub}
+    out_json = output_folder / (instance.name +".json")
+    with open(out_json, "w") as f:
+        json.dump(json_info, f)
+    print(f"Instance {instance.name} compiled")
 
 if __name__ == "__main__":
-    parser = ArgumentParser(description='Solve one or more VLSI instances')
+    parser = ArgumentParser(description='Write one or more VLSI instances in SMTLIB format')
 
     parser.add_argument("instance", nargs=1, type=Path, help="Path to the instance or instance folder")
-    parser.add_argument("-t", "--timeout", nargs=1, default=300, type=int, help="How many seconds to wait before timeout for each instance")
     parser.add_argument("-f", "--folder", action="store_true", help="If passed the input data will be considered a folder containing multiple instances")
 
     args = vars(parser.parse_args())
@@ -141,13 +115,13 @@ if __name__ == "__main__":
         for file in glob.glob("*.txt"):
             try:
                 vlsi_instance = VLSI_Instance(Path(file))
-                start_solving(vlsi_instance, args["timeout"])
+                write_smtlib(vlsi_instance)
             except Exception as e:
                 logging.error(f"File:{file} is malformed\n" + str(e))
     else:
         try:
             vlsi_instance = VLSI_Instance(args["instance"])
-            start_solving(vlsi_instance, args["timeout"])
+            write_smtlib(vlsi_instance)
         except Exception as e:
             logging.error(f"File:{args['instance']} is malformed\n" + str(e))
         

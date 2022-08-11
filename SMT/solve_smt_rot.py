@@ -30,7 +30,7 @@ def start_solving(instance : VLSI_Instance, timeout : int):
     print(f"Time elapsed: {time.time() - start_time:.2f}")
 
 
-def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__).parent / "out"):
+def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__).parent / "out_rot"):
     naive_sol = BL_algorithm(instance)
     # Compute upper bound from naive solution
     ub = int(np.max([s[0][1]+s[1][1] for s in naive_sol]))
@@ -45,7 +45,11 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
     # Variables
     corner_x = [Int(str(i) + "_x") for i in range(instance.n_circuits)]
     corner_y = [Int(str(i) + "_y") for i in range(instance.n_circuits)]
+    rot_flags = [Bool(str(i)+"_rot") for i in range(instance.n_circuits)]
 
+    widths = [Int(str(i) + "_w") for i in range(instance.n_circuits)]
+    heights = [Int(str(i) + "_h") for i in range(instance.n_circuits)]
+    
     makespan = Int("makespan")
 
 
@@ -58,14 +62,18 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
 
     # Element-wise constraints
     for i in range(instance.n_circuits):
-        opt.add(corner_y[i]+instance.get_c_height(i) <= makespan)
-        opt.add(corner_x[i]+instance.get_c_width(i) <= instance.max_width)
+        opt.add(corner_y[i]+heights[i] <= makespan)
+        opt.add(corner_x[i]+widths[i] <= instance.max_width)
 
 
         opt.add(corner_x[i] >= 0)
         # Make use of bounds
-        opt.add(corner_y[i] <= ub - instance.get_c_height(i))
+        opt.add(corner_y[i] <= ub - instance.get_max_dim(i))
         opt.add(corner_y[i] >= 0)
+
+        # Widths and heights constraints
+        opt.add(Or(widths[i] == instance.get_c_height(i), widths[i] == instance.get_c_width(i)))
+        opt.add(Or(heights[i] == instance.get_c_height(i), heights[i] == instance.get_c_width(i)))
 
 
     # Pairwise constraints
@@ -73,10 +81,10 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
         for j in range(i+1, instance.n_circuits):
             # Non overlapping constraints
             opt.add(Or(
-                corner_x[i]+instance.get_c_width(i) <= corner_x[j],
-                corner_y[i]+instance.get_c_height(i) <= corner_y[j],
-                corner_x[j]+instance.get_c_width(j) <= corner_x[i],
-                corner_y[j]+instance.get_c_height(j) <= corner_y[i],
+                corner_x[i]+widths[i] <= corner_x[j],
+                corner_y[i]+heights[i] <= corner_y[j],
+                corner_x[j]+widths[j] <= corner_x[i],
+                corner_y[j]+heights[j] <= corner_y[i],
             ))
             # Symmetry breaking constraints
             """
@@ -90,8 +98,8 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
     for i in range(ub):
         for j in range(instance.n_circuits):
             opt.add(
-                Sum([If(And(corner_y[j]<= i, i <= corner_y[j]+instance.get_c_height(j)), 
-                        instance.get_c_width(j), 
+                Sum([If(And(corner_y[j]<= i, i <= corner_y[j]+heights[j]), 
+                        widths[j], 
                         0)])
                 <= instance.max_width
             )
@@ -99,11 +107,15 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
     for i in range(instance.max_width):
         for j in range(instance.n_circuits):
             opt.add(
-                Sum([If(And(corner_x[j]<= i, i <= corner_x[j]+instance.get_c_width(j)), 
-                        instance.get_c_height(j), 
+                Sum([If(And(corner_x[j]<= i, i <= corner_x[j]+widths[j]), 
+                        heights[j], 
                         0)])
                 <= makespan
             )
+    # Rotation constraints
+    for i in range(instance.n_circuits):
+        opt.add(If(rot_flags[i], widths[i] == instance.get_c_height(i), widths[i] == instance.get_c_width(i)))
+        opt.add(If(rot_flags[i], heights[i] == instance.get_c_width(i), heights[i] == instance.get_c_height(i)))
 
     opt.minimize(makespan)
 
@@ -116,16 +128,17 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
 
     print(opt.check())
     m = opt.model()
-    instance.register_solution(m, corner_x, corner_y, makespan)
 
-    sol_out = instance.solution_to_output_format()
+    instance.register_solution(m, corner_x, corner_y, makespan, rot_flags)
 
-    instance.solution_to_txt(output_folder)
-    instance.solution_to_img(output_folder)
+    sol_out = instance.solution_to_output_format(rot=True)
+
+    instance.solution_to_txt(output_folder, rot=True)
+    instance.solution_to_img(output_folder, rot=True)
     return m
 
 if __name__ == "__main__":
-    parser = ArgumentParser(description='Solve one or more VLSI instances')
+    parser = ArgumentParser(description='Solve one or more VLSI instances with rotation')
 
     parser.add_argument("instance", nargs=1, type=Path, help="Path to the instance or instance folder")
     parser.add_argument("-t", "--timeout", nargs=1, default=300, type=int, help="How many seconds to wait before timeout for each instance")

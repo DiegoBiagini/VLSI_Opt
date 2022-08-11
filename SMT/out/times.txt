@@ -1,0 +1,160 @@
+--------------------
+Solving ins-1
+sat
+Time elapsed: 0.76
+--------------------
+Solving ins-10
+sat
+Time elapsed: 0.54
+--------------------
+Solving ins-11
+sat
+Time elapsed: 1.69
+--------------------
+Solving ins-12
+sat
+Time elapsed: 2.39
+--------------------
+Solving ins-13
+sat
+Time elapsed: 1.29
+--------------------
+Solving ins-14
+sat
+Time elapsed: 1.60
+--------------------
+Solving ins-15
+sat
+Time elapsed: 2.17
+--------------------
+Solving ins-16
+sat
+Time elapsed: 24.75
+--------------------
+Solving ins-17
+sat
+Time elapsed: 3.61
+--------------------
+Solving ins-18
+sat
+Time elapsed: 2.07
+--------------------
+Solving ins-19
+sat
+Time elapsed: 18.22
+--------------------
+Solving ins-2
+sat
+Time elapsed: 0.30
+--------------------
+Solving ins-20
+sat
+Time elapsed: 10.42
+--------------------
+Solving ins-21
+sat
+Time elapsed: 12.77
+--------------------
+Solving ins-22
+sat
+Time elapsed: 168.86
+--------------------
+Solving ins-23
+sat
+Time elapsed: 4.39
+--------------------
+Solving ins-24
+sat
+Time elapsed: 7.75
+--------------------
+Solving ins-25
+sat
+Time elapsed: 85.23
+--------------------
+Solving ins-26
+sat
+Time elapsed: 7.37
+--------------------
+Solving ins-27
+sat
+Time elapsed: 6.17
+--------------------
+Solving ins-28
+sat
+Time elapsed: 6.41
+--------------------
+Solving ins-29
+sat
+Time elapsed: 29.22
+--------------------
+Solving ins-3
+sat
+Time elapsed: 0.22
+--------------------
+Solving ins-30
+sat
+Time elapsed: 98.16
+--------------------
+Solving ins-31
+sat
+Time elapsed: 14.68
+--------------------
+Solving ins-32
+sat
+Time elapsed: 27.82
+--------------------
+Solving ins-33
+sat
+Time elapsed: 3.17
+--------------------
+Solving ins-34
+sat
+Time elapsed: 139.68
+--------------------
+Solving ins-35
+sat
+Time elapsed: 3.28
+--------------------
+Solving ins-36
+sat
+Time elapsed: 10.54
+--------------------
+Solving ins-37
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.10
+--------------------
+Solving ins-38
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.10
+--------------------
+Solving ins-39
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.10
+--------------------
+Solving ins-4
+sat
+Time elapsed: 0.23
+--------------------
+Solving ins-40
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.11
+--------------------
+Solving ins-5
+sat
+Time elapsed: 0.37
+--------------------
+Solving ins-6
+sat
+Time elapsed: 0.39
+--------------------
+Solving ins-7
+sat
+Time elapsed: 0.45
+--------------------
+Solving ins-8
+sat
+Time elapsed: 0.52
+--------------------
+Solving ins-9
+sat
+Time elapsed: 0.49
