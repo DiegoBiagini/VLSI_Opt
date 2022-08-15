@@ -66,6 +66,8 @@ class VLSI_Instance():
         self.solution["corner_x"] = [int(v.X) for v in cornerx_vars]
         self.solution["corner_y"] = [int(v.X) for v in cornery_vars]
         self.solution["makespan"] = int(makespan.X)
+        if not rotation is None:
+            self.solution["rotations"] = [bool(rotation[v].X) for v in rotation]
         
 
     def solution_to_output_format(self, rot = False) -> str:
@@ -138,6 +140,12 @@ class VLSI_Instance():
         plt.grid()
         out_path = out_folder / (self.name + "_sol")
         fig.savefig(out_path)
+    
+    def get_tallest_indices(self):
+        idx_height = [(self.get_c_height(idx), idx) for idx in range(self.n_circuits)]
+
+        height_sort = sorted(idx_height)
+        return [el[1] for el in height_sort]
 
 
 def BL_algorithm(instance : VLSI_Instance):

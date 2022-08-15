@@ -10,6 +10,11 @@ import math
 import numpy as np
 
 import gurobipy as gp
+from itertools import chain, combinations
+
+def powerset(iterable):
+    s = list(iterable)
+    return chain.from_iterable(combinations(s, r) for r in range(2,len(s)+1))
 
 def start_solving(instance : VLSI_Instance, timeout : int):
     print("-"*20)
@@ -39,11 +44,25 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
 
     # Capacity lower bound
     lb = math.ceil(np.sum([instance.get_c_width(i)*instance.get_c_height(i)/instance.max_width for i in range(instance.n_circuits)]))
+
     with gp.Env(empty=True) as env:
         env.setParam("OutputFlag", 0)
         env.start()
         m = gp.Model("vlsi", env=env)
+    
+    # Focus on proving optimality
+    #m.setParam(gp.GRB.Param.MIPFocus, 1)
+    
+    # No symmetry detection
+    m.setParam(gp.GRB.Param.Symmetry, 2)
 
+    #m.setParam(gp.GRB.Param.Disconnected, 0)
+    
+    #m.setParam(gp.GRB.Param.BranchDir, -1)
+    comp_number = math.ceil(instance.n_circuits /5.0)
+
+    tallest_indices = instance.get_tallest_indices()
+    comps_heights = powerset(tallest_indices[:comp_number])
     ###########
     # Variables
     corner_x = [
@@ -63,8 +82,12 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
 
     # Element-wise constraints
     for i in range(instance.n_circuits):
+
         m.addConstr(corner_y[i]+instance.get_c_height(i) <= makespan)
         m.addConstr(corner_x[i]+instance.get_c_width(i) <= instance.max_width)
+
+        corner_x[i].VarHintVal = naive_sol[i][1][0]
+        corner_y[i].VarHintVal = naive_sol[i][1][1]
 
         # Make use of bounds
         m.addConstr(corner_y[i] <= ub - instance.get_c_height(i))
@@ -73,54 +96,100 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
     for i in range(instance.n_circuits):
         for j in range(i+1, instance.n_circuits):
             # Non overlapping constraints
+            
             indicators = m.addVars(4, vtype=gp.GRB.BINARY)
 
-            m.addConstr(corner_x[i]+instance.get_c_width(i) <= corner_x[j] + (1-indicators[0])*nub)
-            m.addConstr(corner_y[i]+instance.get_c_height(i) <= corner_y[j] + (1-indicators[1])*nub)
-            m.addConstr(corner_x[j]+instance.get_c_width(j) <= corner_x[i] + (1-indicators[2])*nub)
-            m.addConstr(corner_y[j]+instance.get_c_height(j) <= corner_y[i] + (1-indicators[3])*nub)
+            m.addGenConstrIndicator(indicators[0], True, corner_x[i]+instance.get_c_width(i) <= corner_x[j])
+            m.addGenConstrIndicator(indicators[1], True, corner_y[i]+instance.get_c_height(i) <= corner_y[j])
+            m.addGenConstrIndicator(indicators[2], True, corner_x[j]+instance.get_c_width(j) <= corner_x[i])
+            m.addGenConstrIndicator(indicators[3], True, corner_y[j]+instance.get_c_height(j) <= corner_y[i])
             # OR
-            m.addConstr(gp.quicksum(indicators[i] for i in range(4)) >= 1)
+            or_out = m.addVar(vtype=gp.GRB.BINARY)
+            m.addGenConstrOr(or_out, indicators)
+            m.addConstr(or_out==1)
+            
             # Symmetry breaking constraints
             """
             if instance.get_c_width(i) == instance.get_c_width(j):
-                opt.add(Implies(corner_x[i]==corner_x[j], corner_y[i] <= corner_y[j]))
+                ind2 = m.addVars(2, vtype=gp.GRB.BINARY)
+                m.addGenConstrIndicator(ind2[0], True, corner_x[i]==corner_x[j])
+                m.addGenConstrIndicator(ind2[1], True, corner_y[i]<= corner_y[j])
+                m.addConstr(ind2[0] <= ind2[1])
+            
             if instance.get_c_height(i) == instance.get_c_height(j):
-                opt.add(Implies(corner_y[i]==corner_y[j], corner_x[i] <= corner_x[j]))
+                ind2 = m.addVars(2, vtype=gp.GRB.BINARY)
+                m.addGenConstrIndicator(ind2[0], True, corner_y[i]== corner_y[j])
+                m.addGenConstrIndicator(ind2[1], True, corner_x[i]<= corner_x[j])
+                m.addConstr(ind2[0] <= ind2[1])
             """
-
     # Cumulative constraints
-    """
+    
     for i in range(ub):
+        and_variables =[]
         for j in range(instance.n_circuits):
-            opt.add(
-                Sum([If(And(corner_y[j]<= i, i <= corner_y[j]+instance.get_c_height(j)), 
-                        instance.get_c_width(j), 
-                        0)])
-                <= instance.max_width
-            )
+            ind2 = m.addVars(2, vtype=gp.GRB.BINARY)
+            m.addGenConstrIndicator(ind2[0], True, corner_y[j]<=i)
+            m.addGenConstrIndicator(ind2[1], True, i<=corner_y[j]+instance.get_c_height(j))
+            
+            andv = m.addVar(vtype=gp.GRB.BINARY)
+            m.addGenConstrAnd(andv, ind2)
+
+            and_variables.append(andv)
+        m.addConstr(gp.quicksum(
+            and_variables[j]*instance.get_c_width(j) for j in range(instance.n_circuits))<=instance.max_width)
+
     
     for i in range(instance.max_width):
+        and_variables = []
         for j in range(instance.n_circuits):
-            opt.add(
-                Sum([If(And(corner_x[j]<= i, i <= corner_x[j]+instance.get_c_width(j)), 
-                        instance.get_c_height(j), 
-                        0)])
-                <= makespan
-            )
-    """
+            ind2 = m.addVars(2, vtype=gp.GRB.BINARY)
+            m.addGenConstrIndicator(ind2[0], True, corner_x[j]<=i)
+            m.addGenConstrIndicator(ind2[1], True, i<=corner_x[j]+instance.get_c_width(j))
+
+            andv = m.addVar(vtype=gp.GRB.BINARY)
+            m.addGenConstrAnd(andv, ind2)
+
+            and_variables.append(andv)
+        m.addConstr(gp.quicksum(
+            and_variables[j]*instance.get_c_height(j) for j in range(instance.n_circuits))<= makespan)       
+
+    bitvecs_w = [[m.addVar(vtype=gp.GRB.BINARY) for j in range(instance.max_width)]for i in range(instance.n_circuits)]
+    for i, el in enumerate(bitvecs_w):
+        for j in range(instance.max_width):
+            ind2 = m.addVars(2, vtype=gp.GRB.BINARY)
+            m.addGenConstrIndicator(ind2[0], True, j >= corner_x[i])
+            m.addGenConstrIndicator(ind2[1], True, j <= corner_x[i]+instance.get_c_height(i))
+            
+            m.addGenConstrAnd(el[j], ind2)
+    
+
+    for e in comps_heights:
+        comp_height = np.sum([instance.get_c_height(v) for v in e])
+        if comp_height > ub:
+            # Hell
+            ands = m.addVars(instance.max_width, vtype=gp.GRB.BINARY)
+            for i in range(instance.max_width):
+                m.addGenConstrAnd(ands[i], [bitvecs_w[j][i] for j in e])
+            m.addConstr(gp.quicksum(ands)==0)
+            
     m.update()
     m.setObjective(makespan, gp.GRB.MINIMIZE)
 
     m.optimize()
+    if m.Status == gp.GRB.OPTIMAL:
+        print(m.ObjVal)
+        """
+        for v in m.getVars():
+            print(v)
+        """
+        instance.register_solution(m.getVars(), corner_x, corner_y, makespan)
 
-    instance.register_solution(m.getVars(), corner_x, corner_y, makespan)
+        sol_out = instance.solution_to_output_format()
 
-    sol_out = instance.solution_to_output_format()
-
-    instance.solution_to_txt(output_folder)
-    instance.solution_to_img(output_folder)
-    return m
+        instance.solution_to_txt(output_folder)
+        instance.solution_to_img(output_folder)
+    else:
+        print("No optimal solution was found")
 
 if __name__ == "__main__":
     parser = ArgumentParser(description='Solve one or more VLSI instances using MIP')
