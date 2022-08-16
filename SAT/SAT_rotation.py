@@ -1,5 +1,6 @@
 from z3 import *
 
+#s.add(Or(And(Not(rot[i]), originale), And(rot[i], Not(originale))))
 
 def SAT_solve():
   s = Solver()
@@ -11,20 +12,28 @@ def SAT_solve():
   lr = [[Bool(f"lr_{i+1}_{j+1}") if i != j else 0 for j in range(n_blocks)] for i in range(n_blocks)]
   ud = [[Bool(f"ud_{i+1}_{j+1}") if i != j else 0 for j in range(n_blocks)] for i in range(n_blocks)]
 
+  rot = [Bool(f"r_{i+1}") for i in range(n_blocks)]
+  
   #Constraints
   
   #Order encoding constraints
   for i in range(n_blocks):
       for e in range(W - width[i]):  
-        s.add(Or(Not(px[i][e]), px[i][e+1]))
+          for e2 in range(W-height[i]):
+              if height[i] <= W:
+                  s.add(Or(And(Not(rot[i]), Or(Not(px[i][e]), px[i][e+1])), And(rot[i], Not(Or(Not(px[i][e2]), px[i][e2+1])) )))
       for f in range(H - height[i]):  
-        s.add(Or(Not(py[i][f]), py[i][f+1]))
+          for f2 in range (H-width[i]):
+              if width[i] <= H:
+                  s.add(Or(And(Not(rot[i]), Or(Not(py[i][f]), py[i][f+1])), And(rot[i], Not(Or(Not(py[i][f2]), py[i][f2+1])) )))
+              
+              
         
   # Non-overlapping constraints via 4-literal clause
   for i in range(n_blocks):  
     for j in range(i+1,n_blocks):
       if i < j: 
-          s.add(Or(lr[i][j], lr[j][i], ud[i][j], ud[j][i]))
+          s.add(Or(And(Not(rot[i]), Or(lr[i][j], lr[j][i], ud[i][j], ud[j][i])), And(rot[i], Not(Or(lr[i][j], lr[j][i], ud[i][j], ud[j][i])))))
       
    # Non-overlapping constraints via 3-literal clauses 
   '''for i in range(n_blocks):  
@@ -54,53 +63,52 @@ def SAT_solve():
     return res
  
   for i in range(n_blocks):
-    for j in range(i+1, n_blocks):
-        
-      for pr in prop_e(i, j):
-        prop = [Not(lr[i][j])] + pr
-        s.add(Or(prop))
-        
-      for pr in prop_e(j, i):
-        prop = [Not(lr[j][i])] + pr
-        s.add(Or(prop))
+   for j in range(i+1, n_blocks):
+       
+     for pr in prop_e(i, j):
+       prop = [Not(lr[i][j])] + pr
+       s.add(Or(And(Not(rot[i]), Or(prop)), And(rot[i], Not(Or(prop)))))
+       
+     for pr in prop_e(j, i):
+       prop = [Not(lr[j][i])] + pr
+       s.add(Or(And(Not(rot[i]), Or(prop)), And(rot[i], Not(Or(prop)))))
 
-      for pr in prop_f(i, j):
-        prop = [Not(ud[i][j])] + pr
-        s.add(Or(prop))
-        
-      for pr in prop_f(j, i):
-        prop = [Not(ud[j][i])] + pr
-        s.add(Or(prop))
- 
+     for pr in prop_f(i, j):
+       prop = [Not(ud[i][j])] + pr
+       s.add(Or(And(Not(rot[i]), Or(prop)), And(rot[i], Not(Or(prop)))))
+       
+     for pr in prop_f(j, i):
+       prop = [Not(ud[j][i])] + pr
+       s.add(Or(And(Not(rot[i]), Or(prop)), And(rot[i], Not(Or(prop)))))
 
-  # Implicit domain of px and py, (true if width and height are less then the higher range)
+
+ # Implicit domain of px and py, (true if width and height are less then the higher range)
   for i in range(n_blocks): 
-    for e in range(W - width[i], W):
-      s.add(px[i][e])
-    for f in range(H - height[i], H):
-      s.add(py[i][f])
-    
+   for e in range(W - width[i], W):  
+     s.add(Or(And(Not(rot[i]), px[i][e]), And(rot[i], Not(px[i][e] ))))
+   for f in range(H - height[i], H):
+     s.add(Or(And(Not(rot[i]),py[i][f]), And(rot[i], Not(py[i][f] ))))
+   
 
-  # Symmetry breaking constraints
-  # Fixing position for same size rectangles (With two rectangles with same height and width, the first one is forced to be
-  # on the left of the other in any solution)
+ # Symmetry breaking constraints
+ # Fixing position for same size rectangles (With two rectangles with same height and width, the first one is forced to be
+ # on the left of the other in any solution)
   for i in range(n_blocks):
-    for j in range(i+1, n_blocks):
-      if width[i] == width[j] and height[i] == height[j]:
-        s.add(Not(lr[j][i]))
-        s.add(Or(lr[i][j], Not(ud[j][i])))
-        
-        
-  # Large rectangles constraint (if sum of dimension exceed max constraint, they cannot be placed side by side or above the other)
+   for j in range(i+1, n_blocks):
+     if width[i] == width[j] and height[i] == height[j]:
+       s.add(Or(And(Not(rot[i]), Not(lr[j][i])), And(rot[i], lr[j][i] )))
+       s.add(Or(And(Not(rot[i]), Or(lr[i][j], Not(ud[j][i]))), And(rot[i], Not(Or(lr[i][j], Not(ud[j][i]))))))
+       
+       
+ # Large rectangles constraint (if sum of dimension exceed max constraint, they cannot be placed side by side or above the other)
   for i in range(n_blocks):
-    for j in range(i+1, n_blocks):
-        
-      if width[i] + width[j] > W:
-        s.add(And(Not(lr[i][j]), Not(lr[j][i])))    
-      
-      if height[i] + height[j] > H:
-        s.add(And(Not(ud[i][j]), Not(ud[j][i])))
-
+   for j in range(i+1, n_blocks):
+       
+     if width[i] + width[j] > W:
+       s.add(Or(And(Not(rot[i]), And(Not(lr[i][j]), Not(lr[j][i]))), And(rot[i], Not(And(Not(lr[i][j]), Not(lr[j][i]))) )))
+     
+     if height[i] + height[j] > H:
+       s.add(Or(And(Not(rot[i]), And(Not(ud[i][j]), Not(ud[j][i]))), And(rot[i], Not(And(Not(ud[i][j]), Not(ud[j][i]))) )))
 
   s.set('timeout', 300 * 1000) 
   
@@ -143,7 +151,7 @@ import math
 import time
 import os
 
-for i in range(39,41):
+for i in range(1,10):
   start_cwd = os.getcwd()
   file_name = "./Instances/ins-" + str(i) + ".txt"
   buf = open(file_name)
@@ -161,8 +169,9 @@ for i in range(39,41):
 
   #max_W = max([width[i] for i in range(n_blocks)])
   #H = int(math.ceil(sum([max_W * height[i] for i in range(n_blocks)]) / W)) #come modello minizinc(funziona male) 
+  
   #H = int(math.ceil(sum([height[i] for i in range(n_blocks)]))) #H naive
-  H = int(math.ceil(sum([width[i] * height[i] for i in range(n_blocks)]) / W))  #lowest H possible (to be modified)
+  H = int(math.ceil(sum([width[i] * height[i] for i in range(n_blocks)]) / W))  #H lower possible
   
   start = time.time()
   s, px, py = SAT_solve()
@@ -172,7 +181,7 @@ for i in range(39,41):
 
   cornerx, cornery = sat_to_coordinates(s.model(), px, py)
   
-  out_file = '{}/out/prova_out-{}.txt'.format(start_cwd,i)
+  out_file = '{}/out_rotation/out-{}.txt'.format(start_cwd,i)
   out_buf = open(out_file, 'w')
   out_buf.write(str(W) + ' ' + str(H) + '\n')
   out_buf.write(str(n_blocks) + '\n')
