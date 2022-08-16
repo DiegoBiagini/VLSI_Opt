@@ -39,11 +39,12 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
     naive_sol = BL_algorithm(instance)
     # Compute upper bound from naive solution
     ub = int(np.max([s[0][1]+s[1][1] for s in naive_sol]))
+    
     # Naive upper bound
     nub = int(np.sum([instance.get_c_height(i) for i in range(instance.n_circuits)]))
 
     # Capacity lower bound
-    lb = math.ceil(np.sum([instance.get_c_width(i)*instance.get_c_height(i)/instance.max_width for i in range(instance.n_circuits)]))
+    lb = math.ceil(np.sum([instance.get_c_width(i)*instance.get_c_height(i) for i in range(instance.n_circuits)])/instance.max_width)
 
     with gp.Env(empty=True) as env:
         env.setParam("OutputFlag", 0)
@@ -54,7 +55,7 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
     #m.setParam(gp.GRB.Param.MIPFocus, 1)
     
     # No symmetry detection
-    m.setParam(gp.GRB.Param.Symmetry, 2)
+    #m.setParam(gp.GRB.Param.Symmetry, 2)
 
     #m.setParam(gp.GRB.Param.Disconnected, 0)
     
@@ -63,6 +64,7 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
 
     tallest_indices = instance.get_tallest_indices()
     comps_heights = powerset(tallest_indices[:comp_number])
+
     ###########
     # Variables
     corner_x = [
@@ -85,10 +87,10 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
 
         m.addConstr(corner_y[i]+instance.get_c_height(i) <= makespan)
         m.addConstr(corner_x[i]+instance.get_c_width(i) <= instance.max_width)
-
+        
         corner_x[i].VarHintVal = naive_sol[i][1][0]
         corner_y[i].VarHintVal = naive_sol[i][1][1]
-
+        
         # Make use of bounds
         m.addConstr(corner_y[i] <= ub - instance.get_c_height(i))
 
@@ -108,20 +110,6 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
             m.addGenConstrOr(or_out, indicators)
             m.addConstr(or_out==1)
             
-            # Symmetry breaking constraints
-            """
-            if instance.get_c_width(i) == instance.get_c_width(j):
-                ind2 = m.addVars(2, vtype=gp.GRB.BINARY)
-                m.addGenConstrIndicator(ind2[0], True, corner_x[i]==corner_x[j])
-                m.addGenConstrIndicator(ind2[1], True, corner_y[i]<= corner_y[j])
-                m.addConstr(ind2[0] <= ind2[1])
-            
-            if instance.get_c_height(i) == instance.get_c_height(j):
-                ind2 = m.addVars(2, vtype=gp.GRB.BINARY)
-                m.addGenConstrIndicator(ind2[0], True, corner_y[i]== corner_y[j])
-                m.addGenConstrIndicator(ind2[1], True, corner_x[i]<= corner_x[j])
-                m.addConstr(ind2[0] <= ind2[1])
-            """
     # Cumulative constraints
     
     for i in range(ub):
@@ -152,7 +140,7 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
             and_variables.append(andv)
         m.addConstr(gp.quicksum(
             and_variables[j]*instance.get_c_height(j) for j in range(instance.n_circuits))<= makespan)       
-
+    
     bitvecs_w = [[m.addVar(vtype=gp.GRB.BINARY) for j in range(instance.max_width)]for i in range(instance.n_circuits)]
     for i, el in enumerate(bitvecs_w):
         for j in range(instance.max_width):
@@ -162,26 +150,20 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
             
             m.addGenConstrAnd(el[j], ind2)
     
-
+    
     for e in comps_heights:
         comp_height = np.sum([instance.get_c_height(v) for v in e])
         if comp_height > ub:
-            # Hell
             ands = m.addVars(instance.max_width, vtype=gp.GRB.BINARY)
             for i in range(instance.max_width):
                 m.addGenConstrAnd(ands[i], [bitvecs_w[j][i] for j in e])
             m.addConstr(gp.quicksum(ands)==0)
-            
+    
     m.update()
     m.setObjective(makespan, gp.GRB.MINIMIZE)
 
     m.optimize()
     if m.Status == gp.GRB.OPTIMAL:
-        print(m.ObjVal)
-        """
-        for v in m.getVars():
-            print(v)
-        """
         instance.register_solution(m.getVars(), corner_x, corner_y, makespan)
 
         sol_out = instance.solution_to_output_format()
