@@ -9,7 +9,7 @@ import time
 import math
 import numpy as np
 
-from z3 import Int, Optimize, Or, And, Implies, IntVector, IntSort, ArraySort, If, Bool, Sum, Ast, Z3_benchmark_to_smtlib_string, Solver
+from z3 import Int, Optimize, Or, And, If, Bool, Sum, set_param, Implies
 
 def start_solving(instance : VLSI_Instance, timeout : int):
     print("-"*20)
@@ -31,6 +31,8 @@ def start_solving(instance : VLSI_Instance, timeout : int):
 
 
 def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__).parent / "out_rot"):
+    #set_param('parallel.enable', True)
+
     naive_sol = BL_algorithm(instance)
     # Compute upper bound from naive solution
     ub = int(np.max([s[0][1]+s[1][1] for s in naive_sol]))
@@ -50,6 +52,9 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
     widths = [Int(str(i) + "_w") for i in range(instance.n_circuits)]
     heights = [Int(str(i) + "_h") for i in range(instance.n_circuits)]
     
+    lr = [[Bool(f"lr_{i+1}_{j+1}") if i != j else 0 for j in range(instance.n_circuits)] for i in range(instance.n_circuits)]
+    ud = [[Bool(f"ud_{i+1}_{j+1}") if i != j else 0 for j in range(instance.n_circuits)] for i in range(instance.n_circuits)]
+
     makespan = Int("makespan")
 
 
@@ -80,38 +85,41 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
     for i in range(instance.n_circuits):
         for j in range(i+1, instance.n_circuits):
             # Non overlapping constraints
-            opt.add(Or(
-                corner_x[i]+widths[i] <= corner_x[j],
-                corner_y[i]+heights[i] <= corner_y[j],
-                corner_x[j]+widths[j] <= corner_x[i],
-                corner_y[j]+heights[j] <= corner_y[i],
-            ))
-            # Symmetry breaking constraints
-            """
-            if instance.get_c_width(i) == instance.get_c_width(j):
-                opt.add(Implies(corner_x[i]==corner_x[j], corner_y[i] <= corner_y[j]))
-            if instance.get_c_height(i) == instance.get_c_height(j):
-                opt.add(Implies(corner_y[i]==corner_y[j], corner_x[i] <= corner_x[j]))
-            """
+            opt.add((corner_x[i] + widths[i] <= corner_x[j]) == lr[i][j])
+            opt.add((corner_y[i]+ heights[i] <= corner_y[j])== ud[i][j])
+            opt.add((corner_x[j]+widths[j] <= corner_x[i]) == lr[j][i])
+            opt.add((corner_y[j]+heights[j] <= corner_y[i])==ud[j][i])
+
+            opt.add(Or(lr[i][j], lr[j][i], ud[i][j], ud[j][i]))
+
+            # Rectangle pair incompatibilities
+            opt.add(Implies(widths[i]+widths[j] > instance.max_width, lr[i][j] == False))
+            opt.add(Implies(widths[i]+widths[j] > instance.max_width, lr[j][i] == False))
+
+            opt.add(Implies(heights[i] + heights[j] > makespan, ud[i][j] == False))
+            opt.add(Implies(heights[j] + heights[i] > makespan, ud[j][i] == False))
+
 
     # Cumulative constraints
+    
+    cum1 = [[Bool(f"{i}_{j}_cum1") for j in range(instance.n_circuits)] for i in range(ub)]
     for i in range(ub):
         for j in range(instance.n_circuits):
-            opt.add(
-                Sum([If(And(corner_y[j]<= i, i <= corner_y[j]+heights[j]), 
-                        widths[j], 
-                        0)])
-                <= instance.max_width
-            )
-    
+            opt.add(And(i>=corner_y[j], i <= corner_y[j]+heights[j]) == cum1[i][j])
+            opt.add(cum1[i][j]*widths[j] <= instance.max_width)
+            
+        #opt.add(Sum([cum1[i][j]* instance.get_c_width(j) for j in range(instance.n_circuits)])<=instance.max_width)
+        opt.add(Sum(cum1[i])<=instance.max_width)
+
+    cum2 = [[Bool(f"{i}_{j}_cum2") for j in range(instance.n_circuits)] for i in range(instance.max_width)]
     for i in range(instance.max_width):
         for j in range(instance.n_circuits):
-            opt.add(
-                Sum([If(And(corner_x[j]<= i, i <= corner_x[j]+widths[j]), 
-                        heights[j], 
-                        0)])
-                <= makespan
-            )
+            opt.add(And(i >= corner_x[j], i <= corner_x[j]+widths[j]) == cum2[i][j])
+            opt.add(cum2[i][j]*heights[j] <= makespan)
+            
+        #opt.add(Sum([cum2[i][j]*instance.get_c_height(j) for j in range(instance.n_circuits)])<= makespan)
+        opt.add(Sum(cum2[i])<=makespan)
+    
     # Rotation constraints
     for i in range(instance.n_circuits):
         opt.add(If(rot_flags[i], widths[i] == instance.get_c_height(i), widths[i] == instance.get_c_width(i)))
@@ -119,12 +127,6 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
 
     opt.minimize(makespan)
 
-    # Set the initial solution found by the simple solver as a set of soft constraints
-    """
-    for c in range(len(naive_sol)):
-        opt.add_soft(corner_x[c] == naive_sol[c][1][0])
-        opt.add_soft(corner_y[c] == naive_sol[c][1][1])
-    """
 
     print(opt.check())
     m = opt.model()

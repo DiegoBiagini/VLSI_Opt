@@ -8,8 +8,13 @@ import multiprocessing
 import time
 import math
 import numpy as np
+from itertools import chain, combinations
 
-from z3 import Int, Optimize, Or, And, Implies, IntVector, IntSort, ArraySort, If, Bool, Sum, Ast, Z3_benchmark_to_smtlib_string, Solver
+
+
+from z3 import Int, Optimize, Or, And, Implies, IntVector, IntSort, ArraySort, If, Bool, Sum, BitVec , set_param, Extract, Product, Not
+
+
 
 def start_solving(instance : VLSI_Instance, timeout : int):
     print("-"*20)
@@ -31,20 +36,28 @@ def start_solving(instance : VLSI_Instance, timeout : int):
 
 
 def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__).parent / "out"):
+    set_param("sat.random_seed", 25)
+
     naive_sol = BL_algorithm(instance)
-    # Compute upper bound from naive solution
+    # Compute upper bound from naive solution1
     ub = int(np.max([s[0][1]+s[1][1] for s in naive_sol]))
 
     # Capacity lower bound
-    lb = math.ceil(np.sum([instance.get_c_width(i)*instance.get_c_height(i)/instance.max_width for i in range(instance.n_circuits)]))
+    lb = math.ceil(np.sum([instance.get_c_width(i)*instance.get_c_height(i) for i in range(instance.n_circuits)])/instance.max_width)
 
     # Naive upper bound
     # ub = int(np.sum([instance.get_c_height(i) for i in range(instance.n_circuits)]))
+
+    widest_idx = np.argmax([instance.get_c_width(i) for i in range(instance.n_circuits)])
+    tallest_idx = np.argmax([instance.get_c_height(i) for i in range(instance.n_circuits)])
 
     ###########
     # Variables
     corner_x = [Int(str(i) + "_x") for i in range(instance.n_circuits)]
     corner_y = [Int(str(i) + "_y") for i in range(instance.n_circuits)]
+
+    lr = [[Bool(f"lr_{i+1}_{j+1}") if i != j else 0 for j in range(instance.n_circuits)] for i in range(instance.n_circuits)]
+    ud = [[Bool(f"ud_{i+1}_{j+1}") if i != j else 0 for j in range(instance.n_circuits)] for i in range(instance.n_circuits)]
 
     makespan = Int("makespan")
 
@@ -61,59 +74,45 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
         opt.add(corner_y[i]+instance.get_c_height(i) <= makespan)
         opt.add(corner_x[i]+instance.get_c_width(i) <= instance.max_width)
 
-
         opt.add(corner_x[i] >= 0)
         # Make use of bounds
         opt.add(corner_y[i] <= ub - instance.get_c_height(i))
         opt.add(corner_y[i] >= 0)
+
+        # Supposed symmetry break
+        if i == widest_idx:
+            opt.add(corner_x[i]<=(instance.max_width-instance.get_c_width(i))//2)
+        elif instance.get_c_width(i)>(instance.max_width - instance.get_c_width(widest_idx))//2:
+            opt.add(lr[i][widest_idx] == False)
+
+        if i == tallest_idx:
+            opt.add(corner_y[i]<=(ub-instance.get_c_height(i))//2)
+        elif instance.get_c_height(i)>(ub - instance.get_c_height(tallest_idx))//2:
+            opt.add(ud[i][tallest_idx] == False)
 
 
     # Pairwise constraints
     for i in range(instance.n_circuits):
         for j in range(i+1, instance.n_circuits):
             # Non overlapping constraints
-            opt.add(Or(
-                corner_x[i]+instance.get_c_width(i) <= corner_x[j],
-                corner_y[i]+instance.get_c_height(i) <= corner_y[j],
-                corner_x[j]+instance.get_c_width(j) <= corner_x[i],
-                corner_y[j]+instance.get_c_height(j) <= corner_y[i],
-            ))
-            # Symmetry breaking constraints
-            """
-            if instance.get_c_width(i) == instance.get_c_width(j):
-                opt.add(Implies(corner_x[i]==corner_x[j], corner_y[i] <= corner_y[j]))
-            if instance.get_c_height(i) == instance.get_c_height(j):
-                opt.add(Implies(corner_y[i]==corner_y[j], corner_x[i] <= corner_x[j]))
-            """
+            opt.add((corner_x[i]+instance.get_c_width(i) <= corner_x[j]) == lr[i][j])
+            opt.add((corner_y[i]+instance.get_c_height(i) <= corner_y[j])== ud[i][j])
+            opt.add((corner_x[j]+instance.get_c_width(j) <= corner_x[i]) == lr[j][i])
+            opt.add((corner_y[j]+instance.get_c_height(j) <= corner_y[i])==ud[j][i])
 
-    # Cumulative constraints
-    for i in range(ub):
-        for j in range(instance.n_circuits):
-            opt.add(
-                Sum([If(And(corner_y[j]<= i, i <= corner_y[j]+instance.get_c_height(j)), 
-                        instance.get_c_width(j), 
-                        0)])
-                <= instance.max_width
-            )
-    
-    for i in range(instance.max_width):
-        for j in range(instance.n_circuits):
-            opt.add(
-                Sum([If(And(corner_x[j]<= i, i <= corner_x[j]+instance.get_c_width(j)), 
-                        instance.get_c_height(j), 
-                        0)])
-                <= makespan
-            )
+            opt.add(Or(lr[i][j], lr[j][i], ud[i][j], ud[j][i]))
+
+            # Rectangle pair incompatibilities
+            if instance.get_c_width(i) + instance.get_c_width(j) > instance.max_width:
+                opt.add(lr[i][j] == False)
+                opt.add(lr[j][i] == False)
+            #if instance.get_c_height(i) + instance.get_c_height(j) > ub:
+            opt.add(Implies(instance.get_c_height(i) + instance.get_c_height(j) > makespan, ud[i][j] == False))
+            opt.add(Implies(instance.get_c_height(j) + instance.get_c_height(i) > makespan, ud[j][i] == False))
+
 
     opt.minimize(makespan)
-
-    # Set the initial solution found by the simple solver as a set of soft constraints
-    """
-    for c in range(len(naive_sol)):
-        opt.add_soft(corner_x[c] == naive_sol[c][1][0])
-        opt.add_soft(corner_y[c] == naive_sol[c][1][1])
-    """
-
+    
     print(opt.check())
     m = opt.model()
     instance.register_solution(m, corner_x, corner_y, makespan)

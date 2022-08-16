@@ -140,6 +140,12 @@ class VLSI_Instance():
         plt.grid()
         out_path = out_folder / (self.name + "_sol")
         fig.savefig(out_path)
+    
+    def get_tallest_indices(self):
+        idx_height = [(self.get_c_height(idx), idx) for idx in range(self.n_circuits)]
+
+        height_sort = sorted(idx_height)
+        return [el[1] for el in height_sort]
 
 
 def BL_algorithm(instance : VLSI_Instance):

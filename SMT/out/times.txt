@@ -1,160 +1,160 @@
 --------------------
 Solving ins-1
 sat
-Time elapsed: 0.76
+Time elapsed: 0.18
 --------------------
 Solving ins-10
 sat
-Time elapsed: 0.54
+Time elapsed: 0.42
 --------------------
 Solving ins-11
 sat
-Time elapsed: 1.69
+Time elapsed: 1.89
 --------------------
 Solving ins-12
 sat
-Time elapsed: 2.39
+Time elapsed: 0.79
 --------------------
 Solving ins-13
 sat
-Time elapsed: 1.29
+Time elapsed: 0.63
 --------------------
 Solving ins-14
 sat
-Time elapsed: 1.60
+Time elapsed: 1.18
 --------------------
 Solving ins-15
 sat
-Time elapsed: 2.17
+Time elapsed: 0.76
 --------------------
 Solving ins-16
 sat
-Time elapsed: 24.75
+Time elapsed: 5.75
 --------------------
 Solving ins-17
 sat
-Time elapsed: 3.61
+Time elapsed: 1.88
 --------------------
 Solving ins-18
 sat
-Time elapsed: 2.07
+Time elapsed: 5.35
 --------------------
 Solving ins-19
 sat
-Time elapsed: 18.22
+Time elapsed: 22.58
 --------------------
 Solving ins-2
 sat
-Time elapsed: 0.30
+Time elapsed: 0.20
 --------------------
 Solving ins-20
 sat
-Time elapsed: 10.42
+Time elapsed: 3.44
 --------------------
 Solving ins-21
 sat
-Time elapsed: 12.77
+Time elapsed: 11.73
 --------------------
 Solving ins-22
 sat
-Time elapsed: 168.86
+Time elapsed: 9.94
 --------------------
 Solving ins-23
 sat
-Time elapsed: 4.39
+Time elapsed: 20.33
 --------------------
 Solving ins-24
 sat
-Time elapsed: 7.75
+Time elapsed: 6.21
 --------------------
 Solving ins-25
 sat
-Time elapsed: 85.23
+Time elapsed: 59.36
 --------------------
 Solving ins-26
 sat
-Time elapsed: 7.37
+Time elapsed: 13.59
 --------------------
 Solving ins-27
 sat
-Time elapsed: 6.17
+Time elapsed: 15.39
 --------------------
 Solving ins-28
 sat
-Time elapsed: 6.41
+Time elapsed: 9.06
 --------------------
 Solving ins-29
 sat
-Time elapsed: 29.22
+Time elapsed: 13.59
 --------------------
 Solving ins-3
 sat
-Time elapsed: 0.22
+Time elapsed: 0.21
 --------------------
 Solving ins-30
 sat
-Time elapsed: 98.16
+Time elapsed: 175.22
 --------------------
 Solving ins-31
 sat
-Time elapsed: 14.68
+Time elapsed: 3.88
 --------------------
 Solving ins-32
-sat
-Time elapsed: 27.82
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.04
 --------------------
 Solving ins-33
 sat
-Time elapsed: 3.17
+Time elapsed: 6.26
 --------------------
 Solving ins-34
 sat
-Time elapsed: 139.68
+Time elapsed: 158.85
 --------------------
 Solving ins-35
 sat
-Time elapsed: 3.28
+Time elapsed: 54.11
 --------------------
 Solving ins-36
 sat
-Time elapsed: 10.54
+Time elapsed: 13.79
 --------------------
 Solving ins-37
-Solving took longer than the allotted time, aborting
-Time elapsed: 300.10
+sat
+Time elapsed: 285.76
 --------------------
 Solving ins-38
 Solving took longer than the allotted time, aborting
-Time elapsed: 300.10
+Time elapsed: 300.11
 --------------------
 Solving ins-39
-Solving took longer than the allotted time, aborting
-Time elapsed: 300.10
+sat
+Time elapsed: 82.85
 --------------------
 Solving ins-4
 sat
-Time elapsed: 0.23
+Time elapsed: 0.22
 --------------------
 Solving ins-40
 Solving took longer than the allotted time, aborting
-Time elapsed: 300.11
+Time elapsed: 300.10
 --------------------
 Solving ins-5
 sat
-Time elapsed: 0.37
+Time elapsed: 0.31
 --------------------
 Solving ins-6
 sat
-Time elapsed: 0.39
+Time elapsed: 0.30
 --------------------
 Solving ins-7
 sat
-Time elapsed: 0.45
+Time elapsed: 0.31
 --------------------
 Solving ins-8
 sat
-Time elapsed: 0.52
+Time elapsed: 0.33
 --------------------
 Solving ins-9
 sat
-Time elapsed: 0.49
+Time elapsed: 0.35
