@@ -79,7 +79,7 @@ def SAT_solve():
       s.add(px[i][e])
     for f in range(H - height[i], H):
       s.add(py[i][f])
-    
+  
 
   # Symmetry breaking constraints
   # Fixing position for same size rectangles (With two rectangles with same height and width, the first one is forced to be
@@ -143,9 +143,10 @@ import math
 import time
 import os
 
-for i in range(39,41):
+for i in range(1,41):
   start_cwd = os.getcwd()
-  file_name = "./Instances/ins-" + str(i) + ".txt"
+
+  file_name = "Instances/ins-" + str(i) + ".txt"
   buf = open(file_name)
   W = int(buf.readline())
   n_blocks = int(buf.readline())
@@ -172,7 +173,7 @@ for i in range(39,41):
 
   cornerx, cornery = sat_to_coordinates(s.model(), px, py)
   
-  out_file = '{}/out/prova_out-{}.txt'.format(start_cwd,i)
+  out_file = '{}/SAT/out/prova_out-{}.txt'.format(start_cwd,i)
   out_buf = open(out_file, 'w')
   out_buf.write(str(W) + ' ' + str(H) + '\n')
   out_buf.write(str(n_blocks) + '\n')

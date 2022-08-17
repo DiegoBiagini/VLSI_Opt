@@ -205,7 +205,7 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
         print("No optimal solution was found")
 
 if __name__ == "__main__":
-    parser = ArgumentParser(description='Solve one or more VLSI instances using MIP')
+    parser = ArgumentParser(description='Solve one or more VLSI instances using MIP with rotations')
 
     parser.add_argument("instance", nargs=1, type=Path, help="Path to the instance or instance folder")
     parser.add_argument("-t", "--timeout", nargs=1, default=300, type=int, help="How many seconds to wait before timeout for each instance")
