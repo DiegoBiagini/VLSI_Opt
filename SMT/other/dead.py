@@ -47,8 +47,8 @@ for i in range(ub):
         opt.add(And(i>=corner_y[j], i <= corner_y[j]+instance.get_c_height(j)) == cum1[i][j])
         opt.add(cum1[i][j]*instance.get_c_width(j) <= instance.max_width)
             
-    #opt.add(Sum([cum1[i][j]* instance.get_c_width(j) for j in range(instance.n_circuits)])<=instance.max_width)
-    opt.add(Sum(cum1[i])<=instance.max_width)
+    opt.add(Sum([cum1[i][j]* instance.get_c_width(j) for j in range(instance.n_circuits)])<=instance.max_width)
+    #opt.add(Sum(cum1[i])<=instance.max_width)
 
 cum2 = [[Bool(f"{i}_{j}_cum2") for j in range(instance.n_circuits)] for i in range(instance.max_width)]
 for i in range(instance.max_width):

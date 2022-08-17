@@ -1,0 +1,137 @@
+PS C:\Users\Lenovo\Desktop\CDMO>  c:; cd 'c:\Users\Lenovo\Desktop\CDMO'; & 'C:\ProgramData\Anaconda3\python.exe' 'c:\Users\Lenovo\.vscode\extensions\ms-python.python-2022.13.12241007\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher' '50948' '--' 'c:\Users\Lenovo\Desktop\CDMO\MIP\solve_mip_rot.py' 'Instances' '-f' 
+--------------------
+Solving ins-1
+Time elapsed: 1.65
+--------------------
+Solving ins-10
+Time elapsed: 2.69
+--------------------
+Solving ins-11
+Time elapsed: 3.96
+--------------------
+Solving ins-12
+Time elapsed: 7.72
+--------------------
+Solving ins-13
+Time elapsed: 4.45
+--------------------
+Solving ins-14
+Time elapsed: 3.15
+--------------------
+Solving ins-15
+Time elapsed: 21.30
+--------------------
+Solving ins-16
+Time elapsed: 64.81
+--------------------
+Solving ins-17
+Time elapsed: 22.14
+--------------------
+Solving ins-18
+Time elapsed: 16.52
+--------------------
+Solving ins-19
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.07
+--------------------
+Solving ins-2       
+Time elapsed: 1.66
+--------------------
+Solving ins-20      
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.05
+--------------------
+Solving ins-21      
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.05
+--------------------
+Solving ins-22      
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.08
+--------------------
+Solving ins-23
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.04
+--------------------
+Solving ins-24
+Time elapsed: 10.87
+--------------------
+Solving ins-25
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.05
+--------------------
+Solving ins-26
+Time elapsed: 43.23
+--------------------
+Solving ins-27
+Time elapsed: 7.73
+--------------------
+Solving ins-28
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.04
+--------------------
+Solving ins-29
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.05
+--------------------
+Solving ins-3
+Time elapsed: 1.71
+--------------------
+Solving ins-30
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.07
+--------------------
+Solving ins-31
+Time elapsed: 7.73
+--------------------
+Solving ins-32
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.06
+--------------------
+Solving ins-33
+Time elapsed: 215.37
+--------------------
+Solving ins-34
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.03
+--------------------
+Solving ins-35
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.04
+--------------------
+Solving ins-36
+Time elapsed: 17.31
+--------------------
+Solving ins-37
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.05
+--------------------
+Solving ins-38
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.06
+--------------------
+Solving ins-39
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.07
+--------------------
+Solving ins-4
+Time elapsed: 1.76
+--------------------
+Solving ins-40
+Solving took longer than the allotted time, aborting
+Time elapsed: 300.13
+--------------------
+Solving ins-5
+Time elapsed: 1.78
+--------------------
+Solving ins-6
+Time elapsed: 1.93
+--------------------
+Solving ins-7
+Time elapsed: 2.00
+--------------------
+Solving ins-8
+Time elapsed: 1.84
+--------------------
+Solving ins-9
+Time elapsed: 1.89
