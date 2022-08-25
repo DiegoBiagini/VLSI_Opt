@@ -1,100 +1,99 @@
-PS C:\Users\Lenovo\Desktop\CDMO>  c:; cd 'c:\Users\Lenovo\Desktop\CDMO'; & 'C:\ProgramData\Anaconda3\python.exe' 'c:\Users\Lenovo\.vscode\extensions\ms-python.python-2022.13.12241007\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher' '51124' '--' 'c:\Users\Lenovo\Desktop\CDMO\MIP\solve_mip.py' 'Instances' '-f' 
 --------------------
 Solving ins-1
-Time elapsed: 1.95
+Time elapsed: 1.80
 --------------------
 Solving ins-10
-Time elapsed: 1.89
+Time elapsed: 1.91
 --------------------
 Solving ins-11
-Time elapsed: 2.08
+Time elapsed: 2.03
 --------------------
 Solving ins-12
-Time elapsed: 2.24
+Time elapsed: 2.31
 --------------------
 Solving ins-13
 Time elapsed: 1.88
 --------------------
 Solving ins-14
-Time elapsed: 2.27
+Time elapsed: 2.24
 --------------------
 Solving ins-15
-Time elapsed: 3.27
+Time elapsed: 3.20
 --------------------
 Solving ins-16
-Time elapsed: 46.60
+Time elapsed: 48.05
 --------------------
 Solving ins-17
-Time elapsed: 3.05
+Time elapsed: 3.01
 --------------------
 Solving ins-18
-Time elapsed: 9.51
+Time elapsed: 9.92
 --------------------
 Solving ins-19
-Time elapsed: 121.13
+Time elapsed: 127.45
 --------------------
 Solving ins-2
-Time elapsed: 1.91
+Time elapsed: 1.87
 --------------------
 Solving ins-20
-Time elapsed: 8.30
+Time elapsed: 8.48
 --------------------
 Solving ins-21
-Time elapsed: 176.06
+Time elapsed: 189.50
 --------------------
 Solving ins-22
-Time elapsed: 64.74
+Time elapsed: 49.19
 --------------------
 Solving ins-23
-Time elapsed: 8.71
+Time elapsed: 8.92
 --------------------
 Solving ins-24
-Time elapsed: 3.86
+Time elapsed: 3.89
 --------------------
 Solving ins-25
-Time elapsed: 66.39
+Time elapsed: 67.80
 --------------------
 Solving ins-26
-Time elapsed: 9.59
+Time elapsed: 39.17
 --------------------
 Solving ins-27
-Time elapsed: 92.39
+Time elapsed: 96.60
 --------------------
 Solving ins-28
-Time elapsed: 6.66
+Time elapsed: 6.60
 --------------------
 Solving ins-29
-Time elapsed: 52.22
+Time elapsed: 52.12
 --------------------
 Solving ins-3
-Time elapsed: 1.95
+Time elapsed: 1.82
 --------------------
 Solving ins-30
 Solving took longer than the allotted time, aborting
-Time elapsed: 300.07
+Time elapsed: 300.09
 --------------------
 Solving ins-31
-Time elapsed: 9.38
+Time elapsed: 14.51
 --------------------
 Solving ins-32
 Solving took longer than the allotted time, aborting
-Time elapsed: 300.06
+Time elapsed: 300.05
 --------------------
 Solving ins-33
-Time elapsed: 7.25
+Time elapsed: 7.24
 --------------------
 Solving ins-34
-Time elapsed: 86.79
+Time elapsed: 223.52
 --------------------
 Solving ins-35
-Time elapsed: 99.84
+Time elapsed: 96.37
 --------------------
 Solving ins-36
-Time elapsed: 129.48
+Time elapsed: 25.11
 --------------------
 Solving ins-37
 Solving took longer than the allotted time, aborting
-Time elapsed: 300.03
+Time elapsed: 300.06
 --------------------
 Solving ins-38
 Solving took longer than the allotted time, aborting
@@ -105,23 +104,23 @@ Solving took longer than the allotted time, aborting
 Time elapsed: 300.06
 --------------------
 Solving ins-4
-Time elapsed: 1.78
+Time elapsed: 1.76
 --------------------
 Solving ins-40
 Solving took longer than the allotted time, aborting
-Time elapsed: 300.06
+Time elapsed: 300.05
 --------------------
 Solving ins-5
-Time elapsed: 1.82
+Time elapsed: 1.75
 --------------------
 Solving ins-6
-Time elapsed: 1.90
---------------------
-Solving ins-7
-Time elapsed: 1.94
---------------------
-Solving ins-8
 Time elapsed: 1.84
 --------------------
+Solving ins-7
+Time elapsed: 1.87
+--------------------
+Solving ins-8
+Time elapsed: 1.82
+--------------------
 Solving ins-9
-Time elapsed: 1.94
+Time elapsed: 1.85

@@ -52,9 +52,9 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
         m = gp.Model("vlsi", env=env)
     
     # Focus on proving optimality
-    #m.setParam(gp.GRB.Param.MIPFocus, 1)
+    #m.setParam(gp.GRB.Param.MIPFocus, 2)
     
-    # No symmetry detection
+    # Max symmetry detection
     #m.setParam(gp.GRB.Param.Symmetry, 2)
 
     #m.setParam(gp.GRB.Param.Disconnected, 0)
@@ -111,7 +111,7 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
             m.addConstr(or_out==1)
             
     # Cumulative constraints
-    
+    # Horizontal cumulative
     for i in range(ub):
         and_variables =[]
         for j in range(instance.n_circuits):
@@ -126,7 +126,7 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
         m.addConstr(gp.quicksum(
             and_variables[j]*instance.get_c_width(j) for j in range(instance.n_circuits))<=instance.max_width)
 
-    
+    # Vertical cumulative
     for i in range(instance.max_width):
         and_variables = []
         for j in range(instance.n_circuits):
@@ -140,13 +140,14 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
             and_variables.append(andv)
         m.addConstr(gp.quicksum(
             and_variables[j]*instance.get_c_height(j) for j in range(instance.n_circuits))<= makespan)       
+    # Big rectangles
     
     bitvecs_w = [[m.addVar(vtype=gp.GRB.BINARY) for j in range(instance.max_width)]for i in range(instance.n_circuits)]
     for i, el in enumerate(bitvecs_w):
         for j in range(instance.max_width):
             ind2 = m.addVars(2, vtype=gp.GRB.BINARY)
             m.addGenConstrIndicator(ind2[0], True, j >= corner_x[i])
-            m.addGenConstrIndicator(ind2[1], True, j <= corner_x[i]+instance.get_c_height(i))
+            m.addGenConstrIndicator(ind2[1], True, j <= corner_x[i]+instance.get_c_width(i))
             
             m.addGenConstrAnd(el[j], ind2)
     
