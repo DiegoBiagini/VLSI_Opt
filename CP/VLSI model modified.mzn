@@ -66,7 +66,7 @@ solve :: seq_search([int_search([makespan], smallest, indomain_min),
 %CHUFFED 
 solve :: seq_search([int_search([makespan], smallest, indomain_min),
                  int_search(cornerx, input_order, indomain_min) 
-                 ])::restart_luby(150) minimize makespan;
+                 ])minimize makespan;
                  
 % Output
 output["\(max_width) \(makespan)\n\(n_blocks)\n"] ++
