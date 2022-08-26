@@ -1,0 +1,426 @@
+user@user-Virtual-Machine:~/CDMO$ python3 SMT/other/solve_smtlib.py SMT/other/smtlib_decl/ cvc5 -f
+--------------------
+Solving SMT/other/smtlib_decl/ins-6.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+sat
+makespan = 16
+----------
+sat
+makespan = 15
+----------
+sat
+makespan = 14
+----------
+sat
+makespan = 13
+----------
+unsat
+==========
+
+Time elapsed:1.038184642791748
+--------------------
+Solving SMT/other/smtlib_decl/ins-23.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-23.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-23.smt2 makespan 37 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-28.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-28.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-28.smt2 makespan 42 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-13.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+ERROR:root:File:SMT/other/smtlib_decl/ins-13.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-13.smt2 makespan 25 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-33.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-33.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-33.smt2 makespan 52 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-8.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+sat
+makespan = 20
+----------
+sat
+makespan = 19
+----------
+sat
+makespan = 18
+----------
+sat
+makespan = 17
+----------
+sat
+makespan = 16
+----------
+sat
+makespan = 15
+----------
+unsat
+==========
+
+Time elapsed:1.7230877876281738
+--------------------
+Solving SMT/other/smtlib_decl/ins-40.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-40.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-40.smt2 makespan 103 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-15.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+ERROR:root:File:SMT/other/smtlib_decl/ins-15.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-15.smt2 makespan 27 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-25.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-25.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-25.smt2 makespan 40 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-27.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-27.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-27.smt2 makespan 42 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-12.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+sat
+makespan = 23
+----------
+sat
+makespan = 22
+----------
+sat
+makespan = 21
+----------
+sat
+makespan = 20
+----------
+sat
+makespan = 19
+----------
+unsat
+==========
+
+Time elapsed:213.00461959838867
+--------------------
+Solving SMT/other/smtlib_decl/ins-9.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+sat
+makespan = 21
+----------
+sat
+makespan = 20
+----------
+sat
+makespan = 19
+----------
+sat
+makespan = 18
+----------
+sat
+makespan = 17
+----------
+sat
+makespan = 16
+----------
+unsat
+==========
+
+Time elapsed:1.8565711975097656
+--------------------
+Solving SMT/other/smtlib_decl/ins-14.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+ERROR:root:File:SMT/other/smtlib_decl/ins-14.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-14.smt2 makespan 25 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-35.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-35.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-35.smt2 makespan 44 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-17.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-17.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-17.smt2 makespan 29 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-11.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+ERROR:root:File:SMT/other/smtlib_decl/ins-11.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-11.smt2 makespan 22 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-10.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+sat
+makespan = 22
+----------
+sat
+makespan = 21
+----------
+sat
+makespan = 20
+----------
+sat
+makespan = 19
+----------
+sat
+makespan = 18
+----------
+sat
+makespan = 17
+----------
+unsat
+==========
+
+Time elapsed:6.436704635620117
+--------------------
+Solving SMT/other/smtlib_decl/ins-16.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-16.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-16.smt2 makespan 29 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-2.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+sat
+makespan = 14
+----------
+sat
+makespan = 13
+----------
+sat
+makespan = 12
+----------
+sat
+makespan = 11
+----------
+sat
+makespan = 10
+----------
+sat
+makespan = 9
+----------
+unsat
+==========
+
+Time elapsed:0.1499621868133545
+--------------------
+Solving SMT/other/smtlib_decl/ins-7.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+sat
+makespan = 20
+----------
+sat
+makespan = 19
+----------
+sat
+makespan = 18
+----------
+sat
+makespan = 17
+----------
+sat
+makespan = 16
+----------
+sat
+makespan = 15
+----------
+sat
+makespan = 14
+----------
+unsat
+==========
+
+Time elapsed:3.403167247772217
+--------------------
+Solving SMT/other/smtlib_decl/ins-26.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-26.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-26.smt2 makespan 39 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-1.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+sat
+makespan = 13
+----------
+sat
+makespan = 12
+----------
+sat
+makespan = 11
+----------
+sat
+makespan = 10
+----------
+
+Time elapsed:0.1922304630279541
+--------------------
+Solving SMT/other/smtlib_decl/ins-29.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-29.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-29.smt2 makespan 45 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-30.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-30.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-30.smt2 makespan 43 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-32.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-32.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-32.smt2 makespan 45 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-34.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-34.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-34.smt2 makespan 50 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-37.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-37.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-37.smt2 makespan 73 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-24.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-24.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-24.smt2 makespan 36 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-39.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-39.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-39.smt2 makespan 69 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-18.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-18.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-18.smt2 makespan 30 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-38.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-38.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-38.smt2 makespan 80 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-36.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-36.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-36.smt2 makespan 45 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-19.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-19.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-19.smt2 makespan 32 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-4.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+sat
+makespan = 17
+----------
+sat
+makespan = 16
+----------
+sat
+makespan = 15
+----------
+sat
+makespan = 14
+----------
+sat
+makespan = 13
+----------
+
+Time elapsed:0.23761868476867676
+--------------------
+Solving SMT/other/smtlib_decl/ins-20.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-20.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-20.smt2 makespan 35 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-5.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+sat
+makespan = 18
+----------
+sat
+makespan = 17
+----------
+sat
+makespan = 16
+----------
+sat
+makespan = 15
+----------
+sat
+makespan = 14
+----------
+sat
+makespan = 13
+----------
+sat
+makespan = 12
+----------
+unsat
+==========
+
+Time elapsed:1.678344488143921
+--------------------
+Solving SMT/other/smtlib_decl/ins-31.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-31.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-31.smt2 makespan 45 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-22.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-22.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-22.smt2 makespan 38 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-21.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-21.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-21.smt2 makespan 34 cvc5 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-3.json
+<stdin>:2.12: No set-logic command was given before this point.
+<stdin>:2.12: cvc5 will make all theories available.
+<stdin>:2.12: Consider setting a stricter logic for (likely) better performance.
+<stdin>:2.12: To suppress this warning in the future use (set-logic ALL).
+sat
+makespan = 15
+----------
+sat
+makespan = 14
+----------
+sat
+makespan = 13
+----------
+sat
+makespan = 12
+----------
+sat
+makespan = 11
+----------
+sat
+makespan = 10
+----------
+unsat
+==========
+
+Time elapsed:0.1821756362915039
+
