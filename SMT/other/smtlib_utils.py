@@ -27,8 +27,8 @@ def write_smtlib(instance: VLSI_Instance, output_folder : Path = Path(__file__).
 
     ###########
     # Variables
-    corner_x = [Int(str(i) + "_x") for i in range(instance.n_circuits)]
-    corner_y = [Int(str(i) + "_y") for i in range(instance.n_circuits)]
+    corner_x = [Int("x_" + str(i)) for i in range(instance.n_circuits)]
+    corner_y = [Int("y_" + str(i)) for i in range(instance.n_circuits)]
 
     lr = [[Bool(f"lr_{i+1}_{j+1}") if i != j else 0 for j in range(instance.n_circuits)] for i in range(instance.n_circuits)]
     ud = [[Bool(f"ud_{i+1}_{j+1}") if i != j else 0 for j in range(instance.n_circuits)] for i in range(instance.n_circuits)]
