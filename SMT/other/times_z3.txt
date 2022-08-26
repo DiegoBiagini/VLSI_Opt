@@ -1,0 +1,371 @@
+user@user-Virtual-Machine:~/CDMO$ python3 SMT/other/solve_smtlib.py SMT/other/smtlib_decl/ z3 -f
+--------------------
+Solving SMT/other/smtlib_decl/ins-6.json
+sat
+makespan = 16
+----------
+sat
+makespan = 15
+----------
+sat
+makespan = 14
+----------
+sat
+makespan = 13
+----------
+unsat
+==========
+
+Time elapsed:0.09138894081115723
+--------------------
+Solving SMT/other/smtlib_decl/ins-23.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-23.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-23.smt2 makespan 37 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-28.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-28.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-28.smt2 makespan 42 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-13.json
+sat
+makespan = 25
+----------
+sat
+makespan = 24
+----------
+sat
+makespan = 23
+----------
+sat
+makespan = 22
+----------
+sat
+makespan = 21
+----------
+sat
+makespan = 20
+----------
+unsat
+==========
+
+Time elapsed:0.948707103729248
+--------------------
+Solving SMT/other/smtlib_decl/ins-33.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-33.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-33.smt2 makespan 52 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-8.json
+sat
+makespan = 20
+----------
+sat
+makespan = 19
+----------
+
+Time elapsed:0.06717586517333984
+--------------------
+Solving SMT/other/smtlib_decl/ins-40.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-40.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-40.smt2 makespan 103 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-15.json
+sat
+makespan = 27
+----------
+sat
+makespan = 26
+----------
+sat
+makespan = 25
+----------
+sat
+makespan = 24
+----------
+sat
+makespan = 23
+----------
+sat
+makespan = 22
+----------
+unsat
+==========
+
+Time elapsed:1.1208035945892334
+--------------------
+Solving SMT/other/smtlib_decl/ins-25.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-25.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-25.smt2 makespan 40 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-27.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-27.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-27.smt2 makespan 42 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-12.json
+sat
+makespan = 23
+----------
+sat
+makespan = 22
+----------
+sat
+makespan = 21
+----------
+sat
+makespan = 20
+----------
+sat
+makespan = 19
+----------
+unsat
+==========
+
+Time elapsed:1.553286075592041
+--------------------
+Solving SMT/other/smtlib_decl/ins-9.json
+sat
+makespan = 21
+----------
+sat
+makespan = 20
+----------
+sat
+makespan = 19
+----------
+sat
+makespan = 18
+----------
+sat
+makespan = 17
+----------
+sat
+makespan = 16
+----------
+unsat
+==========
+
+Time elapsed:0.1820070743560791
+--------------------
+Solving SMT/other/smtlib_decl/ins-14.json
+sat
+makespan = 25
+----------
+sat
+makespan = 24
+----------
+sat
+makespan = 23
+----------
+sat
+makespan = 22
+----------
+sat
+makespan = 21
+----------
+unsat
+==========
+
+Time elapsed:3.4731991291046143
+--------------------
+Solving SMT/other/smtlib_decl/ins-35.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-35.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-35.smt2 makespan 44 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-17.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-17.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-17.smt2 makespan 29 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-11.json
+sat
+makespan = 22
+----------
+sat
+makespan = 21
+----------
+sat
+makespan = 20
+----------
+sat
+makespan = 19
+----------
+sat
+makespan = 18
+----------
+
+Time elapsed:32.59991502761841
+--------------------
+Solving SMT/other/smtlib_decl/ins-10.json
+sat
+makespan = 22
+----------
+sat
+makespan = 21
+----------
+sat
+makespan = 20
+----------
+sat
+makespan = 19
+----------
+sat
+makespan = 18
+----------
+sat
+makespan = 17
+----------
+unsat
+==========
+
+Time elapsed:0.8001501560211182
+--------------------
+Solving SMT/other/smtlib_decl/ins-16.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-16.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-16.smt2 makespan 29 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-2.json
+sat
+makespan = 14
+----------
+sat
+makespan = 13
+----------
+
+Time elapsed:0.29062461853027344
+--------------------
+Solving SMT/other/smtlib_decl/ins-7.json
+sat
+makespan = 20
+----------
+sat
+makespan = 19
+----------
+sat
+makespan = 18
+----------
+sat
+makespan = 17
+----------
+sat
+makespan = 16
+----------
+sat
+makespan = 15
+----------
+sat
+makespan = 14
+----------
+
+Time elapsed:0.49285197257995605
+--------------------
+Solving SMT/other/smtlib_decl/ins-26.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-26.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-26.smt2 makespan 39 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-1.json
+sat
+makespan = 13
+----------
+sat
+makespan = 12
+----------
+sat
+makespan = 11
+----------
+
+Time elapsed:0.08056497573852539
+--------------------
+Solving SMT/other/smtlib_decl/ins-29.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-29.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-29.smt2 makespan 45 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-30.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-30.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-30.smt2 makespan 43 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-32.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-32.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-32.smt2 makespan 45 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-34.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-34.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-34.smt2 makespan 50 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-37.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-37.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-37.smt2 makespan 73 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-24.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-24.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-24.smt2 makespan 36 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-39.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-39.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-39.smt2 makespan 69 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-18.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-18.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-18.smt2 makespan 30 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-38.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-38.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-38.smt2 makespan 80 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-36.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-36.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-36.smt2 makespan 45 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-19.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-19.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-19.smt2 makespan 32 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-4.json
+sat
+makespan = 17
+----------
+sat
+makespan = 16
+----------
+sat
+makespan = 15
+----------
+
+Time elapsed:0.07412028312683105
+--------------------
+Solving SMT/other/smtlib_decl/ins-20.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-20.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-20.smt2 makespan 35 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-5.json
+sat
+makespan = 18
+----------
+sat
+makespan = 17
+----------
+sat
+makespan = 16
+----------
+
+Time elapsed:0.07344889640808105
+--------------------
+Solving SMT/other/smtlib_decl/ins-31.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-31.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-31.smt2 makespan 45 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-22.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-22.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-22.smt2 makespan 38 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-21.json
+ERROR:root:File:SMT/other/smtlib_decl/ins-21.json is malformed
+Command 'SMT/smt_opt.sh SMT/other/smtlib_decl/ins-21.smt2 makespan 34 z3 min' timed out after 300 seconds
+--------------------
+Solving SMT/other/smtlib_decl/ins-3.json
+sat
+makespan = 15
+----------
+sat
+makespan = 14
+----------
+
+Time elapsed:0.05251765251159668
+
