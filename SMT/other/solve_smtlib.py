@@ -37,7 +37,7 @@ if __name__ == "__main__":
     args = {k:simplify_list(args[k]) for k in args}
 
     # Get all instances in the folder
-    if args["folder"]:
+    if args["folder"].exists():
         #os.chdir(args["instance"])
         for file in glob.glob(str(args["instance"]/"*.json")):
             try:

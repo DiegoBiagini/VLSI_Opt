@@ -3,52 +3,736 @@
 (declare-fun makespan () Int)
 (declare-fun 0_y () Int)
 (declare-fun 0_x () Int)
+(declare-fun ud_1_5 () Bool)
 (declare-fun 1_y () Int)
 (declare-fun 1_x () Int)
+(declare-fun ud_2_5 () Bool)
 (declare-fun 2_y () Int)
 (declare-fun 2_x () Int)
+(declare-fun ud_3_5 () Bool)
 (declare-fun 3_y () Int)
 (declare-fun 3_x () Int)
+(declare-fun ud_4_5 () Bool)
 (declare-fun 4_y () Int)
 (declare-fun 4_x () Int)
 (declare-fun 5_y () Int)
 (declare-fun 5_x () Int)
+(declare-fun ud_6_5 () Bool)
 (declare-fun 6_y () Int)
 (declare-fun 6_x () Int)
+(declare-fun ud_7_5 () Bool)
 (declare-fun 7_y () Int)
 (declare-fun 7_x () Int)
+(declare-fun ud_8_5 () Bool)
 (declare-fun 8_y () Int)
 (declare-fun 8_x () Int)
+(declare-fun ud_9_5 () Bool)
 (declare-fun 9_y () Int)
 (declare-fun 9_x () Int)
+(declare-fun ud_10_5 () Bool)
 (declare-fun 10_y () Int)
 (declare-fun 10_x () Int)
+(declare-fun ud_11_5 () Bool)
 (declare-fun 11_y () Int)
 (declare-fun 11_x () Int)
+(declare-fun ud_12_5 () Bool)
 (declare-fun 12_y () Int)
 (declare-fun 12_x () Int)
+(declare-fun ud_13_5 () Bool)
 (declare-fun 13_y () Int)
 (declare-fun 13_x () Int)
+(declare-fun ud_14_5 () Bool)
 (declare-fun 14_y () Int)
 (declare-fun 14_x () Int)
+(declare-fun ud_15_5 () Bool)
 (declare-fun 15_y () Int)
 (declare-fun 15_x () Int)
+(declare-fun ud_16_5 () Bool)
 (declare-fun 16_y () Int)
 (declare-fun 16_x () Int)
+(declare-fun ud_17_5 () Bool)
 (declare-fun 17_y () Int)
 (declare-fun 17_x () Int)
+(declare-fun ud_18_5 () Bool)
 (declare-fun 18_y () Int)
 (declare-fun 18_x () Int)
+(declare-fun ud_19_5 () Bool)
+(declare-fun lr_1_2 () Bool)
+(declare-fun ud_1_2 () Bool)
+(declare-fun lr_2_1 () Bool)
+(declare-fun ud_2_1 () Bool)
+(declare-fun lr_1_3 () Bool)
+(declare-fun ud_1_3 () Bool)
+(declare-fun lr_3_1 () Bool)
+(declare-fun ud_3_1 () Bool)
+(declare-fun lr_1_4 () Bool)
+(declare-fun ud_1_4 () Bool)
+(declare-fun lr_4_1 () Bool)
+(declare-fun ud_4_1 () Bool)
+(declare-fun lr_1_5 () Bool)
+(declare-fun lr_5_1 () Bool)
+(declare-fun ud_5_1 () Bool)
+(declare-fun lr_1_6 () Bool)
+(declare-fun ud_1_6 () Bool)
+(declare-fun lr_6_1 () Bool)
+(declare-fun ud_6_1 () Bool)
+(declare-fun lr_1_7 () Bool)
+(declare-fun ud_1_7 () Bool)
+(declare-fun lr_7_1 () Bool)
+(declare-fun ud_7_1 () Bool)
+(declare-fun lr_1_8 () Bool)
+(declare-fun ud_1_8 () Bool)
+(declare-fun lr_8_1 () Bool)
+(declare-fun ud_8_1 () Bool)
+(declare-fun lr_1_9 () Bool)
+(declare-fun ud_1_9 () Bool)
+(declare-fun lr_9_1 () Bool)
+(declare-fun ud_9_1 () Bool)
+(declare-fun lr_1_10 () Bool)
+(declare-fun ud_1_10 () Bool)
+(declare-fun lr_10_1 () Bool)
+(declare-fun ud_10_1 () Bool)
+(declare-fun lr_1_11 () Bool)
+(declare-fun ud_1_11 () Bool)
+(declare-fun lr_11_1 () Bool)
+(declare-fun ud_11_1 () Bool)
+(declare-fun lr_1_12 () Bool)
+(declare-fun ud_1_12 () Bool)
+(declare-fun lr_12_1 () Bool)
+(declare-fun ud_12_1 () Bool)
+(declare-fun lr_1_13 () Bool)
+(declare-fun ud_1_13 () Bool)
+(declare-fun lr_13_1 () Bool)
+(declare-fun ud_13_1 () Bool)
+(declare-fun lr_1_14 () Bool)
+(declare-fun ud_1_14 () Bool)
+(declare-fun lr_14_1 () Bool)
+(declare-fun ud_14_1 () Bool)
+(declare-fun lr_1_15 () Bool)
+(declare-fun ud_1_15 () Bool)
+(declare-fun lr_15_1 () Bool)
+(declare-fun ud_15_1 () Bool)
+(declare-fun lr_1_16 () Bool)
+(declare-fun ud_1_16 () Bool)
+(declare-fun lr_16_1 () Bool)
+(declare-fun ud_16_1 () Bool)
+(declare-fun lr_1_17 () Bool)
+(declare-fun ud_1_17 () Bool)
+(declare-fun lr_17_1 () Bool)
+(declare-fun ud_17_1 () Bool)
+(declare-fun lr_1_18 () Bool)
+(declare-fun ud_1_18 () Bool)
+(declare-fun lr_18_1 () Bool)
+(declare-fun ud_18_1 () Bool)
+(declare-fun lr_1_19 () Bool)
+(declare-fun ud_1_19 () Bool)
+(declare-fun lr_19_1 () Bool)
+(declare-fun ud_19_1 () Bool)
+(declare-fun lr_2_3 () Bool)
+(declare-fun ud_2_3 () Bool)
+(declare-fun lr_3_2 () Bool)
+(declare-fun ud_3_2 () Bool)
+(declare-fun lr_2_4 () Bool)
+(declare-fun ud_2_4 () Bool)
+(declare-fun lr_4_2 () Bool)
+(declare-fun ud_4_2 () Bool)
+(declare-fun lr_2_5 () Bool)
+(declare-fun lr_5_2 () Bool)
+(declare-fun ud_5_2 () Bool)
+(declare-fun lr_2_6 () Bool)
+(declare-fun ud_2_6 () Bool)
+(declare-fun lr_6_2 () Bool)
+(declare-fun ud_6_2 () Bool)
+(declare-fun lr_2_7 () Bool)
+(declare-fun ud_2_7 () Bool)
+(declare-fun lr_7_2 () Bool)
+(declare-fun ud_7_2 () Bool)
+(declare-fun lr_2_8 () Bool)
+(declare-fun ud_2_8 () Bool)
+(declare-fun lr_8_2 () Bool)
+(declare-fun ud_8_2 () Bool)
+(declare-fun lr_2_9 () Bool)
+(declare-fun ud_2_9 () Bool)
+(declare-fun lr_9_2 () Bool)
+(declare-fun ud_9_2 () Bool)
+(declare-fun lr_2_10 () Bool)
+(declare-fun ud_2_10 () Bool)
+(declare-fun lr_10_2 () Bool)
+(declare-fun ud_10_2 () Bool)
+(declare-fun lr_2_11 () Bool)
+(declare-fun ud_2_11 () Bool)
+(declare-fun lr_11_2 () Bool)
+(declare-fun ud_11_2 () Bool)
+(declare-fun lr_2_12 () Bool)
+(declare-fun ud_2_12 () Bool)
+(declare-fun lr_12_2 () Bool)
+(declare-fun ud_12_2 () Bool)
+(declare-fun lr_2_13 () Bool)
+(declare-fun ud_2_13 () Bool)
+(declare-fun lr_13_2 () Bool)
+(declare-fun ud_13_2 () Bool)
+(declare-fun lr_2_14 () Bool)
+(declare-fun ud_2_14 () Bool)
+(declare-fun lr_14_2 () Bool)
+(declare-fun ud_14_2 () Bool)
+(declare-fun lr_2_15 () Bool)
+(declare-fun ud_2_15 () Bool)
+(declare-fun lr_15_2 () Bool)
+(declare-fun ud_15_2 () Bool)
+(declare-fun lr_2_16 () Bool)
+(declare-fun ud_2_16 () Bool)
+(declare-fun lr_16_2 () Bool)
+(declare-fun ud_16_2 () Bool)
+(declare-fun lr_2_17 () Bool)
+(declare-fun ud_2_17 () Bool)
+(declare-fun lr_17_2 () Bool)
+(declare-fun ud_17_2 () Bool)
+(declare-fun lr_2_18 () Bool)
+(declare-fun ud_2_18 () Bool)
+(declare-fun lr_18_2 () Bool)
+(declare-fun ud_18_2 () Bool)
+(declare-fun lr_2_19 () Bool)
+(declare-fun ud_2_19 () Bool)
+(declare-fun lr_19_2 () Bool)
+(declare-fun ud_19_2 () Bool)
+(declare-fun lr_3_4 () Bool)
+(declare-fun ud_3_4 () Bool)
+(declare-fun lr_4_3 () Bool)
+(declare-fun ud_4_3 () Bool)
+(declare-fun lr_3_5 () Bool)
+(declare-fun lr_5_3 () Bool)
+(declare-fun ud_5_3 () Bool)
+(declare-fun lr_3_6 () Bool)
+(declare-fun ud_3_6 () Bool)
+(declare-fun lr_6_3 () Bool)
+(declare-fun ud_6_3 () Bool)
+(declare-fun lr_3_7 () Bool)
+(declare-fun ud_3_7 () Bool)
+(declare-fun lr_7_3 () Bool)
+(declare-fun ud_7_3 () Bool)
+(declare-fun lr_3_8 () Bool)
+(declare-fun ud_3_8 () Bool)
+(declare-fun lr_8_3 () Bool)
+(declare-fun ud_8_3 () Bool)
+(declare-fun lr_3_9 () Bool)
+(declare-fun ud_3_9 () Bool)
+(declare-fun lr_9_3 () Bool)
+(declare-fun ud_9_3 () Bool)
+(declare-fun lr_3_10 () Bool)
+(declare-fun ud_3_10 () Bool)
+(declare-fun lr_10_3 () Bool)
+(declare-fun ud_10_3 () Bool)
+(declare-fun lr_3_11 () Bool)
+(declare-fun ud_3_11 () Bool)
+(declare-fun lr_11_3 () Bool)
+(declare-fun ud_11_3 () Bool)
+(declare-fun lr_3_12 () Bool)
+(declare-fun ud_3_12 () Bool)
+(declare-fun lr_12_3 () Bool)
+(declare-fun ud_12_3 () Bool)
+(declare-fun lr_3_13 () Bool)
+(declare-fun ud_3_13 () Bool)
+(declare-fun lr_13_3 () Bool)
+(declare-fun ud_13_3 () Bool)
+(declare-fun lr_3_14 () Bool)
+(declare-fun ud_3_14 () Bool)
+(declare-fun lr_14_3 () Bool)
+(declare-fun ud_14_3 () Bool)
+(declare-fun lr_3_15 () Bool)
+(declare-fun ud_3_15 () Bool)
+(declare-fun lr_15_3 () Bool)
+(declare-fun ud_15_3 () Bool)
+(declare-fun lr_3_16 () Bool)
+(declare-fun ud_3_16 () Bool)
+(declare-fun lr_16_3 () Bool)
+(declare-fun ud_16_3 () Bool)
+(declare-fun lr_3_17 () Bool)
+(declare-fun ud_3_17 () Bool)
+(declare-fun lr_17_3 () Bool)
+(declare-fun ud_17_3 () Bool)
+(declare-fun lr_3_18 () Bool)
+(declare-fun ud_3_18 () Bool)
+(declare-fun lr_18_3 () Bool)
+(declare-fun ud_18_3 () Bool)
+(declare-fun lr_3_19 () Bool)
+(declare-fun ud_3_19 () Bool)
+(declare-fun lr_19_3 () Bool)
+(declare-fun ud_19_3 () Bool)
+(declare-fun lr_4_5 () Bool)
+(declare-fun lr_5_4 () Bool)
+(declare-fun ud_5_4 () Bool)
+(declare-fun lr_4_6 () Bool)
+(declare-fun ud_4_6 () Bool)
+(declare-fun lr_6_4 () Bool)
+(declare-fun ud_6_4 () Bool)
+(declare-fun lr_4_7 () Bool)
+(declare-fun ud_4_7 () Bool)
+(declare-fun lr_7_4 () Bool)
+(declare-fun ud_7_4 () Bool)
+(declare-fun lr_4_8 () Bool)
+(declare-fun ud_4_8 () Bool)
+(declare-fun lr_8_4 () Bool)
+(declare-fun ud_8_4 () Bool)
+(declare-fun lr_4_9 () Bool)
+(declare-fun ud_4_9 () Bool)
+(declare-fun lr_9_4 () Bool)
+(declare-fun ud_9_4 () Bool)
+(declare-fun lr_4_10 () Bool)
+(declare-fun ud_4_10 () Bool)
+(declare-fun lr_10_4 () Bool)
+(declare-fun ud_10_4 () Bool)
+(declare-fun lr_4_11 () Bool)
+(declare-fun ud_4_11 () Bool)
+(declare-fun lr_11_4 () Bool)
+(declare-fun ud_11_4 () Bool)
+(declare-fun lr_4_12 () Bool)
+(declare-fun ud_4_12 () Bool)
+(declare-fun lr_12_4 () Bool)
+(declare-fun ud_12_4 () Bool)
+(declare-fun lr_4_13 () Bool)
+(declare-fun ud_4_13 () Bool)
+(declare-fun lr_13_4 () Bool)
+(declare-fun ud_13_4 () Bool)
+(declare-fun lr_4_14 () Bool)
+(declare-fun ud_4_14 () Bool)
+(declare-fun lr_14_4 () Bool)
+(declare-fun ud_14_4 () Bool)
+(declare-fun lr_4_15 () Bool)
+(declare-fun ud_4_15 () Bool)
+(declare-fun lr_15_4 () Bool)
+(declare-fun ud_15_4 () Bool)
+(declare-fun lr_4_16 () Bool)
+(declare-fun ud_4_16 () Bool)
+(declare-fun lr_16_4 () Bool)
+(declare-fun ud_16_4 () Bool)
+(declare-fun lr_4_17 () Bool)
+(declare-fun ud_4_17 () Bool)
+(declare-fun lr_17_4 () Bool)
+(declare-fun ud_17_4 () Bool)
+(declare-fun lr_4_18 () Bool)
+(declare-fun ud_4_18 () Bool)
+(declare-fun lr_18_4 () Bool)
+(declare-fun ud_18_4 () Bool)
+(declare-fun lr_4_19 () Bool)
+(declare-fun ud_4_19 () Bool)
+(declare-fun lr_19_4 () Bool)
+(declare-fun ud_19_4 () Bool)
+(declare-fun lr_5_6 () Bool)
+(declare-fun ud_5_6 () Bool)
+(declare-fun lr_6_5 () Bool)
+(declare-fun lr_5_7 () Bool)
+(declare-fun ud_5_7 () Bool)
+(declare-fun lr_7_5 () Bool)
+(declare-fun lr_5_8 () Bool)
+(declare-fun ud_5_8 () Bool)
+(declare-fun lr_8_5 () Bool)
+(declare-fun lr_5_9 () Bool)
+(declare-fun ud_5_9 () Bool)
+(declare-fun lr_9_5 () Bool)
+(declare-fun lr_5_10 () Bool)
+(declare-fun ud_5_10 () Bool)
+(declare-fun lr_10_5 () Bool)
+(declare-fun lr_5_11 () Bool)
+(declare-fun ud_5_11 () Bool)
+(declare-fun lr_11_5 () Bool)
+(declare-fun lr_5_12 () Bool)
+(declare-fun ud_5_12 () Bool)
+(declare-fun lr_12_5 () Bool)
+(declare-fun lr_5_13 () Bool)
+(declare-fun ud_5_13 () Bool)
+(declare-fun lr_13_5 () Bool)
+(declare-fun lr_5_14 () Bool)
+(declare-fun ud_5_14 () Bool)
+(declare-fun lr_14_5 () Bool)
+(declare-fun lr_5_15 () Bool)
+(declare-fun ud_5_15 () Bool)
+(declare-fun lr_15_5 () Bool)
+(declare-fun lr_5_16 () Bool)
+(declare-fun ud_5_16 () Bool)
+(declare-fun lr_16_5 () Bool)
+(declare-fun lr_5_17 () Bool)
+(declare-fun ud_5_17 () Bool)
+(declare-fun lr_17_5 () Bool)
+(declare-fun lr_5_18 () Bool)
+(declare-fun ud_5_18 () Bool)
+(declare-fun lr_18_5 () Bool)
+(declare-fun lr_5_19 () Bool)
+(declare-fun ud_5_19 () Bool)
+(declare-fun lr_19_5 () Bool)
+(declare-fun lr_6_7 () Bool)
+(declare-fun ud_6_7 () Bool)
+(declare-fun lr_7_6 () Bool)
+(declare-fun ud_7_6 () Bool)
+(declare-fun lr_6_8 () Bool)
+(declare-fun ud_6_8 () Bool)
+(declare-fun lr_8_6 () Bool)
+(declare-fun ud_8_6 () Bool)
+(declare-fun lr_6_9 () Bool)
+(declare-fun ud_6_9 () Bool)
+(declare-fun lr_9_6 () Bool)
+(declare-fun ud_9_6 () Bool)
+(declare-fun lr_6_10 () Bool)
+(declare-fun ud_6_10 () Bool)
+(declare-fun lr_10_6 () Bool)
+(declare-fun ud_10_6 () Bool)
+(declare-fun lr_6_11 () Bool)
+(declare-fun ud_6_11 () Bool)
+(declare-fun lr_11_6 () Bool)
+(declare-fun ud_11_6 () Bool)
+(declare-fun lr_6_12 () Bool)
+(declare-fun ud_6_12 () Bool)
+(declare-fun lr_12_6 () Bool)
+(declare-fun ud_12_6 () Bool)
+(declare-fun lr_6_13 () Bool)
+(declare-fun ud_6_13 () Bool)
+(declare-fun lr_13_6 () Bool)
+(declare-fun ud_13_6 () Bool)
+(declare-fun lr_6_14 () Bool)
+(declare-fun ud_6_14 () Bool)
+(declare-fun lr_14_6 () Bool)
+(declare-fun ud_14_6 () Bool)
+(declare-fun lr_6_15 () Bool)
+(declare-fun ud_6_15 () Bool)
+(declare-fun lr_15_6 () Bool)
+(declare-fun ud_15_6 () Bool)
+(declare-fun lr_6_16 () Bool)
+(declare-fun ud_6_16 () Bool)
+(declare-fun lr_16_6 () Bool)
+(declare-fun ud_16_6 () Bool)
+(declare-fun lr_6_17 () Bool)
+(declare-fun ud_6_17 () Bool)
+(declare-fun lr_17_6 () Bool)
+(declare-fun ud_17_6 () Bool)
+(declare-fun lr_6_18 () Bool)
+(declare-fun ud_6_18 () Bool)
+(declare-fun lr_18_6 () Bool)
+(declare-fun ud_18_6 () Bool)
+(declare-fun lr_6_19 () Bool)
+(declare-fun ud_6_19 () Bool)
+(declare-fun lr_19_6 () Bool)
+(declare-fun ud_19_6 () Bool)
+(declare-fun lr_7_8 () Bool)
+(declare-fun ud_7_8 () Bool)
+(declare-fun lr_8_7 () Bool)
+(declare-fun ud_8_7 () Bool)
+(declare-fun lr_7_9 () Bool)
+(declare-fun ud_7_9 () Bool)
+(declare-fun lr_9_7 () Bool)
+(declare-fun ud_9_7 () Bool)
+(declare-fun lr_7_10 () Bool)
+(declare-fun ud_7_10 () Bool)
+(declare-fun lr_10_7 () Bool)
+(declare-fun ud_10_7 () Bool)
+(declare-fun lr_7_11 () Bool)
+(declare-fun ud_7_11 () Bool)
+(declare-fun lr_11_7 () Bool)
+(declare-fun ud_11_7 () Bool)
+(declare-fun lr_7_12 () Bool)
+(declare-fun ud_7_12 () Bool)
+(declare-fun lr_12_7 () Bool)
+(declare-fun ud_12_7 () Bool)
+(declare-fun lr_7_13 () Bool)
+(declare-fun ud_7_13 () Bool)
+(declare-fun lr_13_7 () Bool)
+(declare-fun ud_13_7 () Bool)
+(declare-fun lr_7_14 () Bool)
+(declare-fun ud_7_14 () Bool)
+(declare-fun lr_14_7 () Bool)
+(declare-fun ud_14_7 () Bool)
+(declare-fun lr_7_15 () Bool)
+(declare-fun ud_7_15 () Bool)
+(declare-fun lr_15_7 () Bool)
+(declare-fun ud_15_7 () Bool)
+(declare-fun lr_7_16 () Bool)
+(declare-fun ud_7_16 () Bool)
+(declare-fun lr_16_7 () Bool)
+(declare-fun ud_16_7 () Bool)
+(declare-fun lr_7_17 () Bool)
+(declare-fun ud_7_17 () Bool)
+(declare-fun lr_17_7 () Bool)
+(declare-fun ud_17_7 () Bool)
+(declare-fun lr_7_18 () Bool)
+(declare-fun ud_7_18 () Bool)
+(declare-fun lr_18_7 () Bool)
+(declare-fun ud_18_7 () Bool)
+(declare-fun lr_7_19 () Bool)
+(declare-fun ud_7_19 () Bool)
+(declare-fun lr_19_7 () Bool)
+(declare-fun ud_19_7 () Bool)
+(declare-fun lr_8_9 () Bool)
+(declare-fun ud_8_9 () Bool)
+(declare-fun lr_9_8 () Bool)
+(declare-fun ud_9_8 () Bool)
+(declare-fun lr_8_10 () Bool)
+(declare-fun ud_8_10 () Bool)
+(declare-fun lr_10_8 () Bool)
+(declare-fun ud_10_8 () Bool)
+(declare-fun lr_8_11 () Bool)
+(declare-fun ud_8_11 () Bool)
+(declare-fun lr_11_8 () Bool)
+(declare-fun ud_11_8 () Bool)
+(declare-fun lr_8_12 () Bool)
+(declare-fun ud_8_12 () Bool)
+(declare-fun lr_12_8 () Bool)
+(declare-fun ud_12_8 () Bool)
+(declare-fun lr_8_13 () Bool)
+(declare-fun ud_8_13 () Bool)
+(declare-fun lr_13_8 () Bool)
+(declare-fun ud_13_8 () Bool)
+(declare-fun lr_8_14 () Bool)
+(declare-fun ud_8_14 () Bool)
+(declare-fun lr_14_8 () Bool)
+(declare-fun ud_14_8 () Bool)
+(declare-fun lr_8_15 () Bool)
+(declare-fun ud_8_15 () Bool)
+(declare-fun lr_15_8 () Bool)
+(declare-fun ud_15_8 () Bool)
+(declare-fun lr_8_16 () Bool)
+(declare-fun ud_8_16 () Bool)
+(declare-fun lr_16_8 () Bool)
+(declare-fun ud_16_8 () Bool)
+(declare-fun lr_8_17 () Bool)
+(declare-fun ud_8_17 () Bool)
+(declare-fun lr_17_8 () Bool)
+(declare-fun ud_17_8 () Bool)
+(declare-fun lr_8_18 () Bool)
+(declare-fun ud_8_18 () Bool)
+(declare-fun lr_18_8 () Bool)
+(declare-fun ud_18_8 () Bool)
+(declare-fun lr_8_19 () Bool)
+(declare-fun ud_8_19 () Bool)
+(declare-fun lr_19_8 () Bool)
+(declare-fun ud_19_8 () Bool)
+(declare-fun lr_9_10 () Bool)
+(declare-fun ud_9_10 () Bool)
+(declare-fun lr_10_9 () Bool)
+(declare-fun ud_10_9 () Bool)
+(declare-fun lr_9_11 () Bool)
+(declare-fun ud_9_11 () Bool)
+(declare-fun lr_11_9 () Bool)
+(declare-fun ud_11_9 () Bool)
+(declare-fun lr_9_12 () Bool)
+(declare-fun ud_9_12 () Bool)
+(declare-fun lr_12_9 () Bool)
+(declare-fun ud_12_9 () Bool)
+(declare-fun lr_9_13 () Bool)
+(declare-fun ud_9_13 () Bool)
+(declare-fun lr_13_9 () Bool)
+(declare-fun ud_13_9 () Bool)
+(declare-fun lr_9_14 () Bool)
+(declare-fun ud_9_14 () Bool)
+(declare-fun lr_14_9 () Bool)
+(declare-fun ud_14_9 () Bool)
+(declare-fun lr_9_15 () Bool)
+(declare-fun ud_9_15 () Bool)
+(declare-fun lr_15_9 () Bool)
+(declare-fun ud_15_9 () Bool)
+(declare-fun lr_9_16 () Bool)
+(declare-fun ud_9_16 () Bool)
+(declare-fun lr_16_9 () Bool)
+(declare-fun ud_16_9 () Bool)
+(declare-fun lr_9_17 () Bool)
+(declare-fun ud_9_17 () Bool)
+(declare-fun lr_17_9 () Bool)
+(declare-fun ud_17_9 () Bool)
+(declare-fun lr_9_18 () Bool)
+(declare-fun ud_9_18 () Bool)
+(declare-fun lr_18_9 () Bool)
+(declare-fun ud_18_9 () Bool)
+(declare-fun lr_9_19 () Bool)
+(declare-fun ud_9_19 () Bool)
+(declare-fun lr_19_9 () Bool)
+(declare-fun ud_19_9 () Bool)
+(declare-fun lr_10_11 () Bool)
+(declare-fun ud_10_11 () Bool)
+(declare-fun lr_11_10 () Bool)
+(declare-fun ud_11_10 () Bool)
+(declare-fun lr_10_12 () Bool)
+(declare-fun ud_10_12 () Bool)
+(declare-fun lr_12_10 () Bool)
+(declare-fun ud_12_10 () Bool)
+(declare-fun lr_10_13 () Bool)
+(declare-fun ud_10_13 () Bool)
+(declare-fun lr_13_10 () Bool)
+(declare-fun ud_13_10 () Bool)
+(declare-fun lr_10_14 () Bool)
+(declare-fun ud_10_14 () Bool)
+(declare-fun lr_14_10 () Bool)
+(declare-fun ud_14_10 () Bool)
+(declare-fun lr_10_15 () Bool)
+(declare-fun ud_10_15 () Bool)
+(declare-fun lr_15_10 () Bool)
+(declare-fun ud_15_10 () Bool)
+(declare-fun lr_10_16 () Bool)
+(declare-fun ud_10_16 () Bool)
+(declare-fun lr_16_10 () Bool)
+(declare-fun ud_16_10 () Bool)
+(declare-fun lr_10_17 () Bool)
+(declare-fun ud_10_17 () Bool)
+(declare-fun lr_17_10 () Bool)
+(declare-fun ud_17_10 () Bool)
+(declare-fun lr_10_18 () Bool)
+(declare-fun ud_10_18 () Bool)
+(declare-fun lr_18_10 () Bool)
+(declare-fun ud_18_10 () Bool)
+(declare-fun lr_10_19 () Bool)
+(declare-fun ud_10_19 () Bool)
+(declare-fun lr_19_10 () Bool)
+(declare-fun ud_19_10 () Bool)
+(declare-fun lr_11_12 () Bool)
+(declare-fun ud_11_12 () Bool)
+(declare-fun lr_12_11 () Bool)
+(declare-fun ud_12_11 () Bool)
+(declare-fun lr_11_13 () Bool)
+(declare-fun ud_11_13 () Bool)
+(declare-fun lr_13_11 () Bool)
+(declare-fun ud_13_11 () Bool)
+(declare-fun lr_11_14 () Bool)
+(declare-fun ud_11_14 () Bool)
+(declare-fun lr_14_11 () Bool)
+(declare-fun ud_14_11 () Bool)
+(declare-fun lr_11_15 () Bool)
+(declare-fun ud_11_15 () Bool)
+(declare-fun lr_15_11 () Bool)
+(declare-fun ud_15_11 () Bool)
+(declare-fun lr_11_16 () Bool)
+(declare-fun ud_11_16 () Bool)
+(declare-fun lr_16_11 () Bool)
+(declare-fun ud_16_11 () Bool)
+(declare-fun lr_11_17 () Bool)
+(declare-fun ud_11_17 () Bool)
+(declare-fun lr_17_11 () Bool)
+(declare-fun ud_17_11 () Bool)
+(declare-fun lr_11_18 () Bool)
+(declare-fun ud_11_18 () Bool)
+(declare-fun lr_18_11 () Bool)
+(declare-fun ud_18_11 () Bool)
+(declare-fun lr_11_19 () Bool)
+(declare-fun ud_11_19 () Bool)
+(declare-fun lr_19_11 () Bool)
+(declare-fun ud_19_11 () Bool)
+(declare-fun lr_12_13 () Bool)
+(declare-fun ud_12_13 () Bool)
+(declare-fun lr_13_12 () Bool)
+(declare-fun ud_13_12 () Bool)
+(declare-fun lr_12_14 () Bool)
+(declare-fun ud_12_14 () Bool)
+(declare-fun lr_14_12 () Bool)
+(declare-fun ud_14_12 () Bool)
+(declare-fun lr_12_15 () Bool)
+(declare-fun ud_12_15 () Bool)
+(declare-fun lr_15_12 () Bool)
+(declare-fun ud_15_12 () Bool)
+(declare-fun lr_12_16 () Bool)
+(declare-fun ud_12_16 () Bool)
+(declare-fun lr_16_12 () Bool)
+(declare-fun ud_16_12 () Bool)
+(declare-fun lr_12_17 () Bool)
+(declare-fun ud_12_17 () Bool)
+(declare-fun lr_17_12 () Bool)
+(declare-fun ud_17_12 () Bool)
+(declare-fun lr_12_18 () Bool)
+(declare-fun ud_12_18 () Bool)
+(declare-fun lr_18_12 () Bool)
+(declare-fun ud_18_12 () Bool)
+(declare-fun lr_12_19 () Bool)
+(declare-fun ud_12_19 () Bool)
+(declare-fun lr_19_12 () Bool)
+(declare-fun ud_19_12 () Bool)
+(declare-fun lr_13_14 () Bool)
+(declare-fun ud_13_14 () Bool)
+(declare-fun lr_14_13 () Bool)
+(declare-fun ud_14_13 () Bool)
+(declare-fun lr_13_15 () Bool)
+(declare-fun ud_13_15 () Bool)
+(declare-fun lr_15_13 () Bool)
+(declare-fun ud_15_13 () Bool)
+(declare-fun lr_13_16 () Bool)
+(declare-fun ud_13_16 () Bool)
+(declare-fun lr_16_13 () Bool)
+(declare-fun ud_16_13 () Bool)
+(declare-fun lr_13_17 () Bool)
+(declare-fun ud_13_17 () Bool)
+(declare-fun lr_17_13 () Bool)
+(declare-fun ud_17_13 () Bool)
+(declare-fun lr_13_18 () Bool)
+(declare-fun ud_13_18 () Bool)
+(declare-fun lr_18_13 () Bool)
+(declare-fun ud_18_13 () Bool)
+(declare-fun lr_13_19 () Bool)
+(declare-fun ud_13_19 () Bool)
+(declare-fun lr_19_13 () Bool)
+(declare-fun ud_19_13 () Bool)
+(declare-fun lr_14_15 () Bool)
+(declare-fun ud_14_15 () Bool)
+(declare-fun lr_15_14 () Bool)
+(declare-fun ud_15_14 () Bool)
+(declare-fun lr_14_16 () Bool)
+(declare-fun ud_14_16 () Bool)
+(declare-fun lr_16_14 () Bool)
+(declare-fun ud_16_14 () Bool)
+(declare-fun lr_14_17 () Bool)
+(declare-fun ud_14_17 () Bool)
+(declare-fun lr_17_14 () Bool)
+(declare-fun ud_17_14 () Bool)
+(declare-fun lr_14_18 () Bool)
+(declare-fun ud_14_18 () Bool)
+(declare-fun lr_18_14 () Bool)
+(declare-fun ud_18_14 () Bool)
+(declare-fun lr_14_19 () Bool)
+(declare-fun ud_14_19 () Bool)
+(declare-fun lr_19_14 () Bool)
+(declare-fun ud_19_14 () Bool)
+(declare-fun lr_15_16 () Bool)
+(declare-fun ud_15_16 () Bool)
+(declare-fun lr_16_15 () Bool)
+(declare-fun ud_16_15 () Bool)
+(declare-fun lr_15_17 () Bool)
+(declare-fun ud_15_17 () Bool)
+(declare-fun lr_17_15 () Bool)
+(declare-fun ud_17_15 () Bool)
+(declare-fun lr_15_18 () Bool)
+(declare-fun ud_15_18 () Bool)
+(declare-fun lr_18_15 () Bool)
+(declare-fun ud_18_15 () Bool)
+(declare-fun lr_15_19 () Bool)
+(declare-fun ud_15_19 () Bool)
+(declare-fun lr_19_15 () Bool)
+(declare-fun ud_19_15 () Bool)
+(declare-fun lr_16_17 () Bool)
+(declare-fun ud_16_17 () Bool)
+(declare-fun lr_17_16 () Bool)
+(declare-fun ud_17_16 () Bool)
+(declare-fun lr_16_18 () Bool)
+(declare-fun ud_16_18 () Bool)
+(declare-fun lr_18_16 () Bool)
+(declare-fun ud_18_16 () Bool)
+(declare-fun lr_16_19 () Bool)
+(declare-fun ud_16_19 () Bool)
+(declare-fun lr_19_16 () Bool)
+(declare-fun ud_19_16 () Bool)
+(declare-fun lr_17_18 () Bool)
+(declare-fun ud_17_18 () Bool)
+(declare-fun lr_18_17 () Bool)
+(declare-fun ud_18_17 () Bool)
+(declare-fun lr_17_19 () Bool)
+(declare-fun ud_17_19 () Bool)
+(declare-fun lr_19_17 () Bool)
+(declare-fun ud_19_17 () Bool)
+(declare-fun lr_18_19 () Bool)
+(declare-fun ud_18_19 () Bool)
+(declare-fun lr_19_18 () Bool)
+(declare-fun ud_19_18 () Bool)
 (assert
  (>= makespan 25))
 (assert
  (<= makespan 30))
 (assert
- (let ((?x4317 (+ 0_y 3)))
- (<= ?x4317 makespan)))
+ (let ((?x3214 (+ 0_y 3)))
+ (<= ?x3214 makespan)))
 (assert
- (let ((?x12227 (+ 0_x 3)))
- (<= ?x12227 25)))
+ (let ((?x2810 (+ 0_x 6)))
+ (<= ?x2810 25)))
 (assert
  (>= 0_x 0))
 (assert
@@ -56,107 +740,127 @@
 (assert
  (>= 0_y 0))
 (assert
- (let ((?x4789 (+ 1_y 4)))
- (<= ?x4789 makespan)))
+ (<= 0_x 9))
 (assert
- (let ((?x4790 (+ 1_x 3)))
- (<= ?x4790 25)))
+ (= ud_1_5 false))
+(assert
+ (let ((?x1548 (+ 1_y 13)))
+ (<= ?x1548 makespan)))
+(assert
+ (let ((?x933 (+ 1_x 4)))
+ (<= ?x933 25)))
 (assert
  (>= 1_x 0))
 (assert
- (<= 1_y 26))
+ (<= 1_y 17))
 (assert
  (>= 1_y 0))
 (assert
- (let ((?x7989 (+ 2_y 5)))
- (<= ?x7989 makespan)))
+ (= ud_2_5 false))
 (assert
- (let ((?x2291 (+ 2_x 3)))
- (<= ?x2291 25)))
+ (let ((?x4106 (+ 2_y 7)))
+ (<= ?x4106 makespan)))
+(assert
+ (let ((?x5539 (+ 2_x 4)))
+ (<= ?x5539 25)))
 (assert
  (>= 2_x 0))
 (assert
- (<= 2_y 25))
+ (<= 2_y 23))
 (assert
  (>= 2_y 0))
 (assert
- (let ((?x6855 (+ 3_y 6)))
- (<= ?x6855 makespan)))
+ (= ud_3_5 false))
 (assert
- (let ((?x6887 (+ 3_x 3)))
- (<= ?x6887 25)))
+ (let ((?x2438 (+ 3_y 5)))
+ (<= ?x2438 makespan)))
+(assert
+ (let ((?x1248 (+ 3_x 4)))
+ (<= ?x1248 25)))
 (assert
  (>= 3_x 0))
 (assert
- (<= 3_y 24))
+ (<= 3_y 25))
 (assert
  (>= 3_y 0))
 (assert
- (let ((?x6520 (+ 4_y 7)))
- (<= ?x6520 makespan)))
+ (= ud_4_5 false))
 (assert
- (let ((?x3730 (+ 4_x 3)))
- (<= ?x3730 25)))
+ (let ((?x3799 (+ 4_y 25)))
+ (<= ?x3799 makespan)))
+(assert
+ (let ((?x3699 (+ 4_x 3)))
+ (<= ?x3699 25)))
 (assert
  (>= 4_x 0))
 (assert
- (<= 4_y 23))
+ (<= 4_y 5))
 (assert
  (>= 4_y 0))
 (assert
- (let ((?x3967 (+ 5_y 8)))
- (<= ?x3967 makespan)))
+ (<= 4_y 2))
 (assert
- (let ((?x1668 (+ 5_x 3)))
- (<= ?x1668 25)))
+ (let ((?x934 (+ 5_y 19)))
+ (<= ?x934 makespan)))
+(assert
+ (let ((?x1093 (+ 5_x 3)))
+ (<= ?x1093 25)))
 (assert
  (>= 5_x 0))
 (assert
- (<= 5_y 22))
+ (<= 5_y 11))
 (assert
  (>= 5_y 0))
 (assert
- (let ((?x5275 (+ 6_y 9)))
- (<= ?x5275 makespan)))
+ (= ud_6_5 false))
 (assert
- (let ((?x2672 (+ 6_x 3)))
- (<= ?x2672 25)))
+ (let ((?x1851 (+ 6_y 18)))
+ (<= ?x1851 makespan)))
+(assert
+ (let ((?x1848 (+ 6_x 3)))
+ (<= ?x1848 25)))
 (assert
  (>= 6_x 0))
 (assert
- (<= 6_y 21))
+ (<= 6_y 12))
 (assert
  (>= 6_y 0))
 (assert
- (let ((?x2124 (+ 7_y 10)))
- (<= ?x2124 makespan)))
+ (= ud_7_5 false))
 (assert
- (let ((?x1320 (+ 7_x 3)))
- (<= ?x1320 25)))
+ (let ((?x2297 (+ 7_y 17)))
+ (<= ?x2297 makespan)))
+(assert
+ (let ((?x2370 (+ 7_x 3)))
+ (<= ?x2370 25)))
 (assert
  (>= 7_x 0))
 (assert
- (<= 7_y 20))
+ (<= 7_y 13))
 (assert
  (>= 7_y 0))
 (assert
- (let ((?x9640 (+ 8_y 11)))
- (<= ?x9640 makespan)))
+ (= ud_8_5 false))
 (assert
- (let ((?x273 (+ 8_x 3)))
- (<= ?x273 25)))
+ (let ((?x941 (+ 8_y 14)))
+ (<= ?x941 makespan)))
+(assert
+ (let ((?x1831 (+ 8_x 3)))
+ (<= ?x1831 25)))
 (assert
  (>= 8_x 0))
 (assert
- (<= 8_y 19))
+ (<= 8_y 16))
 (assert
  (>= 8_y 0))
 (assert
- (let ((?x2428 (+ 9_y 13)))
- (<= ?x2428 makespan)))
+ (= ud_9_5 false))
 (assert
- (let ((?x1808 (+ 9_x 3)))
- (<= ?x1808 25)))
+ (let ((?x470 (+ 9_y 13)))
+ (<= ?x470 makespan)))
+(assert
+ (let ((?x3551 (+ 9_x 3)))
+ (<= ?x3551 25)))
 (assert
  (>= 9_x 0))
 (assert
@@ -164,107 +868,125 @@
 (assert
  (>= 9_y 0))
 (assert
- (let ((?x7829 (+ 10_y 14)))
- (<= ?x7829 makespan)))
+ (= ud_10_5 false))
 (assert
- (let ((?x7868 (+ 10_x 3)))
- (<= ?x7868 25)))
+ (let ((?x936 (+ 10_y 11)))
+ (<= ?x936 makespan)))
+(assert
+ (let ((?x928 (+ 10_x 3)))
+ (<= ?x928 25)))
 (assert
  (>= 10_x 0))
 (assert
- (<= 10_y 16))
+ (<= 10_y 19))
 (assert
  (>= 10_y 0))
 (assert
- (let ((?x6579 (+ 11_y 17)))
- (<= ?x6579 makespan)))
+ (= ud_11_5 false))
 (assert
- (let ((?x6972 (+ 11_x 3)))
- (<= ?x6972 25)))
+ (let ((?x121 (+ 11_y 10)))
+ (<= ?x121 makespan)))
+(assert
+ (let ((?x145 (+ 11_x 3)))
+ (<= ?x145 25)))
 (assert
  (>= 11_x 0))
 (assert
- (<= 11_y 13))
+ (<= 11_y 20))
 (assert
  (>= 11_y 0))
 (assert
- (let ((?x1926 (+ 12_y 18)))
- (<= ?x1926 makespan)))
+ (= ud_12_5 false))
 (assert
- (let ((?x3476 (+ 12_x 3)))
- (<= ?x3476 25)))
+ (let ((?x907 (+ 12_y 9)))
+ (<= ?x907 makespan)))
+(assert
+ (let ((?x2648 (+ 12_x 3)))
+ (<= ?x2648 25)))
 (assert
  (>= 12_x 0))
 (assert
- (<= 12_y 12))
+ (<= 12_y 21))
 (assert
  (>= 12_y 0))
 (assert
- (let ((?x3508 (+ 13_y 19)))
- (<= ?x3508 makespan)))
+ (= ud_13_5 false))
 (assert
- (let ((?x3835 (+ 13_x 3)))
- (<= ?x3835 25)))
+ (let ((?x1267 (+ 13_y 8)))
+ (<= ?x1267 makespan)))
+(assert
+ (let ((?x2269 (+ 13_x 3)))
+ (<= ?x2269 25)))
 (assert
  (>= 13_x 0))
 (assert
- (<= 13_y 11))
+ (<= 13_y 22))
 (assert
  (>= 13_y 0))
 (assert
- (let ((?x4279 (+ 14_y 25)))
- (<= ?x4279 makespan)))
+ (= ud_14_5 false))
 (assert
- (let ((?x4611 (+ 14_x 3)))
- (<= ?x4611 25)))
+ (let ((?x3324 (+ 14_y 7)))
+ (<= ?x3324 makespan)))
+(assert
+ (let ((?x2910 (+ 14_x 3)))
+ (<= ?x2910 25)))
 (assert
  (>= 14_x 0))
 (assert
- (<= 14_y 5))
+ (<= 14_y 23))
 (assert
  (>= 14_y 0))
 (assert
- (let ((?x4647 (+ 15_y 5)))
- (<= ?x4647 makespan)))
+ (= ud_15_5 false))
 (assert
- (let ((?x4757 (+ 15_x 4)))
- (<= ?x4757 25)))
+ (let ((?x5613 (+ 15_y 6)))
+ (<= ?x5613 makespan)))
+(assert
+ (let ((?x3594 (+ 15_x 3)))
+ (<= ?x3594 25)))
 (assert
  (>= 15_x 0))
 (assert
- (<= 15_y 25))
+ (<= 15_y 24))
 (assert
  (>= 15_y 0))
 (assert
- (let ((?x5139 (+ 16_y 7)))
- (<= ?x5139 makespan)))
+ (= ud_16_5 false))
 (assert
- (let ((?x5080 (+ 16_x 4)))
- (<= ?x5080 25)))
+ (let ((?x1875 (+ 16_y 5)))
+ (<= ?x1875 makespan)))
+(assert
+ (let ((?x839 (+ 16_x 3)))
+ (<= ?x839 25)))
 (assert
  (>= 16_x 0))
 (assert
- (<= 16_y 23))
+ (<= 16_y 25))
 (assert
  (>= 16_y 0))
 (assert
- (let ((?x8512 (+ 17_y 13)))
- (<= ?x8512 makespan)))
+ (= ud_17_5 false))
 (assert
- (let ((?x8532 (+ 17_x 4)))
- (<= ?x8532 25)))
+ (let ((?x3568 (+ 17_y 4)))
+ (<= ?x3568 makespan)))
+(assert
+ (let ((?x3040 (+ 17_x 3)))
+ (<= ?x3040 25)))
 (assert
  (>= 17_x 0))
 (assert
- (<= 17_y 17))
+ (<= 17_y 26))
 (assert
  (>= 17_y 0))
 (assert
- (let ((?x8640 (+ 18_y 3)))
- (<= ?x8640 makespan)))
+ (= ud_18_5 false))
 (assert
- (let ((?x8643 (+ 18_x 6)))
- (<= ?x8643 25)))
+ (let ((?x1422 (+ 18_y 3)))
+ (<= ?x1422 makespan)))
+(assert
+ (let ((?x1994 (+ 18_x 3)))
+ (<= ?x1994 25)))
 (assert
  (>= 18_x 0))
 (assert
@@ -272,3480 +994,2759 @@
 (assert
  (>= 18_y 0))
 (assert
- (or (<= (+ 0_x 3) 1_x) (<= (+ 0_y 3) 1_y) (<= (+ 1_x 3) 0_x) (<= (+ 1_y 4) 0_y)))
+ (= ud_19_5 false))
 (assert
- (or (<= (+ 0_x 3) 2_x) (<= (+ 0_y 3) 2_y) (<= (+ 2_x 3) 0_x) (<= (+ 2_y 5) 0_y)))
+ (= (<= (+ 0_x 6) 1_x) lr_1_2))
 (assert
- (or (<= (+ 0_x 3) 3_x) (<= (+ 0_y 3) 3_y) (<= (+ 3_x 3) 0_x) (<= (+ 3_y 6) 0_y)))
+ (= (<= (+ 0_y 3) 1_y) ud_1_2))
 (assert
- (or (<= (+ 0_x 3) 4_x) (<= (+ 0_y 3) 4_y) (<= (+ 4_x 3) 0_x) (<= (+ 4_y 7) 0_y)))
+ (= (<= (+ 1_x 4) 0_x) lr_2_1))
 (assert
- (or (<= (+ 0_x 3) 5_x) (<= (+ 0_y 3) 5_y) (<= (+ 5_x 3) 0_x) (<= (+ 5_y 8) 0_y)))
+ (= (<= (+ 1_y 13) 0_y) ud_2_1))
 (assert
- (or (<= (+ 0_x 3) 6_x) (<= (+ 0_y 3) 6_y) (<= (+ 6_x 3) 0_x) (<= (+ 6_y 9) 0_y)))
+ (or lr_1_2 lr_2_1 ud_1_2 ud_2_1))
 (assert
- (or (<= (+ 0_x 3) 7_x) (<= (+ 0_y 3) 7_y) (<= (+ 7_x 3) 0_x) (<= (+ 7_y 10) 0_y)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_1_2 false))))
 (assert
- (or (<= (+ 0_x 3) 8_x) (<= (+ 0_y 3) 8_y) (<= (+ 8_x 3) 0_x) (<= (+ 8_y 11) 0_y)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_2_1 false))))
 (assert
- (or (<= (+ 0_x 3) 9_x) (<= (+ 0_y 3) 9_y) (<= (+ 9_x 3) 0_x) (<= (+ 9_y 13) 0_y)))
+ (= (<= (+ 0_x 6) 2_x) lr_1_3))
 (assert
- (or (<= (+ 0_x 3) 10_x) (<= (+ 0_y 3) 10_y) (<= (+ 10_x 3) 0_x) (<= (+ 10_y 14) 0_y)))
+ (= (<= (+ 0_y 3) 2_y) ud_1_3))
 (assert
- (or (<= (+ 0_x 3) 11_x) (<= (+ 0_y 3) 11_y) (<= (+ 11_x 3) 0_x) (<= (+ 11_y 17) 0_y)))
+ (= (<= (+ 2_x 4) 0_x) lr_3_1))
 (assert
- (or (<= (+ 0_x 3) 12_x) (<= (+ 0_y 3) 12_y) (<= (+ 12_x 3) 0_x) (<= (+ 12_y 18) 0_y)))
+ (= (<= (+ 2_y 7) 0_y) ud_3_1))
 (assert
- (or (<= (+ 0_x 3) 13_x) (<= (+ 0_y 3) 13_y) (<= (+ 13_x 3) 0_x) (<= (+ 13_y 19) 0_y)))
+ (or lr_1_3 lr_3_1 ud_1_3 ud_3_1))
 (assert
- (or (<= (+ 0_x 3) 14_x) (<= (+ 0_y 3) 14_y) (<= (+ 14_x 3) 0_x) (<= (+ 14_y 25) 0_y)))
+ (let (($x2994 (< makespan 10)))
+ (=> $x2994 (= ud_1_3 false))))
 (assert
- (or (<= (+ 0_x 3) 15_x) (<= (+ 0_y 3) 15_y) (<= (+ 15_x 4) 0_x) (<= (+ 15_y 5) 0_y)))
+ (let (($x2994 (< makespan 10)))
+ (=> $x2994 (= ud_3_1 false))))
 (assert
- (or (<= (+ 0_x 3) 16_x) (<= (+ 0_y 3) 16_y) (<= (+ 16_x 4) 0_x) (<= (+ 16_y 7) 0_y)))
+ (= (<= (+ 0_x 6) 3_x) lr_1_4))
 (assert
- (or (<= (+ 0_x 3) 17_x) (<= (+ 0_y 3) 17_y) (<= (+ 17_x 4) 0_x) (<= (+ 17_y 13) 0_y)))
+ (= (<= (+ 0_y 3) 3_y) ud_1_4))
 (assert
- (or (<= (+ 0_x 3) 18_x) (<= (+ 0_y 3) 18_y) (<= (+ 18_x 6) 0_x) (<= (+ 18_y 3) 0_y)))
+ (= (<= (+ 3_x 4) 0_x) lr_4_1))
 (assert
- (or (<= (+ 1_x 3) 2_x) (<= (+ 1_y 4) 2_y) (<= (+ 2_x 3) 1_x) (<= (+ 2_y 5) 1_y)))
+ (= (<= (+ 3_y 5) 0_y) ud_4_1))
 (assert
- (or (<= (+ 1_x 3) 3_x) (<= (+ 1_y 4) 3_y) (<= (+ 3_x 3) 1_x) (<= (+ 3_y 6) 1_y)))
+ (or lr_1_4 lr_4_1 ud_1_4 ud_4_1))
 (assert
- (or (<= (+ 1_x 3) 4_x) (<= (+ 1_y 4) 4_y) (<= (+ 4_x 3) 1_x) (<= (+ 4_y 7) 1_y)))
+ (let (($x2453 (< makespan 8)))
+ (=> $x2453 (= ud_1_4 false))))
 (assert
- (or (<= (+ 1_x 3) 5_x) (<= (+ 1_y 4) 5_y) (<= (+ 5_x 3) 1_x) (<= (+ 5_y 8) 1_y)))
+ (let (($x2453 (< makespan 8)))
+ (=> $x2453 (= ud_4_1 false))))
 (assert
- (or (<= (+ 1_x 3) 6_x) (<= (+ 1_y 4) 6_y) (<= (+ 6_x 3) 1_x) (<= (+ 6_y 9) 1_y)))
+ (= (<= (+ 0_x 6) 4_x) lr_1_5))
 (assert
- (or (<= (+ 1_x 3) 7_x) (<= (+ 1_y 4) 7_y) (<= (+ 7_x 3) 1_x) (<= (+ 7_y 10) 1_y)))
+ (= (<= (+ 0_y 3) 4_y) ud_1_5))
 (assert
- (or (<= (+ 1_x 3) 8_x) (<= (+ 1_y 4) 8_y) (<= (+ 8_x 3) 1_x) (<= (+ 8_y 11) 1_y)))
+ (= (<= (+ 4_x 3) 0_x) lr_5_1))
 (assert
- (or (<= (+ 1_x 3) 9_x) (<= (+ 1_y 4) 9_y) (<= (+ 9_x 3) 1_x) (<= (+ 9_y 13) 1_y)))
+ (= (<= (+ 4_y 25) 0_y) ud_5_1))
 (assert
- (or (<= (+ 1_x 3) 10_x) (<= (+ 1_y 4) 10_y) (<= (+ 10_x 3) 1_x) (<= (+ 10_y 14) 1_y)))
+ (or lr_1_5 lr_5_1 ud_1_5 ud_5_1))
 (assert
- (or (<= (+ 1_x 3) 11_x) (<= (+ 1_y 4) 11_y) (<= (+ 11_x 3) 1_x) (<= (+ 11_y 17) 1_y)))
+ (let (($x2150 (= ud_1_5 false)))
+ (let (($x1905 (< makespan 28)))
+ (=> $x1905 $x2150))))
 (assert
- (or (<= (+ 1_x 3) 12_x) (<= (+ 1_y 4) 12_y) (<= (+ 12_x 3) 1_x) (<= (+ 12_y 18) 1_y)))
+ (let (($x1905 (< makespan 28)))
+ (=> $x1905 (= ud_5_1 false))))
 (assert
- (or (<= (+ 1_x 3) 13_x) (<= (+ 1_y 4) 13_y) (<= (+ 13_x 3) 1_x) (<= (+ 13_y 19) 1_y)))
+ (= (<= (+ 0_x 6) 5_x) lr_1_6))
 (assert
- (or (<= (+ 1_x 3) 14_x) (<= (+ 1_y 4) 14_y) (<= (+ 14_x 3) 1_x) (<= (+ 14_y 25) 1_y)))
+ (= (<= (+ 0_y 3) 5_y) ud_1_6))
 (assert
- (or (<= (+ 1_x 3) 15_x) (<= (+ 1_y 4) 15_y) (<= (+ 15_x 4) 1_x) (<= (+ 15_y 5) 1_y)))
+ (= (<= (+ 5_x 3) 0_x) lr_6_1))
 (assert
- (or (<= (+ 1_x 3) 16_x) (<= (+ 1_y 4) 16_y) (<= (+ 16_x 4) 1_x) (<= (+ 16_y 7) 1_y)))
+ (= (<= (+ 5_y 19) 0_y) ud_6_1))
 (assert
- (or (<= (+ 1_x 3) 17_x) (<= (+ 1_y 4) 17_y) (<= (+ 17_x 4) 1_x) (<= (+ 17_y 13) 1_y)))
+ (or lr_1_6 lr_6_1 ud_1_6 ud_6_1))
 (assert
- (or (<= (+ 1_x 3) 18_x) (<= (+ 1_y 4) 18_y) (<= (+ 18_x 6) 1_x) (<= (+ 18_y 3) 1_y)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_1_6 false))))
 (assert
- (or (<= (+ 2_x 3) 3_x) (<= (+ 2_y 5) 3_y) (<= (+ 3_x 3) 2_x) (<= (+ 3_y 6) 2_y)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_6_1 false))))
 (assert
- (or (<= (+ 2_x 3) 4_x) (<= (+ 2_y 5) 4_y) (<= (+ 4_x 3) 2_x) (<= (+ 4_y 7) 2_y)))
+ (= (<= (+ 0_x 6) 6_x) lr_1_7))
 (assert
- (or (<= (+ 2_x 3) 5_x) (<= (+ 2_y 5) 5_y) (<= (+ 5_x 3) 2_x) (<= (+ 5_y 8) 2_y)))
+ (= (<= (+ 0_y 3) 6_y) ud_1_7))
 (assert
- (or (<= (+ 2_x 3) 6_x) (<= (+ 2_y 5) 6_y) (<= (+ 6_x 3) 2_x) (<= (+ 6_y 9) 2_y)))
+ (= (<= (+ 6_x 3) 0_x) lr_7_1))
 (assert
- (or (<= (+ 2_x 3) 7_x) (<= (+ 2_y 5) 7_y) (<= (+ 7_x 3) 2_x) (<= (+ 7_y 10) 2_y)))
+ (= (<= (+ 6_y 18) 0_y) ud_7_1))
 (assert
- (or (<= (+ 2_x 3) 8_x) (<= (+ 2_y 5) 8_y) (<= (+ 8_x 3) 2_x) (<= (+ 8_y 11) 2_y)))
+ (or lr_1_7 lr_7_1 ud_1_7 ud_7_1))
 (assert
- (or (<= (+ 2_x 3) 9_x) (<= (+ 2_y 5) 9_y) (<= (+ 9_x 3) 2_x) (<= (+ 9_y 13) 2_y)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_1_7 false))))
 (assert
- (or (<= (+ 2_x 3) 10_x) (<= (+ 2_y 5) 10_y) (<= (+ 10_x 3) 2_x) (<= (+ 10_y 14) 2_y)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_7_1 false))))
 (assert
- (or (<= (+ 2_x 3) 11_x) (<= (+ 2_y 5) 11_y) (<= (+ 11_x 3) 2_x) (<= (+ 11_y 17) 2_y)))
+ (= (<= (+ 0_x 6) 7_x) lr_1_8))
 (assert
- (or (<= (+ 2_x 3) 12_x) (<= (+ 2_y 5) 12_y) (<= (+ 12_x 3) 2_x) (<= (+ 12_y 18) 2_y)))
+ (= (<= (+ 0_y 3) 7_y) ud_1_8))
 (assert
- (or (<= (+ 2_x 3) 13_x) (<= (+ 2_y 5) 13_y) (<= (+ 13_x 3) 2_x) (<= (+ 13_y 19) 2_y)))
+ (= (<= (+ 7_x 3) 0_x) lr_8_1))
 (assert
- (or (<= (+ 2_x 3) 14_x) (<= (+ 2_y 5) 14_y) (<= (+ 14_x 3) 2_x) (<= (+ 14_y 25) 2_y)))
+ (= (<= (+ 7_y 17) 0_y) ud_8_1))
 (assert
- (or (<= (+ 2_x 3) 15_x) (<= (+ 2_y 5) 15_y) (<= (+ 15_x 4) 2_x) (<= (+ 15_y 5) 2_y)))
+ (or lr_1_8 lr_8_1 ud_1_8 ud_8_1))
 (assert
- (or (<= (+ 2_x 3) 16_x) (<= (+ 2_y 5) 16_y) (<= (+ 16_x 4) 2_x) (<= (+ 16_y 7) 2_y)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_1_8 false))))
 (assert
- (or (<= (+ 2_x 3) 17_x) (<= (+ 2_y 5) 17_y) (<= (+ 17_x 4) 2_x) (<= (+ 17_y 13) 2_y)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_8_1 false))))
 (assert
- (or (<= (+ 2_x 3) 18_x) (<= (+ 2_y 5) 18_y) (<= (+ 18_x 6) 2_x) (<= (+ 18_y 3) 2_y)))
+ (= (<= (+ 0_x 6) 8_x) lr_1_9))
 (assert
- (or (<= (+ 3_x 3) 4_x) (<= (+ 3_y 6) 4_y) (<= (+ 4_x 3) 3_x) (<= (+ 4_y 7) 3_y)))
+ (= (<= (+ 0_y 3) 8_y) ud_1_9))
 (assert
- (or (<= (+ 3_x 3) 5_x) (<= (+ 3_y 6) 5_y) (<= (+ 5_x 3) 3_x) (<= (+ 5_y 8) 3_y)))
+ (= (<= (+ 8_x 3) 0_x) lr_9_1))
 (assert
- (or (<= (+ 3_x 3) 6_x) (<= (+ 3_y 6) 6_y) (<= (+ 6_x 3) 3_x) (<= (+ 6_y 9) 3_y)))
+ (= (<= (+ 8_y 14) 0_y) ud_9_1))
 (assert
- (or (<= (+ 3_x 3) 7_x) (<= (+ 3_y 6) 7_y) (<= (+ 7_x 3) 3_x) (<= (+ 7_y 10) 3_y)))
+ (or lr_1_9 lr_9_1 ud_1_9 ud_9_1))
 (assert
- (or (<= (+ 3_x 3) 8_x) (<= (+ 3_y 6) 8_y) (<= (+ 8_x 3) 3_x) (<= (+ 8_y 11) 3_y)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_1_9 false))))
 (assert
- (or (<= (+ 3_x 3) 9_x) (<= (+ 3_y 6) 9_y) (<= (+ 9_x 3) 3_x) (<= (+ 9_y 13) 3_y)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_9_1 false))))
 (assert
- (or (<= (+ 3_x 3) 10_x) (<= (+ 3_y 6) 10_y) (<= (+ 10_x 3) 3_x) (<= (+ 10_y 14) 3_y)))
+ (= (<= (+ 0_x 6) 9_x) lr_1_10))
 (assert
- (or (<= (+ 3_x 3) 11_x) (<= (+ 3_y 6) 11_y) (<= (+ 11_x 3) 3_x) (<= (+ 11_y 17) 3_y)))
+ (= (<= (+ 0_y 3) 9_y) ud_1_10))
 (assert
- (or (<= (+ 3_x 3) 12_x) (<= (+ 3_y 6) 12_y) (<= (+ 12_x 3) 3_x) (<= (+ 12_y 18) 3_y)))
+ (= (<= (+ 9_x 3) 0_x) lr_10_1))
 (assert
- (or (<= (+ 3_x 3) 13_x) (<= (+ 3_y 6) 13_y) (<= (+ 13_x 3) 3_x) (<= (+ 13_y 19) 3_y)))
+ (= (<= (+ 9_y 13) 0_y) ud_10_1))
 (assert
- (or (<= (+ 3_x 3) 14_x) (<= (+ 3_y 6) 14_y) (<= (+ 14_x 3) 3_x) (<= (+ 14_y 25) 3_y)))
+ (or lr_1_10 lr_10_1 ud_1_10 ud_10_1))
 (assert
- (or (<= (+ 3_x 3) 15_x) (<= (+ 3_y 6) 15_y) (<= (+ 15_x 4) 3_x) (<= (+ 15_y 5) 3_y)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_1_10 false))))
 (assert
- (or (<= (+ 3_x 3) 16_x) (<= (+ 3_y 6) 16_y) (<= (+ 16_x 4) 3_x) (<= (+ 16_y 7) 3_y)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_10_1 false))))
 (assert
- (or (<= (+ 3_x 3) 17_x) (<= (+ 3_y 6) 17_y) (<= (+ 17_x 4) 3_x) (<= (+ 17_y 13) 3_y)))
+ (= (<= (+ 0_x 6) 10_x) lr_1_11))
 (assert
- (or (<= (+ 3_x 3) 18_x) (<= (+ 3_y 6) 18_y) (<= (+ 18_x 6) 3_x) (<= (+ 18_y 3) 3_y)))
+ (= (<= (+ 0_y 3) 10_y) ud_1_11))
 (assert
- (or (<= (+ 4_x 3) 5_x) (<= (+ 4_y 7) 5_y) (<= (+ 5_x 3) 4_x) (<= (+ 5_y 8) 4_y)))
+ (= (<= (+ 10_x 3) 0_x) lr_11_1))
 (assert
- (or (<= (+ 4_x 3) 6_x) (<= (+ 4_y 7) 6_y) (<= (+ 6_x 3) 4_x) (<= (+ 6_y 9) 4_y)))
+ (= (<= (+ 10_y 11) 0_y) ud_11_1))
 (assert
- (or (<= (+ 4_x 3) 7_x) (<= (+ 4_y 7) 7_y) (<= (+ 7_x 3) 4_x) (<= (+ 7_y 10) 4_y)))
+ (or lr_1_11 lr_11_1 ud_1_11 ud_11_1))
 (assert
- (or (<= (+ 4_x 3) 8_x) (<= (+ 4_y 7) 8_y) (<= (+ 8_x 3) 4_x) (<= (+ 8_y 11) 4_y)))
+ (let (($x4364 (< makespan 14)))
+ (=> $x4364 (= ud_1_11 false))))
 (assert
- (or (<= (+ 4_x 3) 9_x) (<= (+ 4_y 7) 9_y) (<= (+ 9_x 3) 4_x) (<= (+ 9_y 13) 4_y)))
+ (let (($x4364 (< makespan 14)))
+ (=> $x4364 (= ud_11_1 false))))
 (assert
- (or (<= (+ 4_x 3) 10_x) (<= (+ 4_y 7) 10_y) (<= (+ 10_x 3) 4_x) (<= (+ 10_y 14) 4_y)))
+ (= (<= (+ 0_x 6) 11_x) lr_1_12))
 (assert
- (or (<= (+ 4_x 3) 11_x) (<= (+ 4_y 7) 11_y) (<= (+ 11_x 3) 4_x) (<= (+ 11_y 17) 4_y)))
+ (= (<= (+ 0_y 3) 11_y) ud_1_12))
 (assert
- (or (<= (+ 4_x 3) 12_x) (<= (+ 4_y 7) 12_y) (<= (+ 12_x 3) 4_x) (<= (+ 12_y 18) 4_y)))
+ (= (<= (+ 11_x 3) 0_x) lr_12_1))
 (assert
- (or (<= (+ 4_x 3) 13_x) (<= (+ 4_y 7) 13_y) (<= (+ 13_x 3) 4_x) (<= (+ 13_y 19) 4_y)))
+ (= (<= (+ 11_y 10) 0_y) ud_12_1))
 (assert
- (or (<= (+ 4_x 3) 14_x) (<= (+ 4_y 7) 14_y) (<= (+ 14_x 3) 4_x) (<= (+ 14_y 25) 4_y)))
+ (or lr_1_12 lr_12_1 ud_1_12 ud_12_1))
 (assert
- (or (<= (+ 4_x 3) 15_x) (<= (+ 4_y 7) 15_y) (<= (+ 15_x 4) 4_x) (<= (+ 15_y 5) 4_y)))
+ (let (($x4485 (< makespan 13)))
+ (=> $x4485 (= ud_1_12 false))))
 (assert
- (or (<= (+ 4_x 3) 16_x) (<= (+ 4_y 7) 16_y) (<= (+ 16_x 4) 4_x) (<= (+ 16_y 7) 4_y)))
+ (let (($x4485 (< makespan 13)))
+ (=> $x4485 (= ud_12_1 false))))
 (assert
- (or (<= (+ 4_x 3) 17_x) (<= (+ 4_y 7) 17_y) (<= (+ 17_x 4) 4_x) (<= (+ 17_y 13) 4_y)))
+ (= (<= (+ 0_x 6) 12_x) lr_1_13))
 (assert
- (or (<= (+ 4_x 3) 18_x) (<= (+ 4_y 7) 18_y) (<= (+ 18_x 6) 4_x) (<= (+ 18_y 3) 4_y)))
+ (= (<= (+ 0_y 3) 12_y) ud_1_13))
 (assert
- (or (<= (+ 5_x 3) 6_x) (<= (+ 5_y 8) 6_y) (<= (+ 6_x 3) 5_x) (<= (+ 6_y 9) 5_y)))
+ (= (<= (+ 12_x 3) 0_x) lr_13_1))
 (assert
- (or (<= (+ 5_x 3) 7_x) (<= (+ 5_y 8) 7_y) (<= (+ 7_x 3) 5_x) (<= (+ 7_y 10) 5_y)))
+ (= (<= (+ 12_y 9) 0_y) ud_13_1))
 (assert
- (or (<= (+ 5_x 3) 8_x) (<= (+ 5_y 8) 8_y) (<= (+ 8_x 3) 5_x) (<= (+ 8_y 11) 5_y)))
+ (or lr_1_13 lr_13_1 ud_1_13 ud_13_1))
 (assert
- (or (<= (+ 5_x 3) 9_x) (<= (+ 5_y 8) 9_y) (<= (+ 9_x 3) 5_x) (<= (+ 9_y 13) 5_y)))
+ (let (($x4625 (< makespan 12)))
+ (=> $x4625 (= ud_1_13 false))))
 (assert
- (or (<= (+ 5_x 3) 10_x) (<= (+ 5_y 8) 10_y) (<= (+ 10_x 3) 5_x) (<= (+ 10_y 14) 5_y)))
+ (let (($x4625 (< makespan 12)))
+ (=> $x4625 (= ud_13_1 false))))
 (assert
- (or (<= (+ 5_x 3) 11_x) (<= (+ 5_y 8) 11_y) (<= (+ 11_x 3) 5_x) (<= (+ 11_y 17) 5_y)))
+ (= (<= (+ 0_x 6) 13_x) lr_1_14))
 (assert
- (or (<= (+ 5_x 3) 12_x) (<= (+ 5_y 8) 12_y) (<= (+ 12_x 3) 5_x) (<= (+ 12_y 18) 5_y)))
+ (= (<= (+ 0_y 3) 13_y) ud_1_14))
 (assert
- (or (<= (+ 5_x 3) 13_x) (<= (+ 5_y 8) 13_y) (<= (+ 13_x 3) 5_x) (<= (+ 13_y 19) 5_y)))
+ (= (<= (+ 13_x 3) 0_x) lr_14_1))
 (assert
- (or (<= (+ 5_x 3) 14_x) (<= (+ 5_y 8) 14_y) (<= (+ 14_x 3) 5_x) (<= (+ 14_y 25) 5_y)))
+ (= (<= (+ 13_y 8) 0_y) ud_14_1))
 (assert
- (or (<= (+ 5_x 3) 15_x) (<= (+ 5_y 8) 15_y) (<= (+ 15_x 4) 5_x) (<= (+ 15_y 5) 5_y)))
+ (or lr_1_14 lr_14_1 ud_1_14 ud_14_1))
 (assert
- (or (<= (+ 5_x 3) 16_x) (<= (+ 5_y 8) 16_y) (<= (+ 16_x 4) 5_x) (<= (+ 16_y 7) 5_y)))
+ (let (($x4767 (< makespan 11)))
+ (=> $x4767 (= ud_1_14 false))))
 (assert
- (or (<= (+ 5_x 3) 17_x) (<= (+ 5_y 8) 17_y) (<= (+ 17_x 4) 5_x) (<= (+ 17_y 13) 5_y)))
+ (let (($x4767 (< makespan 11)))
+ (=> $x4767 (= ud_14_1 false))))
 (assert
- (or (<= (+ 5_x 3) 18_x) (<= (+ 5_y 8) 18_y) (<= (+ 18_x 6) 5_x) (<= (+ 18_y 3) 5_y)))
+ (= (<= (+ 0_x 6) 14_x) lr_1_15))
 (assert
- (or (<= (+ 6_x 3) 7_x) (<= (+ 6_y 9) 7_y) (<= (+ 7_x 3) 6_x) (<= (+ 7_y 10) 6_y)))
+ (= (<= (+ 0_y 3) 14_y) ud_1_15))
 (assert
- (or (<= (+ 6_x 3) 8_x) (<= (+ 6_y 9) 8_y) (<= (+ 8_x 3) 6_x) (<= (+ 8_y 11) 6_y)))
+ (= (<= (+ 14_x 3) 0_x) lr_15_1))
 (assert
- (or (<= (+ 6_x 3) 9_x) (<= (+ 6_y 9) 9_y) (<= (+ 9_x 3) 6_x) (<= (+ 9_y 13) 6_y)))
+ (= (<= (+ 14_y 7) 0_y) ud_15_1))
 (assert
- (or (<= (+ 6_x 3) 10_x) (<= (+ 6_y 9) 10_y) (<= (+ 10_x 3) 6_x) (<= (+ 10_y 14) 6_y)))
+ (or lr_1_15 lr_15_1 ud_1_15 ud_15_1))
 (assert
- (or (<= (+ 6_x 3) 11_x) (<= (+ 6_y 9) 11_y) (<= (+ 11_x 3) 6_x) (<= (+ 11_y 17) 6_y)))
+ (let (($x2994 (< makespan 10)))
+ (=> $x2994 (= ud_1_15 false))))
 (assert
- (or (<= (+ 6_x 3) 12_x) (<= (+ 6_y 9) 12_y) (<= (+ 12_x 3) 6_x) (<= (+ 12_y 18) 6_y)))
+ (let (($x2994 (< makespan 10)))
+ (=> $x2994 (= ud_15_1 false))))
 (assert
- (or (<= (+ 6_x 3) 13_x) (<= (+ 6_y 9) 13_y) (<= (+ 13_x 3) 6_x) (<= (+ 13_y 19) 6_y)))
+ (= (<= (+ 0_x 6) 15_x) lr_1_16))
 (assert
- (or (<= (+ 6_x 3) 14_x) (<= (+ 6_y 9) 14_y) (<= (+ 14_x 3) 6_x) (<= (+ 14_y 25) 6_y)))
+ (= (<= (+ 0_y 3) 15_y) ud_1_16))
 (assert
- (or (<= (+ 6_x 3) 15_x) (<= (+ 6_y 9) 15_y) (<= (+ 15_x 4) 6_x) (<= (+ 15_y 5) 6_y)))
+ (= (<= (+ 15_x 3) 0_x) lr_16_1))
 (assert
- (or (<= (+ 6_x 3) 16_x) (<= (+ 6_y 9) 16_y) (<= (+ 16_x 4) 6_x) (<= (+ 16_y 7) 6_y)))
+ (= (<= (+ 15_y 6) 0_y) ud_16_1))
 (assert
- (or (<= (+ 6_x 3) 17_x) (<= (+ 6_y 9) 17_y) (<= (+ 17_x 4) 6_x) (<= (+ 17_y 13) 6_y)))
+ (or lr_1_16 lr_16_1 ud_1_16 ud_16_1))
 (assert
- (or (<= (+ 6_x 3) 18_x) (<= (+ 6_y 9) 18_y) (<= (+ 18_x 6) 6_x) (<= (+ 18_y 3) 6_y)))
+ (let (($x4991 (< makespan 9)))
+ (=> $x4991 (= ud_1_16 false))))
 (assert
- (or (<= (+ 7_x 3) 8_x) (<= (+ 7_y 10) 8_y) (<= (+ 8_x 3) 7_x) (<= (+ 8_y 11) 7_y)))
+ (let (($x4991 (< makespan 9)))
+ (=> $x4991 (= ud_16_1 false))))
 (assert
- (or (<= (+ 7_x 3) 9_x) (<= (+ 7_y 10) 9_y) (<= (+ 9_x 3) 7_x) (<= (+ 9_y 13) 7_y)))
+ (= (<= (+ 0_x 6) 16_x) lr_1_17))
 (assert
- (or (<= (+ 7_x 3) 10_x) (<= (+ 7_y 10) 10_y) (<= (+ 10_x 3) 7_x) (<= (+ 10_y 14) 7_y)))
+ (= (<= (+ 0_y 3) 16_y) ud_1_17))
 (assert
- (or (<= (+ 7_x 3) 11_x) (<= (+ 7_y 10) 11_y) (<= (+ 11_x 3) 7_x) (<= (+ 11_y 17) 7_y)))
+ (= (<= (+ 16_x 3) 0_x) lr_17_1))
 (assert
- (or (<= (+ 7_x 3) 12_x) (<= (+ 7_y 10) 12_y) (<= (+ 12_x 3) 7_x) (<= (+ 12_y 18) 7_y)))
+ (= (<= (+ 16_y 5) 0_y) ud_17_1))
 (assert
- (or (<= (+ 7_x 3) 13_x) (<= (+ 7_y 10) 13_y) (<= (+ 13_x 3) 7_x) (<= (+ 13_y 19) 7_y)))
+ (or lr_1_17 lr_17_1 ud_1_17 ud_17_1))
 (assert
- (or (<= (+ 7_x 3) 14_x) (<= (+ 7_y 10) 14_y) (<= (+ 14_x 3) 7_x) (<= (+ 14_y 25) 7_y)))
+ (let (($x2453 (< makespan 8)))
+ (=> $x2453 (= ud_1_17 false))))
 (assert
- (or (<= (+ 7_x 3) 15_x) (<= (+ 7_y 10) 15_y) (<= (+ 15_x 4) 7_x) (<= (+ 15_y 5) 7_y)))
+ (let (($x2453 (< makespan 8)))
+ (=> $x2453 (= ud_17_1 false))))
 (assert
- (or (<= (+ 7_x 3) 16_x) (<= (+ 7_y 10) 16_y) (<= (+ 16_x 4) 7_x) (<= (+ 16_y 7) 7_y)))
+ (= (<= (+ 0_x 6) 17_x) lr_1_18))
 (assert
- (or (<= (+ 7_x 3) 17_x) (<= (+ 7_y 10) 17_y) (<= (+ 17_x 4) 7_x) (<= (+ 17_y 13) 7_y)))
+ (= (<= (+ 0_y 3) 17_y) ud_1_18))
 (assert
- (or (<= (+ 7_x 3) 18_x) (<= (+ 7_y 10) 18_y) (<= (+ 18_x 6) 7_x) (<= (+ 18_y 3) 7_y)))
+ (= (<= (+ 17_x 3) 0_x) lr_18_1))
 (assert
- (or (<= (+ 8_x 3) 9_x) (<= (+ 8_y 11) 9_y) (<= (+ 9_x 3) 8_x) (<= (+ 9_y 13) 8_y)))
+ (= (<= (+ 17_y 4) 0_y) ud_18_1))
 (assert
- (or (<= (+ 8_x 3) 10_x) (<= (+ 8_y 11) 10_y) (<= (+ 10_x 3) 8_x) (<= (+ 10_y 14) 8_y)))
+ (or lr_1_18 lr_18_1 ud_1_18 ud_18_1))
 (assert
- (or (<= (+ 8_x 3) 11_x) (<= (+ 8_y 11) 11_y) (<= (+ 11_x 3) 8_x) (<= (+ 11_y 17) 8_y)))
+ (let (($x5230 (< makespan 7)))
+ (=> $x5230 (= ud_1_18 false))))
 (assert
- (or (<= (+ 8_x 3) 12_x) (<= (+ 8_y 11) 12_y) (<= (+ 12_x 3) 8_x) (<= (+ 12_y 18) 8_y)))
+ (let (($x5230 (< makespan 7)))
+ (=> $x5230 (= ud_18_1 false))))
 (assert
- (or (<= (+ 8_x 3) 13_x) (<= (+ 8_y 11) 13_y) (<= (+ 13_x 3) 8_x) (<= (+ 13_y 19) 8_y)))
+ (= (<= (+ 0_x 6) 18_x) lr_1_19))
 (assert
- (or (<= (+ 8_x 3) 14_x) (<= (+ 8_y 11) 14_y) (<= (+ 14_x 3) 8_x) (<= (+ 14_y 25) 8_y)))
+ (= (<= (+ 0_y 3) 18_y) ud_1_19))
 (assert
- (or (<= (+ 8_x 3) 15_x) (<= (+ 8_y 11) 15_y) (<= (+ 15_x 4) 8_x) (<= (+ 15_y 5) 8_y)))
+ (= (<= (+ 18_x 3) 0_x) lr_19_1))
 (assert
- (or (<= (+ 8_x 3) 16_x) (<= (+ 8_y 11) 16_y) (<= (+ 16_x 4) 8_x) (<= (+ 16_y 7) 8_y)))
+ (= (<= (+ 18_y 3) 0_y) ud_19_1))
 (assert
- (or (<= (+ 8_x 3) 17_x) (<= (+ 8_y 11) 17_y) (<= (+ 17_x 4) 8_x) (<= (+ 17_y 13) 8_y)))
+ (or lr_1_19 lr_19_1 ud_1_19 ud_19_1))
 (assert
- (or (<= (+ 8_x 3) 18_x) (<= (+ 8_y 11) 18_y) (<= (+ 18_x 6) 8_x) (<= (+ 18_y 3) 8_y)))
+ (let (($x5357 (< makespan 6)))
+ (=> $x5357 (= ud_1_19 false))))
 (assert
- (or (<= (+ 9_x 3) 10_x) (<= (+ 9_y 13) 10_y) (<= (+ 10_x 3) 9_x) (<= (+ 10_y 14) 9_y)))
+ (let (($x5357 (< makespan 6)))
+ (=> $x5357 (= ud_19_1 false))))
 (assert
- (or (<= (+ 9_x 3) 11_x) (<= (+ 9_y 13) 11_y) (<= (+ 11_x 3) 9_x) (<= (+ 11_y 17) 9_y)))
+ (= (<= (+ 1_x 4) 2_x) lr_2_3))
 (assert
- (or (<= (+ 9_x 3) 12_x) (<= (+ 9_y 13) 12_y) (<= (+ 12_x 3) 9_x) (<= (+ 12_y 18) 9_y)))
+ (= (<= (+ 1_y 13) 2_y) ud_2_3))
 (assert
- (or (<= (+ 9_x 3) 13_x) (<= (+ 9_y 13) 13_y) (<= (+ 13_x 3) 9_x) (<= (+ 13_y 19) 9_y)))
+ (= (<= (+ 2_x 4) 1_x) lr_3_2))
 (assert
- (or (<= (+ 9_x 3) 14_x) (<= (+ 9_y 13) 14_y) (<= (+ 14_x 3) 9_x) (<= (+ 14_y 25) 9_y)))
+ (= (<= (+ 2_y 7) 1_y) ud_3_2))
 (assert
- (or (<= (+ 9_x 3) 15_x) (<= (+ 9_y 13) 15_y) (<= (+ 15_x 4) 9_x) (<= (+ 15_y 5) 9_y)))
+ (or lr_2_3 lr_3_2 ud_2_3 ud_3_2))
 (assert
- (or (<= (+ 9_x 3) 16_x) (<= (+ 9_y 13) 16_y) (<= (+ 16_x 4) 9_x) (<= (+ 16_y 7) 9_y)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_2_3 false))))
 (assert
- (or (<= (+ 9_x 3) 17_x) (<= (+ 9_y 13) 17_y) (<= (+ 17_x 4) 9_x) (<= (+ 17_y 13) 9_y)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_3_2 false))))
 (assert
- (or (<= (+ 9_x 3) 18_x) (<= (+ 9_y 13) 18_y) (<= (+ 18_x 6) 9_x) (<= (+ 18_y 3) 9_y)))
+ (= (<= (+ 1_x 4) 3_x) lr_2_4))
 (assert
- (or (<= (+ 10_x 3) 11_x) (<= (+ 10_y 14) 11_y) (<= (+ 11_x 3) 10_x) (<= (+ 11_y 17) 10_y)))
+ (= (<= (+ 1_y 13) 3_y) ud_2_4))
 (assert
- (or (<= (+ 10_x 3) 12_x) (<= (+ 10_y 14) 12_y) (<= (+ 12_x 3) 10_x) (<= (+ 12_y 18) 10_y)))
+ (= (<= (+ 3_x 4) 1_x) lr_4_2))
 (assert
- (or (<= (+ 10_x 3) 13_x) (<= (+ 10_y 14) 13_y) (<= (+ 13_x 3) 10_x) (<= (+ 13_y 19) 10_y)))
+ (= (<= (+ 3_y 5) 1_y) ud_4_2))
 (assert
- (or (<= (+ 10_x 3) 14_x) (<= (+ 10_y 14) 14_y) (<= (+ 14_x 3) 10_x) (<= (+ 14_y 25) 10_y)))
+ (or lr_2_4 lr_4_2 ud_2_4 ud_4_2))
 (assert
- (or (<= (+ 10_x 3) 15_x) (<= (+ 10_y 14) 15_y) (<= (+ 15_x 4) 10_x) (<= (+ 15_y 5) 10_y)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_2_4 false))))
 (assert
- (or (<= (+ 10_x 3) 16_x) (<= (+ 10_y 14) 16_y) (<= (+ 16_x 4) 10_x) (<= (+ 16_y 7) 10_y)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_4_2 false))))
 (assert
- (or (<= (+ 10_x 3) 17_x) (<= (+ 10_y 14) 17_y) (<= (+ 17_x 4) 10_x) (<= (+ 17_y 13) 10_y)))
+ (= (<= (+ 1_x 4) 4_x) lr_2_5))
 (assert
- (or (<= (+ 10_x 3) 18_x) (<= (+ 10_y 14) 18_y) (<= (+ 18_x 6) 10_x) (<= (+ 18_y 3) 10_y)))
+ (= (<= (+ 1_y 13) 4_y) ud_2_5))
 (assert
- (or (<= (+ 11_x 3) 12_x) (<= (+ 11_y 17) 12_y) (<= (+ 12_x 3) 11_x) (<= (+ 12_y 18) 11_y)))
+ (= (<= (+ 4_x 3) 1_x) lr_5_2))
 (assert
- (or (<= (+ 11_x 3) 13_x) (<= (+ 11_y 17) 13_y) (<= (+ 13_x 3) 11_x) (<= (+ 13_y 19) 11_y)))
+ (= (<= (+ 4_y 25) 1_y) ud_5_2))
 (assert
- (or (<= (+ 11_x 3) 14_x) (<= (+ 11_y 17) 14_y) (<= (+ 14_x 3) 11_x) (<= (+ 14_y 25) 11_y)))
+ (or lr_2_5 lr_5_2 ud_2_5 ud_5_2))
 (assert
- (or (<= (+ 11_x 3) 15_x) (<= (+ 11_y 17) 15_y) (<= (+ 15_x 4) 11_x) (<= (+ 15_y 5) 11_y)))
+ (let (($x2811 (= ud_2_5 false)))
+ (let (($x5724 (< makespan 38)))
+ (=> $x5724 $x2811))))
 (assert
- (or (<= (+ 11_x 3) 16_x) (<= (+ 11_y 17) 16_y) (<= (+ 16_x 4) 11_x) (<= (+ 16_y 7) 11_y)))
+ (let (($x5724 (< makespan 38)))
+ (=> $x5724 (= ud_5_2 false))))
 (assert
- (or (<= (+ 11_x 3) 17_x) (<= (+ 11_y 17) 17_y) (<= (+ 17_x 4) 11_x) (<= (+ 17_y 13) 11_y)))
+ (= (<= (+ 1_x 4) 5_x) lr_2_6))
 (assert
- (or (<= (+ 11_x 3) 18_x) (<= (+ 11_y 17) 18_y) (<= (+ 18_x 6) 11_x) (<= (+ 18_y 3) 11_y)))
+ (= (<= (+ 1_y 13) 5_y) ud_2_6))
 (assert
- (or (<= (+ 12_x 3) 13_x) (<= (+ 12_y 18) 13_y) (<= (+ 13_x 3) 12_x) (<= (+ 13_y 19) 12_y)))
+ (= (<= (+ 5_x 3) 1_x) lr_6_2))
 (assert
- (or (<= (+ 12_x 3) 14_x) (<= (+ 12_y 18) 14_y) (<= (+ 14_x 3) 12_x) (<= (+ 14_y 25) 12_y)))
+ (= (<= (+ 5_y 19) 1_y) ud_6_2))
 (assert
- (or (<= (+ 12_x 3) 15_x) (<= (+ 12_y 18) 15_y) (<= (+ 15_x 4) 12_x) (<= (+ 15_y 5) 12_y)))
+ (or lr_2_6 lr_6_2 ud_2_6 ud_6_2))
 (assert
- (or (<= (+ 12_x 3) 16_x) (<= (+ 12_y 18) 16_y) (<= (+ 16_x 4) 12_x) (<= (+ 16_y 7) 12_y)))
+ (let (($x665 (< makespan 32)))
+ (=> $x665 (= ud_2_6 false))))
 (assert
- (or (<= (+ 12_x 3) 17_x) (<= (+ 12_y 18) 17_y) (<= (+ 17_x 4) 12_x) (<= (+ 17_y 13) 12_y)))
+ (let (($x665 (< makespan 32)))
+ (=> $x665 (= ud_6_2 false))))
 (assert
- (or (<= (+ 12_x 3) 18_x) (<= (+ 12_y 18) 18_y) (<= (+ 18_x 6) 12_x) (<= (+ 18_y 3) 12_y)))
+ (= (<= (+ 1_x 4) 6_x) lr_2_7))
 (assert
- (or (<= (+ 13_x 3) 14_x) (<= (+ 13_y 19) 14_y) (<= (+ 14_x 3) 13_x) (<= (+ 14_y 25) 13_y)))
+ (= (<= (+ 1_y 13) 6_y) ud_2_7))
 (assert
- (or (<= (+ 13_x 3) 15_x) (<= (+ 13_y 19) 15_y) (<= (+ 15_x 4) 13_x) (<= (+ 15_y 5) 13_y)))
+ (= (<= (+ 6_x 3) 1_x) lr_7_2))
 (assert
- (or (<= (+ 13_x 3) 16_x) (<= (+ 13_y 19) 16_y) (<= (+ 16_x 4) 13_x) (<= (+ 16_y 7) 13_y)))
+ (= (<= (+ 6_y 18) 1_y) ud_7_2))
 (assert
- (or (<= (+ 13_x 3) 17_x) (<= (+ 13_y 19) 17_y) (<= (+ 17_x 4) 13_x) (<= (+ 17_y 13) 13_y)))
+ (or lr_2_7 lr_7_2 ud_2_7 ud_7_2))
 (assert
- (or (<= (+ 13_x 3) 18_x) (<= (+ 13_y 19) 18_y) (<= (+ 18_x 6) 13_x) (<= (+ 18_y 3) 13_y)))
+ (let (($x610 (< makespan 31)))
+ (=> $x610 (= ud_2_7 false))))
 (assert
- (or (<= (+ 14_x 3) 15_x) (<= (+ 14_y 25) 15_y) (<= (+ 15_x 4) 14_x) (<= (+ 15_y 5) 14_y)))
+ (let (($x610 (< makespan 31)))
+ (=> $x610 (= ud_7_2 false))))
 (assert
- (or (<= (+ 14_x 3) 16_x) (<= (+ 14_y 25) 16_y) (<= (+ 16_x 4) 14_x) (<= (+ 16_y 7) 14_y)))
+ (= (<= (+ 1_x 4) 7_x) lr_2_8))
 (assert
- (or (<= (+ 14_x 3) 17_x) (<= (+ 14_y 25) 17_y) (<= (+ 17_x 4) 14_x) (<= (+ 17_y 13) 14_y)))
+ (= (<= (+ 1_y 13) 7_y) ud_2_8))
 (assert
- (or (<= (+ 14_x 3) 18_x) (<= (+ 14_y 25) 18_y) (<= (+ 18_x 6) 14_x) (<= (+ 18_y 3) 14_y)))
+ (= (<= (+ 7_x 3) 1_x) lr_8_2))
 (assert
- (or (<= (+ 15_x 4) 16_x) (<= (+ 15_y 5) 16_y) (<= (+ 16_x 4) 15_x) (<= (+ 16_y 7) 15_y)))
+ (= (<= (+ 7_y 17) 1_y) ud_8_2))
 (assert
- (or (<= (+ 15_x 4) 17_x) (<= (+ 15_y 5) 17_y) (<= (+ 17_x 4) 15_x) (<= (+ 17_y 13) 15_y)))
+ (or lr_2_8 lr_8_2 ud_2_8 ud_8_2))
 (assert
- (or (<= (+ 15_x 4) 18_x) (<= (+ 15_y 5) 18_y) (<= (+ 18_x 6) 15_x) (<= (+ 18_y 3) 15_y)))
+ (let (($x2168 (< makespan 30)))
+ (=> $x2168 (= ud_2_8 false))))
 (assert
- (or (<= (+ 16_x 4) 17_x) (<= (+ 16_y 7) 17_y) (<= (+ 17_x 4) 16_x) (<= (+ 17_y 13) 16_y)))
+ (let (($x2168 (< makespan 30)))
+ (=> $x2168 (= ud_8_2 false))))
 (assert
- (or (<= (+ 16_x 4) 18_x) (<= (+ 16_y 7) 18_y) (<= (+ 18_x 6) 16_x) (<= (+ 18_y 3) 16_y)))
+ (= (<= (+ 1_x 4) 8_x) lr_2_9))
 (assert
- (or (<= (+ 17_x 4) 18_x) (<= (+ 17_y 13) 18_y) (<= (+ 18_x 6) 17_x) (<= (+ 18_y 3) 17_y)))
+ (= (<= (+ 1_y 13) 8_y) ud_2_9))
 (assert
- (let ((?x5699 (+ (ite (and (<= 0_y 0) (>= (+ 0_y 3) 0)) 3 0))))
- (<= ?x5699 25)))
+ (= (<= (+ 8_x 3) 1_x) lr_9_2))
 (assert
- (let ((?x9123 (+ (ite (and (<= 1_y 0) (>= (+ 1_y 4) 0)) 3 0))))
- (<= ?x9123 25)))
+ (= (<= (+ 8_y 14) 1_y) ud_9_2))
 (assert
- (let ((?x4466 (+ (ite (and (<= 2_y 0) (>= (+ 2_y 5) 0)) 3 0))))
- (<= ?x4466 25)))
+ (or lr_2_9 lr_9_2 ud_2_9 ud_9_2))
 (assert
- (let ((?x4648 (+ (ite (and (<= 3_y 0) (>= (+ 3_y 6) 0)) 3 0))))
- (<= ?x4648 25)))
+ (let (($x4226 (< makespan 27)))
+ (=> $x4226 (= ud_2_9 false))))
 (assert
- (let ((?x686 (+ (ite (and (<= 4_y 0) (>= (+ 4_y 7) 0)) 3 0))))
- (<= ?x686 25)))
+ (let (($x4226 (< makespan 27)))
+ (=> $x4226 (= ud_9_2 false))))
 (assert
- (let ((?x2813 (+ (ite (and (<= 5_y 0) (>= (+ 5_y 8) 0)) 3 0))))
- (<= ?x2813 25)))
+ (= (<= (+ 1_x 4) 9_x) lr_2_10))
 (assert
- (let ((?x6707 (+ (ite (and (<= 6_y 0) (>= (+ 6_y 9) 0)) 3 0))))
- (<= ?x6707 25)))
+ (= (<= (+ 1_y 13) 9_y) ud_2_10))
 (assert
- (let ((?x6521 (+ (ite (and (<= 7_y 0) (>= (+ 7_y 10) 0)) 3 0))))
- (<= ?x6521 25)))
+ (= (<= (+ 9_x 3) 1_x) lr_10_2))
 (assert
- (let ((?x2272 (+ (ite (and (<= 8_y 0) (>= (+ 8_y 11) 0)) 3 0))))
- (<= ?x2272 25)))
+ (= (<= (+ 9_y 13) 1_y) ud_10_2))
 (assert
- (let ((?x6355 (+ (ite (and (<= 9_y 0) (>= (+ 9_y 13) 0)) 3 0))))
- (<= ?x6355 25)))
+ (or lr_2_10 lr_10_2 ud_2_10 ud_10_2))
 (assert
- (let ((?x1794 (+ (ite (and (<= 10_y 0) (>= (+ 10_y 14) 0)) 3 0))))
- (<= ?x1794 25)))
+ (let (($x965 (< makespan 26)))
+ (=> $x965 (= ud_2_10 false))))
 (assert
- (let ((?x751 (+ (ite (and (<= 11_y 0) (>= (+ 11_y 17) 0)) 3 0))))
- (<= ?x751 25)))
+ (let (($x965 (< makespan 26)))
+ (=> $x965 (= ud_10_2 false))))
 (assert
- (let ((?x5792 (+ (ite (and (<= 12_y 0) (>= (+ 12_y 18) 0)) 3 0))))
- (<= ?x5792 25)))
+ (= (<= (+ 1_x 4) 10_x) lr_2_11))
 (assert
- (let ((?x9495 (+ (ite (and (<= 13_y 0) (>= (+ 13_y 19) 0)) 3 0))))
- (<= ?x9495 25)))
+ (= (<= (+ 1_y 13) 10_y) ud_2_11))
 (assert
- (let ((?x2478 (+ (ite (and (<= 14_y 0) (>= (+ 14_y 25) 0)) 3 0))))
- (<= ?x2478 25)))
+ (= (<= (+ 10_x 3) 1_x) lr_11_2))
 (assert
- (let ((?x673 (+ (ite (and (<= 15_y 0) (>= (+ 15_y 5) 0)) 4 0))))
- (<= ?x673 25)))
+ (= (<= (+ 10_y 11) 1_y) ud_11_2))
 (assert
- (let ((?x2625 (+ (ite (and (<= 16_y 0) (>= (+ 16_y 7) 0)) 4 0))))
- (<= ?x2625 25)))
+ (or lr_2_11 lr_11_2 ud_2_11 ud_11_2))
 (assert
- (let ((?x9058 (+ (ite (and (<= 17_y 0) (>= (+ 17_y 13) 0)) 4 0))))
- (<= ?x9058 25)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_2_11 false))))
 (assert
- (let ((?x5046 (+ (ite (and (<= 18_y 0) (>= (+ 18_y 3) 0)) 6 0))))
- (<= ?x5046 25)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_11_2 false))))
 (assert
- (let ((?x7349 (+ (ite (and (<= 0_y 1) (>= (+ 0_y 3) 1)) 3 0))))
- (<= ?x7349 25)))
+ (= (<= (+ 1_x 4) 11_x) lr_2_12))
 (assert
- (let ((?x6546 (+ (ite (and (<= 1_y 1) (>= (+ 1_y 4) 1)) 3 0))))
- (<= ?x6546 25)))
+ (= (<= (+ 1_y 13) 11_y) ud_2_12))
 (assert
- (let ((?x1367 (+ (ite (and (<= 2_y 1) (>= (+ 2_y 5) 1)) 3 0))))
- (<= ?x1367 25)))
+ (= (<= (+ 11_x 3) 1_x) lr_12_2))
 (assert
- (let ((?x8530 (+ (ite (and (<= 3_y 1) (>= (+ 3_y 6) 1)) 3 0))))
- (<= ?x8530 25)))
+ (= (<= (+ 11_y 10) 1_y) ud_12_2))
 (assert
- (let ((?x9630 (+ (ite (and (<= 4_y 1) (>= (+ 4_y 7) 1)) 3 0))))
- (<= ?x9630 25)))
+ (or lr_2_12 lr_12_2 ud_2_12 ud_12_2))
 (assert
- (let ((?x9584 (+ (ite (and (<= 5_y 1) (>= (+ 5_y 8) 1)) 3 0))))
- (<= ?x9584 25)))
+ (let (($x3449 (< makespan 23)))
+ (=> $x3449 (= ud_2_12 false))))
 (assert
- (let ((?x9425 (+ (ite (and (<= 6_y 1) (>= (+ 6_y 9) 1)) 3 0))))
- (<= ?x9425 25)))
+ (let (($x3449 (< makespan 23)))
+ (=> $x3449 (= ud_12_2 false))))
 (assert
- (let ((?x9379 (+ (ite (and (<= 7_y 1) (>= (+ 7_y 10) 1)) 3 0))))
- (<= ?x9379 25)))
+ (= (<= (+ 1_x 4) 12_x) lr_2_13))
 (assert
- (let ((?x9227 (+ (ite (and (<= 8_y 1) (>= (+ 8_y 11) 1)) 3 0))))
- (<= ?x9227 25)))
+ (= (<= (+ 1_y 13) 12_y) ud_2_13))
 (assert
- (let ((?x9204 (+ (ite (and (<= 9_y 1) (>= (+ 9_y 13) 1)) 3 0))))
- (<= ?x9204 25)))
+ (= (<= (+ 12_x 3) 1_x) lr_13_2))
 (assert
- (let ((?x9047 (+ (ite (and (<= 10_y 1) (>= (+ 10_y 14) 1)) 3 0))))
- (<= ?x9047 25)))
+ (= (<= (+ 12_y 9) 1_y) ud_13_2))
 (assert
- (let ((?x9024 (+ (ite (and (<= 11_y 1) (>= (+ 11_y 17) 1)) 3 0))))
- (<= ?x9024 25)))
+ (or lr_2_13 lr_13_2 ud_2_13 ud_13_2))
 (assert
- (let ((?x8984 (+ (ite (and (<= 12_y 1) (>= (+ 12_y 18) 1)) 3 0))))
- (<= ?x8984 25)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_2_13 false))))
 (assert
- (let ((?x8845 (+ (ite (and (<= 13_y 1) (>= (+ 13_y 19) 1)) 3 0))))
- (<= ?x8845 25)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_13_2 false))))
 (assert
- (let ((?x8819 (+ (ite (and (<= 14_y 1) (>= (+ 14_y 25) 1)) 3 0))))
- (<= ?x8819 25)))
+ (= (<= (+ 1_x 4) 13_x) lr_2_14))
 (assert
- (let ((?x3380 (+ (ite (and (<= 15_y 1) (>= (+ 15_y 5) 1)) 4 0))))
- (<= ?x3380 25)))
+ (= (<= (+ 1_y 13) 13_y) ud_2_14))
 (assert
- (let ((?x6969 (+ (ite (and (<= 16_y 1) (>= (+ 16_y 7) 1)) 4 0))))
- (<= ?x6969 25)))
+ (= (<= (+ 13_x 3) 1_x) lr_14_2))
 (assert
- (let ((?x6534 (+ (ite (and (<= 17_y 1) (>= (+ 17_y 13) 1)) 4 0))))
- (<= ?x6534 25)))
+ (= (<= (+ 13_y 8) 1_y) ud_14_2))
 (assert
- (let ((?x6097 (+ (ite (and (<= 18_y 1) (>= (+ 18_y 3) 1)) 6 0))))
- (<= ?x6097 25)))
+ (or lr_2_14 lr_14_2 ud_2_14 ud_14_2))
 (assert
- (let ((?x4554 (+ (ite (and (<= 0_y 2) (>= (+ 0_y 3) 2)) 3 0))))
- (<= ?x4554 25)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_2_14 false))))
 (assert
- (let ((?x12479 (+ (ite (and (<= 1_y 2) (>= (+ 1_y 4) 2)) 3 0))))
- (<= ?x12479 25)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_14_2 false))))
 (assert
- (let ((?x1506 (+ (ite (and (<= 2_y 2) (>= (+ 2_y 5) 2)) 3 0))))
- (<= ?x1506 25)))
+ (= (<= (+ 1_x 4) 14_x) lr_2_15))
 (assert
- (let ((?x8399 (+ (ite (and (<= 3_y 2) (>= (+ 3_y 6) 2)) 3 0))))
- (<= ?x8399 25)))
+ (= (<= (+ 1_y 13) 14_y) ud_2_15))
 (assert
- (let ((?x7360 (+ (ite (and (<= 4_y 2) (>= (+ 4_y 7) 2)) 3 0))))
- (<= ?x7360 25)))
+ (= (<= (+ 14_x 3) 1_x) lr_15_2))
 (assert
- (let ((?x7046 (+ (ite (and (<= 5_y 2) (>= (+ 5_y 8) 2)) 3 0))))
- (<= ?x7046 25)))
+ (= (<= (+ 14_y 7) 1_y) ud_15_2))
 (assert
- (let ((?x804 (+ (ite (and (<= 6_y 2) (>= (+ 6_y 9) 2)) 3 0))))
- (<= ?x804 25)))
+ (or lr_2_15 lr_15_2 ud_2_15 ud_15_2))
 (assert
- (let ((?x3778 (+ (ite (and (<= 7_y 2) (>= (+ 7_y 10) 2)) 3 0))))
- (<= ?x3778 25)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_2_15 false))))
 (assert
- (let ((?x366 (+ (ite (and (<= 8_y 2) (>= (+ 8_y 11) 2)) 3 0))))
- (<= ?x366 25)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_15_2 false))))
 (assert
- (let ((?x117 (+ (ite (and (<= 9_y 2) (>= (+ 9_y 13) 2)) 3 0))))
- (<= ?x117 25)))
+ (= (<= (+ 1_x 4) 15_x) lr_2_16))
 (assert
- (let ((?x6258 (+ (ite (and (<= 10_y 2) (>= (+ 10_y 14) 2)) 3 0))))
- (<= ?x6258 25)))
+ (= (<= (+ 1_y 13) 15_y) ud_2_16))
 (assert
- (let ((?x5073 (+ (ite (and (<= 11_y 2) (>= (+ 11_y 17) 2)) 3 0))))
- (<= ?x5073 25)))
+ (= (<= (+ 15_x 3) 1_x) lr_16_2))
 (assert
- (let ((?x3092 (+ (ite (and (<= 12_y 2) (>= (+ 12_y 18) 2)) 3 0))))
- (<= ?x3092 25)))
+ (= (<= (+ 15_y 6) 1_y) ud_16_2))
 (assert
- (let ((?x3023 (+ (ite (and (<= 13_y 2) (>= (+ 13_y 19) 2)) 3 0))))
- (<= ?x3023 25)))
+ (or lr_2_16 lr_16_2 ud_2_16 ud_16_2))
 (assert
- (let ((?x7258 (+ (ite (and (<= 14_y 2) (>= (+ 14_y 25) 2)) 3 0))))
- (<= ?x7258 25)))
+ (let (($x1260 (< makespan 19)))
+ (=> $x1260 (= ud_2_16 false))))
 (assert
- (let ((?x6943 (+ (ite (and (<= 15_y 2) (>= (+ 15_y 5) 2)) 4 0))))
- (<= ?x6943 25)))
+ (let (($x1260 (< makespan 19)))
+ (=> $x1260 (= ud_16_2 false))))
 (assert
- (let ((?x435 (+ (ite (and (<= 16_y 2) (>= (+ 16_y 7) 2)) 4 0))))
- (<= ?x435 25)))
+ (= (<= (+ 1_x 4) 16_x) lr_2_17))
 (assert
- (let ((?x3120 (+ (ite (and (<= 17_y 2) (>= (+ 17_y 13) 2)) 4 0))))
- (<= ?x3120 25)))
+ (= (<= (+ 1_y 13) 16_y) ud_2_17))
 (assert
- (let ((?x4798 (+ (ite (and (<= 18_y 2) (>= (+ 18_y 3) 2)) 6 0))))
- (<= ?x4798 25)))
+ (= (<= (+ 16_x 3) 1_x) lr_17_2))
 (assert
- (let ((?x8375 (+ (ite (and (<= 0_y 3) (>= (+ 0_y 3) 3)) 3 0))))
- (<= ?x8375 25)))
+ (= (<= (+ 16_y 5) 1_y) ud_17_2))
 (assert
- (let ((?x6254 (+ (ite (and (<= 1_y 3) (>= (+ 1_y 4) 3)) 3 0))))
- (<= ?x6254 25)))
+ (or lr_2_17 lr_17_2 ud_2_17 ud_17_2))
 (assert
- (let ((?x5879 (+ (ite (and (<= 2_y 3) (>= (+ 2_y 5) 3)) 3 0))))
- (<= ?x5879 25)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_2_17 false))))
 (assert
- (let ((?x4882 (+ (ite (and (<= 3_y 3) (>= (+ 3_y 6) 3)) 3 0))))
- (<= ?x4882 25)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_17_2 false))))
 (assert
- (let ((?x89 (+ (ite (and (<= 4_y 3) (>= (+ 4_y 7) 3)) 3 0))))
- (<= ?x89 25)))
+ (= (<= (+ 1_x 4) 17_x) lr_2_18))
 (assert
- (let ((?x4271 (+ (ite (and (<= 5_y 3) (>= (+ 5_y 8) 3)) 3 0))))
- (<= ?x4271 25)))
+ (= (<= (+ 1_y 13) 17_y) ud_2_18))
 (assert
- (let ((?x3370 (+ (ite (and (<= 6_y 3) (>= (+ 6_y 9) 3)) 3 0))))
- (<= ?x3370 25)))
+ (= (<= (+ 17_x 3) 1_x) lr_18_2))
 (assert
- (let ((?x5051 (+ (ite (and (<= 7_y 3) (>= (+ 7_y 10) 3)) 3 0))))
- (<= ?x5051 25)))
+ (= (<= (+ 17_y 4) 1_y) ud_18_2))
 (assert
- (let ((?x8433 (+ (ite (and (<= 8_y 3) (>= (+ 8_y 11) 3)) 3 0))))
- (<= ?x8433 25)))
+ (or lr_2_18 lr_18_2 ud_2_18 ud_18_2))
 (assert
- (let ((?x8035 (+ (ite (and (<= 9_y 3) (>= (+ 9_y 13) 3)) 3 0))))
- (<= ?x8035 25)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_2_18 false))))
 (assert
- (let ((?x6756 (+ (ite (and (<= 10_y 3) (>= (+ 10_y 14) 3)) 3 0))))
- (<= ?x6756 25)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_18_2 false))))
 (assert
- (let ((?x6412 (+ (ite (and (<= 11_y 3) (>= (+ 11_y 17) 3)) 3 0))))
- (<= ?x6412 25)))
+ (= (<= (+ 1_x 4) 18_x) lr_2_19))
 (assert
- (let ((?x3629 (+ (ite (and (<= 12_y 3) (>= (+ 12_y 18) 3)) 3 0))))
- (<= ?x3629 25)))
+ (= (<= (+ 1_y 13) 18_y) ud_2_19))
 (assert
- (let ((?x4045 (+ (ite (and (<= 13_y 3) (>= (+ 13_y 19) 3)) 3 0))))
- (<= ?x4045 25)))
+ (= (<= (+ 18_x 3) 1_x) lr_19_2))
 (assert
- (let ((?x4683 (+ (ite (and (<= 14_y 3) (>= (+ 14_y 25) 3)) 3 0))))
- (<= ?x4683 25)))
+ (= (<= (+ 18_y 3) 1_y) ud_19_2))
 (assert
- (let ((?x5213 (+ (ite (and (<= 15_y 3) (>= (+ 15_y 5) 3)) 4 0))))
- (<= ?x5213 25)))
+ (or lr_2_19 lr_19_2 ud_2_19 ud_19_2))
 (assert
- (let ((?x5376 (+ (ite (and (<= 16_y 3) (>= (+ 16_y 7) 3)) 4 0))))
- (<= ?x5376 25)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_2_19 false))))
 (assert
- (let ((?x8582 (+ (ite (and (<= 17_y 3) (>= (+ 17_y 13) 3)) 4 0))))
- (<= ?x8582 25)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_19_2 false))))
 (assert
- (let ((?x8616 (+ (ite (and (<= 18_y 3) (>= (+ 18_y 3) 3)) 6 0))))
- (<= ?x8616 25)))
+ (= (<= (+ 2_x 4) 3_x) lr_3_4))
 (assert
- (let ((?x8752 (+ (ite (and (<= 0_y 4) (>= (+ 0_y 3) 4)) 3 0))))
- (<= ?x8752 25)))
+ (= (<= (+ 2_y 7) 3_y) ud_3_4))
 (assert
- (let ((?x6539 (+ (ite (and (<= 1_y 4) (>= (+ 1_y 4) 4)) 3 0))))
- (<= ?x6539 25)))
+ (= (<= (+ 3_x 4) 2_x) lr_4_3))
 (assert
- (let ((?x1300 (+ (ite (and (<= 2_y 4) (>= (+ 2_y 5) 4)) 3 0))))
- (<= ?x1300 25)))
+ (= (<= (+ 3_y 5) 2_y) ud_4_3))
 (assert
- (let ((?x608 (+ (ite (and (<= 3_y 4) (>= (+ 3_y 6) 4)) 3 0))))
- (<= ?x608 25)))
+ (or lr_3_4 lr_4_3 ud_3_4 ud_4_3))
 (assert
- (let ((?x7129 (+ (ite (and (<= 4_y 4) (>= (+ 4_y 7) 4)) 3 0))))
- (<= ?x7129 25)))
+ (let (($x4625 (< makespan 12)))
+ (=> $x4625 (= ud_3_4 false))))
 (assert
- (let ((?x8237 (+ (ite (and (<= 5_y 4) (>= (+ 5_y 8) 4)) 3 0))))
- (<= ?x8237 25)))
+ (let (($x4625 (< makespan 12)))
+ (=> $x4625 (= ud_4_3 false))))
 (assert
- (let ((?x2122 (+ (ite (and (<= 6_y 4) (>= (+ 6_y 9) 4)) 3 0))))
- (<= ?x2122 25)))
+ (= (<= (+ 2_x 4) 4_x) lr_3_5))
 (assert
- (let ((?x6094 (+ (ite (and (<= 7_y 4) (>= (+ 7_y 10) 4)) 3 0))))
- (<= ?x6094 25)))
+ (= (<= (+ 2_y 7) 4_y) ud_3_5))
 (assert
- (let ((?x1939 (+ (ite (and (<= 8_y 4) (>= (+ 8_y 11) 4)) 3 0))))
- (<= ?x1939 25)))
+ (= (<= (+ 4_x 3) 2_x) lr_5_3))
 (assert
- (let ((?x5590 (+ (ite (and (<= 9_y 4) (>= (+ 9_y 13) 4)) 3 0))))
- (<= ?x5590 25)))
+ (= (<= (+ 4_y 25) 2_y) ud_5_3))
 (assert
- (let ((?x1964 (+ (ite (and (<= 10_y 4) (>= (+ 10_y 14) 4)) 3 0))))
- (<= ?x1964 25)))
+ (or lr_3_5 lr_5_3 ud_3_5 ud_5_3))
 (assert
- (let ((?x241 (+ (ite (and (<= 11_y 4) (>= (+ 11_y 17) 4)) 3 0))))
- (<= ?x241 25)))
+ (let (($x3728 (= ud_3_5 false)))
+ (let (($x665 (< makespan 32)))
+ (=> $x665 $x3728))))
 (assert
- (let ((?x1109 (+ (ite (and (<= 12_y 4) (>= (+ 12_y 18) 4)) 3 0))))
- (<= ?x1109 25)))
+ (let (($x665 (< makespan 32)))
+ (=> $x665 (= ud_5_3 false))))
 (assert
- (let ((?x4372 (+ (ite (and (<= 13_y 4) (>= (+ 13_y 19) 4)) 3 0))))
- (<= ?x4372 25)))
+ (= (<= (+ 2_x 4) 5_x) lr_3_6))
 (assert
- (let ((?x515 (+ (ite (and (<= 14_y 4) (>= (+ 14_y 25) 4)) 3 0))))
- (<= ?x515 25)))
+ (= (<= (+ 2_y 7) 5_y) ud_3_6))
 (assert
- (let ((?x3607 (+ (ite (and (<= 15_y 4) (>= (+ 15_y 5) 4)) 4 0))))
- (<= ?x3607 25)))
+ (= (<= (+ 5_x 3) 2_x) lr_6_3))
 (assert
- (let ((?x5425 (+ (ite (and (<= 16_y 4) (>= (+ 16_y 7) 4)) 4 0))))
- (<= ?x5425 25)))
+ (= (<= (+ 5_y 19) 2_y) ud_6_3))
 (assert
- (let ((?x8427 (+ (ite (and (<= 17_y 4) (>= (+ 17_y 13) 4)) 4 0))))
- (<= ?x8427 25)))
+ (or lr_3_6 lr_6_3 ud_3_6 ud_6_3))
 (assert
- (let ((?x364 (+ (ite (and (<= 18_y 4) (>= (+ 18_y 3) 4)) 6 0))))
- (<= ?x364 25)))
+ (let (($x965 (< makespan 26)))
+ (=> $x965 (= ud_3_6 false))))
 (assert
- (let ((?x2115 (+ (ite (and (<= 0_y 5) (>= (+ 0_y 3) 5)) 3 0))))
- (<= ?x2115 25)))
+ (let (($x965 (< makespan 26)))
+ (=> $x965 (= ud_6_3 false))))
 (assert
- (let ((?x928 (+ (ite (and (<= 1_y 5) (>= (+ 1_y 4) 5)) 3 0))))
- (<= ?x928 25)))
+ (= (<= (+ 2_x 4) 6_x) lr_3_7))
 (assert
- (let ((?x5448 (+ (ite (and (<= 2_y 5) (>= (+ 2_y 5) 5)) 3 0))))
- (<= ?x5448 25)))
+ (= (<= (+ 2_y 7) 6_y) ud_3_7))
 (assert
- (let ((?x4861 (+ (ite (and (<= 3_y 5) (>= (+ 3_y 6) 5)) 3 0))))
- (<= ?x4861 25)))
+ (= (<= (+ 6_x 3) 2_x) lr_7_3))
 (assert
- (let ((?x155 (+ (ite (and (<= 4_y 5) (>= (+ 4_y 7) 5)) 3 0))))
- (<= ?x155 25)))
+ (= (<= (+ 6_y 18) 2_y) ud_7_3))
 (assert
- (let ((?x1082 (+ (ite (and (<= 5_y 5) (>= (+ 5_y 8) 5)) 3 0))))
- (<= ?x1082 25)))
+ (or lr_3_7 lr_7_3 ud_3_7 ud_7_3))
 (assert
- (let ((?x510 (+ (ite (and (<= 6_y 5) (>= (+ 6_y 9) 5)) 3 0))))
- (<= ?x510 25)))
+ (let (($x3537 (< makespan 25)))
+ (=> $x3537 (= ud_3_7 false))))
 (assert
- (let ((?x1759 (+ (ite (and (<= 7_y 5) (>= (+ 7_y 10) 5)) 3 0))))
- (<= ?x1759 25)))
+ (let (($x3537 (< makespan 25)))
+ (=> $x3537 (= ud_7_3 false))))
 (assert
- (let ((?x2019 (+ (ite (and (<= 8_y 5) (>= (+ 8_y 11) 5)) 3 0))))
- (<= ?x2019 25)))
+ (= (<= (+ 2_x 4) 7_x) lr_3_8))
 (assert
- (let ((?x651 (+ (ite (and (<= 9_y 5) (>= (+ 9_y 13) 5)) 3 0))))
- (<= ?x651 25)))
+ (= (<= (+ 2_y 7) 7_y) ud_3_8))
 (assert
- (let ((?x3184 (+ (ite (and (<= 10_y 5) (>= (+ 10_y 14) 5)) 3 0))))
- (<= ?x3184 25)))
+ (= (<= (+ 7_x 3) 2_x) lr_8_3))
 (assert
- (let ((?x3094 (+ (ite (and (<= 11_y 5) (>= (+ 11_y 17) 5)) 3 0))))
- (<= ?x3094 25)))
+ (= (<= (+ 7_y 17) 2_y) ud_8_3))
 (assert
- (let ((?x7594 (+ (ite (and (<= 12_y 5) (>= (+ 12_y 18) 5)) 3 0))))
- (<= ?x7594 25)))
+ (or lr_3_8 lr_8_3 ud_3_8 ud_8_3))
 (assert
- (let ((?x7090 (+ (ite (and (<= 13_y 5) (>= (+ 13_y 19) 5)) 3 0))))
- (<= ?x7090 25)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_3_8 false))))
 (assert
- (let ((?x6132 (+ (ite (and (<= 14_y 5) (>= (+ 14_y 25) 5)) 3 0))))
- (<= ?x6132 25)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_8_3 false))))
 (assert
- (let ((?x6307 (+ (ite (and (<= 15_y 5) (>= (+ 15_y 5) 5)) 4 0))))
- (<= ?x6307 25)))
+ (= (<= (+ 2_x 4) 8_x) lr_3_9))
 (assert
- (let ((?x4958 (+ (ite (and (<= 16_y 5) (>= (+ 16_y 7) 5)) 4 0))))
- (<= ?x4958 25)))
+ (= (<= (+ 2_y 7) 8_y) ud_3_9))
 (assert
- (let ((?x4997 (+ (ite (and (<= 17_y 5) (>= (+ 17_y 13) 5)) 4 0))))
- (<= ?x4997 25)))
+ (= (<= (+ 8_x 3) 2_x) lr_9_3))
 (assert
- (let ((?x2590 (+ (ite (and (<= 18_y 5) (>= (+ 18_y 3) 5)) 6 0))))
- (<= ?x2590 25)))
+ (= (<= (+ 8_y 14) 2_y) ud_9_3))
 (assert
- (let ((?x2135 (+ (ite (and (<= 0_y 6) (>= (+ 0_y 3) 6)) 3 0))))
- (<= ?x2135 25)))
+ (or lr_3_9 lr_9_3 ud_3_9 ud_9_3))
 (assert
- (let ((?x3164 (+ (ite (and (<= 1_y 6) (>= (+ 1_y 4) 6)) 3 0))))
- (<= ?x3164 25)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_3_9 false))))
 (assert
- (let ((?x8134 (+ (ite (and (<= 2_y 6) (>= (+ 2_y 5) 6)) 3 0))))
- (<= ?x8134 25)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_9_3 false))))
 (assert
- (let ((?x7692 (+ (ite (and (<= 3_y 6) (>= (+ 3_y 6) 6)) 3 0))))
- (<= ?x7692 25)))
+ (= (<= (+ 2_x 4) 9_x) lr_3_10))
 (assert
- (let ((?x7295 (+ (ite (and (<= 4_y 6) (>= (+ 4_y 7) 6)) 3 0))))
- (<= ?x7295 25)))
+ (= (<= (+ 2_y 7) 9_y) ud_3_10))
 (assert
- (let ((?x7216 (+ (ite (and (<= 5_y 6) (>= (+ 5_y 8) 6)) 3 0))))
- (<= ?x7216 25)))
+ (= (<= (+ 9_x 3) 2_x) lr_10_3))
 (assert
- (let ((?x5972 (+ (ite (and (<= 6_y 6) (>= (+ 6_y 9) 6)) 3 0))))
- (<= ?x5972 25)))
+ (= (<= (+ 9_y 13) 2_y) ud_10_3))
 (assert
- (let ((?x122 (+ (ite (and (<= 7_y 6) (>= (+ 7_y 10) 6)) 3 0))))
- (<= ?x122 25)))
+ (or lr_3_10 lr_10_3 ud_3_10 ud_10_3))
 (assert
- (let ((?x3884 (+ (ite (and (<= 8_y 6) (>= (+ 8_y 11) 6)) 3 0))))
- (<= ?x3884 25)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_3_10 false))))
 (assert
- (let ((?x2164 (+ (ite (and (<= 9_y 6) (>= (+ 9_y 13) 6)) 3 0))))
- (<= ?x2164 25)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_10_3 false))))
 (assert
- (let ((?x5847 (+ (ite (and (<= 10_y 6) (>= (+ 10_y 14) 6)) 3 0))))
- (<= ?x5847 25)))
+ (= (<= (+ 2_x 4) 10_x) lr_3_11))
 (assert
- (let ((?x3789 (+ (ite (and (<= 11_y 6) (>= (+ 11_y 17) 6)) 3 0))))
- (<= ?x3789 25)))
+ (= (<= (+ 2_y 7) 10_y) ud_3_11))
 (assert
- (let ((?x2709 (+ (ite (and (<= 12_y 6) (>= (+ 12_y 18) 6)) 3 0))))
- (<= ?x2709 25)))
+ (= (<= (+ 10_x 3) 2_x) lr_11_3))
 (assert
- (let ((?x236 (+ (ite (and (<= 13_y 6) (>= (+ 13_y 19) 6)) 3 0))))
- (<= ?x236 25)))
+ (= (<= (+ 10_y 11) 2_y) ud_11_3))
 (assert
- (let ((?x1533 (+ (ite (and (<= 14_y 6) (>= (+ 14_y 25) 6)) 3 0))))
- (<= ?x1533 25)))
+ (or lr_3_11 lr_11_3 ud_3_11 ud_11_3))
 (assert
- (let ((?x4850 (+ (ite (and (<= 15_y 6) (>= (+ 15_y 5) 6)) 4 0))))
- (<= ?x4850 25)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_3_11 false))))
 (assert
- (let ((?x3869 (+ (ite (and (<= 16_y 6) (>= (+ 16_y 7) 6)) 4 0))))
- (<= ?x3869 25)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_11_3 false))))
 (assert
- (let ((?x3624 (+ (ite (and (<= 17_y 6) (>= (+ 17_y 13) 6)) 4 0))))
- (<= ?x3624 25)))
+ (= (<= (+ 2_x 4) 11_x) lr_3_12))
 (assert
- (let ((?x2090 (+ (ite (and (<= 18_y 6) (>= (+ 18_y 3) 6)) 6 0))))
- (<= ?x2090 25)))
+ (= (<= (+ 2_y 7) 11_y) ud_3_12))
 (assert
- (let ((?x3845 (+ (ite (and (<= 0_y 7) (>= (+ 0_y 3) 7)) 3 0))))
- (<= ?x3845 25)))
+ (= (<= (+ 11_x 3) 2_x) lr_12_3))
 (assert
- (let ((?x8225 (+ (ite (and (<= 1_y 7) (>= (+ 1_y 4) 7)) 3 0))))
- (<= ?x8225 25)))
+ (= (<= (+ 11_y 10) 2_y) ud_12_3))
 (assert
- (let ((?x7996 (+ (ite (and (<= 2_y 7) (>= (+ 2_y 5) 7)) 3 0))))
- (<= ?x7996 25)))
+ (or lr_3_12 lr_12_3 ud_3_12 ud_12_3))
 (assert
- (let ((?x7388 (+ (ite (and (<= 3_y 7) (>= (+ 3_y 6) 7)) 3 0))))
- (<= ?x7388 25)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_3_12 false))))
 (assert
- (let ((?x7254 (+ (ite (and (<= 4_y 7) (>= (+ 4_y 7) 7)) 3 0))))
- (<= ?x7254 25)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_12_3 false))))
 (assert
- (let ((?x6957 (+ (ite (and (<= 5_y 7) (>= (+ 5_y 8) 7)) 3 0))))
- (<= ?x6957 25)))
+ (= (<= (+ 2_x 4) 12_x) lr_3_13))
 (assert
- (let ((?x6789 (+ (ite (and (<= 6_y 7) (>= (+ 6_y 9) 7)) 3 0))))
- (<= ?x6789 25)))
+ (= (<= (+ 2_y 7) 12_y) ud_3_13))
 (assert
- (let ((?x6233 (+ (ite (and (<= 7_y 7) (>= (+ 7_y 10) 7)) 3 0))))
- (<= ?x6233 25)))
+ (= (<= (+ 12_x 3) 2_x) lr_13_3))
 (assert
- (let ((?x5941 (+ (ite (and (<= 8_y 7) (>= (+ 8_y 11) 7)) 3 0))))
- (<= ?x5941 25)))
+ (= (<= (+ 12_y 9) 2_y) ud_13_3))
 (assert
- (let ((?x358 (+ (ite (and (<= 9_y 7) (>= (+ 9_y 13) 7)) 3 0))))
- (<= ?x358 25)))
+ (or lr_3_13 lr_13_3 ud_3_13 ud_13_3))
 (assert
- (let ((?x302 (+ (ite (and (<= 10_y 7) (>= (+ 10_y 14) 7)) 3 0))))
- (<= ?x302 25)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_3_13 false))))
 (assert
- (let ((?x3502 (+ (ite (and (<= 11_y 7) (>= (+ 11_y 17) 7)) 3 0))))
- (<= ?x3502 25)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_13_3 false))))
 (assert
- (let ((?x3621 (+ (ite (and (<= 12_y 7) (>= (+ 12_y 18) 7)) 3 0))))
- (<= ?x3621 25)))
+ (= (<= (+ 2_x 4) 13_x) lr_3_14))
 (assert
- (let ((?x5608 (+ (ite (and (<= 13_y 7) (>= (+ 13_y 19) 7)) 3 0))))
- (<= ?x5608 25)))
+ (= (<= (+ 2_y 7) 13_y) ud_3_14))
 (assert
- (let ((?x4188 (+ (ite (and (<= 14_y 7) (>= (+ 14_y 25) 7)) 3 0))))
- (<= ?x4188 25)))
+ (= (<= (+ 13_x 3) 2_x) lr_14_3))
 (assert
- (let ((?x4788 (+ (ite (and (<= 15_y 7) (>= (+ 15_y 5) 7)) 4 0))))
- (<= ?x4788 25)))
+ (= (<= (+ 13_y 8) 2_y) ud_14_3))
 (assert
- (let ((?x4885 (+ (ite (and (<= 16_y 7) (>= (+ 16_y 7) 7)) 4 0))))
- (<= ?x4885 25)))
+ (or lr_3_14 lr_14_3 ud_3_14 ud_14_3))
 (assert
- (let ((?x5112 (+ (ite (and (<= 17_y 7) (>= (+ 17_y 13) 7)) 4 0))))
- (<= ?x5112 25)))
+ (let (($x3447 (< makespan 15)))
+ (=> $x3447 (= ud_3_14 false))))
 (assert
- (let ((?x5268 (+ (ite (and (<= 18_y 7) (>= (+ 18_y 3) 7)) 6 0))))
- (<= ?x5268 25)))
+ (let (($x3447 (< makespan 15)))
+ (=> $x3447 (= ud_14_3 false))))
 (assert
- (let ((?x1715 (+ (ite (and (<= 0_y 8) (>= (+ 0_y 3) 8)) 3 0))))
- (<= ?x1715 25)))
+ (= (<= (+ 2_x 4) 14_x) lr_3_15))
 (assert
- (let ((?x1346 (+ (ite (and (<= 1_y 8) (>= (+ 1_y 4) 8)) 3 0))))
- (<= ?x1346 25)))
+ (= (<= (+ 2_y 7) 14_y) ud_3_15))
 (assert
- (let ((?x2933 (+ (ite (and (<= 2_y 8) (>= (+ 2_y 5) 8)) 3 0))))
- (<= ?x2933 25)))
+ (= (<= (+ 14_x 3) 2_x) lr_15_3))
 (assert
- (let ((?x1972 (+ (ite (and (<= 3_y 8) (>= (+ 3_y 6) 8)) 3 0))))
- (<= ?x1972 25)))
+ (= (<= (+ 14_y 7) 2_y) ud_15_3))
 (assert
- (let ((?x2174 (+ (ite (and (<= 4_y 8) (>= (+ 4_y 7) 8)) 3 0))))
- (<= ?x2174 25)))
+ (or lr_3_15 lr_15_3 ud_3_15 ud_15_3))
 (assert
- (let ((?x2594 (+ (ite (and (<= 5_y 8) (>= (+ 5_y 8) 8)) 3 0))))
- (<= ?x2594 25)))
+ (let (($x4364 (< makespan 14)))
+ (=> $x4364 (= ud_3_15 false))))
 (assert
- (let ((?x3300 (+ (ite (and (<= 6_y 8) (>= (+ 6_y 9) 8)) 3 0))))
- (<= ?x3300 25)))
+ (let (($x4364 (< makespan 14)))
+ (=> $x4364 (= ud_15_3 false))))
 (assert
- (let ((?x478 (+ (ite (and (<= 7_y 8) (>= (+ 7_y 10) 8)) 3 0))))
- (<= ?x478 25)))
+ (= (<= (+ 2_x 4) 15_x) lr_3_16))
 (assert
- (let ((?x277 (+ (ite (and (<= 8_y 8) (>= (+ 8_y 11) 8)) 3 0))))
- (<= ?x277 25)))
+ (= (<= (+ 2_y 7) 15_y) ud_3_16))
 (assert
- (let ((?x1150 (+ (ite (and (<= 9_y 8) (>= (+ 9_y 13) 8)) 3 0))))
- (<= ?x1150 25)))
+ (= (<= (+ 15_x 3) 2_x) lr_16_3))
 (assert
- (let ((?x1251 (+ (ite (and (<= 10_y 8) (>= (+ 10_y 14) 8)) 3 0))))
- (<= ?x1251 25)))
+ (= (<= (+ 15_y 6) 2_y) ud_16_3))
 (assert
- (let ((?x1469 (+ (ite (and (<= 11_y 8) (>= (+ 11_y 17) 8)) 3 0))))
- (<= ?x1469 25)))
+ (or lr_3_16 lr_16_3 ud_3_16 ud_16_3))
 (assert
- (let ((?x1585 (+ (ite (and (<= 12_y 8) (>= (+ 12_y 18) 8)) 3 0))))
- (<= ?x1585 25)))
+ (let (($x4485 (< makespan 13)))
+ (=> $x4485 (= ud_3_16 false))))
 (assert
- (let ((?x1998 (+ (ite (and (<= 13_y 8) (>= (+ 13_y 19) 8)) 3 0))))
- (<= ?x1998 25)))
+ (let (($x4485 (< makespan 13)))
+ (=> $x4485 (= ud_16_3 false))))
 (assert
- (let ((?x2142 (+ (ite (and (<= 14_y 8) (>= (+ 14_y 25) 8)) 3 0))))
- (<= ?x2142 25)))
+ (= (<= (+ 2_x 4) 16_x) lr_3_17))
 (assert
- (let ((?x2373 (+ (ite (and (<= 15_y 8) (>= (+ 15_y 5) 8)) 4 0))))
- (<= ?x2373 25)))
+ (= (<= (+ 2_y 7) 16_y) ud_3_17))
 (assert
- (let ((?x2412 (+ (ite (and (<= 16_y 8) (>= (+ 16_y 7) 8)) 4 0))))
- (<= ?x2412 25)))
+ (= (<= (+ 16_x 3) 2_x) lr_17_3))
 (assert
- (let ((?x853 (+ (ite (and (<= 17_y 8) (>= (+ 17_y 13) 8)) 4 0))))
- (<= ?x853 25)))
+ (= (<= (+ 16_y 5) 2_y) ud_17_3))
 (assert
- (let ((?x2855 (+ (ite (and (<= 18_y 8) (>= (+ 18_y 3) 8)) 6 0))))
- (<= ?x2855 25)))
+ (or lr_3_17 lr_17_3 ud_3_17 ud_17_3))
 (assert
- (let ((?x3640 (+ (ite (and (<= 0_y 9) (>= (+ 0_y 3) 9)) 3 0))))
- (<= ?x3640 25)))
+ (let (($x4625 (< makespan 12)))
+ (=> $x4625 (= ud_3_17 false))))
 (assert
- (let ((?x5635 (+ (ite (and (<= 1_y 9) (>= (+ 1_y 4) 9)) 3 0))))
- (<= ?x5635 25)))
+ (let (($x4625 (< makespan 12)))
+ (=> $x4625 (= ud_17_3 false))))
 (assert
- (let ((?x4316 (+ (ite (and (<= 2_y 9) (>= (+ 2_y 5) 9)) 3 0))))
- (<= ?x4316 25)))
+ (= (<= (+ 2_x 4) 17_x) lr_3_18))
 (assert
- (let ((?x9537 (+ (ite (and (<= 3_y 9) (>= (+ 3_y 6) 9)) 3 0))))
- (<= ?x9537 25)))
+ (= (<= (+ 2_y 7) 17_y) ud_3_18))
 (assert
- (let ((?x1126 (+ (ite (and (<= 4_y 9) (>= (+ 4_y 7) 9)) 3 0))))
- (<= ?x1126 25)))
+ (= (<= (+ 17_x 3) 2_x) lr_18_3))
 (assert
- (let ((?x4999 (+ (ite (and (<= 5_y 9) (>= (+ 5_y 8) 9)) 3 0))))
- (<= ?x4999 25)))
+ (= (<= (+ 17_y 4) 2_y) ud_18_3))
 (assert
- (let ((?x4921 (+ (ite (and (<= 6_y 9) (>= (+ 6_y 9) 9)) 3 0))))
- (<= ?x4921 25)))
+ (or lr_3_18 lr_18_3 ud_3_18 ud_18_3))
 (assert
- (let ((?x40 (+ (ite (and (<= 7_y 9) (>= (+ 7_y 10) 9)) 3 0))))
- (<= ?x40 25)))
+ (let (($x4767 (< makespan 11)))
+ (=> $x4767 (= ud_3_18 false))))
 (assert
- (let ((?x5158 (+ (ite (and (<= 8_y 9) (>= (+ 8_y 11) 9)) 3 0))))
- (<= ?x5158 25)))
+ (let (($x4767 (< makespan 11)))
+ (=> $x4767 (= ud_18_3 false))))
 (assert
- (let ((?x864 (+ (ite (and (<= 9_y 9) (>= (+ 9_y 13) 9)) 3 0))))
- (<= ?x864 25)))
+ (= (<= (+ 2_x 4) 18_x) lr_3_19))
 (assert
- (let ((?x3027 (+ (ite (and (<= 10_y 9) (>= (+ 10_y 14) 9)) 3 0))))
- (<= ?x3027 25)))
+ (= (<= (+ 2_y 7) 18_y) ud_3_19))
 (assert
- (let ((?x8348 (+ (ite (and (<= 11_y 9) (>= (+ 11_y 17) 9)) 3 0))))
- (<= ?x8348 25)))
+ (= (<= (+ 18_x 3) 2_x) lr_19_3))
 (assert
- (let ((?x7420 (+ (ite (and (<= 12_y 9) (>= (+ 12_y 18) 9)) 3 0))))
- (<= ?x7420 25)))
+ (= (<= (+ 18_y 3) 2_y) ud_19_3))
 (assert
- (let ((?x7467 (+ (ite (and (<= 13_y 9) (>= (+ 13_y 19) 9)) 3 0))))
- (<= ?x7467 25)))
+ (or lr_3_19 lr_19_3 ud_3_19 ud_19_3))
 (assert
- (let ((?x6827 (+ (ite (and (<= 14_y 9) (>= (+ 14_y 25) 9)) 3 0))))
- (<= ?x6827 25)))
+ (let (($x2994 (< makespan 10)))
+ (=> $x2994 (= ud_3_19 false))))
 (assert
- (let ((?x6746 (+ (ite (and (<= 15_y 9) (>= (+ 15_y 5) 9)) 4 0))))
- (<= ?x6746 25)))
+ (let (($x2994 (< makespan 10)))
+ (=> $x2994 (= ud_19_3 false))))
 (assert
- (let ((?x8198 (+ (ite (and (<= 16_y 9) (>= (+ 16_y 7) 9)) 4 0))))
- (<= ?x8198 25)))
+ (= (<= (+ 3_x 4) 4_x) lr_4_5))
 (assert
- (let ((?x62 (+ (ite (and (<= 17_y 9) (>= (+ 17_y 13) 9)) 4 0))))
- (<= ?x62 25)))
+ (= (<= (+ 3_y 5) 4_y) ud_4_5))
 (assert
- (let ((?x4285 (+ (ite (and (<= 18_y 9) (>= (+ 18_y 3) 9)) 6 0))))
- (<= ?x4285 25)))
+ (= (<= (+ 4_x 3) 3_x) lr_5_4))
 (assert
- (let ((?x6393 (+ (ite (and (<= 0_y 10) (>= (+ 0_y 3) 10)) 3 0))))
- (<= ?x6393 25)))
+ (= (<= (+ 4_y 25) 3_y) ud_5_4))
 (assert
- (let ((?x5003 (+ (ite (and (<= 1_y 10) (>= (+ 1_y 4) 10)) 3 0))))
- (<= ?x5003 25)))
+ (or lr_4_5 lr_5_4 ud_4_5 ud_5_4))
 (assert
- (let ((?x4414 (+ (ite (and (<= 2_y 10) (>= (+ 2_y 5) 10)) 3 0))))
- (<= ?x4414 25)))
+ (let (($x1803 (= ud_4_5 false)))
+ (let (($x2168 (< makespan 30)))
+ (=> $x2168 $x1803))))
 (assert
- (let ((?x459 (+ (ite (and (<= 3_y 10) (>= (+ 3_y 6) 10)) 3 0))))
- (<= ?x459 25)))
+ (let (($x2168 (< makespan 30)))
+ (=> $x2168 (= ud_5_4 false))))
 (assert
- (let ((?x3487 (+ (ite (and (<= 4_y 10) (>= (+ 4_y 7) 10)) 3 0))))
- (<= ?x3487 25)))
+ (= (<= (+ 3_x 4) 5_x) lr_4_6))
 (assert
- (let ((?x3655 (+ (ite (and (<= 5_y 10) (>= (+ 5_y 8) 10)) 3 0))))
- (<= ?x3655 25)))
+ (= (<= (+ 3_y 5) 5_y) ud_4_6))
 (assert
- (let ((?x5760 (+ (ite (and (<= 6_y 10) (>= (+ 6_y 9) 10)) 3 0))))
- (<= ?x5760 25)))
+ (= (<= (+ 5_x 3) 3_x) lr_6_4))
 (assert
- (let ((?x3398 (+ (ite (and (<= 7_y 10) (>= (+ 7_y 10) 10)) 3 0))))
- (<= ?x3398 25)))
+ (= (<= (+ 5_y 19) 3_y) ud_6_4))
 (assert
- (let ((?x4247 (+ (ite (and (<= 8_y 10) (>= (+ 8_y 11) 10)) 3 0))))
- (<= ?x4247 25)))
+ (or lr_4_6 lr_6_4 ud_4_6 ud_6_4))
 (assert
- (let ((?x1276 (+ (ite (and (<= 9_y 10) (>= (+ 9_y 13) 10)) 3 0))))
- (<= ?x1276 25)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_4_6 false))))
 (assert
- (let ((?x1848 (+ (ite (and (<= 10_y 10) (>= (+ 10_y 14) 10)) 3 0))))
- (<= ?x1848 25)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_6_4 false))))
 (assert
- (let ((?x8346 (+ (ite (and (<= 11_y 10) (>= (+ 11_y 17) 10)) 3 0))))
- (<= ?x8346 25)))
+ (= (<= (+ 3_x 4) 6_x) lr_4_7))
 (assert
- (let ((?x8318 (+ (ite (and (<= 12_y 10) (>= (+ 12_y 18) 10)) 3 0))))
- (<= ?x8318 25)))
+ (= (<= (+ 3_y 5) 6_y) ud_4_7))
 (assert
- (let ((?x2493 (+ (ite (and (<= 13_y 10) (>= (+ 13_y 19) 10)) 3 0))))
- (<= ?x2493 25)))
+ (= (<= (+ 6_x 3) 3_x) lr_7_4))
 (assert
- (let ((?x6497 (+ (ite (and (<= 14_y 10) (>= (+ 14_y 25) 10)) 3 0))))
- (<= ?x6497 25)))
+ (= (<= (+ 6_y 18) 3_y) ud_7_4))
 (assert
- (let ((?x4166 (+ (ite (and (<= 15_y 10) (>= (+ 15_y 5) 10)) 4 0))))
- (<= ?x4166 25)))
+ (or lr_4_7 lr_7_4 ud_4_7 ud_7_4))
 (assert
- (let ((?x4524 (+ (ite (and (<= 16_y 10) (>= (+ 16_y 7) 10)) 4 0))))
- (<= ?x4524 25)))
+ (let (($x3449 (< makespan 23)))
+ (=> $x3449 (= ud_4_7 false))))
 (assert
- (let ((?x2231 (+ (ite (and (<= 17_y 10) (>= (+ 17_y 13) 10)) 4 0))))
- (<= ?x2231 25)))
+ (let (($x3449 (< makespan 23)))
+ (=> $x3449 (= ud_7_4 false))))
 (assert
- (let ((?x2235 (+ (ite (and (<= 18_y 10) (>= (+ 18_y 3) 10)) 6 0))))
- (<= ?x2235 25)))
+ (= (<= (+ 3_x 4) 7_x) lr_4_8))
 (assert
- (let ((?x5782 (+ (ite (and (<= 0_y 11) (>= (+ 0_y 3) 11)) 3 0))))
- (<= ?x5782 25)))
+ (= (<= (+ 3_y 5) 7_y) ud_4_8))
 (assert
- (let ((?x4797 (+ (ite (and (<= 1_y 11) (>= (+ 1_y 4) 11)) 3 0))))
- (<= ?x4797 25)))
+ (= (<= (+ 7_x 3) 3_x) lr_8_4))
 (assert
- (let ((?x3167 (+ (ite (and (<= 2_y 11) (>= (+ 2_y 5) 11)) 3 0))))
- (<= ?x3167 25)))
+ (= (<= (+ 7_y 17) 3_y) ud_8_4))
 (assert
- (let ((?x2935 (+ (ite (and (<= 3_y 11) (>= (+ 3_y 6) 11)) 3 0))))
- (<= ?x2935 25)))
+ (or lr_4_8 lr_8_4 ud_4_8 ud_8_4))
 (assert
- (let ((?x7930 (+ (ite (and (<= 4_y 11) (>= (+ 4_y 7) 11)) 3 0))))
- (<= ?x7930 25)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_4_8 false))))
 (assert
- (let ((?x7625 (+ (ite (and (<= 5_y 11) (>= (+ 5_y 8) 11)) 3 0))))
- (<= ?x7625 25)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_8_4 false))))
 (assert
- (let ((?x6379 (+ (ite (and (<= 6_y 11) (>= (+ 6_y 9) 11)) 3 0))))
- (<= ?x6379 25)))
+ (= (<= (+ 3_x 4) 8_x) lr_4_9))
 (assert
- (let ((?x6083 (+ (ite (and (<= 7_y 11) (>= (+ 7_y 10) 11)) 3 0))))
- (<= ?x6083 25)))
+ (= (<= (+ 3_y 5) 8_y) ud_4_9))
 (assert
- (let ((?x5527 (+ (ite (and (<= 8_y 11) (>= (+ 8_y 11) 11)) 3 0))))
- (<= ?x5527 25)))
+ (= (<= (+ 8_x 3) 3_x) lr_9_4))
 (assert
- (let ((?x413 (+ (ite (and (<= 9_y 11) (>= (+ 9_y 13) 11)) 3 0))))
- (<= ?x413 25)))
+ (= (<= (+ 8_y 14) 3_y) ud_9_4))
 (assert
- (let ((?x4297 (+ (ite (and (<= 10_y 11) (>= (+ 10_y 14) 11)) 3 0))))
- (<= ?x4297 25)))
+ (or lr_4_9 lr_9_4 ud_4_9 ud_9_4))
 (assert
- (let ((?x8423 (+ (ite (and (<= 11_y 11) (>= (+ 11_y 17) 11)) 3 0))))
- (<= ?x8423 25)))
+ (let (($x1260 (< makespan 19)))
+ (=> $x1260 (= ud_4_9 false))))
 (assert
- (let ((?x8037 (+ (ite (and (<= 12_y 11) (>= (+ 12_y 18) 11)) 3 0))))
- (<= ?x8037 25)))
+ (let (($x1260 (< makespan 19)))
+ (=> $x1260 (= ud_9_4 false))))
 (assert
- (let ((?x7415 (+ (ite (and (<= 13_y 11) (>= (+ 13_y 19) 11)) 3 0))))
- (<= ?x7415 25)))
+ (= (<= (+ 3_x 4) 9_x) lr_4_10))
 (assert
- (let ((?x6901 (+ (ite (and (<= 14_y 11) (>= (+ 14_y 25) 11)) 3 0))))
- (<= ?x6901 25)))
+ (= (<= (+ 3_y 5) 9_y) ud_4_10))
 (assert
- (let ((?x813 (+ (ite (and (<= 15_y 11) (>= (+ 15_y 5) 11)) 4 0))))
- (<= ?x813 25)))
+ (= (<= (+ 9_x 3) 3_x) lr_10_4))
 (assert
- (let ((?x2571 (+ (ite (and (<= 16_y 11) (>= (+ 16_y 7) 11)) 4 0))))
- (<= ?x2571 25)))
+ (= (<= (+ 9_y 13) 3_y) ud_10_4))
 (assert
- (let ((?x692 (+ (ite (and (<= 17_y 11) (>= (+ 17_y 13) 11)) 4 0))))
- (<= ?x692 25)))
+ (or lr_4_10 lr_10_4 ud_4_10 ud_10_4))
 (assert
- (let ((?x1582 (+ (ite (and (<= 18_y 11) (>= (+ 18_y 3) 11)) 6 0))))
- (<= ?x1582 25)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_4_10 false))))
 (assert
- (let ((?x1213 (+ (ite (and (<= 0_y 12) (>= (+ 0_y 3) 12)) 3 0))))
- (<= ?x1213 25)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_10_4 false))))
 (assert
- (let ((?x5642 (+ (ite (and (<= 1_y 12) (>= (+ 1_y 4) 12)) 3 0))))
- (<= ?x5642 25)))
+ (= (<= (+ 3_x 4) 10_x) lr_4_11))
 (assert
- (let ((?x399 (+ (ite (and (<= 2_y 12) (>= (+ 2_y 5) 12)) 3 0))))
- (<= ?x399 25)))
+ (= (<= (+ 3_y 5) 10_y) ud_4_11))
 (assert
- (let ((?x1720 (+ (ite (and (<= 3_y 12) (>= (+ 3_y 6) 12)) 3 0))))
- (<= ?x1720 25)))
+ (= (<= (+ 10_x 3) 3_x) lr_11_4))
 (assert
- (let ((?x7680 (+ (ite (and (<= 4_y 12) (>= (+ 4_y 7) 12)) 3 0))))
- (<= ?x7680 25)))
+ (= (<= (+ 10_y 11) 3_y) ud_11_4))
 (assert
- (let ((?x7619 (+ (ite (and (<= 5_y 12) (>= (+ 5_y 8) 12)) 3 0))))
- (<= ?x7619 25)))
+ (or lr_4_11 lr_11_4 ud_4_11 ud_11_4))
 (assert
- (let ((?x6820 (+ (ite (and (<= 6_y 12) (>= (+ 6_y 9) 12)) 3 0))))
- (<= ?x6820 25)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_4_11 false))))
 (assert
- (let ((?x6516 (+ (ite (and (<= 7_y 12) (>= (+ 7_y 10) 12)) 3 0))))
- (<= ?x6516 25)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_11_4 false))))
 (assert
- (let ((?x3652 (+ (ite (and (<= 8_y 12) (>= (+ 8_y 11) 12)) 3 0))))
- (<= ?x3652 25)))
+ (= (<= (+ 3_x 4) 11_x) lr_4_12))
 (assert
- (let ((?x3833 (+ (ite (and (<= 9_y 12) (>= (+ 9_y 13) 12)) 3 0))))
- (<= ?x3833 25)))
+ (= (<= (+ 3_y 5) 11_y) ud_4_12))
 (assert
- (let ((?x4185 (+ (ite (and (<= 10_y 12) (>= (+ 10_y 14) 12)) 3 0))))
- (<= ?x4185 25)))
+ (= (<= (+ 11_x 3) 3_x) lr_12_4))
 (assert
- (let ((?x4377 (+ (ite (and (<= 11_y 12) (>= (+ 11_y 17) 12)) 3 0))))
- (<= ?x4377 25)))
+ (= (<= (+ 11_y 10) 3_y) ud_12_4))
 (assert
- (let ((?x5174 (+ (ite (and (<= 12_y 12) (>= (+ 12_y 18) 12)) 3 0))))
- (<= ?x5174 25)))
+ (or lr_4_12 lr_12_4 ud_4_12 ud_12_4))
 (assert
- (let ((?x5536 (+ (ite (and (<= 13_y 12) (>= (+ 13_y 19) 12)) 3 0))))
- (<= ?x5536 25)))
+ (let (($x3447 (< makespan 15)))
+ (=> $x3447 (= ud_4_12 false))))
 (assert
- (let ((?x8514 (+ (ite (and (<= 14_y 12) (>= (+ 14_y 25) 12)) 3 0))))
- (<= ?x8514 25)))
+ (let (($x3447 (< makespan 15)))
+ (=> $x3447 (= ud_12_4 false))))
 (assert
- (let ((?x8577 (+ (ite (and (<= 15_y 12) (>= (+ 15_y 5) 12)) 4 0))))
- (<= ?x8577 25)))
+ (= (<= (+ 3_x 4) 12_x) lr_4_13))
 (assert
- (let ((?x8770 (+ (ite (and (<= 16_y 12) (>= (+ 16_y 7) 12)) 4 0))))
- (<= ?x8770 25)))
+ (= (<= (+ 3_y 5) 12_y) ud_4_13))
 (assert
- (let ((?x2130 (+ (ite (and (<= 17_y 12) (>= (+ 17_y 13) 12)) 4 0))))
- (<= ?x2130 25)))
+ (= (<= (+ 12_x 3) 3_x) lr_13_4))
 (assert
- (let ((?x1089 (+ (ite (and (<= 18_y 12) (>= (+ 18_y 3) 12)) 6 0))))
- (<= ?x1089 25)))
+ (= (<= (+ 12_y 9) 3_y) ud_13_4))
 (assert
- (let ((?x1860 (+ (ite (and (<= 0_y 13) (>= (+ 0_y 3) 13)) 3 0))))
- (<= ?x1860 25)))
+ (or lr_4_13 lr_13_4 ud_4_13 ud_13_4))
 (assert
- (let ((?x7484 (+ (ite (and (<= 1_y 13) (>= (+ 1_y 4) 13)) 3 0))))
- (<= ?x7484 25)))
+ (let (($x4364 (< makespan 14)))
+ (=> $x4364 (= ud_4_13 false))))
 (assert
- (let ((?x5431 (+ (ite (and (<= 2_y 13) (>= (+ 2_y 5) 13)) 3 0))))
- (<= ?x5431 25)))
+ (let (($x4364 (< makespan 14)))
+ (=> $x4364 (= ud_13_4 false))))
 (assert
- (let ((?x5920 (+ (ite (and (<= 3_y 13) (>= (+ 3_y 6) 13)) 3 0))))
- (<= ?x5920 25)))
+ (= (<= (+ 3_x 4) 13_x) lr_4_14))
 (assert
- (let ((?x5356 (+ (ite (and (<= 4_y 13) (>= (+ 4_y 7) 13)) 3 0))))
- (<= ?x5356 25)))
+ (= (<= (+ 3_y 5) 13_y) ud_4_14))
 (assert
- (let ((?x2775 (+ (ite (and (<= 5_y 13) (>= (+ 5_y 8) 13)) 3 0))))
- (<= ?x2775 25)))
+ (= (<= (+ 13_x 3) 3_x) lr_14_4))
 (assert
- (let ((?x7859 (+ (ite (and (<= 6_y 13) (>= (+ 6_y 9) 13)) 3 0))))
- (<= ?x7859 25)))
+ (= (<= (+ 13_y 8) 3_y) ud_14_4))
 (assert
- (let ((?x4176 (+ (ite (and (<= 7_y 13) (>= (+ 7_y 10) 13)) 3 0))))
- (<= ?x4176 25)))
+ (or lr_4_14 lr_14_4 ud_4_14 ud_14_4))
 (assert
- (let ((?x3920 (+ (ite (and (<= 8_y 13) (>= (+ 8_y 11) 13)) 3 0))))
- (<= ?x3920 25)))
+ (let (($x4485 (< makespan 13)))
+ (=> $x4485 (= ud_4_14 false))))
 (assert
- (let ((?x7702 (+ (ite (and (<= 9_y 13) (>= (+ 9_y 13) 13)) 3 0))))
- (<= ?x7702 25)))
+ (let (($x4485 (< makespan 13)))
+ (=> $x4485 (= ud_14_4 false))))
 (assert
- (let ((?x2322 (+ (ite (and (<= 10_y 13) (>= (+ 10_y 14) 13)) 3 0))))
- (<= ?x2322 25)))
+ (= (<= (+ 3_x 4) 14_x) lr_4_15))
 (assert
- (let ((?x6038 (+ (ite (and (<= 11_y 13) (>= (+ 11_y 17) 13)) 3 0))))
- (<= ?x6038 25)))
+ (= (<= (+ 3_y 5) 14_y) ud_4_15))
 (assert
- (let ((?x3241 (+ (ite (and (<= 12_y 13) (>= (+ 12_y 18) 13)) 3 0))))
- (<= ?x3241 25)))
+ (= (<= (+ 14_x 3) 3_x) lr_15_4))
 (assert
- (let ((?x8295 (+ (ite (and (<= 13_y 13) (>= (+ 13_y 19) 13)) 3 0))))
- (<= ?x8295 25)))
+ (= (<= (+ 14_y 7) 3_y) ud_15_4))
 (assert
- (let ((?x7574 (+ (ite (and (<= 14_y 13) (>= (+ 14_y 25) 13)) 3 0))))
- (<= ?x7574 25)))
+ (or lr_4_15 lr_15_4 ud_4_15 ud_15_4))
 (assert
- (let ((?x8402 (+ (ite (and (<= 15_y 13) (>= (+ 15_y 5) 13)) 4 0))))
- (<= ?x8402 25)))
+ (let (($x4625 (< makespan 12)))
+ (=> $x4625 (= ud_4_15 false))))
 (assert
- (let ((?x2293 (+ (ite (and (<= 16_y 13) (>= (+ 16_y 7) 13)) 4 0))))
- (<= ?x2293 25)))
+ (let (($x4625 (< makespan 12)))
+ (=> $x4625 (= ud_15_4 false))))
 (assert
- (let ((?x8030 (+ (ite (and (<= 17_y 13) (>= (+ 17_y 13) 13)) 4 0))))
- (<= ?x8030 25)))
+ (= (<= (+ 3_x 4) 15_x) lr_4_16))
 (assert
- (let ((?x30 (+ (ite (and (<= 18_y 13) (>= (+ 18_y 3) 13)) 6 0))))
- (<= ?x30 25)))
+ (= (<= (+ 3_y 5) 15_y) ud_4_16))
 (assert
- (let ((?x7221 (+ (ite (and (<= 0_y 14) (>= (+ 0_y 3) 14)) 3 0))))
- (<= ?x7221 25)))
+ (= (<= (+ 15_x 3) 3_x) lr_16_4))
 (assert
- (let ((?x338 (+ (ite (and (<= 1_y 14) (>= (+ 1_y 4) 14)) 3 0))))
- (<= ?x338 25)))
+ (= (<= (+ 15_y 6) 3_y) ud_16_4))
 (assert
- (let ((?x5603 (+ (ite (and (<= 2_y 14) (>= (+ 2_y 5) 14)) 3 0))))
- (<= ?x5603 25)))
+ (or lr_4_16 lr_16_4 ud_4_16 ud_16_4))
 (assert
- (let ((?x2275 (+ (ite (and (<= 3_y 14) (>= (+ 3_y 6) 14)) 3 0))))
- (<= ?x2275 25)))
+ (let (($x4767 (< makespan 11)))
+ (=> $x4767 (= ud_4_16 false))))
 (assert
- (let ((?x3551 (+ (ite (and (<= 4_y 14) (>= (+ 4_y 7) 14)) 3 0))))
- (<= ?x3551 25)))
+ (let (($x4767 (< makespan 11)))
+ (=> $x4767 (= ud_16_4 false))))
 (assert
- (let ((?x4530 (+ (ite (and (<= 5_y 14) (>= (+ 5_y 8) 14)) 3 0))))
- (<= ?x4530 25)))
+ (= (<= (+ 3_x 4) 16_x) lr_4_17))
 (assert
- (let ((?x1330 (+ (ite (and (<= 6_y 14) (>= (+ 6_y 9) 14)) 3 0))))
- (<= ?x1330 25)))
+ (= (<= (+ 3_y 5) 16_y) ud_4_17))
 (assert
- (let ((?x5835 (+ (ite (and (<= 7_y 14) (>= (+ 7_y 10) 14)) 3 0))))
- (<= ?x5835 25)))
+ (= (<= (+ 16_x 3) 3_x) lr_17_4))
 (assert
- (let ((?x8056 (+ (ite (and (<= 8_y 14) (>= (+ 8_y 11) 14)) 3 0))))
- (<= ?x8056 25)))
+ (= (<= (+ 16_y 5) 3_y) ud_17_4))
 (assert
- (let ((?x5658 (+ (ite (and (<= 9_y 14) (>= (+ 9_y 13) 14)) 3 0))))
- (<= ?x5658 25)))
+ (or lr_4_17 lr_17_4 ud_4_17 ud_17_4))
 (assert
- (let ((?x2181 (+ (ite (and (<= 10_y 14) (>= (+ 10_y 14) 14)) 3 0))))
- (<= ?x2181 25)))
+ (let (($x2994 (< makespan 10)))
+ (=> $x2994 (= ud_4_17 false))))
 (assert
- (let ((?x960 (+ (ite (and (<= 11_y 14) (>= (+ 11_y 17) 14)) 3 0))))
- (<= ?x960 25)))
+ (let (($x2994 (< makespan 10)))
+ (=> $x2994 (= ud_17_4 false))))
 (assert
- (let ((?x4452 (+ (ite (and (<= 12_y 14) (>= (+ 12_y 18) 14)) 3 0))))
- (<= ?x4452 25)))
+ (= (<= (+ 3_x 4) 17_x) lr_4_18))
 (assert
- (let ((?x388 (+ (ite (and (<= 13_y 14) (>= (+ 13_y 19) 14)) 3 0))))
- (<= ?x388 25)))
+ (= (<= (+ 3_y 5) 17_y) ud_4_18))
 (assert
- (let ((?x5207 (+ (ite (and (<= 14_y 14) (>= (+ 14_y 25) 14)) 3 0))))
- (<= ?x5207 25)))
+ (= (<= (+ 17_x 3) 3_x) lr_18_4))
 (assert
- (let ((?x3892 (+ (ite (and (<= 15_y 14) (>= (+ 15_y 5) 14)) 4 0))))
- (<= ?x3892 25)))
+ (= (<= (+ 17_y 4) 3_y) ud_18_4))
 (assert
- (let ((?x817 (+ (ite (and (<= 16_y 14) (>= (+ 16_y 7) 14)) 4 0))))
- (<= ?x817 25)))
+ (or lr_4_18 lr_18_4 ud_4_18 ud_18_4))
 (assert
- (let ((?x5507 (+ (ite (and (<= 17_y 14) (>= (+ 17_y 13) 14)) 4 0))))
- (<= ?x5507 25)))
+ (let (($x4991 (< makespan 9)))
+ (=> $x4991 (= ud_4_18 false))))
 (assert
- (let ((?x2207 (+ (ite (and (<= 18_y 14) (>= (+ 18_y 3) 14)) 6 0))))
- (<= ?x2207 25)))
+ (let (($x4991 (< makespan 9)))
+ (=> $x4991 (= ud_18_4 false))))
 (assert
- (let ((?x8249 (+ (ite (and (<= 0_y 15) (>= (+ 0_y 3) 15)) 3 0))))
- (<= ?x8249 25)))
+ (= (<= (+ 3_x 4) 18_x) lr_4_19))
 (assert
- (let ((?x842 (+ (ite (and (<= 1_y 15) (>= (+ 1_y 4) 15)) 3 0))))
- (<= ?x842 25)))
+ (= (<= (+ 3_y 5) 18_y) ud_4_19))
 (assert
- (let ((?x3453 (+ (ite (and (<= 2_y 15) (>= (+ 2_y 5) 15)) 3 0))))
- (<= ?x3453 25)))
+ (= (<= (+ 18_x 3) 3_x) lr_19_4))
 (assert
- (let ((?x3530 (+ (ite (and (<= 3_y 15) (>= (+ 3_y 6) 15)) 3 0))))
- (<= ?x3530 25)))
+ (= (<= (+ 18_y 3) 3_y) ud_19_4))
 (assert
- (let ((?x1712 (+ (ite (and (<= 4_y 15) (>= (+ 4_y 7) 15)) 3 0))))
- (<= ?x1712 25)))
+ (or lr_4_19 lr_19_4 ud_4_19 ud_19_4))
 (assert
- (let ((?x3455 (+ (ite (and (<= 5_y 15) (>= (+ 5_y 8) 15)) 3 0))))
- (<= ?x3455 25)))
+ (let (($x2453 (< makespan 8)))
+ (=> $x2453 (= ud_4_19 false))))
 (assert
- (let ((?x2724 (+ (ite (and (<= 6_y 15) (>= (+ 6_y 9) 15)) 3 0))))
- (<= ?x2724 25)))
+ (let (($x2453 (< makespan 8)))
+ (=> $x2453 (= ud_19_4 false))))
 (assert
- (let ((?x2501 (+ (ite (and (<= 7_y 15) (>= (+ 7_y 10) 15)) 3 0))))
- (<= ?x2501 25)))
+ (= (<= (+ 4_x 3) 5_x) lr_5_6))
 (assert
- (let ((?x6927 (+ (ite (and (<= 8_y 15) (>= (+ 8_y 11) 15)) 3 0))))
- (<= ?x6927 25)))
+ (= (<= (+ 4_y 25) 5_y) ud_5_6))
 (assert
- (let ((?x857 (+ (ite (and (<= 9_y 15) (>= (+ 9_y 13) 15)) 3 0))))
- (<= ?x857 25)))
+ (= (<= (+ 5_x 3) 4_x) lr_6_5))
 (assert
- (let ((?x7611 (+ (ite (and (<= 10_y 15) (>= (+ 10_y 14) 15)) 3 0))))
- (<= ?x7611 25)))
+ (= (<= (+ 5_y 19) 4_y) ud_6_5))
 (assert
- (let ((?x500 (+ (ite (and (<= 11_y 15) (>= (+ 11_y 17) 15)) 3 0))))
- (<= ?x500 25)))
+ (or lr_5_6 lr_6_5 ud_5_6 ud_6_5))
 (assert
- (let ((?x2627 (+ (ite (and (<= 12_y 15) (>= (+ 12_y 18) 15)) 3 0))))
- (<= ?x2627 25)))
+ (let (($x4493 (< makespan 44)))
+ (=> $x4493 (= ud_5_6 false))))
 (assert
- (let ((?x9712 (+ (ite (and (<= 13_y 15) (>= (+ 13_y 19) 15)) 3 0))))
- (<= ?x9712 25)))
+ (let (($x1795 (= ud_6_5 false)))
+ (let (($x4493 (< makespan 44)))
+ (=> $x4493 $x1795))))
 (assert
- (let ((?x5251 (+ (ite (and (<= 14_y 15) (>= (+ 14_y 25) 15)) 3 0))))
- (<= ?x5251 25)))
+ (= (<= (+ 4_x 3) 6_x) lr_5_7))
 (assert
- (let ((?x6822 (+ (ite (and (<= 15_y 15) (>= (+ 15_y 5) 15)) 4 0))))
- (<= ?x6822 25)))
+ (= (<= (+ 4_y 25) 6_y) ud_5_7))
 (assert
- (let ((?x748 (+ (ite (and (<= 16_y 15) (>= (+ 16_y 7) 15)) 4 0))))
- (<= ?x748 25)))
+ (= (<= (+ 6_x 3) 4_x) lr_7_5))
 (assert
- (let ((?x2568 (+ (ite (and (<= 17_y 15) (>= (+ 17_y 13) 15)) 4 0))))
- (<= ?x2568 25)))
+ (= (<= (+ 6_y 18) 4_y) ud_7_5))
 (assert
- (let ((?x6465 (+ (ite (and (<= 18_y 15) (>= (+ 18_y 3) 15)) 6 0))))
- (<= ?x6465 25)))
+ (or lr_5_7 lr_7_5 ud_5_7 ud_7_5))
 (assert
- (let ((?x3174 (+ (ite (and (<= 0_y 16) (>= (+ 0_y 3) 16)) 3 0))))
- (<= ?x3174 25)))
+ (let (($x2724 (< makespan 43)))
+ (=> $x2724 (= ud_5_7 false))))
 (assert
- (let ((?x6250 (+ (ite (and (<= 1_y 16) (>= (+ 1_y 4) 16)) 3 0))))
- (<= ?x6250 25)))
+ (let (($x4170 (= ud_7_5 false)))
+ (let (($x2724 (< makespan 43)))
+ (=> $x2724 $x4170))))
 (assert
- (let ((?x2014 (+ (ite (and (<= 2_y 16) (>= (+ 2_y 5) 16)) 3 0))))
- (<= ?x2014 25)))
+ (= (<= (+ 4_x 3) 7_x) lr_5_8))
 (assert
- (let ((?x238 (+ (ite (and (<= 3_y 16) (>= (+ 3_y 6) 16)) 3 0))))
- (<= ?x238 25)))
+ (= (<= (+ 4_y 25) 7_y) ud_5_8))
 (assert
- (let ((?x2945 (+ (ite (and (<= 4_y 16) (>= (+ 4_y 7) 16)) 3 0))))
- (<= ?x2945 25)))
+ (= (<= (+ 7_x 3) 4_x) lr_8_5))
 (assert
- (let ((?x1913 (+ (ite (and (<= 5_y 16) (>= (+ 5_y 8) 16)) 3 0))))
- (<= ?x1913 25)))
+ (= (<= (+ 7_y 17) 4_y) ud_8_5))
 (assert
- (let ((?x1139 (+ (ite (and (<= 6_y 16) (>= (+ 6_y 9) 16)) 3 0))))
- (<= ?x1139 25)))
+ (or lr_5_8 lr_8_5 ud_5_8 ud_8_5))
 (assert
- (let ((?x951 (+ (ite (and (<= 7_y 16) (>= (+ 7_y 10) 16)) 3 0))))
- (<= ?x951 25)))
+ (let (($x3474 (< makespan 42)))
+ (=> $x3474 (= ud_5_8 false))))
 (assert
- (let ((?x2930 (+ (ite (and (<= 8_y 16) (>= (+ 8_y 11) 16)) 3 0))))
- (<= ?x2930 25)))
+ (let (($x921 (= ud_8_5 false)))
+ (let (($x3474 (< makespan 42)))
+ (=> $x3474 $x921))))
 (assert
- (let ((?x3780 (+ (ite (and (<= 9_y 16) (>= (+ 9_y 13) 16)) 3 0))))
- (<= ?x3780 25)))
+ (= (<= (+ 4_x 3) 8_x) lr_5_9))
 (assert
- (let ((?x9744 (+ (ite (and (<= 10_y 16) (>= (+ 10_y 14) 16)) 3 0))))
- (<= ?x9744 25)))
+ (= (<= (+ 4_y 25) 8_y) ud_5_9))
 (assert
- (let ((?x9733 (+ (ite (and (<= 11_y 16) (>= (+ 11_y 17) 16)) 3 0))))
- (<= ?x9733 25)))
+ (= (<= (+ 8_x 3) 4_x) lr_9_5))
 (assert
- (let ((?x9687 (+ (ite (and (<= 12_y 16) (>= (+ 12_y 18) 16)) 3 0))))
- (<= ?x9687 25)))
+ (= (<= (+ 8_y 14) 4_y) ud_9_5))
 (assert
- (let ((?x9659 (+ (ite (and (<= 13_y 16) (>= (+ 13_y 19) 16)) 3 0))))
- (<= ?x9659 25)))
+ (or lr_5_9 lr_9_5 ud_5_9 ud_9_5))
 (assert
- (let ((?x9574 (+ (ite (and (<= 14_y 16) (>= (+ 14_y 25) 16)) 3 0))))
- (<= ?x9574 25)))
+ (let (($x4201 (< makespan 39)))
+ (=> $x4201 (= ud_5_9 false))))
 (assert
- (let ((?x9566 (+ (ite (and (<= 15_y 16) (>= (+ 15_y 5) 16)) 4 0))))
- (<= ?x9566 25)))
+ (let (($x1513 (= ud_9_5 false)))
+ (let (($x4201 (< makespan 39)))
+ (=> $x4201 $x1513))))
 (assert
- (let ((?x9516 (+ (ite (and (<= 16_y 16) (>= (+ 16_y 7) 16)) 4 0))))
- (<= ?x9516 25)))
+ (= (<= (+ 4_x 3) 9_x) lr_5_10))
 (assert
- (let ((?x9505 (+ (ite (and (<= 17_y 16) (>= (+ 17_y 13) 16)) 4 0))))
- (<= ?x9505 25)))
+ (= (<= (+ 4_y 25) 9_y) ud_5_10))
 (assert
- (let ((?x9420 (+ (ite (and (<= 18_y 16) (>= (+ 18_y 3) 16)) 6 0))))
- (<= ?x9420 25)))
+ (= (<= (+ 9_x 3) 4_x) lr_10_5))
 (assert
- (let ((?x9763 (+ (ite (and (<= 0_y 17) (>= (+ 0_y 3) 17)) 3 0))))
- (<= ?x9763 25)))
+ (= (<= (+ 9_y 13) 4_y) ud_10_5))
 (assert
- (let ((?x9350 (+ (ite (and (<= 1_y 17) (>= (+ 1_y 4) 17)) 3 0))))
- (<= ?x9350 25)))
+ (or lr_5_10 lr_10_5 ud_5_10 ud_10_5))
 (assert
- (let ((?x9343 (+ (ite (and (<= 2_y 17) (>= (+ 2_y 5) 17)) 3 0))))
- (<= ?x9343 25)))
+ (let (($x5724 (< makespan 38)))
+ (=> $x5724 (= ud_5_10 false))))
 (assert
- (let ((?x9262 (+ (ite (and (<= 3_y 17) (>= (+ 3_y 6) 17)) 3 0))))
- (<= ?x9262 25)))
+ (let (($x992 (= ud_10_5 false)))
+ (let (($x5724 (< makespan 38)))
+ (=> $x5724 $x992))))
 (assert
- (let ((?x9255 (+ (ite (and (<= 4_y 17) (>= (+ 4_y 7) 17)) 3 0))))
- (<= ?x9255 25)))
+ (= (<= (+ 4_x 3) 10_x) lr_5_11))
 (assert
- (let ((?x9209 (+ (ite (and (<= 5_y 17) (>= (+ 5_y 8) 17)) 3 0))))
- (<= ?x9209 25)))
+ (= (<= (+ 4_y 25) 10_y) ud_5_11))
 (assert
- (let ((?x9181 (+ (ite (and (<= 6_y 17) (>= (+ 6_y 9) 17)) 3 0))))
- (<= ?x9181 25)))
+ (= (<= (+ 10_x 3) 4_x) lr_11_5))
 (assert
- (let ((?x9133 (+ (ite (and (<= 7_y 17) (>= (+ 7_y 10) 17)) 3 0))))
- (<= ?x9133 25)))
+ (= (<= (+ 10_y 11) 4_y) ud_11_5))
 (assert
- (let ((?x9125 (+ (ite (and (<= 8_y 17) (>= (+ 8_y 11) 17)) 3 0))))
- (<= ?x9125 25)))
+ (or lr_5_11 lr_11_5 ud_5_11 ud_11_5))
 (assert
- (let ((?x9041 (+ (ite (and (<= 9_y 17) (>= (+ 9_y 13) 17)) 3 0))))
- (<= ?x9041 25)))
+ (let (($x700 (< makespan 36)))
+ (=> $x700 (= ud_5_11 false))))
 (assert
- (let ((?x9054 (+ (ite (and (<= 10_y 17) (>= (+ 10_y 14) 17)) 3 0))))
- (<= ?x9054 25)))
+ (let (($x504 (= ud_11_5 false)))
+ (let (($x700 (< makespan 36)))
+ (=> $x700 $x504))))
 (assert
- (let ((?x8970 (+ (ite (and (<= 11_y 17) (>= (+ 11_y 17) 17)) 3 0))))
- (<= ?x8970 25)))
+ (= (<= (+ 4_x 3) 11_x) lr_5_12))
 (assert
- (let ((?x9653 (+ (ite (and (<= 12_y 17) (>= (+ 12_y 18) 17)) 3 0))))
- (<= ?x9653 25)))
+ (= (<= (+ 4_y 25) 11_y) ud_5_12))
 (assert
- (let ((?x9645 (+ (ite (and (<= 13_y 17) (>= (+ 13_y 19) 17)) 3 0))))
- (<= ?x9645 25)))
+ (= (<= (+ 11_x 3) 4_x) lr_12_5))
 (assert
- (let ((?x9571 (+ (ite (and (<= 14_y 17) (>= (+ 14_y 25) 17)) 3 0))))
- (<= ?x9571 25)))
+ (= (<= (+ 11_y 10) 4_y) ud_12_5))
 (assert
- (let ((?x8885 (+ (ite (and (<= 15_y 17) (>= (+ 15_y 5) 17)) 4 0))))
- (<= ?x8885 25)))
+ (or lr_5_12 lr_12_5 ud_5_12 ud_12_5))
 (assert
- (let ((?x8822 (+ (ite (and (<= 16_y 17) (>= (+ 16_y 7) 17)) 4 0))))
- (<= ?x8822 25)))
+ (let (($x2710 (< makespan 35)))
+ (=> $x2710 (= ud_5_12 false))))
 (assert
- (let ((?x8814 (+ (ite (and (<= 17_y 17) (>= (+ 17_y 13) 17)) 4 0))))
- (<= ?x8814 25)))
+ (let (($x2349 (= ud_12_5 false)))
+ (let (($x2710 (< makespan 35)))
+ (=> $x2710 $x2349))))
 (assert
- (let ((?x7907 (+ (ite (and (<= 18_y 17) (>= (+ 18_y 3) 17)) 6 0))))
- (<= ?x7907 25)))
+ (= (<= (+ 4_x 3) 12_x) lr_5_13))
 (assert
- (let ((?x7603 (+ (ite (and (<= 0_y 18) (>= (+ 0_y 3) 18)) 3 0))))
- (<= ?x7603 25)))
+ (= (<= (+ 4_y 25) 12_y) ud_5_13))
 (assert
- (let ((?x6848 (+ (ite (and (<= 1_y 18) (>= (+ 1_y 4) 18)) 3 0))))
- (<= ?x6848 25)))
+ (= (<= (+ 12_x 3) 4_x) lr_13_5))
 (assert
- (let ((?x7869 (+ (ite (and (<= 2_y 18) (>= (+ 2_y 5) 18)) 3 0))))
- (<= ?x7869 25)))
+ (= (<= (+ 12_y 9) 4_y) ud_13_5))
 (assert
- (let ((?x4792 (+ (ite (and (<= 3_y 18) (>= (+ 3_y 6) 18)) 3 0))))
- (<= ?x4792 25)))
+ (or lr_5_13 lr_13_5 ud_5_13 ud_13_5))
 (assert
- (let ((?x5379 (+ (ite (and (<= 4_y 18) (>= (+ 4_y 7) 18)) 3 0))))
- (<= ?x5379 25)))
+ (let (($x3191 (< makespan 34)))
+ (=> $x3191 (= ud_5_13 false))))
 (assert
- (let ((?x5509 (+ (ite (and (<= 5_y 18) (>= (+ 5_y 8) 18)) 3 0))))
- (<= ?x5509 25)))
+ (let (($x1289 (= ud_13_5 false)))
+ (let (($x3191 (< makespan 34)))
+ (=> $x3191 $x1289))))
 (assert
- (let ((?x2054 (+ (ite (and (<= 6_y 18) (>= (+ 6_y 9) 18)) 3 0))))
- (<= ?x2054 25)))
+ (= (<= (+ 4_x 3) 13_x) lr_5_14))
 (assert
- (let ((?x7714 (+ (ite (and (<= 7_y 18) (>= (+ 7_y 10) 18)) 3 0))))
- (<= ?x7714 25)))
+ (= (<= (+ 4_y 25) 13_y) ud_5_14))
 (assert
- (let ((?x7488 (+ (ite (and (<= 8_y 18) (>= (+ 8_y 11) 18)) 3 0))))
- (<= ?x7488 25)))
+ (= (<= (+ 13_x 3) 4_x) lr_14_5))
 (assert
- (let ((?x6614 (+ (ite (and (<= 9_y 18) (>= (+ 9_y 13) 18)) 3 0))))
- (<= ?x6614 25)))
+ (= (<= (+ 13_y 8) 4_y) ud_14_5))
 (assert
- (let ((?x6397 (+ (ite (and (<= 10_y 18) (>= (+ 10_y 14) 18)) 3 0))))
- (<= ?x6397 25)))
+ (or lr_5_14 lr_14_5 ud_5_14 ud_14_5))
 (assert
- (let ((?x2397 (+ (ite (and (<= 11_y 18) (>= (+ 11_y 17) 18)) 3 0))))
- (<= ?x2397 25)))
+ (let (($x2989 (< makespan 33)))
+ (=> $x2989 (= ud_5_14 false))))
 (assert
- (let ((?x6645 (+ (ite (and (<= 12_y 18) (>= (+ 12_y 18) 18)) 3 0))))
- (<= ?x6645 25)))
+ (let (($x3212 (= ud_14_5 false)))
+ (let (($x2989 (< makespan 33)))
+ (=> $x2989 $x3212))))
 (assert
- (let ((?x2838 (+ (ite (and (<= 13_y 18) (>= (+ 13_y 19) 18)) 3 0))))
- (<= ?x2838 25)))
+ (= (<= (+ 4_x 3) 14_x) lr_5_15))
 (assert
- (let ((?x7895 (+ (ite (and (<= 14_y 18) (>= (+ 14_y 25) 18)) 3 0))))
- (<= ?x7895 25)))
+ (= (<= (+ 4_y 25) 14_y) ud_5_15))
 (assert
- (let ((?x5099 (+ (ite (and (<= 15_y 18) (>= (+ 15_y 5) 18)) 4 0))))
- (<= ?x5099 25)))
+ (= (<= (+ 14_x 3) 4_x) lr_15_5))
 (assert
- (let ((?x1827 (+ (ite (and (<= 16_y 18) (>= (+ 16_y 7) 18)) 4 0))))
- (<= ?x1827 25)))
+ (= (<= (+ 14_y 7) 4_y) ud_15_5))
 (assert
- (let ((?x3257 (+ (ite (and (<= 17_y 18) (>= (+ 17_y 13) 18)) 4 0))))
- (<= ?x3257 25)))
+ (or lr_5_15 lr_15_5 ud_5_15 ud_15_5))
 (assert
- (let ((?x3024 (+ (ite (and (<= 18_y 18) (>= (+ 18_y 3) 18)) 6 0))))
- (<= ?x3024 25)))
+ (let (($x665 (< makespan 32)))
+ (=> $x665 (= ud_5_15 false))))
 (assert
- (let ((?x7362 (+ (ite (and (<= 0_y 19) (>= (+ 0_y 3) 19)) 3 0))))
- (<= ?x7362 25)))
+ (let (($x4089 (= ud_15_5 false)))
+ (let (($x665 (< makespan 32)))
+ (=> $x665 $x4089))))
 (assert
- (let ((?x7065 (+ (ite (and (<= 1_y 19) (>= (+ 1_y 4) 19)) 3 0))))
- (<= ?x7065 25)))
+ (= (<= (+ 4_x 3) 15_x) lr_5_16))
 (assert
- (let ((?x6224 (+ (ite (and (<= 2_y 19) (>= (+ 2_y 5) 19)) 3 0))))
- (<= ?x6224 25)))
+ (= (<= (+ 4_y 25) 15_y) ud_5_16))
 (assert
- (let ((?x5952 (+ (ite (and (<= 3_y 19) (>= (+ 3_y 6) 19)) 3 0))))
- (<= ?x5952 25)))
+ (= (<= (+ 15_x 3) 4_x) lr_16_5))
 (assert
- (let ((?x1501 (+ (ite (and (<= 4_y 19) (>= (+ 4_y 7) 19)) 3 0))))
- (<= ?x1501 25)))
+ (= (<= (+ 15_y 6) 4_y) ud_16_5))
 (assert
- (let ((?x1440 (+ (ite (and (<= 5_y 19) (>= (+ 5_y 8) 19)) 3 0))))
- (<= ?x1440 25)))
+ (or lr_5_16 lr_16_5 ud_5_16 ud_16_5))
 (assert
- (let ((?x8312 (+ (ite (and (<= 6_y 19) (>= (+ 6_y 9) 19)) 3 0))))
- (<= ?x8312 25)))
+ (let (($x610 (< makespan 31)))
+ (=> $x610 (= ud_5_16 false))))
 (assert
- (let ((?x7932 (+ (ite (and (<= 7_y 19) (>= (+ 7_y 10) 19)) 3 0))))
- (<= ?x7932 25)))
+ (let (($x1334 (= ud_16_5 false)))
+ (let (($x610 (< makespan 31)))
+ (=> $x610 $x1334))))
 (assert
- (let ((?x7713 (+ (ite (and (<= 8_y 19) (>= (+ 8_y 11) 19)) 3 0))))
- (<= ?x7713 25)))
+ (= (<= (+ 4_x 3) 16_x) lr_5_17))
 (assert
- (let ((?x6147 (+ (ite (and (<= 9_y 19) (>= (+ 9_y 13) 19)) 3 0))))
- (<= ?x6147 25)))
+ (= (<= (+ 4_y 25) 16_y) ud_5_17))
 (assert
- (let ((?x993 (+ (ite (and (<= 10_y 19) (>= (+ 10_y 14) 19)) 3 0))))
- (<= ?x993 25)))
+ (= (<= (+ 16_x 3) 4_x) lr_17_5))
 (assert
- (let ((?x3544 (+ (ite (and (<= 11_y 19) (>= (+ 11_y 17) 19)) 3 0))))
- (<= ?x3544 25)))
+ (= (<= (+ 16_y 5) 4_y) ud_17_5))
 (assert
- (let ((?x4144 (+ (ite (and (<= 12_y 19) (>= (+ 12_y 18) 19)) 3 0))))
- (<= ?x4144 25)))
+ (or lr_5_17 lr_17_5 ud_5_17 ud_17_5))
 (assert
- (let ((?x1055 (+ (ite (and (<= 13_y 19) (>= (+ 13_y 19) 19)) 3 0))))
- (<= ?x1055 25)))
+ (let (($x2168 (< makespan 30)))
+ (=> $x2168 (= ud_5_17 false))))
 (assert
- (let ((?x29 (+ (ite (and (<= 14_y 19) (>= (+ 14_y 25) 19)) 3 0))))
- (<= ?x29 25)))
+ (let (($x2792 (= ud_17_5 false)))
+ (let (($x2168 (< makespan 30)))
+ (=> $x2168 $x2792))))
 (assert
- (let ((?x2694 (+ (ite (and (<= 15_y 19) (>= (+ 15_y 5) 19)) 4 0))))
- (<= ?x2694 25)))
+ (= (<= (+ 4_x 3) 17_x) lr_5_18))
 (assert
- (let ((?x2143 (+ (ite (and (<= 16_y 19) (>= (+ 16_y 7) 19)) 4 0))))
- (<= ?x2143 25)))
+ (= (<= (+ 4_y 25) 17_y) ud_5_18))
 (assert
- (let ((?x8100 (+ (ite (and (<= 17_y 19) (>= (+ 17_y 13) 19)) 4 0))))
- (<= ?x8100 25)))
+ (= (<= (+ 17_x 3) 4_x) lr_18_5))
 (assert
- (let ((?x7773 (+ (ite (and (<= 18_y 19) (>= (+ 18_y 3) 19)) 6 0))))
- (<= ?x7773 25)))
+ (= (<= (+ 17_y 4) 4_y) ud_18_5))
 (assert
- (let ((?x6626 (+ (ite (and (<= 0_y 20) (>= (+ 0_y 3) 20)) 3 0))))
- (<= ?x6626 25)))
+ (or lr_5_18 lr_18_5 ud_5_18 ud_18_5))
 (assert
- (let ((?x3594 (+ (ite (and (<= 1_y 20) (>= (+ 1_y 4) 20)) 3 0))))
- (<= ?x3594 25)))
+ (let (($x3853 (< makespan 29)))
+ (=> $x3853 (= ud_5_18 false))))
 (assert
- (let ((?x3879 (+ (ite (and (<= 2_y 20) (>= (+ 2_y 5) 20)) 3 0))))
- (<= ?x3879 25)))
+ (let (($x3665 (= ud_18_5 false)))
+ (let (($x3853 (< makespan 29)))
+ (=> $x3853 $x3665))))
 (assert
- (let ((?x4563 (+ (ite (and (<= 3_y 20) (>= (+ 3_y 6) 20)) 3 0))))
- (<= ?x4563 25)))
+ (= (<= (+ 4_x 3) 18_x) lr_5_19))
 (assert
- (let ((?x5212 (+ (ite (and (<= 4_y 20) (>= (+ 4_y 7) 20)) 3 0))))
- (<= ?x5212 25)))
+ (= (<= (+ 4_y 25) 18_y) ud_5_19))
 (assert
- (let ((?x8546 (+ (ite (and (<= 5_y 20) (>= (+ 5_y 8) 20)) 3 0))))
- (<= ?x8546 25)))
+ (= (<= (+ 18_x 3) 4_x) lr_19_5))
 (assert
- (let ((?x8796 (+ (ite (and (<= 6_y 20) (>= (+ 6_y 9) 20)) 3 0))))
- (<= ?x8796 25)))
+ (= (<= (+ 18_y 3) 4_y) ud_19_5))
 (assert
- (let ((?x3118 (+ (ite (and (<= 7_y 20) (>= (+ 7_y 10) 20)) 3 0))))
- (<= ?x3118 25)))
+ (or lr_5_19 lr_19_5 ud_5_19 ud_19_5))
 (assert
- (let ((?x6558 (+ (ite (and (<= 8_y 20) (>= (+ 8_y 11) 20)) 3 0))))
- (<= ?x6558 25)))
+ (let (($x1905 (< makespan 28)))
+ (=> $x1905 (= ud_5_19 false))))
 (assert
- (let ((?x2472 (+ (ite (and (<= 9_y 20) (>= (+ 9_y 13) 20)) 3 0))))
- (<= ?x2472 25)))
+ (let (($x3571 (= ud_19_5 false)))
+ (let (($x1905 (< makespan 28)))
+ (=> $x1905 $x3571))))
 (assert
- (let ((?x5012 (+ (ite (and (<= 10_y 20) (>= (+ 10_y 14) 20)) 3 0))))
- (<= ?x5012 25)))
+ (= (<= (+ 5_x 3) 6_x) lr_6_7))
 (assert
- (let ((?x892 (+ (ite (and (<= 11_y 20) (>= (+ 11_y 17) 20)) 3 0))))
- (<= ?x892 25)))
+ (= (<= (+ 5_y 19) 6_y) ud_6_7))
 (assert
- (let ((?x6655 (+ (ite (and (<= 12_y 20) (>= (+ 12_y 18) 20)) 3 0))))
- (<= ?x6655 25)))
+ (= (<= (+ 6_x 3) 5_x) lr_7_6))
 (assert
- (let ((?x3113 (+ (ite (and (<= 13_y 20) (>= (+ 13_y 19) 20)) 3 0))))
- (<= ?x3113 25)))
+ (= (<= (+ 6_y 18) 5_y) ud_7_6))
 (assert
- (let ((?x7425 (+ (ite (and (<= 14_y 20) (>= (+ 14_y 25) 20)) 3 0))))
- (<= ?x7425 25)))
+ (or lr_6_7 lr_7_6 ud_6_7 ud_7_6))
 (assert
- (let ((?x6454 (+ (ite (and (<= 15_y 20) (>= (+ 15_y 5) 20)) 4 0))))
- (<= ?x6454 25)))
+ (let (($x2977 (< makespan 37)))
+ (=> $x2977 (= ud_6_7 false))))
 (assert
- (let ((?x6057 (+ (ite (and (<= 16_y 20) (>= (+ 16_y 7) 20)) 4 0))))
- (<= ?x6057 25)))
+ (let (($x2977 (< makespan 37)))
+ (=> $x2977 (= ud_7_6 false))))
 (assert
- (let ((?x2066 (+ (ite (and (<= 17_y 20) (>= (+ 17_y 13) 20)) 4 0))))
- (<= ?x2066 25)))
+ (= (<= (+ 5_x 3) 7_x) lr_6_8))
 (assert
- (let ((?x8613 (+ (ite (and (<= 18_y 20) (>= (+ 18_y 3) 20)) 6 0))))
- (<= ?x8613 25)))
+ (= (<= (+ 5_y 19) 7_y) ud_6_8))
 (assert
- (let ((?x7716 (+ (ite (and (<= 0_y 21) (>= (+ 0_y 3) 21)) 3 0))))
- (<= ?x7716 25)))
+ (= (<= (+ 7_x 3) 5_x) lr_8_6))
 (assert
- (let ((?x6231 (+ (ite (and (<= 1_y 21) (>= (+ 1_y 4) 21)) 3 0))))
- (<= ?x6231 25)))
+ (= (<= (+ 7_y 17) 5_y) ud_8_6))
 (assert
- (let ((?x6184 (+ (ite (and (<= 2_y 21) (>= (+ 2_y 5) 21)) 3 0))))
- (<= ?x6184 25)))
+ (or lr_6_8 lr_8_6 ud_6_8 ud_8_6))
 (assert
- (let ((?x1241 (+ (ite (and (<= 3_y 21) (>= (+ 3_y 6) 21)) 3 0))))
- (<= ?x1241 25)))
+ (let (($x700 (< makespan 36)))
+ (=> $x700 (= ud_6_8 false))))
 (assert
- (let ((?x5638 (+ (ite (and (<= 4_y 21) (>= (+ 4_y 7) 21)) 3 0))))
- (<= ?x5638 25)))
+ (let (($x700 (< makespan 36)))
+ (=> $x700 (= ud_8_6 false))))
 (assert
- (let ((?x1338 (+ (ite (and (<= 5_y 21) (>= (+ 5_y 8) 21)) 3 0))))
- (<= ?x1338 25)))
+ (= (<= (+ 5_x 3) 8_x) lr_6_9))
 (assert
- (let ((?x6137 (+ (ite (and (<= 6_y 21) (>= (+ 6_y 9) 21)) 3 0))))
- (<= ?x6137 25)))
+ (= (<= (+ 5_y 19) 8_y) ud_6_9))
 (assert
- (let ((?x2432 (+ (ite (and (<= 7_y 21) (>= (+ 7_y 10) 21)) 3 0))))
- (<= ?x2432 25)))
+ (= (<= (+ 8_x 3) 5_x) lr_9_6))
 (assert
- (let ((?x7644 (+ (ite (and (<= 8_y 21) (>= (+ 8_y 11) 21)) 3 0))))
- (<= ?x7644 25)))
+ (= (<= (+ 8_y 14) 5_y) ud_9_6))
 (assert
- (let ((?x6171 (+ (ite (and (<= 9_y 21) (>= (+ 9_y 13) 21)) 3 0))))
- (<= ?x6171 25)))
+ (or lr_6_9 lr_9_6 ud_6_9 ud_9_6))
 (assert
- (let ((?x3699 (+ (ite (and (<= 10_y 21) (>= (+ 10_y 14) 21)) 3 0))))
- (<= ?x3699 25)))
+ (let (($x2989 (< makespan 33)))
+ (=> $x2989 (= ud_6_9 false))))
 (assert
- (let ((?x3724 (+ (ite (and (<= 11_y 21) (>= (+ 11_y 17) 21)) 3 0))))
- (<= ?x3724 25)))
+ (let (($x2989 (< makespan 33)))
+ (=> $x2989 (= ud_9_6 false))))
 (assert
- (let ((?x4302 (+ (ite (and (<= 12_y 21) (>= (+ 12_y 18) 21)) 3 0))))
- (<= ?x4302 25)))
+ (= (<= (+ 5_x 3) 9_x) lr_6_10))
 (assert
- (let ((?x5411 (+ (ite (and (<= 13_y 21) (>= (+ 13_y 19) 21)) 3 0))))
- (<= ?x5411 25)))
+ (= (<= (+ 5_y 19) 9_y) ud_6_10))
 (assert
- (let ((?x8453 (+ (ite (and (<= 14_y 21) (>= (+ 14_y 25) 21)) 3 0))))
- (<= ?x8453 25)))
+ (= (<= (+ 9_x 3) 5_x) lr_10_6))
 (assert
- (let ((?x9857 (+ (ite (and (<= 15_y 21) (>= (+ 15_y 5) 21)) 4 0))))
- (<= ?x9857 25)))
+ (= (<= (+ 9_y 13) 5_y) ud_10_6))
 (assert
- (let ((?x9867 (+ (ite (and (<= 16_y 21) (>= (+ 16_y 7) 21)) 4 0))))
- (<= ?x9867 25)))
+ (or lr_6_10 lr_10_6 ud_6_10 ud_10_6))
 (assert
- (let ((?x9914 (+ (ite (and (<= 17_y 21) (>= (+ 17_y 13) 21)) 4 0))))
- (<= ?x9914 25)))
+ (let (($x665 (< makespan 32)))
+ (=> $x665 (= ud_6_10 false))))
 (assert
- (let ((?x9978 (+ (ite (and (<= 18_y 21) (>= (+ 18_y 3) 21)) 6 0))))
- (<= ?x9978 25)))
+ (let (($x665 (< makespan 32)))
+ (=> $x665 (= ud_10_6 false))))
 (assert
- (let ((?x10025 (+ (ite (and (<= 0_y 22) (>= (+ 0_y 3) 22)) 3 0))))
- (<= ?x10025 25)))
+ (= (<= (+ 5_x 3) 10_x) lr_6_11))
 (assert
- (let ((?x10072 (+ (ite (and (<= 1_y 22) (>= (+ 1_y 4) 22)) 3 0))))
- (<= ?x10072 25)))
+ (= (<= (+ 5_y 19) 10_y) ud_6_11))
 (assert
- (let ((?x10082 (+ (ite (and (<= 2_y 22) (>= (+ 2_y 5) 22)) 3 0))))
- (<= ?x10082 25)))
+ (= (<= (+ 10_x 3) 5_x) lr_11_6))
 (assert
- (let ((?x10146 (+ (ite (and (<= 3_y 22) (>= (+ 3_y 6) 22)) 3 0))))
- (<= ?x10146 25)))
+ (= (<= (+ 10_y 11) 5_y) ud_11_6))
 (assert
- (let ((?x10191 (+ (ite (and (<= 4_y 22) (>= (+ 4_y 7) 22)) 3 0))))
- (<= ?x10191 25)))
+ (or lr_6_11 lr_11_6 ud_6_11 ud_11_6))
 (assert
- (let ((?x10254 (+ (ite (and (<= 5_y 22) (>= (+ 5_y 8) 22)) 3 0))))
- (<= ?x10254 25)))
+ (let (($x2168 (< makespan 30)))
+ (=> $x2168 (= ud_6_11 false))))
 (assert
- (let ((?x10264 (+ (ite (and (<= 6_y 22) (>= (+ 6_y 9) 22)) 3 0))))
- (<= ?x10264 25)))
+ (let (($x2168 (< makespan 30)))
+ (=> $x2168 (= ud_11_6 false))))
 (assert
- (let ((?x10311 (+ (ite (and (<= 7_y 22) (>= (+ 7_y 10) 22)) 3 0))))
- (<= ?x10311 25)))
+ (= (<= (+ 5_x 3) 11_x) lr_6_12))
 (assert
- (let ((?x10358 (+ (ite (and (<= 8_y 22) (>= (+ 8_y 11) 22)) 3 0))))
- (<= ?x10358 25)))
+ (= (<= (+ 5_y 19) 11_y) ud_6_12))
 (assert
- (let ((?x10423 (+ (ite (and (<= 9_y 22) (>= (+ 9_y 13) 22)) 3 0))))
- (<= ?x10423 25)))
+ (= (<= (+ 11_x 3) 5_x) lr_12_6))
 (assert
- (let ((?x10470 (+ (ite (and (<= 10_y 22) (>= (+ 10_y 14) 22)) 3 0))))
- (<= ?x10470 25)))
+ (= (<= (+ 11_y 10) 5_y) ud_12_6))
 (assert
- (let ((?x10480 (+ (ite (and (<= 11_y 22) (>= (+ 11_y 17) 22)) 3 0))))
- (<= ?x10480 25)))
+ (or lr_6_12 lr_12_6 ud_6_12 ud_12_6))
 (assert
- (let ((?x10527 (+ (ite (and (<= 12_y 22) (>= (+ 12_y 18) 22)) 3 0))))
- (<= ?x10527 25)))
+ (let (($x3853 (< makespan 29)))
+ (=> $x3853 (= ud_6_12 false))))
 (assert
- (let ((?x10591 (+ (ite (and (<= 13_y 22) (>= (+ 13_y 19) 22)) 3 0))))
- (<= ?x10591 25)))
+ (let (($x3853 (< makespan 29)))
+ (=> $x3853 (= ud_12_6 false))))
 (assert
- (let ((?x10638 (+ (ite (and (<= 14_y 22) (>= (+ 14_y 25) 22)) 3 0))))
- (<= ?x10638 25)))
+ (= (<= (+ 5_x 3) 12_x) lr_6_13))
 (assert
- (let ((?x10685 (+ (ite (and (<= 15_y 22) (>= (+ 15_y 5) 22)) 4 0))))
- (<= ?x10685 25)))
+ (= (<= (+ 5_y 19) 12_y) ud_6_13))
 (assert
- (let ((?x10695 (+ (ite (and (<= 16_y 22) (>= (+ 16_y 7) 22)) 4 0))))
- (<= ?x10695 25)))
+ (= (<= (+ 12_x 3) 5_x) lr_13_6))
 (assert
- (let ((?x10742 (+ (ite (and (<= 17_y 22) (>= (+ 17_y 13) 22)) 4 0))))
- (<= ?x10742 25)))
+ (= (<= (+ 12_y 9) 5_y) ud_13_6))
 (assert
- (let ((?x10807 (+ (ite (and (<= 18_y 22) (>= (+ 18_y 3) 22)) 6 0))))
- (<= ?x10807 25)))
+ (or lr_6_13 lr_13_6 ud_6_13 ud_13_6))
 (assert
- (let ((?x10854 (+ (ite (and (<= 0_y 23) (>= (+ 0_y 3) 23)) 3 0))))
- (<= ?x10854 25)))
+ (let (($x1905 (< makespan 28)))
+ (=> $x1905 (= ud_6_13 false))))
 (assert
- (let ((?x10901 (+ (ite (and (<= 1_y 23) (>= (+ 1_y 4) 23)) 3 0))))
- (<= ?x10901 25)))
+ (let (($x1905 (< makespan 28)))
+ (=> $x1905 (= ud_13_6 false))))
 (assert
- (let ((?x10911 (+ (ite (and (<= 2_y 23) (>= (+ 2_y 5) 23)) 3 0))))
- (<= ?x10911 25)))
+ (= (<= (+ 5_x 3) 13_x) lr_6_14))
 (assert
- (let ((?x10958 (+ (ite (and (<= 3_y 23) (>= (+ 3_y 6) 23)) 3 0))))
- (<= ?x10958 25)))
+ (= (<= (+ 5_y 19) 13_y) ud_6_14))
 (assert
- (let ((?x11022 (+ (ite (and (<= 4_y 23) (>= (+ 4_y 7) 23)) 3 0))))
- (<= ?x11022 25)))
+ (= (<= (+ 13_x 3) 5_x) lr_14_6))
 (assert
- (let ((?x11069 (+ (ite (and (<= 5_y 23) (>= (+ 5_y 8) 23)) 3 0))))
- (<= ?x11069 25)))
+ (= (<= (+ 13_y 8) 5_y) ud_14_6))
 (assert
- (let ((?x11079 (+ (ite (and (<= 6_y 23) (>= (+ 6_y 9) 23)) 3 0))))
- (<= ?x11079 25)))
+ (or lr_6_14 lr_14_6 ud_6_14 ud_14_6))
 (assert
- (let ((?x11126 (+ (ite (and (<= 7_y 23) (>= (+ 7_y 10) 23)) 3 0))))
- (<= ?x11126 25)))
+ (let (($x4226 (< makespan 27)))
+ (=> $x4226 (= ud_6_14 false))))
 (assert
- (let ((?x11191 (+ (ite (and (<= 8_y 23) (>= (+ 8_y 11) 23)) 3 0))))
- (<= ?x11191 25)))
+ (let (($x4226 (< makespan 27)))
+ (=> $x4226 (= ud_14_6 false))))
 (assert
- (let ((?x11239 (+ (ite (and (<= 9_y 23) (>= (+ 9_y 13) 23)) 3 0))))
- (<= ?x11239 25)))
+ (= (<= (+ 5_x 3) 14_x) lr_6_15))
 (assert
- (let ((?x11286 (+ (ite (and (<= 10_y 23) (>= (+ 10_y 14) 23)) 3 0))))
- (<= ?x11286 25)))
+ (= (<= (+ 5_y 19) 14_y) ud_6_15))
 (assert
- (let ((?x11296 (+ (ite (and (<= 11_y 23) (>= (+ 11_y 17) 23)) 3 0))))
- (<= ?x11296 25)))
+ (= (<= (+ 14_x 3) 5_x) lr_15_6))
 (assert
- (let ((?x11343 (+ (ite (and (<= 12_y 23) (>= (+ 12_y 18) 23)) 3 0))))
- (<= ?x11343 25)))
+ (= (<= (+ 14_y 7) 5_y) ud_15_6))
 (assert
- (let ((?x11390 (+ (ite (and (<= 13_y 23) (>= (+ 13_y 19) 23)) 3 0))))
- (<= ?x11390 25)))
+ (or lr_6_15 lr_15_6 ud_6_15 ud_15_6))
 (assert
- (let ((?x11437 (+ (ite (and (<= 14_y 23) (>= (+ 14_y 25) 23)) 3 0))))
- (<= ?x11437 25)))
+ (let (($x965 (< makespan 26)))
+ (=> $x965 (= ud_6_15 false))))
 (assert
- (let ((?x11502 (+ (ite (and (<= 15_y 23) (>= (+ 15_y 5) 23)) 4 0))))
- (<= ?x11502 25)))
+ (let (($x965 (< makespan 26)))
+ (=> $x965 (= ud_15_6 false))))
 (assert
- (let ((?x11511 (+ (ite (and (<= 16_y 23) (>= (+ 16_y 7) 23)) 4 0))))
- (<= ?x11511 25)))
+ (= (<= (+ 5_x 3) 15_x) lr_6_16))
 (assert
- (let ((?x11558 (+ (ite (and (<= 17_y 23) (>= (+ 17_y 13) 23)) 4 0))))
- (<= ?x11558 25)))
+ (= (<= (+ 5_y 19) 15_y) ud_6_16))
 (assert
- (let ((?x11605 (+ (ite (and (<= 18_y 23) (>= (+ 18_y 3) 23)) 6 0))))
- (<= ?x11605 25)))
+ (= (<= (+ 15_x 3) 5_x) lr_16_6))
 (assert
- (let ((?x11668 (+ (ite (and (<= 0_y 24) (>= (+ 0_y 3) 24)) 3 0))))
- (<= ?x11668 25)))
+ (= (<= (+ 15_y 6) 5_y) ud_16_6))
 (assert
- (let ((?x11693 (+ (ite (and (<= 1_y 24) (>= (+ 1_y 4) 24)) 3 0))))
- (<= ?x11693 25)))
+ (or lr_6_16 lr_16_6 ud_6_16 ud_16_6))
 (assert
- (let ((?x11752 (+ (ite (and (<= 2_y 24) (>= (+ 2_y 5) 24)) 3 0))))
- (<= ?x11752 25)))
+ (let (($x3537 (< makespan 25)))
+ (=> $x3537 (= ud_6_16 false))))
 (assert
- (let ((?x11809 (+ (ite (and (<= 3_y 24) (>= (+ 3_y 6) 24)) 3 0))))
- (<= ?x11809 25)))
+ (let (($x3537 (< makespan 25)))
+ (=> $x3537 (= ud_16_6 false))))
 (assert
- (let ((?x9404 (+ (ite (and (<= 4_y 24) (>= (+ 4_y 7) 24)) 3 0))))
- (<= ?x9404 25)))
+ (= (<= (+ 5_x 3) 16_x) lr_6_17))
 (assert
- (let ((?x11888 (+ (ite (and (<= 5_y 24) (>= (+ 5_y 8) 24)) 3 0))))
- (<= ?x11888 25)))
+ (= (<= (+ 5_y 19) 16_y) ud_6_17))
 (assert
- (let ((?x11942 (+ (ite (and (<= 6_y 24) (>= (+ 6_y 9) 24)) 3 0))))
- (<= ?x11942 25)))
+ (= (<= (+ 16_x 3) 5_x) lr_17_6))
 (assert
- (let ((?x9561 (+ (ite (and (<= 7_y 24) (>= (+ 7_y 10) 24)) 3 0))))
- (<= ?x9561 25)))
+ (= (<= (+ 16_y 5) 5_y) ud_17_6))
 (assert
- (let ((?x12071 (+ (ite (and (<= 8_y 24) (>= (+ 8_y 11) 24)) 3 0))))
- (<= ?x12071 25)))
+ (or lr_6_17 lr_17_6 ud_6_17 ud_17_6))
 (assert
- (let ((?x12144 (+ (ite (and (<= 9_y 24) (>= (+ 9_y 13) 24)) 3 0))))
- (<= ?x12144 25)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_6_17 false))))
 (assert
- (let ((?x12167 (+ (ite (and (<= 10_y 24) (>= (+ 10_y 14) 24)) 3 0))))
- (<= ?x12167 25)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_17_6 false))))
 (assert
- (let ((?x12214 (+ (ite (and (<= 11_y 24) (>= (+ 11_y 17) 24)) 3 0))))
- (<= ?x12214 25)))
+ (= (<= (+ 5_x 3) 17_x) lr_6_18))
 (assert
- (let ((?x12263 (+ (ite (and (<= 12_y 24) (>= (+ 12_y 18) 24)) 3 0))))
- (<= ?x12263 25)))
+ (= (<= (+ 5_y 19) 17_y) ud_6_18))
 (assert
- (let ((?x12308 (+ (ite (and (<= 13_y 24) (>= (+ 13_y 19) 24)) 3 0))))
- (<= ?x12308 25)))
+ (= (<= (+ 17_x 3) 5_x) lr_18_6))
 (assert
- (let ((?x12357 (+ (ite (and (<= 14_y 24) (>= (+ 14_y 25) 24)) 3 0))))
- (<= ?x12357 25)))
+ (= (<= (+ 17_y 4) 5_y) ud_18_6))
 (assert
- (let ((?x12406 (+ (ite (and (<= 15_y 24) (>= (+ 15_y 5) 24)) 4 0))))
- (<= ?x12406 25)))
+ (or lr_6_18 lr_18_6 ud_6_18 ud_18_6))
 (assert
- (let ((?x12439 (+ (ite (and (<= 16_y 24) (>= (+ 16_y 7) 24)) 4 0))))
- (<= ?x12439 25)))
+ (let (($x3449 (< makespan 23)))
+ (=> $x3449 (= ud_6_18 false))))
 (assert
- (let ((?x9498 (+ (ite (and (<= 17_y 24) (>= (+ 17_y 13) 24)) 4 0))))
- (<= ?x9498 25)))
+ (let (($x3449 (< makespan 23)))
+ (=> $x3449 (= ud_18_6 false))))
 (assert
- (let ((?x9553 (+ (ite (and (<= 18_y 24) (>= (+ 18_y 3) 24)) 6 0))))
- (<= ?x9553 25)))
+ (= (<= (+ 5_x 3) 18_x) lr_6_19))
 (assert
- (let ((?x8300 (+ (ite (and (<= 0_y 25) (>= (+ 0_y 3) 25)) 3 0))))
- (<= ?x8300 25)))
+ (= (<= (+ 5_y 19) 18_y) ud_6_19))
 (assert
- (let ((?x5740 (+ (ite (and (<= 1_y 25) (>= (+ 1_y 4) 25)) 3 0))))
- (<= ?x5740 25)))
+ (= (<= (+ 18_x 3) 5_x) lr_19_6))
 (assert
- (let ((?x11665 (+ (ite (and (<= 2_y 25) (>= (+ 2_y 5) 25)) 3 0))))
- (<= ?x11665 25)))
+ (= (<= (+ 18_y 3) 5_y) ud_19_6))
 (assert
- (let ((?x2386 (+ (ite (and (<= 3_y 25) (>= (+ 3_y 6) 25)) 3 0))))
- (<= ?x2386 25)))
+ (or lr_6_19 lr_19_6 ud_6_19 ud_19_6))
 (assert
- (let ((?x9781 (+ (ite (and (<= 4_y 25) (>= (+ 4_y 7) 25)) 3 0))))
- (<= ?x9781 25)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_6_19 false))))
 (assert
- (let ((?x4955 (+ (ite (and (<= 5_y 25) (>= (+ 5_y 8) 25)) 3 0))))
- (<= ?x4955 25)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_19_6 false))))
 (assert
- (let ((?x9265 (+ (ite (and (<= 6_y 25) (>= (+ 6_y 9) 25)) 3 0))))
- (<= ?x9265 25)))
+ (= (<= (+ 6_x 3) 7_x) lr_7_8))
 (assert
- (let ((?x4576 (+ (ite (and (<= 7_y 25) (>= (+ 7_y 10) 25)) 3 0))))
- (<= ?x4576 25)))
+ (= (<= (+ 6_y 18) 7_y) ud_7_8))
 (assert
- (let ((?x12512 (+ (ite (and (<= 8_y 25) (>= (+ 8_y 11) 25)) 3 0))))
- (<= ?x12512 25)))
+ (= (<= (+ 7_x 3) 6_x) lr_8_7))
 (assert
- (let ((?x8662 (+ (ite (and (<= 9_y 25) (>= (+ 9_y 13) 25)) 3 0))))
- (<= ?x8662 25)))
+ (= (<= (+ 7_y 17) 6_y) ud_8_7))
 (assert
- (let ((?x20 (+ (ite (and (<= 10_y 25) (>= (+ 10_y 14) 25)) 3 0))))
- (<= ?x20 25)))
+ (or lr_7_8 lr_8_7 ud_7_8 ud_8_7))
 (assert
- (let ((?x5180 (+ (ite (and (<= 11_y 25) (>= (+ 11_y 17) 25)) 3 0))))
- (<= ?x5180 25)))
+ (let (($x2710 (< makespan 35)))
+ (=> $x2710 (= ud_7_8 false))))
 (assert
- (let ((?x3127 (+ (ite (and (<= 12_y 25) (>= (+ 12_y 18) 25)) 3 0))))
- (<= ?x3127 25)))
+ (let (($x2710 (< makespan 35)))
+ (=> $x2710 (= ud_8_7 false))))
 (assert
- (let ((?x45 (+ (ite (and (<= 13_y 25) (>= (+ 13_y 19) 25)) 3 0))))
- (<= ?x45 25)))
+ (= (<= (+ 6_x 3) 8_x) lr_7_9))
 (assert
- (let ((?x7974 (+ (ite (and (<= 14_y 25) (>= (+ 14_y 25) 25)) 3 0))))
- (<= ?x7974 25)))
+ (= (<= (+ 6_y 18) 8_y) ud_7_9))
 (assert
- (let ((?x9491 (+ (ite (and (<= 15_y 25) (>= (+ 15_y 5) 25)) 4 0))))
- (<= ?x9491 25)))
+ (= (<= (+ 8_x 3) 6_x) lr_9_7))
 (assert
- (let ((?x9108 (+ (ite (and (<= 16_y 25) (>= (+ 16_y 7) 25)) 4 0))))
- (<= ?x9108 25)))
+ (= (<= (+ 8_y 14) 6_y) ud_9_7))
 (assert
- (let ((?x2312 (+ (ite (and (<= 17_y 25) (>= (+ 17_y 13) 25)) 4 0))))
- (<= ?x2312 25)))
+ (or lr_7_9 lr_9_7 ud_7_9 ud_9_7))
 (assert
- (let ((?x5424 (+ (ite (and (<= 18_y 25) (>= (+ 18_y 3) 25)) 6 0))))
- (<= ?x5424 25)))
+ (let (($x665 (< makespan 32)))
+ (=> $x665 (= ud_7_9 false))))
 (assert
- (let ((?x12045 (+ (ite (and (<= 0_y 26) (>= (+ 0_y 3) 26)) 3 0))))
- (<= ?x12045 25)))
+ (let (($x665 (< makespan 32)))
+ (=> $x665 (= ud_9_7 false))))
 (assert
- (let ((?x6225 (+ (ite (and (<= 1_y 26) (>= (+ 1_y 4) 26)) 3 0))))
- (<= ?x6225 25)))
+ (= (<= (+ 6_x 3) 9_x) lr_7_10))
 (assert
- (let ((?x2535 (+ (ite (and (<= 2_y 26) (>= (+ 2_y 5) 26)) 3 0))))
- (<= ?x2535 25)))
+ (= (<= (+ 6_y 18) 9_y) ud_7_10))
 (assert
- (let ((?x6176 (+ (ite (and (<= 3_y 26) (>= (+ 3_y 6) 26)) 3 0))))
- (<= ?x6176 25)))
+ (= (<= (+ 9_x 3) 6_x) lr_10_7))
 (assert
- (let ((?x7857 (+ (ite (and (<= 4_y 26) (>= (+ 4_y 7) 26)) 3 0))))
- (<= ?x7857 25)))
+ (= (<= (+ 9_y 13) 6_y) ud_10_7))
 (assert
- (let ((?x1502 (+ (ite (and (<= 5_y 26) (>= (+ 5_y 8) 26)) 3 0))))
- (<= ?x1502 25)))
+ (or lr_7_10 lr_10_7 ud_7_10 ud_10_7))
 (assert
- (let ((?x6994 (+ (ite (and (<= 6_y 26) (>= (+ 6_y 9) 26)) 3 0))))
- (<= ?x6994 25)))
+ (let (($x610 (< makespan 31)))
+ (=> $x610 (= ud_7_10 false))))
 (assert
- (let ((?x7316 (+ (ite (and (<= 7_y 26) (>= (+ 7_y 10) 26)) 3 0))))
- (<= ?x7316 25)))
+ (let (($x610 (< makespan 31)))
+ (=> $x610 (= ud_10_7 false))))
 (assert
- (let ((?x2116 (+ (ite (and (<= 8_y 26) (>= (+ 8_y 11) 26)) 3 0))))
- (<= ?x2116 25)))
+ (= (<= (+ 6_x 3) 10_x) lr_7_11))
 (assert
- (let ((?x888 (+ (ite (and (<= 9_y 26) (>= (+ 9_y 13) 26)) 3 0))))
- (<= ?x888 25)))
+ (= (<= (+ 6_y 18) 10_y) ud_7_11))
 (assert
- (let ((?x3104 (+ (ite (and (<= 10_y 26) (>= (+ 10_y 14) 26)) 3 0))))
- (<= ?x3104 25)))
+ (= (<= (+ 10_x 3) 6_x) lr_11_7))
 (assert
- (let ((?x7307 (+ (ite (and (<= 11_y 26) (>= (+ 11_y 17) 26)) 3 0))))
- (<= ?x7307 25)))
+ (= (<= (+ 10_y 11) 6_y) ud_11_7))
 (assert
- (let ((?x7171 (+ (ite (and (<= 12_y 26) (>= (+ 12_y 18) 26)) 3 0))))
- (<= ?x7171 25)))
+ (or lr_7_11 lr_11_7 ud_7_11 ud_11_7))
 (assert
- (let ((?x2487 (+ (ite (and (<= 13_y 26) (>= (+ 13_y 19) 26)) 3 0))))
- (<= ?x2487 25)))
+ (let (($x3853 (< makespan 29)))
+ (=> $x3853 (= ud_7_11 false))))
 (assert
- (let ((?x4753 (+ (ite (and (<= 14_y 26) (>= (+ 14_y 25) 26)) 3 0))))
- (<= ?x4753 25)))
+ (let (($x3853 (< makespan 29)))
+ (=> $x3853 (= ud_11_7 false))))
 (assert
- (let ((?x6191 (+ (ite (and (<= 15_y 26) (>= (+ 15_y 5) 26)) 4 0))))
- (<= ?x6191 25)))
+ (= (<= (+ 6_x 3) 11_x) lr_7_12))
 (assert
- (let ((?x1144 (+ (ite (and (<= 16_y 26) (>= (+ 16_y 7) 26)) 4 0))))
- (<= ?x1144 25)))
+ (= (<= (+ 6_y 18) 11_y) ud_7_12))
 (assert
- (let ((?x353 (+ (ite (and (<= 17_y 26) (>= (+ 17_y 13) 26)) 4 0))))
- (<= ?x353 25)))
+ (= (<= (+ 11_x 3) 6_x) lr_12_7))
 (assert
- (let ((?x3904 (+ (ite (and (<= 18_y 26) (>= (+ 18_y 3) 26)) 6 0))))
- (<= ?x3904 25)))
+ (= (<= (+ 11_y 10) 6_y) ud_12_7))
 (assert
- (let ((?x4933 (+ (ite (and (<= 0_y 27) (>= (+ 0_y 3) 27)) 3 0))))
- (<= ?x4933 25)))
+ (or lr_7_12 lr_12_7 ud_7_12 ud_12_7))
 (assert
- (let ((?x7751 (+ (ite (and (<= 1_y 27) (>= (+ 1_y 4) 27)) 3 0))))
- (<= ?x7751 25)))
+ (let (($x1905 (< makespan 28)))
+ (=> $x1905 (= ud_7_12 false))))
 (assert
- (let ((?x378 (+ (ite (and (<= 2_y 27) (>= (+ 2_y 5) 27)) 3 0))))
- (<= ?x378 25)))
+ (let (($x1905 (< makespan 28)))
+ (=> $x1905 (= ud_12_7 false))))
 (assert
- (let ((?x2267 (+ (ite (and (<= 3_y 27) (>= (+ 3_y 6) 27)) 3 0))))
- (<= ?x2267 25)))
+ (= (<= (+ 6_x 3) 12_x) lr_7_13))
 (assert
- (let ((?x6880 (+ (ite (and (<= 4_y 27) (>= (+ 4_y 7) 27)) 3 0))))
- (<= ?x6880 25)))
+ (= (<= (+ 6_y 18) 12_y) ud_7_13))
 (assert
- (let ((?x6826 (+ (ite (and (<= 5_y 27) (>= (+ 5_y 8) 27)) 3 0))))
- (<= ?x6826 25)))
+ (= (<= (+ 12_x 3) 6_x) lr_13_7))
 (assert
- (let ((?x5191 (+ (ite (and (<= 6_y 27) (>= (+ 6_y 9) 27)) 3 0))))
- (<= ?x5191 25)))
+ (= (<= (+ 12_y 9) 6_y) ud_13_7))
 (assert
- (let ((?x9478 (+ (ite (and (<= 7_y 27) (>= (+ 7_y 10) 27)) 3 0))))
- (<= ?x9478 25)))
+ (or lr_7_13 lr_13_7 ud_7_13 ud_13_7))
 (assert
- (let ((?x307 (+ (ite (and (<= 8_y 27) (>= (+ 8_y 11) 27)) 3 0))))
- (<= ?x307 25)))
+ (let (($x4226 (< makespan 27)))
+ (=> $x4226 (= ud_7_13 false))))
 (assert
- (let ((?x8969 (+ (ite (and (<= 9_y 27) (>= (+ 9_y 13) 27)) 3 0))))
- (<= ?x8969 25)))
+ (let (($x4226 (< makespan 27)))
+ (=> $x4226 (= ud_13_7 false))))
 (assert
- (let ((?x5898 (+ (ite (and (<= 10_y 27) (>= (+ 10_y 14) 27)) 3 0))))
- (<= ?x5898 25)))
+ (= (<= (+ 6_x 3) 13_x) lr_7_14))
 (assert
- (let ((?x9173 (+ (ite (and (<= 11_y 27) (>= (+ 11_y 17) 27)) 3 0))))
- (<= ?x9173 25)))
+ (= (<= (+ 6_y 18) 13_y) ud_7_14))
 (assert
- (let ((?x6346 (+ (ite (and (<= 12_y 27) (>= (+ 12_y 18) 27)) 3 0))))
- (<= ?x6346 25)))
+ (= (<= (+ 13_x 3) 6_x) lr_14_7))
 (assert
- (let ((?x5558 (+ (ite (and (<= 13_y 27) (>= (+ 13_y 19) 27)) 3 0))))
- (<= ?x5558 25)))
+ (= (<= (+ 13_y 8) 6_y) ud_14_7))
 (assert
- (let ((?x1168 (+ (ite (and (<= 14_y 27) (>= (+ 14_y 25) 27)) 3 0))))
- (<= ?x1168 25)))
+ (or lr_7_14 lr_14_7 ud_7_14 ud_14_7))
 (assert
- (let ((?x7926 (+ (ite (and (<= 15_y 27) (>= (+ 15_y 5) 27)) 4 0))))
- (<= ?x7926 25)))
+ (let (($x965 (< makespan 26)))
+ (=> $x965 (= ud_7_14 false))))
 (assert
- (let ((?x6775 (+ (ite (and (<= 16_y 27) (>= (+ 16_y 7) 27)) 4 0))))
- (<= ?x6775 25)))
+ (let (($x965 (< makespan 26)))
+ (=> $x965 (= ud_14_7 false))))
 (assert
- (let ((?x2326 (+ (ite (and (<= 17_y 27) (>= (+ 17_y 13) 27)) 4 0))))
- (<= ?x2326 25)))
+ (= (<= (+ 6_x 3) 14_x) lr_7_15))
 (assert
- (let ((?x3192 (+ (ite (and (<= 18_y 27) (>= (+ 18_y 3) 27)) 6 0))))
- (<= ?x3192 25)))
+ (= (<= (+ 6_y 18) 14_y) ud_7_15))
 (assert
- (let ((?x3888 (+ (ite (and (<= 0_y 28) (>= (+ 0_y 3) 28)) 3 0))))
- (<= ?x3888 25)))
+ (= (<= (+ 14_x 3) 6_x) lr_15_7))
 (assert
- (let ((?x1904 (+ (ite (and (<= 1_y 28) (>= (+ 1_y 4) 28)) 3 0))))
- (<= ?x1904 25)))
+ (= (<= (+ 14_y 7) 6_y) ud_15_7))
 (assert
- (let ((?x9421 (+ (ite (and (<= 2_y 28) (>= (+ 2_y 5) 28)) 3 0))))
- (<= ?x9421 25)))
+ (or lr_7_15 lr_15_7 ud_7_15 ud_15_7))
 (assert
- (let ((?x8978 (+ (ite (and (<= 3_y 28) (>= (+ 3_y 6) 28)) 3 0))))
- (<= ?x8978 25)))
+ (let (($x3537 (< makespan 25)))
+ (=> $x3537 (= ud_7_15 false))))
 (assert
- (let ((?x6774 (+ (ite (and (<= 4_y 28) (>= (+ 4_y 7) 28)) 3 0))))
- (<= ?x6774 25)))
+ (let (($x3537 (< makespan 25)))
+ (=> $x3537 (= ud_15_7 false))))
 (assert
- (let ((?x3299 (+ (ite (and (<= 5_y 28) (>= (+ 5_y 8) 28)) 3 0))))
- (<= ?x3299 25)))
+ (= (<= (+ 6_x 3) 15_x) lr_7_16))
 (assert
- (let ((?x11741 (+ (ite (and (<= 6_y 28) (>= (+ 6_y 9) 28)) 3 0))))
- (<= ?x11741 25)))
+ (= (<= (+ 6_y 18) 15_y) ud_7_16))
 (assert
- (let ((?x5625 (+ (ite (and (<= 7_y 28) (>= (+ 7_y 10) 28)) 3 0))))
- (<= ?x5625 25)))
+ (= (<= (+ 15_x 3) 6_x) lr_16_7))
 (assert
- (let ((?x8964 (+ (ite (and (<= 8_y 28) (>= (+ 8_y 11) 28)) 3 0))))
- (<= ?x8964 25)))
+ (= (<= (+ 15_y 6) 6_y) ud_16_7))
 (assert
- (let ((?x6773 (+ (ite (and (<= 9_y 28) (>= (+ 9_y 13) 28)) 3 0))))
- (<= ?x6773 25)))
+ (or lr_7_16 lr_16_7 ud_7_16 ud_16_7))
 (assert
- (let ((?x31 (+ (ite (and (<= 10_y 28) (>= (+ 10_y 14) 28)) 3 0))))
- (<= ?x31 25)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_7_16 false))))
 (assert
- (let ((?x8818 (+ (ite (and (<= 11_y 28) (>= (+ 11_y 17) 28)) 3 0))))
- (<= ?x8818 25)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_16_7 false))))
 (assert
- (let ((?x9602 (+ (ite (and (<= 12_y 28) (>= (+ 12_y 18) 28)) 3 0))))
- (<= ?x9602 25)))
+ (= (<= (+ 6_x 3) 16_x) lr_7_17))
 (assert
- (let ((?x432 (+ (ite (and (<= 13_y 28) (>= (+ 13_y 19) 28)) 3 0))))
- (<= ?x432 25)))
+ (= (<= (+ 6_y 18) 16_y) ud_7_17))
 (assert
- (let ((?x4069 (+ (ite (and (<= 14_y 28) (>= (+ 14_y 25) 28)) 3 0))))
- (<= ?x4069 25)))
+ (= (<= (+ 16_x 3) 6_x) lr_17_7))
 (assert
- (let ((?x8216 (+ (ite (and (<= 15_y 28) (>= (+ 15_y 5) 28)) 4 0))))
- (<= ?x8216 25)))
+ (= (<= (+ 16_y 5) 6_y) ud_17_7))
 (assert
- (let ((?x2021 (+ (ite (and (<= 16_y 28) (>= (+ 16_y 7) 28)) 4 0))))
- (<= ?x2021 25)))
+ (or lr_7_17 lr_17_7 ud_7_17 ud_17_7))
 (assert
- (let ((?x2417 (+ (ite (and (<= 17_y 28) (>= (+ 17_y 13) 28)) 4 0))))
- (<= ?x2417 25)))
+ (let (($x3449 (< makespan 23)))
+ (=> $x3449 (= ud_7_17 false))))
 (assert
- (let ((?x7056 (+ (ite (and (<= 18_y 28) (>= (+ 18_y 3) 28)) 6 0))))
- (<= ?x7056 25)))
+ (let (($x3449 (< makespan 23)))
+ (=> $x3449 (= ud_17_7 false))))
 (assert
- (let ((?x6343 (+ (ite (and (<= 0_y 29) (>= (+ 0_y 3) 29)) 3 0))))
- (<= ?x6343 25)))
+ (= (<= (+ 6_x 3) 17_x) lr_7_18))
 (assert
- (let ((?x3404 (+ (ite (and (<= 1_y 29) (>= (+ 1_y 4) 29)) 3 0))))
- (<= ?x3404 25)))
+ (= (<= (+ 6_y 18) 17_y) ud_7_18))
 (assert
- (let ((?x658 (+ (ite (and (<= 2_y 29) (>= (+ 2_y 5) 29)) 3 0))))
- (<= ?x658 25)))
+ (= (<= (+ 17_x 3) 6_x) lr_18_7))
 (assert
- (let ((?x9288 (+ (ite (and (<= 3_y 29) (>= (+ 3_y 6) 29)) 3 0))))
- (<= ?x9288 25)))
+ (= (<= (+ 17_y 4) 6_y) ud_18_7))
 (assert
- (let ((?x1167 (+ (ite (and (<= 4_y 29) (>= (+ 4_y 7) 29)) 3 0))))
- (<= ?x1167 25)))
+ (or lr_7_18 lr_18_7 ud_7_18 ud_18_7))
 (assert
- (let ((?x8303 (+ (ite (and (<= 5_y 29) (>= (+ 5_y 8) 29)) 3 0))))
- (<= ?x8303 25)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_7_18 false))))
 (assert
- (let ((?x1268 (+ (ite (and (<= 6_y 29) (>= (+ 6_y 9) 29)) 3 0))))
- (<= ?x1268 25)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_18_7 false))))
 (assert
- (let ((?x2790 (+ (ite (and (<= 7_y 29) (>= (+ 7_y 10) 29)) 3 0))))
- (<= ?x2790 25)))
+ (= (<= (+ 6_x 3) 18_x) lr_7_19))
 (assert
- (let ((?x2084 (+ (ite (and (<= 8_y 29) (>= (+ 8_y 11) 29)) 3 0))))
- (<= ?x2084 25)))
+ (= (<= (+ 6_y 18) 18_y) ud_7_19))
 (assert
- (let ((?x1022 (+ (ite (and (<= 9_y 29) (>= (+ 9_y 13) 29)) 3 0))))
- (<= ?x1022 25)))
+ (= (<= (+ 18_x 3) 6_x) lr_19_7))
 (assert
- (let ((?x7325 (+ (ite (and (<= 10_y 29) (>= (+ 10_y 14) 29)) 3 0))))
- (<= ?x7325 25)))
+ (= (<= (+ 18_y 3) 6_y) ud_19_7))
 (assert
- (let ((?x4597 (+ (ite (and (<= 11_y 29) (>= (+ 11_y 17) 29)) 3 0))))
- (<= ?x4597 25)))
+ (or lr_7_19 lr_19_7 ud_7_19 ud_19_7))
 (assert
- (let ((?x2062 (+ (ite (and (<= 12_y 29) (>= (+ 12_y 18) 29)) 3 0))))
- (<= ?x2062 25)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_7_19 false))))
 (assert
- (let ((?x5675 (+ (ite (and (<= 13_y 29) (>= (+ 13_y 19) 29)) 3 0))))
- (<= ?x5675 25)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_19_7 false))))
 (assert
- (let ((?x66 (+ (ite (and (<= 14_y 29) (>= (+ 14_y 25) 29)) 3 0))))
- (<= ?x66 25)))
+ (= (<= (+ 7_x 3) 8_x) lr_8_9))
 (assert
- (let ((?x585 (+ (ite (and (<= 15_y 29) (>= (+ 15_y 5) 29)) 4 0))))
- (<= ?x585 25)))
+ (= (<= (+ 7_y 17) 8_y) ud_8_9))
 (assert
- (let ((?x5954 (+ (ite (and (<= 16_y 29) (>= (+ 16_y 7) 29)) 4 0))))
- (<= ?x5954 25)))
+ (= (<= (+ 8_x 3) 7_x) lr_9_8))
 (assert
- (let ((?x7674 (+ (ite (and (<= 17_y 29) (>= (+ 17_y 13) 29)) 4 0))))
- (<= ?x7674 25)))
+ (= (<= (+ 8_y 14) 7_y) ud_9_8))
 (assert
- (let ((?x9590 (+ (ite (and (<= 18_y 29) (>= (+ 18_y 3) 29)) 6 0))))
- (<= ?x9590 25)))
+ (or lr_8_9 lr_9_8 ud_8_9 ud_9_8))
 (assert
- (let ((?x2147 (+ (ite (and (<= 0_x 0) (>= (+ 0_x 3) 0)) 3 0))))
- (<= ?x2147 makespan)))
+ (let (($x610 (< makespan 31)))
+ (=> $x610 (= ud_8_9 false))))
 (assert
- (let ((?x2871 (+ (ite (and (<= 1_x 0) (>= (+ 1_x 3) 0)) 4 0))))
- (<= ?x2871 makespan)))
+ (let (($x610 (< makespan 31)))
+ (=> $x610 (= ud_9_8 false))))
 (assert
- (let ((?x4031 (+ (ite (and (<= 2_x 0) (>= (+ 2_x 3) 0)) 5 0))))
- (<= ?x4031 makespan)))
+ (= (<= (+ 7_x 3) 9_x) lr_8_10))
 (assert
- (let ((?x5597 (+ (ite (and (<= 3_x 0) (>= (+ 3_x 3) 0)) 6 0))))
- (<= ?x5597 makespan)))
+ (= (<= (+ 7_y 17) 9_y) ud_8_10))
 (assert
- (let ((?x397 (+ (ite (and (<= 4_x 0) (>= (+ 4_x 3) 0)) 7 0))))
- (<= ?x397 makespan)))
+ (= (<= (+ 9_x 3) 7_x) lr_10_8))
 (assert
- (let ((?x6088 (+ (ite (and (<= 5_x 0) (>= (+ 5_x 3) 0)) 8 0))))
- (<= ?x6088 makespan)))
+ (= (<= (+ 9_y 13) 7_y) ud_10_8))
 (assert
- (let ((?x8534 (+ (ite (and (<= 6_x 0) (>= (+ 6_x 3) 0)) 9 0))))
- (<= ?x8534 makespan)))
+ (or lr_8_10 lr_10_8 ud_8_10 ud_10_8))
 (assert
- (let ((?x4363 (+ (ite (and (<= 7_x 0) (>= (+ 7_x 3) 0)) 10 0))))
- (<= ?x4363 makespan)))
+ (let (($x2168 (< makespan 30)))
+ (=> $x2168 (= ud_8_10 false))))
 (assert
- (let ((?x1460 (+ (ite (and (<= 8_x 0) (>= (+ 8_x 3) 0)) 11 0))))
- (<= ?x1460 makespan)))
+ (let (($x2168 (< makespan 30)))
+ (=> $x2168 (= ud_10_8 false))))
 (assert
- (let ((?x6678 (+ (ite (and (<= 9_x 0) (>= (+ 9_x 3) 0)) 13 0))))
- (<= ?x6678 makespan)))
+ (= (<= (+ 7_x 3) 10_x) lr_8_11))
 (assert
- (let ((?x7726 (+ (ite (and (<= 10_x 0) (>= (+ 10_x 3) 0)) 14 0))))
- (<= ?x7726 makespan)))
+ (= (<= (+ 7_y 17) 10_y) ud_8_11))
 (assert
- (let ((?x8284 (+ (ite (and (<= 11_x 0) (>= (+ 11_x 3) 0)) 17 0))))
- (<= ?x8284 makespan)))
+ (= (<= (+ 10_x 3) 7_x) lr_11_8))
 (assert
- (let ((?x2652 (+ (ite (and (<= 12_x 0) (>= (+ 12_x 3) 0)) 18 0))))
- (<= ?x2652 makespan)))
+ (= (<= (+ 10_y 11) 7_y) ud_11_8))
 (assert
- (let ((?x694 (+ (ite (and (<= 13_x 0) (>= (+ 13_x 3) 0)) 19 0))))
- (<= ?x694 makespan)))
+ (or lr_8_11 lr_11_8 ud_8_11 ud_11_8))
 (assert
- (let ((?x4396 (+ (ite (and (<= 14_x 0) (>= (+ 14_x 3) 0)) 25 0))))
- (<= ?x4396 makespan)))
+ (let (($x1905 (< makespan 28)))
+ (=> $x1905 (= ud_8_11 false))))
 (assert
- (let ((?x5390 (+ (ite (and (<= 15_x 0) (>= (+ 15_x 4) 0)) 5 0))))
- (<= ?x5390 makespan)))
+ (let (($x1905 (< makespan 28)))
+ (=> $x1905 (= ud_11_8 false))))
 (assert
- (let ((?x1991 (+ (ite (and (<= 16_x 0) (>= (+ 16_x 4) 0)) 7 0))))
- (<= ?x1991 makespan)))
+ (= (<= (+ 7_x 3) 11_x) lr_8_12))
 (assert
- (let ((?x3858 (+ (ite (and (<= 17_x 0) (>= (+ 17_x 4) 0)) 13 0))))
- (<= ?x3858 makespan)))
+ (= (<= (+ 7_y 17) 11_y) ud_8_12))
 (assert
- (let ((?x3646 (+ (ite (and (<= 18_x 0) (>= (+ 18_x 6) 0)) 3 0))))
- (<= ?x3646 makespan)))
+ (= (<= (+ 11_x 3) 7_x) lr_12_8))
 (assert
- (let ((?x2356 (+ (ite (and (<= 0_x 1) (>= (+ 0_x 3) 1)) 3 0))))
- (<= ?x2356 makespan)))
+ (= (<= (+ 11_y 10) 7_y) ud_12_8))
 (assert
- (let ((?x6698 (+ (ite (and (<= 1_x 1) (>= (+ 1_x 3) 1)) 4 0))))
- (<= ?x6698 makespan)))
+ (or lr_8_12 lr_12_8 ud_8_12 ud_12_8))
 (assert
- (let ((?x6703 (+ (ite (and (<= 2_x 1) (>= (+ 2_x 3) 1)) 5 0))))
- (<= ?x6703 makespan)))
+ (let (($x4226 (< makespan 27)))
+ (=> $x4226 (= ud_8_12 false))))
 (assert
- (let ((?x771 (+ (ite (and (<= 3_x 1) (>= (+ 3_x 3) 1)) 6 0))))
- (<= ?x771 makespan)))
+ (let (($x4226 (< makespan 27)))
+ (=> $x4226 (= ud_12_8 false))))
 (assert
- (let ((?x6138 (+ (ite (and (<= 4_x 1) (>= (+ 4_x 3) 1)) 7 0))))
- (<= ?x6138 makespan)))
+ (= (<= (+ 7_x 3) 12_x) lr_8_13))
 (assert
- (let ((?x8656 (+ (ite (and (<= 5_x 1) (>= (+ 5_x 3) 1)) 8 0))))
- (<= ?x8656 makespan)))
+ (= (<= (+ 7_y 17) 12_y) ud_8_13))
 (assert
- (let ((?x5456 (+ (ite (and (<= 6_x 1) (>= (+ 6_x 3) 1)) 9 0))))
- (<= ?x5456 makespan)))
+ (= (<= (+ 12_x 3) 7_x) lr_13_8))
 (assert
- (let ((?x6966 (+ (ite (and (<= 7_x 1) (>= (+ 7_x 3) 1)) 10 0))))
- (<= ?x6966 makespan)))
+ (= (<= (+ 12_y 9) 7_y) ud_13_8))
 (assert
- (let ((?x8898 (+ (ite (and (<= 8_x 1) (>= (+ 8_x 3) 1)) 11 0))))
- (<= ?x8898 makespan)))
+ (or lr_8_13 lr_13_8 ud_8_13 ud_13_8))
 (assert
- (let ((?x2246 (+ (ite (and (<= 9_x 1) (>= (+ 9_x 3) 1)) 13 0))))
- (<= ?x2246 makespan)))
+ (let (($x965 (< makespan 26)))
+ (=> $x965 (= ud_8_13 false))))
 (assert
- (let ((?x6104 (+ (ite (and (<= 10_x 1) (>= (+ 10_x 3) 1)) 14 0))))
- (<= ?x6104 makespan)))
+ (let (($x965 (< makespan 26)))
+ (=> $x965 (= ud_13_8 false))))
 (assert
- (let ((?x2401 (+ (ite (and (<= 11_x 1) (>= (+ 11_x 3) 1)) 17 0))))
- (<= ?x2401 makespan)))
+ (= (<= (+ 7_x 3) 13_x) lr_8_14))
 (assert
- (let ((?x9029 (+ (ite (and (<= 12_x 1) (>= (+ 12_x 3) 1)) 18 0))))
- (<= ?x9029 makespan)))
+ (= (<= (+ 7_y 17) 13_y) ud_8_14))
 (assert
- (let ((?x9164 (+ (ite (and (<= 13_x 1) (>= (+ 13_x 3) 1)) 19 0))))
- (<= ?x9164 makespan)))
+ (= (<= (+ 13_x 3) 7_x) lr_14_8))
 (assert
- (let ((?x5721 (+ (ite (and (<= 14_x 1) (>= (+ 14_x 3) 1)) 25 0))))
- (<= ?x5721 makespan)))
+ (= (<= (+ 13_y 8) 7_y) ud_14_8))
 (assert
- (let ((?x4886 (+ (ite (and (<= 15_x 1) (>= (+ 15_x 4) 1)) 5 0))))
- (<= ?x4886 makespan)))
+ (or lr_8_14 lr_14_8 ud_8_14 ud_14_8))
 (assert
- (let ((?x1321 (+ (ite (and (<= 16_x 1) (>= (+ 16_x 4) 1)) 7 0))))
- (<= ?x1321 makespan)))
+ (let (($x3537 (< makespan 25)))
+ (=> $x3537 (= ud_8_14 false))))
 (assert
- (let ((?x3729 (+ (ite (and (<= 17_x 1) (>= (+ 17_x 4) 1)) 13 0))))
- (<= ?x3729 makespan)))
+ (let (($x3537 (< makespan 25)))
+ (=> $x3537 (= ud_14_8 false))))
 (assert
- (let ((?x6542 (+ (ite (and (<= 18_x 1) (>= (+ 18_x 6) 1)) 3 0))))
- (<= ?x6542 makespan)))
+ (= (<= (+ 7_x 3) 14_x) lr_8_15))
 (assert
- (let ((?x7568 (+ (ite (and (<= 0_x 2) (>= (+ 0_x 3) 2)) 3 0))))
- (<= ?x7568 makespan)))
+ (= (<= (+ 7_y 17) 14_y) ud_8_15))
 (assert
- (let ((?x7878 (+ (ite (and (<= 1_x 2) (>= (+ 1_x 3) 2)) 4 0))))
- (<= ?x7878 makespan)))
+ (= (<= (+ 14_x 3) 7_x) lr_15_8))
 (assert
- (let ((?x5584 (+ (ite (and (<= 2_x 2) (>= (+ 2_x 3) 2)) 5 0))))
- (<= ?x5584 makespan)))
+ (= (<= (+ 14_y 7) 7_y) ud_15_8))
 (assert
- (let ((?x7987 (+ (ite (and (<= 3_x 2) (>= (+ 3_x 3) 2)) 6 0))))
- (<= ?x7987 makespan)))
+ (or lr_8_15 lr_15_8 ud_8_15 ud_15_8))
 (assert
- (let ((?x5408 (+ (ite (and (<= 4_x 2) (>= (+ 4_x 3) 2)) 7 0))))
- (<= ?x5408 makespan)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_8_15 false))))
 (assert
- (let ((?x2994 (+ (ite (and (<= 5_x 2) (>= (+ 5_x 3) 2)) 8 0))))
- (<= ?x2994 makespan)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_15_8 false))))
 (assert
- (let ((?x2619 (+ (ite (and (<= 6_x 2) (>= (+ 6_x 3) 2)) 9 0))))
- (<= ?x2619 makespan)))
+ (= (<= (+ 7_x 3) 15_x) lr_8_16))
 (assert
- (let ((?x1271 (+ (ite (and (<= 7_x 2) (>= (+ 7_x 3) 2)) 10 0))))
- (<= ?x1271 makespan)))
+ (= (<= (+ 7_y 17) 15_y) ud_8_16))
 (assert
- (let ((?x7818 (+ (ite (and (<= 8_x 2) (>= (+ 8_x 3) 2)) 11 0))))
- (<= ?x7818 makespan)))
+ (= (<= (+ 15_x 3) 7_x) lr_16_8))
 (assert
- (let ((?x1604 (+ (ite (and (<= 9_x 2) (>= (+ 9_x 3) 2)) 13 0))))
- (<= ?x1604 makespan)))
+ (= (<= (+ 15_y 6) 7_y) ud_16_8))
 (assert
- (let ((?x6385 (+ (ite (and (<= 10_x 2) (>= (+ 10_x 3) 2)) 14 0))))
- (<= ?x6385 makespan)))
+ (or lr_8_16 lr_16_8 ud_8_16 ud_16_8))
 (assert
- (let ((?x7527 (+ (ite (and (<= 11_x 2) (>= (+ 11_x 3) 2)) 17 0))))
- (<= ?x7527 makespan)))
+ (let (($x3449 (< makespan 23)))
+ (=> $x3449 (= ud_8_16 false))))
 (assert
- (let ((?x8887 (+ (ite (and (<= 12_x 2) (>= (+ 12_x 3) 2)) 18 0))))
- (<= ?x8887 makespan)))
+ (let (($x3449 (< makespan 23)))
+ (=> $x3449 (= ud_16_8 false))))
 (assert
- (let ((?x2768 (+ (ite (and (<= 13_x 2) (>= (+ 13_x 3) 2)) 19 0))))
- (<= ?x2768 makespan)))
+ (= (<= (+ 7_x 3) 16_x) lr_8_17))
 (assert
- (let ((?x4231 (+ (ite (and (<= 14_x 2) (>= (+ 14_x 3) 2)) 25 0))))
- (<= ?x4231 makespan)))
+ (= (<= (+ 7_y 17) 16_y) ud_8_17))
 (assert
- (let ((?x1434 (+ (ite (and (<= 15_x 2) (>= (+ 15_x 4) 2)) 5 0))))
- (<= ?x1434 makespan)))
+ (= (<= (+ 16_x 3) 7_x) lr_17_8))
 (assert
- (let ((?x6410 (+ (ite (and (<= 16_x 2) (>= (+ 16_x 4) 2)) 7 0))))
- (<= ?x6410 makespan)))
+ (= (<= (+ 16_y 5) 7_y) ud_17_8))
 (assert
- (let ((?x7172 (+ (ite (and (<= 17_x 2) (>= (+ 17_x 4) 2)) 13 0))))
- (<= ?x7172 makespan)))
+ (or lr_8_17 lr_17_8 ud_8_17 ud_17_8))
 (assert
- (let ((?x8750 (+ (ite (and (<= 18_x 2) (>= (+ 18_x 6) 2)) 3 0))))
- (<= ?x8750 makespan)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_8_17 false))))
 (assert
- (let ((?x5614 (+ (ite (and (<= 0_x 3) (>= (+ 0_x 3) 3)) 3 0))))
- (<= ?x5614 makespan)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_17_8 false))))
 (assert
- (let ((?x6116 (+ (ite (and (<= 1_x 3) (>= (+ 1_x 3) 3)) 4 0))))
- (<= ?x6116 makespan)))
+ (= (<= (+ 7_x 3) 17_x) lr_8_18))
 (assert
- (let ((?x205 (+ (ite (and (<= 2_x 3) (>= (+ 2_x 3) 3)) 5 0))))
- (<= ?x205 makespan)))
+ (= (<= (+ 7_y 17) 17_y) ud_8_18))
 (assert
- (let ((?x9410 (+ (ite (and (<= 3_x 3) (>= (+ 3_x 3) 3)) 6 0))))
- (<= ?x9410 makespan)))
+ (= (<= (+ 17_x 3) 7_x) lr_18_8))
 (assert
- (let ((?x5064 (+ (ite (and (<= 4_x 3) (>= (+ 4_x 3) 3)) 7 0))))
- (<= ?x5064 makespan)))
+ (= (<= (+ 17_y 4) 7_y) ud_18_8))
 (assert
- (let ((?x8429 (+ (ite (and (<= 5_x 3) (>= (+ 5_x 3) 3)) 8 0))))
- (<= ?x8429 makespan)))
+ (or lr_8_18 lr_18_8 ud_8_18 ud_18_8))
 (assert
- (let ((?x6644 (+ (ite (and (<= 6_x 3) (>= (+ 6_x 3) 3)) 9 0))))
- (<= ?x6644 makespan)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_8_18 false))))
 (assert
- (let ((?x7791 (+ (ite (and (<= 7_x 3) (>= (+ 7_x 3) 3)) 10 0))))
- (<= ?x7791 makespan)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_18_8 false))))
 (assert
- (let ((?x4546 (+ (ite (and (<= 8_x 3) (>= (+ 8_x 3) 3)) 11 0))))
- (<= ?x4546 makespan)))
+ (= (<= (+ 7_x 3) 18_x) lr_8_19))
 (assert
- (let ((?x5096 (+ (ite (and (<= 9_x 3) (>= (+ 9_x 3) 3)) 13 0))))
- (<= ?x5096 makespan)))
+ (= (<= (+ 7_y 17) 18_y) ud_8_19))
 (assert
- (let ((?x8158 (+ (ite (and (<= 10_x 3) (>= (+ 10_x 3) 3)) 14 0))))
- (<= ?x8158 makespan)))
+ (= (<= (+ 18_x 3) 7_x) lr_19_8))
 (assert
- (let ((?x6311 (+ (ite (and (<= 11_x 3) (>= (+ 11_x 3) 3)) 17 0))))
- (<= ?x6311 makespan)))
+ (= (<= (+ 18_y 3) 7_y) ud_19_8))
 (assert
- (let ((?x662 (+ (ite (and (<= 12_x 3) (>= (+ 12_x 3) 3)) 18 0))))
- (<= ?x662 makespan)))
+ (or lr_8_19 lr_19_8 ud_8_19 ud_19_8))
 (assert
- (let ((?x2187 (+ (ite (and (<= 13_x 3) (>= (+ 13_x 3) 3)) 19 0))))
- (<= ?x2187 makespan)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_8_19 false))))
 (assert
- (let ((?x2176 (+ (ite (and (<= 14_x 3) (>= (+ 14_x 3) 3)) 25 0))))
- (<= ?x2176 makespan)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_19_8 false))))
 (assert
- (let ((?x1181 (+ (ite (and (<= 15_x 3) (>= (+ 15_x 4) 3)) 5 0))))
- (<= ?x1181 makespan)))
+ (= (<= (+ 8_x 3) 9_x) lr_9_10))
 (assert
- (let ((?x5177 (+ (ite (and (<= 16_x 3) (>= (+ 16_x 4) 3)) 7 0))))
- (<= ?x5177 makespan)))
+ (= (<= (+ 8_y 14) 9_y) ud_9_10))
 (assert
- (let ((?x8180 (+ (ite (and (<= 17_x 3) (>= (+ 17_x 4) 3)) 13 0))))
- (<= ?x8180 makespan)))
+ (= (<= (+ 9_x 3) 8_x) lr_10_9))
 (assert
- (let ((?x6772 (+ (ite (and (<= 18_x 3) (>= (+ 18_x 6) 3)) 3 0))))
- (<= ?x6772 makespan)))
+ (= (<= (+ 9_y 13) 8_y) ud_10_9))
 (assert
- (let ((?x943 (+ (ite (and (<= 0_x 4) (>= (+ 0_x 3) 4)) 3 0))))
- (<= ?x943 makespan)))
+ (or lr_9_10 lr_10_9 ud_9_10 ud_10_9))
 (assert
- (let ((?x3737 (+ (ite (and (<= 1_x 4) (>= (+ 1_x 3) 4)) 4 0))))
- (<= ?x3737 makespan)))
+ (let (($x4226 (< makespan 27)))
+ (=> $x4226 (= ud_9_10 false))))
 (assert
- (let ((?x4409 (+ (ite (and (<= 2_x 4) (>= (+ 2_x 3) 4)) 5 0))))
- (<= ?x4409 makespan)))
+ (let (($x4226 (< makespan 27)))
+ (=> $x4226 (= ud_10_9 false))))
 (assert
- (let ((?x4887 (+ (ite (and (<= 3_x 4) (>= (+ 3_x 3) 4)) 6 0))))
- (<= ?x4887 makespan)))
+ (= (<= (+ 8_x 3) 10_x) lr_9_11))
 (assert
- (let ((?x5296 (+ (ite (and (<= 4_x 4) (>= (+ 4_x 3) 4)) 7 0))))
- (<= ?x5296 makespan)))
+ (= (<= (+ 8_y 14) 10_y) ud_9_11))
 (assert
- (let ((?x8584 (+ (ite (and (<= 5_x 4) (>= (+ 5_x 3) 4)) 8 0))))
- (<= ?x8584 makespan)))
+ (= (<= (+ 10_x 3) 8_x) lr_11_9))
 (assert
- (let ((?x8726 (+ (ite (and (<= 6_x 4) (>= (+ 6_x 3) 4)) 9 0))))
- (<= ?x8726 makespan)))
+ (= (<= (+ 10_y 11) 8_y) ud_11_9))
 (assert
- (let ((?x2200 (+ (ite (and (<= 7_x 4) (>= (+ 7_x 3) 4)) 10 0))))
- (<= ?x2200 makespan)))
+ (or lr_9_11 lr_11_9 ud_9_11 ud_11_9))
 (assert
- (let ((?x1066 (+ (ite (and (<= 8_x 4) (>= (+ 8_x 3) 4)) 11 0))))
- (<= ?x1066 makespan)))
+ (let (($x3537 (< makespan 25)))
+ (=> $x3537 (= ud_9_11 false))))
 (assert
- (let ((?x1245 (+ (ite (and (<= 9_x 4) (>= (+ 9_x 3) 4)) 13 0))))
- (<= ?x1245 makespan)))
+ (let (($x3537 (< makespan 25)))
+ (=> $x3537 (= ud_11_9 false))))
 (assert
- (let ((?x207 (+ (ite (and (<= 10_x 4) (>= (+ 10_x 3) 4)) 14 0))))
- (<= ?x207 makespan)))
+ (= (<= (+ 8_x 3) 11_x) lr_9_12))
 (assert
- (let ((?x7542 (+ (ite (and (<= 11_x 4) (>= (+ 11_x 3) 4)) 17 0))))
- (<= ?x7542 makespan)))
+ (= (<= (+ 8_y 14) 11_y) ud_9_12))
 (assert
- (let ((?x4266 (+ (ite (and (<= 12_x 4) (>= (+ 12_x 3) 4)) 18 0))))
- (<= ?x4266 makespan)))
+ (= (<= (+ 11_x 3) 8_x) lr_12_9))
 (assert
- (let ((?x7789 (+ (ite (and (<= 13_x 4) (>= (+ 13_x 3) 4)) 19 0))))
- (<= ?x7789 makespan)))
+ (= (<= (+ 11_y 10) 8_y) ud_12_9))
 (assert
- (let ((?x2575 (+ (ite (and (<= 14_x 4) (>= (+ 14_x 3) 4)) 25 0))))
- (<= ?x2575 makespan)))
+ (or lr_9_12 lr_12_9 ud_9_12 ud_12_9))
 (assert
- (let ((?x2196 (+ (ite (and (<= 15_x 4) (>= (+ 15_x 4) 4)) 5 0))))
- (<= ?x2196 makespan)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_9_12 false))))
 (assert
- (let ((?x1809 (+ (ite (and (<= 16_x 4) (>= (+ 16_x 4) 4)) 7 0))))
- (<= ?x1809 makespan)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_12_9 false))))
 (assert
- (let ((?x2842 (+ (ite (and (<= 17_x 4) (>= (+ 17_x 4) 4)) 13 0))))
- (<= ?x2842 makespan)))
+ (= (<= (+ 8_x 3) 12_x) lr_9_13))
 (assert
- (let ((?x9451 (+ (ite (and (<= 18_x 4) (>= (+ 18_x 6) 4)) 3 0))))
- (<= ?x9451 makespan)))
+ (= (<= (+ 8_y 14) 12_y) ud_9_13))
 (assert
- (let ((?x1482 (+ (ite (and (<= 0_x 5) (>= (+ 0_x 3) 5)) 3 0))))
- (<= ?x1482 makespan)))
+ (= (<= (+ 12_x 3) 8_x) lr_13_9))
 (assert
- (let ((?x6908 (+ (ite (and (<= 1_x 5) (>= (+ 1_x 3) 5)) 4 0))))
- (<= ?x6908 makespan)))
+ (= (<= (+ 12_y 9) 8_y) ud_13_9))
 (assert
- (let ((?x7770 (+ (ite (and (<= 2_x 5) (>= (+ 2_x 3) 5)) 5 0))))
- (<= ?x7770 makespan)))
+ (or lr_9_13 lr_13_9 ud_9_13 ud_13_9))
 (assert
- (let ((?x2155 (+ (ite (and (<= 3_x 5) (>= (+ 3_x 3) 5)) 6 0))))
- (<= ?x2155 makespan)))
+ (let (($x3449 (< makespan 23)))
+ (=> $x3449 (= ud_9_13 false))))
 (assert
- (let ((?x5252 (+ (ite (and (<= 4_x 5) (>= (+ 4_x 3) 5)) 7 0))))
- (<= ?x5252 makespan)))
+ (let (($x3449 (< makespan 23)))
+ (=> $x3449 (= ud_13_9 false))))
 (assert
- (let ((?x7455 (+ (ite (and (<= 5_x 5) (>= (+ 5_x 3) 5)) 8 0))))
- (<= ?x7455 makespan)))
+ (= (<= (+ 8_x 3) 13_x) lr_9_14))
 (assert
- (let ((?x6495 (+ (ite (and (<= 6_x 5) (>= (+ 6_x 3) 5)) 9 0))))
- (<= ?x6495 makespan)))
+ (= (<= (+ 8_y 14) 13_y) ud_9_14))
 (assert
- (let ((?x3490 (+ (ite (and (<= 7_x 5) (>= (+ 7_x 3) 5)) 10 0))))
- (<= ?x3490 makespan)))
+ (= (<= (+ 13_x 3) 8_x) lr_14_9))
 (assert
- (let ((?x2055 (+ (ite (and (<= 8_x 5) (>= (+ 8_x 3) 5)) 11 0))))
- (<= ?x2055 makespan)))
+ (= (<= (+ 13_y 8) 8_y) ud_14_9))
 (assert
- (let ((?x2908 (+ (ite (and (<= 9_x 5) (>= (+ 9_x 3) 5)) 13 0))))
- (<= ?x2908 makespan)))
+ (or lr_9_14 lr_14_9 ud_9_14 ud_14_9))
 (assert
- (let ((?x7494 (+ (ite (and (<= 10_x 5) (>= (+ 10_x 3) 5)) 14 0))))
- (<= ?x7494 makespan)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_9_14 false))))
 (assert
- (let ((?x3079 (+ (ite (and (<= 11_x 5) (>= (+ 11_x 3) 5)) 17 0))))
- (<= ?x3079 makespan)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_14_9 false))))
 (assert
- (let ((?x7314 (+ (ite (and (<= 12_x 5) (>= (+ 12_x 3) 5)) 18 0))))
- (<= ?x7314 makespan)))
+ (= (<= (+ 8_x 3) 14_x) lr_9_15))
 (assert
- (let ((?x6129 (+ (ite (and (<= 13_x 5) (>= (+ 13_x 3) 5)) 19 0))))
- (<= ?x6129 makespan)))
+ (= (<= (+ 8_y 14) 14_y) ud_9_15))
 (assert
- (let ((?x2024 (+ (ite (and (<= 14_x 5) (>= (+ 14_x 3) 5)) 25 0))))
- (<= ?x2024 makespan)))
+ (= (<= (+ 14_x 3) 8_x) lr_15_9))
 (assert
- (let ((?x2347 (+ (ite (and (<= 15_x 5) (>= (+ 15_x 4) 5)) 5 0))))
- (<= ?x2347 makespan)))
+ (= (<= (+ 14_y 7) 8_y) ud_15_9))
 (assert
- (let ((?x6734 (+ (ite (and (<= 16_x 5) (>= (+ 16_x 4) 5)) 7 0))))
- (<= ?x6734 makespan)))
+ (or lr_9_15 lr_15_9 ud_9_15 ud_15_9))
 (assert
- (let ((?x4348 (+ (ite (and (<= 17_x 5) (>= (+ 17_x 4) 5)) 13 0))))
- (<= ?x4348 makespan)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_9_15 false))))
 (assert
- (let ((?x5192 (+ (ite (and (<= 18_x 5) (>= (+ 18_x 6) 5)) 3 0))))
- (<= ?x5192 makespan)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_15_9 false))))
 (assert
- (let ((?x1419 (+ (ite (and (<= 0_x 6) (>= (+ 0_x 3) 6)) 3 0))))
- (<= ?x1419 makespan)))
+ (= (<= (+ 8_x 3) 15_x) lr_9_16))
 (assert
- (let ((?x5279 (+ (ite (and (<= 1_x 6) (>= (+ 1_x 3) 6)) 4 0))))
- (<= ?x5279 makespan)))
+ (= (<= (+ 8_y 14) 15_y) ud_9_16))
 (assert
- (let ((?x7725 (+ (ite (and (<= 2_x 6) (>= (+ 2_x 3) 6)) 5 0))))
- (<= ?x7725 makespan)))
+ (= (<= (+ 15_x 3) 8_x) lr_16_9))
 (assert
- (let ((?x6468 (+ (ite (and (<= 3_x 6) (>= (+ 3_x 3) 6)) 6 0))))
- (<= ?x6468 makespan)))
+ (= (<= (+ 15_y 6) 8_y) ud_16_9))
 (assert
- (let ((?x3808 (+ (ite (and (<= 4_x 6) (>= (+ 4_x 3) 6)) 7 0))))
- (<= ?x3808 makespan)))
+ (or lr_9_16 lr_16_9 ud_9_16 ud_16_9))
 (assert
- (let ((?x4474 (+ (ite (and (<= 5_x 6) (>= (+ 5_x 3) 6)) 8 0))))
- (<= ?x4474 makespan)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_9_16 false))))
 (assert
- (let ((?x5113 (+ (ite (and (<= 6_x 6) (>= (+ 6_x 3) 6)) 9 0))))
- (<= ?x5113 makespan)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_16_9 false))))
 (assert
- (let ((?x8523 (+ (ite (and (<= 7_x 6) (>= (+ 7_x 3) 6)) 10 0))))
- (<= ?x8523 makespan)))
+ (= (<= (+ 8_x 3) 16_x) lr_9_17))
 (assert
- (let ((?x8738 (+ (ite (and (<= 8_x 6) (>= (+ 8_x 3) 6)) 11 0))))
- (<= ?x8738 makespan)))
+ (= (<= (+ 8_y 14) 16_y) ud_9_17))
 (assert
- (let ((?x2680 (+ (ite (and (<= 9_x 6) (>= (+ 9_x 3) 6)) 13 0))))
- (<= ?x2680 makespan)))
+ (= (<= (+ 16_x 3) 8_x) lr_17_9))
 (assert
- (let ((?x3012 (+ (ite (and (<= 10_x 6) (>= (+ 10_x 3) 6)) 14 0))))
- (<= ?x3012 makespan)))
+ (= (<= (+ 16_y 5) 8_y) ud_17_9))
 (assert
- (let ((?x4535 (+ (ite (and (<= 11_x 6) (>= (+ 11_x 3) 6)) 17 0))))
- (<= ?x4535 makespan)))
+ (or lr_9_17 lr_17_9 ud_9_17 ud_17_9))
 (assert
- (let ((?x5242 (+ (ite (and (<= 12_x 6) (>= (+ 12_x 3) 6)) 18 0))))
- (<= ?x5242 makespan)))
+ (let (($x1260 (< makespan 19)))
+ (=> $x1260 (= ud_9_17 false))))
 (assert
- (let ((?x5618 (+ (ite (and (<= 13_x 6) (>= (+ 13_x 3) 6)) 19 0))))
- (<= ?x5618 makespan)))
+ (let (($x1260 (< makespan 19)))
+ (=> $x1260 (= ud_17_9 false))))
 (assert
- (let ((?x3264 (+ (ite (and (<= 14_x 6) (>= (+ 14_x 3) 6)) 25 0))))
- (<= ?x3264 makespan)))
+ (= (<= (+ 8_x 3) 17_x) lr_9_18))
 (assert
- (let ((?x7754 (+ (ite (and (<= 15_x 6) (>= (+ 15_x 4) 6)) 5 0))))
- (<= ?x7754 makespan)))
+ (= (<= (+ 8_y 14) 17_y) ud_9_18))
 (assert
- (let ((?x6930 (+ (ite (and (<= 16_x 6) (>= (+ 16_x 4) 6)) 7 0))))
- (<= ?x6930 makespan)))
+ (= (<= (+ 17_x 3) 8_x) lr_18_9))
 (assert
- (let ((?x4436 (+ (ite (and (<= 17_x 6) (>= (+ 17_x 4) 6)) 13 0))))
- (<= ?x4436 makespan)))
+ (= (<= (+ 17_y 4) 8_y) ud_18_9))
 (assert
- (let ((?x4060 (+ (ite (and (<= 18_x 6) (>= (+ 18_x 6) 6)) 3 0))))
- (<= ?x4060 makespan)))
+ (or lr_9_18 lr_18_9 ud_9_18 ud_18_9))
 (assert
- (let ((?x8455 (+ (ite (and (<= 0_x 7) (>= (+ 0_x 3) 7)) 3 0))))
- (<= ?x8455 makespan)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_9_18 false))))
 (assert
- (let ((?x6974 (+ (ite (and (<= 1_x 7) (>= (+ 1_x 3) 7)) 4 0))))
- (<= ?x6974 makespan)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_18_9 false))))
 (assert
- (let ((?x5979 (+ (ite (and (<= 2_x 7) (>= (+ 2_x 3) 7)) 5 0))))
- (<= ?x5979 makespan)))
+ (= (<= (+ 8_x 3) 18_x) lr_9_19))
 (assert
- (let ((?x2483 (+ (ite (and (<= 3_x 7) (>= (+ 3_x 3) 7)) 6 0))))
- (<= ?x2483 makespan)))
+ (= (<= (+ 8_y 14) 18_y) ud_9_19))
 (assert
- (let ((?x2169 (+ (ite (and (<= 4_x 7) (>= (+ 4_x 3) 7)) 7 0))))
- (<= ?x2169 makespan)))
+ (= (<= (+ 18_x 3) 8_x) lr_19_9))
 (assert
- (let ((?x2715 (+ (ite (and (<= 5_x 7) (>= (+ 5_x 3) 7)) 8 0))))
- (<= ?x2715 makespan)))
+ (= (<= (+ 18_y 3) 8_y) ud_19_9))
 (assert
- (let ((?x6016 (+ (ite (and (<= 6_x 7) (>= (+ 6_x 3) 7)) 9 0))))
- (<= ?x6016 makespan)))
+ (or lr_9_19 lr_19_9 ud_9_19 ud_19_9))
 (assert
- (let ((?x7912 (+ (ite (and (<= 7_x 7) (>= (+ 7_x 3) 7)) 10 0))))
- (<= ?x7912 makespan)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_9_19 false))))
 (assert
- (let ((?x7058 (+ (ite (and (<= 8_x 7) (>= (+ 8_x 3) 7)) 11 0))))
- (<= ?x7058 makespan)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_19_9 false))))
 (assert
- (let ((?x502 (+ (ite (and (<= 9_x 7) (>= (+ 9_x 3) 7)) 13 0))))
- (<= ?x502 makespan)))
+ (= (<= (+ 9_x 3) 10_x) lr_10_11))
 (assert
- (let ((?x3876 (+ (ite (and (<= 10_x 7) (>= (+ 10_x 3) 7)) 14 0))))
- (<= ?x3876 makespan)))
+ (= (<= (+ 9_y 13) 10_y) ud_10_11))
 (assert
- (let ((?x4540 (+ (ite (and (<= 11_x 7) (>= (+ 11_x 3) 7)) 17 0))))
- (<= ?x4540 makespan)))
+ (= (<= (+ 10_x 3) 9_x) lr_11_10))
 (assert
- (let ((?x5260 (+ (ite (and (<= 12_x 7) (>= (+ 12_x 3) 7)) 18 0))))
- (<= ?x5260 makespan)))
+ (= (<= (+ 10_y 11) 9_y) ud_11_10))
 (assert
- (let ((?x8741 (+ (ite (and (<= 13_x 7) (>= (+ 13_x 3) 7)) 19 0))))
- (<= ?x8741 makespan)))
+ (or lr_10_11 lr_11_10 ud_10_11 ud_11_10))
 (assert
- (let ((?x9851 (+ (ite (and (<= 14_x 7) (>= (+ 14_x 3) 7)) 25 0))))
- (<= ?x9851 makespan)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_10_11 false))))
 (assert
- (let ((?x9899 (+ (ite (and (<= 15_x 7) (>= (+ 15_x 4) 7)) 5 0))))
- (<= ?x9899 makespan)))
+ (let (($x3887 (< makespan 24)))
+ (=> $x3887 (= ud_11_10 false))))
 (assert
- (let ((?x9947 (+ (ite (and (<= 16_x 7) (>= (+ 16_x 4) 7)) 7 0))))
- (<= ?x9947 makespan)))
+ (= (<= (+ 9_x 3) 11_x) lr_10_12))
 (assert
- (let ((?x9995 (+ (ite (and (<= 17_x 7) (>= (+ 17_x 4) 7)) 13 0))))
- (<= ?x9995 makespan)))
+ (= (<= (+ 9_y 13) 11_y) ud_10_12))
 (assert
- (let ((?x10043 (+ (ite (and (<= 18_x 7) (>= (+ 18_x 6) 7)) 3 0))))
- (<= ?x10043 makespan)))
+ (= (<= (+ 11_x 3) 9_x) lr_12_10))
 (assert
- (let ((?x10091 (+ (ite (and (<= 0_x 8) (>= (+ 0_x 3) 8)) 3 0))))
- (<= ?x10091 makespan)))
+ (= (<= (+ 11_y 10) 9_y) ud_12_10))
 (assert
- (let ((?x10139 (+ (ite (and (<= 1_x 8) (>= (+ 1_x 3) 8)) 4 0))))
- (<= ?x10139 makespan)))
+ (or lr_10_12 lr_12_10 ud_10_12 ud_12_10))
 (assert
- (let ((?x10187 (+ (ite (and (<= 2_x 8) (>= (+ 2_x 3) 8)) 5 0))))
- (<= ?x10187 makespan)))
+ (let (($x3449 (< makespan 23)))
+ (=> $x3449 (= ud_10_12 false))))
 (assert
- (let ((?x10235 (+ (ite (and (<= 3_x 8) (>= (+ 3_x 3) 8)) 6 0))))
- (<= ?x10235 makespan)))
+ (let (($x3449 (< makespan 23)))
+ (=> $x3449 (= ud_12_10 false))))
 (assert
- (let ((?x10283 (+ (ite (and (<= 4_x 8) (>= (+ 4_x 3) 8)) 7 0))))
- (<= ?x10283 makespan)))
+ (= (<= (+ 9_x 3) 12_x) lr_10_13))
 (assert
- (let ((?x10331 (+ (ite (and (<= 5_x 8) (>= (+ 5_x 3) 8)) 8 0))))
- (<= ?x10331 makespan)))
+ (= (<= (+ 9_y 13) 12_y) ud_10_13))
 (assert
- (let ((?x10379 (+ (ite (and (<= 6_x 8) (>= (+ 6_x 3) 8)) 9 0))))
- (<= ?x10379 makespan)))
+ (= (<= (+ 12_x 3) 9_x) lr_13_10))
 (assert
- (let ((?x10427 (+ (ite (and (<= 7_x 8) (>= (+ 7_x 3) 8)) 10 0))))
- (<= ?x10427 makespan)))
+ (= (<= (+ 12_y 9) 9_y) ud_13_10))
 (assert
- (let ((?x10475 (+ (ite (and (<= 8_x 8) (>= (+ 8_x 3) 8)) 11 0))))
- (<= ?x10475 makespan)))
+ (or lr_10_13 lr_13_10 ud_10_13 ud_13_10))
 (assert
- (let ((?x10523 (+ (ite (and (<= 9_x 8) (>= (+ 9_x 3) 8)) 13 0))))
- (<= ?x10523 makespan)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_10_13 false))))
 (assert
- (let ((?x10571 (+ (ite (and (<= 10_x 8) (>= (+ 10_x 3) 8)) 14 0))))
- (<= ?x10571 makespan)))
+ (let (($x2644 (< makespan 22)))
+ (=> $x2644 (= ud_13_10 false))))
 (assert
- (let ((?x10619 (+ (ite (and (<= 11_x 8) (>= (+ 11_x 3) 8)) 17 0))))
- (<= ?x10619 makespan)))
+ (= (<= (+ 9_x 3) 13_x) lr_10_14))
 (assert
- (let ((?x10667 (+ (ite (and (<= 12_x 8) (>= (+ 12_x 3) 8)) 18 0))))
- (<= ?x10667 makespan)))
+ (= (<= (+ 9_y 13) 13_y) ud_10_14))
 (assert
- (let ((?x10715 (+ (ite (and (<= 13_x 8) (>= (+ 13_x 3) 8)) 19 0))))
- (<= ?x10715 makespan)))
+ (= (<= (+ 13_x 3) 9_x) lr_14_10))
 (assert
- (let ((?x10763 (+ (ite (and (<= 14_x 8) (>= (+ 14_x 3) 8)) 25 0))))
- (<= ?x10763 makespan)))
+ (= (<= (+ 13_y 8) 9_y) ud_14_10))
 (assert
- (let ((?x10811 (+ (ite (and (<= 15_x 8) (>= (+ 15_x 4) 8)) 5 0))))
- (<= ?x10811 makespan)))
+ (or lr_10_14 lr_14_10 ud_10_14 ud_14_10))
 (assert
- (let ((?x10859 (+ (ite (and (<= 16_x 8) (>= (+ 16_x 4) 8)) 7 0))))
- (<= ?x10859 makespan)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_10_14 false))))
 (assert
- (let ((?x10907 (+ (ite (and (<= 17_x 8) (>= (+ 17_x 4) 8)) 13 0))))
- (<= ?x10907 makespan)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_14_10 false))))
 (assert
- (let ((?x10955 (+ (ite (and (<= 18_x 8) (>= (+ 18_x 6) 8)) 3 0))))
- (<= ?x10955 makespan)))
+ (= (<= (+ 9_x 3) 14_x) lr_10_15))
 (assert
- (let ((?x11003 (+ (ite (and (<= 0_x 9) (>= (+ 0_x 3) 9)) 3 0))))
- (<= ?x11003 makespan)))
+ (= (<= (+ 9_y 13) 14_y) ud_10_15))
 (assert
- (let ((?x11051 (+ (ite (and (<= 1_x 9) (>= (+ 1_x 3) 9)) 4 0))))
- (<= ?x11051 makespan)))
+ (= (<= (+ 14_x 3) 9_x) lr_15_10))
 (assert
- (let ((?x11099 (+ (ite (and (<= 2_x 9) (>= (+ 2_x 3) 9)) 5 0))))
- (<= ?x11099 makespan)))
+ (= (<= (+ 14_y 7) 9_y) ud_15_10))
 (assert
- (let ((?x11147 (+ (ite (and (<= 3_x 9) (>= (+ 3_x 3) 9)) 6 0))))
- (<= ?x11147 makespan)))
+ (or lr_10_15 lr_15_10 ud_10_15 ud_15_10))
 (assert
- (let ((?x11195 (+ (ite (and (<= 4_x 9) (>= (+ 4_x 3) 9)) 7 0))))
- (<= ?x11195 makespan)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_10_15 false))))
 (assert
- (let ((?x11243 (+ (ite (and (<= 5_x 9) (>= (+ 5_x 3) 9)) 8 0))))
- (<= ?x11243 makespan)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_15_10 false))))
 (assert
- (let ((?x11291 (+ (ite (and (<= 6_x 9) (>= (+ 6_x 3) 9)) 9 0))))
- (<= ?x11291 makespan)))
+ (= (<= (+ 9_x 3) 15_x) lr_10_16))
 (assert
- (let ((?x11339 (+ (ite (and (<= 7_x 9) (>= (+ 7_x 3) 9)) 10 0))))
- (<= ?x11339 makespan)))
+ (= (<= (+ 9_y 13) 15_y) ud_10_16))
 (assert
- (let ((?x11387 (+ (ite (and (<= 8_x 9) (>= (+ 8_x 3) 9)) 11 0))))
- (<= ?x11387 makespan)))
+ (= (<= (+ 15_x 3) 9_x) lr_16_10))
 (assert
- (let ((?x11434 (+ (ite (and (<= 9_x 9) (>= (+ 9_x 3) 9)) 13 0))))
- (<= ?x11434 makespan)))
+ (= (<= (+ 15_y 6) 9_y) ud_16_10))
 (assert
- (let ((?x11482 (+ (ite (and (<= 10_x 9) (>= (+ 10_x 3) 9)) 14 0))))
- (<= ?x11482 makespan)))
+ (or lr_10_16 lr_16_10 ud_10_16 ud_16_10))
 (assert
- (let ((?x11530 (+ (ite (and (<= 11_x 9) (>= (+ 11_x 3) 9)) 17 0))))
- (<= ?x11530 makespan)))
+ (let (($x1260 (< makespan 19)))
+ (=> $x1260 (= ud_10_16 false))))
 (assert
- (let ((?x11578 (+ (ite (and (<= 12_x 9) (>= (+ 12_x 3) 9)) 18 0))))
- (<= ?x11578 makespan)))
+ (let (($x1260 (< makespan 19)))
+ (=> $x1260 (= ud_16_10 false))))
 (assert
- (let ((?x11626 (+ (ite (and (<= 13_x 9) (>= (+ 13_x 3) 9)) 19 0))))
- (<= ?x11626 makespan)))
+ (= (<= (+ 9_x 3) 16_x) lr_10_17))
 (assert
- (let ((?x11674 (+ (ite (and (<= 14_x 9) (>= (+ 14_x 3) 9)) 25 0))))
- (<= ?x11674 makespan)))
+ (= (<= (+ 9_y 13) 16_y) ud_10_17))
 (assert
- (let ((?x11722 (+ (ite (and (<= 15_x 9) (>= (+ 15_x 4) 9)) 5 0))))
- (<= ?x11722 makespan)))
+ (= (<= (+ 16_x 3) 9_x) lr_17_10))
 (assert
- (let ((?x11770 (+ (ite (and (<= 16_x 9) (>= (+ 16_x 4) 9)) 7 0))))
- (<= ?x11770 makespan)))
+ (= (<= (+ 16_y 5) 9_y) ud_17_10))
 (assert
- (let ((?x11817 (+ (ite (and (<= 17_x 9) (>= (+ 17_x 4) 9)) 13 0))))
- (<= ?x11817 makespan)))
+ (or lr_10_17 lr_17_10 ud_10_17 ud_17_10))
 (assert
- (let ((?x11861 (+ (ite (and (<= 18_x 9) (>= (+ 18_x 6) 9)) 3 0))))
- (<= ?x11861 makespan)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_10_17 false))))
 (assert
- (let ((?x11906 (+ (ite (and (<= 0_x 10) (>= (+ 0_x 3) 10)) 3 0))))
- (<= ?x11906 makespan)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_17_10 false))))
 (assert
- (let ((?x11950 (+ (ite (and (<= 1_x 10) (>= (+ 1_x 3) 10)) 4 0))))
- (<= ?x11950 makespan)))
+ (= (<= (+ 9_x 3) 17_x) lr_10_18))
 (assert
- (let ((?x11994 (+ (ite (and (<= 2_x 10) (>= (+ 2_x 3) 10)) 5 0))))
- (<= ?x11994 makespan)))
+ (= (<= (+ 9_y 13) 17_y) ud_10_18))
 (assert
- (let ((?x12040 (+ (ite (and (<= 3_x 10) (>= (+ 3_x 3) 10)) 6 0))))
- (<= ?x12040 makespan)))
+ (= (<= (+ 17_x 3) 9_x) lr_18_10))
 (assert
- (let ((?x12088 (+ (ite (and (<= 4_x 10) (>= (+ 4_x 3) 10)) 7 0))))
- (<= ?x12088 makespan)))
+ (= (<= (+ 17_y 4) 9_y) ud_18_10))
 (assert
- (let ((?x12136 (+ (ite (and (<= 5_x 10) (>= (+ 5_x 3) 10)) 8 0))))
- (<= ?x12136 makespan)))
+ (or lr_10_18 lr_18_10 ud_10_18 ud_18_10))
 (assert
- (let ((?x12184 (+ (ite (and (<= 6_x 10) (>= (+ 6_x 3) 10)) 9 0))))
- (<= ?x12184 makespan)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_10_18 false))))
 (assert
- (let ((?x12232 (+ (ite (and (<= 7_x 10) (>= (+ 7_x 3) 10)) 10 0))))
- (<= ?x12232 makespan)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_18_10 false))))
 (assert
- (let ((?x12280 (+ (ite (and (<= 8_x 10) (>= (+ 8_x 3) 10)) 11 0))))
- (<= ?x12280 makespan)))
+ (= (<= (+ 9_x 3) 18_x) lr_10_19))
 (assert
- (let ((?x12328 (+ (ite (and (<= 9_x 10) (>= (+ 9_x 3) 10)) 13 0))))
- (<= ?x12328 makespan)))
+ (= (<= (+ 9_y 13) 18_y) ud_10_19))
 (assert
- (let ((?x12376 (+ (ite (and (<= 10_x 10) (>= (+ 10_x 3) 10)) 14 0))))
- (<= ?x12376 makespan)))
+ (= (<= (+ 18_x 3) 9_x) lr_19_10))
 (assert
- (let ((?x12424 (+ (ite (and (<= 11_x 10) (>= (+ 11_x 3) 10)) 17 0))))
- (<= ?x12424 makespan)))
+ (= (<= (+ 18_y 3) 9_y) ud_19_10))
 (assert
- (let ((?x12472 (+ (ite (and (<= 12_x 10) (>= (+ 12_x 3) 10)) 18 0))))
- (<= ?x12472 makespan)))
+ (or lr_10_19 lr_19_10 ud_10_19 ud_19_10))
 (assert
- (let ((?x12520 (+ (ite (and (<= 13_x 10) (>= (+ 13_x 3) 10)) 19 0))))
- (<= ?x12520 makespan)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_10_19 false))))
 (assert
- (let ((?x8996 (+ (ite (and (<= 14_x 10) (>= (+ 14_x 3) 10)) 25 0))))
- (<= ?x8996 makespan)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_19_10 false))))
 (assert
- (let ((?x2443 (+ (ite (and (<= 15_x 10) (>= (+ 15_x 4) 10)) 5 0))))
- (<= ?x2443 makespan)))
+ (= (<= (+ 10_x 3) 11_x) lr_11_12))
 (assert
- (let ((?x2410 (+ (ite (and (<= 16_x 10) (>= (+ 16_x 4) 10)) 7 0))))
- (<= ?x2410 makespan)))
+ (= (<= (+ 10_y 11) 11_y) ud_11_12))
 (assert
- (let ((?x2696 (+ (ite (and (<= 17_x 10) (>= (+ 17_x 4) 10)) 13 0))))
- (<= ?x2696 makespan)))
+ (= (<= (+ 11_x 3) 10_x) lr_12_11))
 (assert
- (let ((?x8836 (+ (ite (and (<= 18_x 10) (>= (+ 18_x 6) 10)) 3 0))))
- (<= ?x8836 makespan)))
+ (= (<= (+ 11_y 10) 10_y) ud_12_11))
 (assert
- (let ((?x9778 (+ (ite (and (<= 0_x 11) (>= (+ 0_x 3) 11)) 3 0))))
- (<= ?x9778 makespan)))
+ (or lr_11_12 lr_12_11 ud_11_12 ud_12_11))
 (assert
- (let ((?x680 (+ (ite (and (<= 1_x 11) (>= (+ 1_x 3) 11)) 4 0))))
- (<= ?x680 makespan)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_11_12 false))))
 (assert
- (let ((?x8363 (+ (ite (and (<= 2_x 11) (>= (+ 2_x 3) 11)) 5 0))))
- (<= ?x8363 makespan)))
+ (let (($x1717 (< makespan 21)))
+ (=> $x1717 (= ud_12_11 false))))
 (assert
- (let ((?x359 (+ (ite (and (<= 3_x 11) (>= (+ 3_x 3) 11)) 6 0))))
- (<= ?x359 makespan)))
+ (= (<= (+ 10_x 3) 12_x) lr_11_13))
 (assert
- (let ((?x2746 (+ (ite (and (<= 4_x 11) (>= (+ 4_x 3) 11)) 7 0))))
- (<= ?x2746 makespan)))
+ (= (<= (+ 10_y 11) 12_y) ud_11_13))
 (assert
- (let ((?x9355 (+ (ite (and (<= 5_x 11) (>= (+ 5_x 3) 11)) 8 0))))
- (<= ?x9355 makespan)))
+ (= (<= (+ 12_x 3) 10_x) lr_13_11))
 (assert
- (let ((?x9230 (+ (ite (and (<= 6_x 11) (>= (+ 6_x 3) 11)) 9 0))))
- (<= ?x9230 makespan)))
+ (= (<= (+ 12_y 9) 10_y) ud_13_11))
 (assert
- (let ((?x2232 (+ (ite (and (<= 7_x 11) (>= (+ 7_x 3) 11)) 10 0))))
- (<= ?x2232 makespan)))
+ (or lr_11_13 lr_13_11 ud_11_13 ud_13_11))
 (assert
- (let ((?x7735 (+ (ite (and (<= 8_x 11) (>= (+ 8_x 3) 11)) 11 0))))
- (<= ?x7735 makespan)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_11_13 false))))
 (assert
- (let ((?x9296 (+ (ite (and (<= 9_x 11) (>= (+ 9_x 3) 11)) 13 0))))
- (<= ?x9296 makespan)))
+ (let (($x743 (< makespan 20)))
+ (=> $x743 (= ud_13_11 false))))
 (assert
- (let ((?x8083 (+ (ite (and (<= 10_x 11) (>= (+ 10_x 3) 11)) 14 0))))
- (<= ?x8083 makespan)))
+ (= (<= (+ 10_x 3) 13_x) lr_11_14))
 (assert
- (let ((?x3227 (+ (ite (and (<= 11_x 11) (>= (+ 11_x 3) 11)) 17 0))))
- (<= ?x3227 makespan)))
+ (= (<= (+ 10_y 11) 13_y) ud_11_14))
 (assert
- (let ((?x173 (+ (ite (and (<= 12_x 11) (>= (+ 12_x 3) 11)) 18 0))))
- (<= ?x173 makespan)))
+ (= (<= (+ 13_x 3) 10_x) lr_14_11))
 (assert
- (let ((?x725 (+ (ite (and (<= 13_x 11) (>= (+ 13_x 3) 11)) 19 0))))
- (<= ?x725 makespan)))
+ (= (<= (+ 13_y 8) 10_y) ud_14_11))
 (assert
- (let ((?x1097 (+ (ite (and (<= 14_x 11) (>= (+ 14_x 3) 11)) 25 0))))
- (<= ?x1097 makespan)))
+ (or lr_11_14 lr_14_11 ud_11_14 ud_14_11))
 (assert
- (let ((?x6321 (+ (ite (and (<= 15_x 11) (>= (+ 15_x 4) 11)) 5 0))))
- (<= ?x6321 makespan)))
+ (let (($x1260 (< makespan 19)))
+ (=> $x1260 (= ud_11_14 false))))
 (assert
- (let ((?x6103 (+ (ite (and (<= 16_x 11) (>= (+ 16_x 4) 11)) 7 0))))
- (<= ?x6103 makespan)))
+ (let (($x1260 (< makespan 19)))
+ (=> $x1260 (= ud_14_11 false))))
 (assert
- (let ((?x4701 (+ (ite (and (<= 17_x 11) (>= (+ 17_x 4) 11)) 13 0))))
- (<= ?x4701 makespan)))
+ (= (<= (+ 10_x 3) 14_x) lr_11_15))
 (assert
- (let ((?x8245 (+ (ite (and (<= 18_x 11) (>= (+ 18_x 6) 11)) 3 0))))
- (<= ?x8245 makespan)))
+ (= (<= (+ 10_y 11) 14_y) ud_11_15))
 (assert
- (let ((?x1626 (+ (ite (and (<= 0_x 12) (>= (+ 0_x 3) 12)) 3 0))))
- (<= ?x1626 makespan)))
+ (= (<= (+ 14_x 3) 10_x) lr_15_11))
 (assert
- (let ((?x7610 (+ (ite (and (<= 1_x 12) (>= (+ 1_x 3) 12)) 4 0))))
- (<= ?x7610 makespan)))
+ (= (<= (+ 14_y 7) 10_y) ud_15_11))
 (assert
- (let ((?x5026 (+ (ite (and (<= 2_x 12) (>= (+ 2_x 3) 12)) 5 0))))
- (<= ?x5026 makespan)))
+ (or lr_11_15 lr_15_11 ud_11_15 ud_15_11))
 (assert
- (let ((?x7083 (+ (ite (and (<= 3_x 12) (>= (+ 3_x 3) 12)) 6 0))))
- (<= ?x7083 makespan)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_11_15 false))))
 (assert
- (let ((?x3838 (+ (ite (and (<= 4_x 12) (>= (+ 4_x 3) 12)) 7 0))))
- (<= ?x3838 makespan)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_15_11 false))))
 (assert
- (let ((?x8552 (+ (ite (and (<= 5_x 12) (>= (+ 5_x 3) 12)) 8 0))))
- (<= ?x8552 makespan)))
+ (= (<= (+ 10_x 3) 15_x) lr_11_16))
 (assert
- (let ((?x789 (+ (ite (and (<= 6_x 12) (>= (+ 6_x 3) 12)) 9 0))))
- (<= ?x789 makespan)))
+ (= (<= (+ 10_y 11) 15_y) ud_11_16))
 (assert
- (let ((?x8175 (+ (ite (and (<= 7_x 12) (>= (+ 7_x 3) 12)) 10 0))))
- (<= ?x8175 makespan)))
+ (= (<= (+ 15_x 3) 10_x) lr_16_11))
 (assert
- (let ((?x5059 (+ (ite (and (<= 8_x 12) (>= (+ 8_x 3) 12)) 11 0))))
- (<= ?x5059 makespan)))
+ (= (<= (+ 15_y 6) 10_y) ud_16_11))
 (assert
- (let ((?x9076 (+ (ite (and (<= 9_x 12) (>= (+ 9_x 3) 12)) 13 0))))
- (<= ?x9076 makespan)))
+ (or lr_11_16 lr_16_11 ud_11_16 ud_16_11))
 (assert
- (let ((?x7150 (+ (ite (and (<= 10_x 12) (>= (+ 10_x 3) 12)) 14 0))))
- (<= ?x7150 makespan)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_11_16 false))))
 (assert
- (let ((?x9399 (+ (ite (and (<= 11_x 12) (>= (+ 11_x 3) 12)) 17 0))))
- (<= ?x9399 makespan)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_16_11 false))))
 (assert
- (let ((?x1417 (+ (ite (and (<= 12_x 12) (>= (+ 12_x 3) 12)) 18 0))))
- (<= ?x1417 makespan)))
+ (= (<= (+ 10_x 3) 16_x) lr_11_17))
 (assert
- (let ((?x5928 (+ (ite (and (<= 13_x 12) (>= (+ 13_x 3) 12)) 19 0))))
- (<= ?x5928 makespan)))
+ (= (<= (+ 10_y 11) 16_y) ud_11_17))
 (assert
- (let ((?x7397 (+ (ite (and (<= 14_x 12) (>= (+ 14_x 3) 12)) 25 0))))
- (<= ?x7397 makespan)))
+ (= (<= (+ 16_x 3) 10_x) lr_17_11))
 (assert
- (let ((?x2438 (+ (ite (and (<= 15_x 12) (>= (+ 15_x 4) 12)) 5 0))))
- (<= ?x2438 makespan)))
+ (= (<= (+ 16_y 5) 10_y) ud_17_11))
 (assert
- (let ((?x7296 (+ (ite (and (<= 16_x 12) (>= (+ 16_x 4) 12)) 7 0))))
- (<= ?x7296 makespan)))
+ (or lr_11_17 lr_17_11 ud_11_17 ud_17_11))
 (assert
- (let ((?x239 (+ (ite (and (<= 17_x 12) (>= (+ 17_x 4) 12)) 13 0))))
- (<= ?x239 makespan)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_11_17 false))))
 (assert
- (let ((?x4010 (+ (ite (and (<= 18_x 12) (>= (+ 18_x 6) 12)) 3 0))))
- (<= ?x4010 makespan)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_17_11 false))))
 (assert
- (let ((?x8231 (+ (ite (and (<= 0_x 13) (>= (+ 0_x 3) 13)) 3 0))))
- (<= ?x8231 makespan)))
+ (= (<= (+ 10_x 3) 17_x) lr_11_18))
 (assert
- (let ((?x4014 (+ (ite (and (<= 1_x 13) (>= (+ 1_x 3) 13)) 4 0))))
- (<= ?x4014 makespan)))
+ (= (<= (+ 10_y 11) 17_y) ud_11_18))
 (assert
- (let ((?x8709 (+ (ite (and (<= 2_x 13) (>= (+ 2_x 3) 13)) 5 0))))
- (<= ?x8709 makespan)))
+ (= (<= (+ 17_x 3) 10_x) lr_18_11))
 (assert
- (let ((?x7347 (+ (ite (and (<= 3_x 13) (>= (+ 3_x 3) 13)) 6 0))))
- (<= ?x7347 makespan)))
+ (= (<= (+ 17_y 4) 10_y) ud_18_11))
 (assert
- (let ((?x9222 (+ (ite (and (<= 4_x 13) (>= (+ 4_x 3) 13)) 7 0))))
- (<= ?x9222 makespan)))
+ (or lr_11_18 lr_18_11 ud_11_18 ud_18_11))
 (assert
- (let ((?x7743 (+ (ite (and (<= 5_x 13) (>= (+ 5_x 3) 13)) 8 0))))
- (<= ?x7743 makespan)))
+ (let (($x3447 (< makespan 15)))
+ (=> $x3447 (= ud_11_18 false))))
 (assert
- (let ((?x8251 (+ (ite (and (<= 6_x 13) (>= (+ 6_x 3) 13)) 9 0))))
- (<= ?x8251 makespan)))
+ (let (($x3447 (< makespan 15)))
+ (=> $x3447 (= ud_18_11 false))))
 (assert
- (let ((?x5475 (+ (ite (and (<= 7_x 13) (>= (+ 7_x 3) 13)) 10 0))))
- (<= ?x5475 makespan)))
+ (= (<= (+ 10_x 3) 18_x) lr_11_19))
 (assert
- (let ((?x5878 (+ (ite (and (<= 8_x 13) (>= (+ 8_x 3) 13)) 11 0))))
- (<= ?x5878 makespan)))
+ (= (<= (+ 10_y 11) 18_y) ud_11_19))
 (assert
- (let ((?x2313 (+ (ite (and (<= 9_x 13) (>= (+ 9_x 3) 13)) 13 0))))
- (<= ?x2313 makespan)))
+ (= (<= (+ 18_x 3) 10_x) lr_19_11))
 (assert
- (let ((?x2003 (+ (ite (and (<= 10_x 13) (>= (+ 10_x 3) 13)) 14 0))))
- (<= ?x2003 makespan)))
+ (= (<= (+ 18_y 3) 10_y) ud_19_11))
 (assert
- (let ((?x1021 (+ (ite (and (<= 11_x 13) (>= (+ 11_x 3) 13)) 17 0))))
- (<= ?x1021 makespan)))
+ (or lr_11_19 lr_19_11 ud_11_19 ud_19_11))
 (assert
- (let ((?x9759 (+ (ite (and (<= 12_x 13) (>= (+ 12_x 3) 13)) 18 0))))
- (<= ?x9759 makespan)))
+ (let (($x4364 (< makespan 14)))
+ (=> $x4364 (= ud_11_19 false))))
 (assert
- (let ((?x4813 (+ (ite (and (<= 13_x 13) (>= (+ 13_x 3) 13)) 19 0))))
- (<= ?x4813 makespan)))
+ (let (($x4364 (< makespan 14)))
+ (=> $x4364 (= ud_19_11 false))))
 (assert
- (let ((?x5616 (+ (ite (and (<= 14_x 13) (>= (+ 14_x 3) 13)) 25 0))))
- (<= ?x5616 makespan)))
+ (= (<= (+ 11_x 3) 12_x) lr_12_13))
 (assert
- (let ((?x3017 (+ (ite (and (<= 15_x 13) (>= (+ 15_x 4) 13)) 5 0))))
- (<= ?x3017 makespan)))
+ (= (<= (+ 11_y 10) 12_y) ud_12_13))
 (assert
- (let ((?x1962 (+ (ite (and (<= 16_x 13) (>= (+ 16_x 4) 13)) 7 0))))
- (<= ?x1962 makespan)))
+ (= (<= (+ 12_x 3) 11_x) lr_13_12))
 (assert
- (let ((?x6823 (+ (ite (and (<= 17_x 13) (>= (+ 17_x 4) 13)) 13 0))))
- (<= ?x6823 makespan)))
+ (= (<= (+ 12_y 9) 11_y) ud_13_12))
 (assert
- (let ((?x649 (+ (ite (and (<= 18_x 13) (>= (+ 18_x 6) 13)) 3 0))))
- (<= ?x649 makespan)))
+ (or lr_12_13 lr_13_12 ud_12_13 ud_13_12))
 (assert
- (let ((?x4642 (+ (ite (and (<= 0_x 14) (>= (+ 0_x 3) 14)) 3 0))))
- (<= ?x4642 makespan)))
+ (let (($x1260 (< makespan 19)))
+ (=> $x1260 (= ud_12_13 false))))
 (assert
- (let ((?x9386 (+ (ite (and (<= 1_x 14) (>= (+ 1_x 3) 14)) 4 0))))
- (<= ?x9386 makespan)))
+ (let (($x1260 (< makespan 19)))
+ (=> $x1260 (= ud_13_12 false))))
 (assert
- (let ((?x7161 (+ (ite (and (<= 2_x 14) (>= (+ 2_x 3) 14)) 5 0))))
- (<= ?x7161 makespan)))
+ (= (<= (+ 11_x 3) 13_x) lr_12_14))
 (assert
- (let ((?x7246 (+ (ite (and (<= 3_x 14) (>= (+ 3_x 3) 14)) 6 0))))
- (<= ?x7246 makespan)))
+ (= (<= (+ 11_y 10) 13_y) ud_12_14))
 (assert
- (let ((?x7729 (+ (ite (and (<= 4_x 14) (>= (+ 4_x 3) 14)) 7 0))))
- (<= ?x7729 makespan)))
+ (= (<= (+ 13_x 3) 11_x) lr_14_12))
 (assert
- (let ((?x1625 (+ (ite (and (<= 5_x 14) (>= (+ 5_x 3) 14)) 8 0))))
- (<= ?x1625 makespan)))
+ (= (<= (+ 13_y 8) 11_y) ud_14_12))
 (assert
- (let ((?x7179 (+ (ite (and (<= 6_x 14) (>= (+ 6_x 3) 14)) 9 0))))
- (<= ?x7179 makespan)))
+ (or lr_12_14 lr_14_12 ud_12_14 ud_14_12))
 (assert
- (let ((?x4730 (+ (ite (and (<= 7_x 14) (>= (+ 7_x 3) 14)) 10 0))))
- (<= ?x4730 makespan)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_12_14 false))))
 (assert
- (let ((?x9772 (+ (ite (and (<= 8_x 14) (>= (+ 8_x 3) 14)) 11 0))))
- (<= ?x9772 makespan)))
+ (let (($x5582 (< makespan 18)))
+ (=> $x5582 (= ud_14_12 false))))
 (assert
- (let ((?x9654 (+ (ite (and (<= 9_x 14) (>= (+ 9_x 3) 14)) 13 0))))
- (<= ?x9654 makespan)))
+ (= (<= (+ 11_x 3) 14_x) lr_12_15))
 (assert
- (let ((?x9522 (+ (ite (and (<= 10_x 14) (>= (+ 10_x 3) 14)) 14 0))))
- (<= ?x9522 makespan)))
+ (= (<= (+ 11_y 10) 14_y) ud_12_15))
 (assert
- (let ((?x9390 (+ (ite (and (<= 11_x 14) (>= (+ 11_x 3) 14)) 17 0))))
- (<= ?x9390 makespan)))
+ (= (<= (+ 14_x 3) 11_x) lr_15_12))
 (assert
- (let ((?x9247 (+ (ite (and (<= 12_x 14) (>= (+ 12_x 3) 14)) 18 0))))
- (<= ?x9247 makespan)))
+ (= (<= (+ 14_y 7) 11_y) ud_15_12))
 (assert
- (let ((?x6947 (+ (ite (and (<= 13_x 14) (>= (+ 13_x 3) 14)) 19 0))))
- (<= ?x6947 makespan)))
+ (or lr_12_15 lr_15_12 ud_12_15 ud_15_12))
 (assert
- (let ((?x3435 (+ (ite (and (<= 14_x 14) (>= (+ 14_x 3) 14)) 25 0))))
- (<= ?x3435 makespan)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_12_15 false))))
 (assert
- (let ((?x3764 (+ (ite (and (<= 15_x 14) (>= (+ 15_x 4) 14)) 5 0))))
- (<= ?x3764 makespan)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_15_12 false))))
 (assert
- (let ((?x4241 (+ (ite (and (<= 16_x 14) (>= (+ 16_x 4) 14)) 7 0))))
- (<= ?x4241 makespan)))
+ (= (<= (+ 11_x 3) 15_x) lr_12_16))
 (assert
- (let ((?x4664 (+ (ite (and (<= 17_x 14) (>= (+ 17_x 4) 14)) 13 0))))
- (<= ?x4664 makespan)))
+ (= (<= (+ 11_y 10) 15_y) ud_12_16))
 (assert
- (let ((?x5365 (+ (ite (and (<= 18_x 14) (>= (+ 18_x 6) 14)) 3 0))))
- (<= ?x5365 makespan)))
+ (= (<= (+ 15_x 3) 11_x) lr_16_12))
 (assert
- (let ((?x8620 (+ (ite (and (<= 0_x 15) (>= (+ 0_x 3) 15)) 3 0))))
- (<= ?x8620 makespan)))
+ (= (<= (+ 15_y 6) 11_y) ud_16_12))
 (assert
- (let ((?x8701 (+ (ite (and (<= 1_x 15) (>= (+ 1_x 3) 15)) 4 0))))
- (<= ?x8701 makespan)))
+ (or lr_12_16 lr_16_12 ud_12_16 ud_16_12))
 (assert
- (let ((?x3576 (+ (ite (and (<= 2_x 15) (>= (+ 2_x 3) 15)) 5 0))))
- (<= ?x3576 makespan)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_12_16 false))))
 (assert
- (let ((?x4139 (+ (ite (and (<= 3_x 15) (>= (+ 3_x 3) 15)) 6 0))))
- (<= ?x4139 makespan)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_16_12 false))))
 (assert
- (let ((?x6162 (+ (ite (and (<= 4_x 15) (>= (+ 4_x 3) 15)) 7 0))))
- (<= ?x6162 makespan)))
+ (= (<= (+ 11_x 3) 16_x) lr_12_17))
 (assert
- (let ((?x7422 (+ (ite (and (<= 5_x 15) (>= (+ 5_x 3) 15)) 8 0))))
- (<= ?x7422 makespan)))
+ (= (<= (+ 11_y 10) 16_y) ud_12_17))
 (assert
- (let ((?x5745 (+ (ite (and (<= 6_x 15) (>= (+ 6_x 3) 15)) 9 0))))
- (<= ?x5745 makespan)))
+ (= (<= (+ 16_x 3) 11_x) lr_17_12))
 (assert
- (let ((?x1768 (+ (ite (and (<= 7_x 15) (>= (+ 7_x 3) 15)) 10 0))))
- (<= ?x1768 makespan)))
+ (= (<= (+ 16_y 5) 11_y) ud_17_12))
 (assert
- (let ((?x2989 (+ (ite (and (<= 8_x 15) (>= (+ 8_x 3) 15)) 11 0))))
- (<= ?x2989 makespan)))
+ (or lr_12_17 lr_17_12 ud_12_17 ud_17_12))
 (assert
- (let ((?x7695 (+ (ite (and (<= 9_x 15) (>= (+ 9_x 3) 15)) 13 0))))
- (<= ?x7695 makespan)))
+ (let (($x3447 (< makespan 15)))
+ (=> $x3447 (= ud_12_17 false))))
 (assert
- (let ((?x7522 (+ (ite (and (<= 10_x 15) (>= (+ 10_x 3) 15)) 14 0))))
- (<= ?x7522 makespan)))
+ (let (($x3447 (< makespan 15)))
+ (=> $x3447 (= ud_17_12 false))))
 (assert
- (let ((?x8540 (+ (ite (and (<= 11_x 15) (>= (+ 11_x 3) 15)) 17 0))))
- (<= ?x8540 makespan)))
+ (= (<= (+ 11_x 3) 17_x) lr_12_18))
 (assert
- (let ((?x7827 (+ (ite (and (<= 12_x 15) (>= (+ 12_x 3) 15)) 18 0))))
- (<= ?x7827 makespan)))
+ (= (<= (+ 11_y 10) 17_y) ud_12_18))
 (assert
- (let ((?x2202 (+ (ite (and (<= 13_x 15) (>= (+ 13_x 3) 15)) 19 0))))
- (<= ?x2202 makespan)))
+ (= (<= (+ 17_x 3) 11_x) lr_18_12))
 (assert
- (let ((?x1584 (+ (ite (and (<= 14_x 15) (>= (+ 14_x 3) 15)) 25 0))))
- (<= ?x1584 makespan)))
+ (= (<= (+ 17_y 4) 11_y) ud_18_12))
 (assert
- (let ((?x11868 (+ (ite (and (<= 15_x 15) (>= (+ 15_x 4) 15)) 5 0))))
- (<= ?x11868 makespan)))
+ (or lr_12_18 lr_18_12 ud_12_18 ud_18_12))
 (assert
- (let ((?x7127 (+ (ite (and (<= 16_x 15) (>= (+ 16_x 4) 15)) 7 0))))
- (<= ?x7127 makespan)))
+ (let (($x4364 (< makespan 14)))
+ (=> $x4364 (= ud_12_18 false))))
 (assert
- (let ((?x25 (+ (ite (and (<= 17_x 15) (>= (+ 17_x 4) 15)) 13 0))))
- (<= ?x25 makespan)))
+ (let (($x4364 (< makespan 14)))
+ (=> $x4364 (= ud_18_12 false))))
 (assert
- (let ((?x2737 (+ (ite (and (<= 18_x 15) (>= (+ 18_x 6) 15)) 3 0))))
- (<= ?x2737 makespan)))
+ (= (<= (+ 11_x 3) 18_x) lr_12_19))
 (assert
- (let ((?x1696 (+ (ite (and (<= 0_x 16) (>= (+ 0_x 3) 16)) 3 0))))
- (<= ?x1696 makespan)))
+ (= (<= (+ 11_y 10) 18_y) ud_12_19))
 (assert
- (let ((?x1231 (+ (ite (and (<= 1_x 16) (>= (+ 1_x 3) 16)) 4 0))))
- (<= ?x1231 makespan)))
+ (= (<= (+ 18_x 3) 11_x) lr_19_12))
 (assert
- (let ((?x2610 (+ (ite (and (<= 2_x 16) (>= (+ 2_x 3) 16)) 5 0))))
- (<= ?x2610 makespan)))
+ (= (<= (+ 18_y 3) 11_y) ud_19_12))
 (assert
- (let ((?x2391 (+ (ite (and (<= 3_x 16) (>= (+ 3_x 3) 16)) 6 0))))
- (<= ?x2391 makespan)))
+ (or lr_12_19 lr_19_12 ud_12_19 ud_19_12))
 (assert
- (let ((?x7443 (+ (ite (and (<= 4_x 16) (>= (+ 4_x 3) 16)) 7 0))))
- (<= ?x7443 makespan)))
+ (let (($x4485 (< makespan 13)))
+ (=> $x4485 (= ud_12_19 false))))
 (assert
- (let ((?x7379 (+ (ite (and (<= 5_x 16) (>= (+ 5_x 3) 16)) 8 0))))
- (<= ?x7379 makespan)))
+ (let (($x4485 (< makespan 13)))
+ (=> $x4485 (= ud_19_12 false))))
 (assert
- (let ((?x6338 (+ (ite (and (<= 6_x 16) (>= (+ 6_x 3) 16)) 9 0))))
- (<= ?x6338 makespan)))
+ (= (<= (+ 12_x 3) 13_x) lr_13_14))
 (assert
- (let ((?x3557 (+ (ite (and (<= 7_x 16) (>= (+ 7_x 3) 16)) 10 0))))
- (<= ?x3557 makespan)))
+ (= (<= (+ 12_y 9) 13_y) ud_13_14))
 (assert
- (let ((?x4136 (+ (ite (and (<= 8_x 16) (>= (+ 8_x 3) 16)) 11 0))))
- (<= ?x4136 makespan)))
+ (= (<= (+ 13_x 3) 12_x) lr_14_13))
 (assert
- (let ((?x4854 (+ (ite (and (<= 9_x 16) (>= (+ 9_x 3) 16)) 13 0))))
- (<= ?x4854 makespan)))
+ (= (<= (+ 13_y 8) 12_y) ud_14_13))
 (assert
- (let ((?x5754 (+ (ite (and (<= 10_x 16) (>= (+ 10_x 3) 16)) 14 0))))
- (<= ?x5754 makespan)))
+ (or lr_13_14 lr_14_13 ud_13_14 ud_14_13))
 (assert
- (let ((?x8563 (+ (ite (and (<= 11_x 16) (>= (+ 11_x 3) 16)) 17 0))))
- (<= ?x8563 makespan)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_13_14 false))))
 (assert
- (let ((?x9831 (+ (ite (and (<= 12_x 16) (>= (+ 12_x 3) 16)) 18 0))))
- (<= ?x9831 makespan)))
+ (let (($x4111 (< makespan 17)))
+ (=> $x4111 (= ud_14_13 false))))
 (assert
- (let ((?x9893 (+ (ite (and (<= 13_x 16) (>= (+ 13_x 3) 16)) 19 0))))
- (<= ?x9893 makespan)))
+ (= (<= (+ 12_x 3) 14_x) lr_13_15))
 (assert
- (let ((?x9918 (+ (ite (and (<= 14_x 16) (>= (+ 14_x 3) 16)) 25 0))))
- (<= ?x9918 makespan)))
+ (= (<= (+ 12_y 9) 14_y) ud_13_15))
 (assert
- (let ((?x9966 (+ (ite (and (<= 15_x 16) (>= (+ 15_x 4) 16)) 5 0))))
- (<= ?x9966 makespan)))
+ (= (<= (+ 14_x 3) 12_x) lr_15_13))
 (assert
- (let ((?x10012 (+ (ite (and (<= 16_x 16) (>= (+ 16_x 4) 16)) 7 0))))
- (<= ?x10012 makespan)))
+ (= (<= (+ 14_y 7) 12_y) ud_15_13))
 (assert
- (let ((?x10023 (+ (ite (and (<= 17_x 16) (>= (+ 17_x 4) 16)) 13 0))))
- (<= ?x10023 makespan)))
+ (or lr_13_15 lr_15_13 ud_13_15 ud_15_13))
 (assert
- (let ((?x10087 (+ (ite (and (<= 18_x 16) (>= (+ 18_x 6) 16)) 3 0))))
- (<= ?x10087 makespan)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_13_15 false))))
 (assert
- (let ((?x10118 (+ (ite (and (<= 0_x 17) (>= (+ 0_x 3) 17)) 3 0))))
- (<= ?x10118 makespan)))
+ (let (($x1435 (< makespan 16)))
+ (=> $x1435 (= ud_15_13 false))))
 (assert
- (let ((?x10142 (+ (ite (and (<= 1_x 17) (>= (+ 1_x 3) 17)) 4 0))))
- (<= ?x10142 makespan)))
+ (= (<= (+ 12_x 3) 15_x) lr_13_16))
 (assert
- (let ((?x10203 (+ (ite (and (<= 2_x 17) (>= (+ 2_x 3) 17)) 5 0))))
- (<= ?x10203 makespan)))
+ (= (<= (+ 12_y 9) 15_y) ud_13_16))
 (assert
- (let ((?x10266 (+ (ite (and (<= 3_x 17) (>= (+ 3_x 3) 17)) 6 0))))
- (<= ?x10266 makespan)))
+ (= (<= (+ 15_x 3) 12_x) lr_16_13))
 (assert
- (let ((?x10277 (+ (ite (and (<= 4_x 17) (>= (+ 4_x 3) 17)) 7 0))))
- (<= ?x10277 makespan)))
+ (= (<= (+ 15_y 6) 12_y) ud_16_13))
 (assert
- (let ((?x10323 (+ (ite (and (<= 5_x 17) (>= (+ 5_x 3) 17)) 8 0))))
- (<= ?x10323 makespan)))
+ (or lr_13_16 lr_16_13 ud_13_16 ud_16_13))
 (assert
- (let ((?x10387 (+ (ite (and (<= 6_x 17) (>= (+ 6_x 3) 17)) 9 0))))
- (<= ?x10387 makespan)))
+ (let (($x3447 (< makespan 15)))
+ (=> $x3447 (= ud_13_16 false))))
 (assert
- (let ((?x10433 (+ (ite (and (<= 7_x 17) (>= (+ 7_x 3) 17)) 10 0))))
- (<= ?x10433 makespan)))
+ (let (($x3447 (< makespan 15)))
+ (=> $x3447 (= ud_16_13 false))))
 (assert
- (let ((?x10444 (+ (ite (and (<= 8_x 17) (>= (+ 8_x 3) 17)) 11 0))))
- (<= ?x10444 makespan)))
+ (= (<= (+ 12_x 3) 16_x) lr_13_17))
 (assert
- (let ((?x10507 (+ (ite (and (<= 9_x 17) (>= (+ 9_x 3) 17)) 13 0))))
- (<= ?x10507 makespan)))
+ (= (<= (+ 12_y 9) 16_y) ud_13_17))
 (assert
- (let ((?x11999 (+ (ite (and (<= 10_x 17) (>= (+ 10_x 3) 17)) 14 0))))
- (<= ?x11999 makespan)))
+ (= (<= (+ 16_x 3) 12_x) lr_17_13))
 (assert
- (let ((?x10562 (+ (ite (and (<= 11_x 17) (>= (+ 11_x 3) 17)) 17 0))))
- (<= ?x10562 makespan)))
+ (= (<= (+ 16_y 5) 12_y) ud_17_13))
 (assert
- (let ((?x10626 (+ (ite (and (<= 12_x 17) (>= (+ 12_x 3) 17)) 18 0))))
- (<= ?x10626 makespan)))
+ (or lr_13_17 lr_17_13 ud_13_17 ud_17_13))
 (assert
- (let ((?x10672 (+ (ite (and (<= 13_x 17) (>= (+ 13_x 3) 17)) 19 0))))
- (<= ?x10672 makespan)))
+ (let (($x4364 (< makespan 14)))
+ (=> $x4364 (= ud_13_17 false))))
 (assert
- (let ((?x10683 (+ (ite (and (<= 14_x 17) (>= (+ 14_x 3) 17)) 25 0))))
- (<= ?x10683 makespan)))
+ (let (($x4364 (< makespan 14)))
+ (=> $x4364 (= ud_17_13 false))))
 (assert
- (let ((?x10747 (+ (ite (and (<= 15_x 17) (>= (+ 15_x 4) 17)) 5 0))))
- (<= ?x10747 makespan)))
+ (= (<= (+ 12_x 3) 17_x) lr_13_18))
 (assert
- (let ((?x10793 (+ (ite (and (<= 16_x 17) (>= (+ 16_x 4) 17)) 7 0))))
- (<= ?x10793 makespan)))
+ (= (<= (+ 12_y 9) 17_y) ud_13_18))
 (assert
- (let ((?x10804 (+ (ite (and (<= 17_x 17) (>= (+ 17_x 4) 17)) 13 0))))
- (<= ?x10804 makespan)))
+ (= (<= (+ 17_x 3) 12_x) lr_18_13))
 (assert
- (let ((?x10850 (+ (ite (and (<= 18_x 17) (>= (+ 18_x 6) 17)) 3 0))))
- (<= ?x10850 makespan)))
+ (= (<= (+ 17_y 4) 12_y) ud_18_13))
 (assert
- (let ((?x10912 (+ (ite (and (<= 0_x 18) (>= (+ 0_x 3) 18)) 3 0))))
- (<= ?x10912 makespan)))
+ (or lr_13_18 lr_18_13 ud_13_18 ud_18_13))
 (assert
- (let ((?x10923 (+ (ite (and (<= 1_x 18) (>= (+ 1_x 3) 18)) 4 0))))
- (<= ?x10923 makespan)))
+ (let (($x4485 (< makespan 13)))
+ (=> $x4485 (= ud_13_18 false))))
 (assert
- (let ((?x10987 (+ (ite (and (<= 2_x 18) (>= (+ 2_x 3) 18)) 5 0))))
- (<= ?x10987 makespan)))
+ (let (($x4485 (< makespan 13)))
+ (=> $x4485 (= ud_18_13 false))))
 (assert
- (let ((?x11033 (+ (ite (and (<= 3_x 18) (>= (+ 3_x 3) 18)) 6 0))))
- (<= ?x11033 makespan)))
+ (= (<= (+ 12_x 3) 18_x) lr_13_19))
 (assert
- (let ((?x11044 (+ (ite (and (<= 4_x 18) (>= (+ 4_x 3) 18)) 7 0))))
- (<= ?x11044 makespan)))
+ (= (<= (+ 12_y 9) 18_y) ud_13_19))
 (assert
- (let ((?x11090 (+ (ite (and (<= 5_x 18) (>= (+ 5_x 3) 18)) 8 0))))
- (<= ?x11090 makespan)))
+ (= (<= (+ 18_x 3) 12_x) lr_19_13))
 (assert
- (let ((?x11154 (+ (ite (and (<= 6_x 18) (>= (+ 6_x 3) 18)) 9 0))))
- (<= ?x11154 makespan)))
+ (= (<= (+ 18_y 3) 12_y) ud_19_13))
 (assert
- (let ((?x11200 (+ (ite (and (<= 7_x 18) (>= (+ 7_x 3) 18)) 10 0))))
- (<= ?x11200 makespan)))
+ (or lr_13_19 lr_19_13 ud_13_19 ud_19_13))
 (assert
- (let ((?x11212 (+ (ite (and (<= 8_x 18) (>= (+ 8_x 3) 18)) 11 0))))
- (<= ?x11212 makespan)))
+ (let (($x4625 (< makespan 12)))
+ (=> $x4625 (= ud_13_19 false))))
 (assert
- (let ((?x11274 (+ (ite (and (<= 9_x 18) (>= (+ 9_x 3) 18)) 13 0))))
- (<= ?x11274 makespan)))
+ (let (($x4625 (< makespan 12)))
+ (=> $x4625 (= ud_19_13 false))))
 (assert
- (let ((?x11285 (+ (ite (and (<= 10_x 18) (>= (+ 10_x 3) 18)) 14 0))))
- (<= ?x11285 makespan)))
+ (= (<= (+ 13_x 3) 14_x) lr_14_15))
 (assert
- (let ((?x11331 (+ (ite (and (<= 11_x 18) (>= (+ 11_x 3) 18)) 17 0))))
- (<= ?x11331 makespan)))
+ (= (<= (+ 13_y 8) 14_y) ud_14_15))
 (assert
- (let ((?x11395 (+ (ite (and (<= 12_x 18) (>= (+ 12_x 3) 18)) 18 0))))
- (<= ?x11395 makespan)))
+ (= (<= (+ 14_x 3) 13_x) lr_15_14))
 (assert
- (let ((?x11441 (+ (ite (and (<= 13_x 18) (>= (+ 13_x 3) 18)) 19 0))))
- (<= ?x11441 makespan)))
+ (= (<= (+ 14_y 7) 13_y) ud_15_14))
 (assert
- (let ((?x11452 (+ (ite (and (<= 14_x 18) (>= (+ 14_x 3) 18)) 25 0))))
- (<= ?x11452 makespan)))
+ (or lr_14_15 lr_15_14 ud_14_15 ud_15_14))
 (assert
- (let ((?x11498 (+ (ite (and (<= 15_x 18) (>= (+ 15_x 4) 18)) 5 0))))
- (<= ?x11498 makespan)))
+ (let (($x3447 (< makespan 15)))
+ (=> $x3447 (= ud_14_15 false))))
 (assert
- (let ((?x11562 (+ (ite (and (<= 16_x 18) (>= (+ 16_x 4) 18)) 7 0))))
- (<= ?x11562 makespan)))
+ (let (($x3447 (< makespan 15)))
+ (=> $x3447 (= ud_15_14 false))))
 (assert
- (let ((?x11573 (+ (ite (and (<= 17_x 18) (>= (+ 17_x 4) 18)) 13 0))))
- (<= ?x11573 makespan)))
+ (= (<= (+ 13_x 3) 15_x) lr_14_16))
 (assert
- (let ((?x11617 (+ (ite (and (<= 18_x 18) (>= (+ 18_x 6) 18)) 3 0))))
- (<= ?x11617 makespan)))
+ (= (<= (+ 13_y 8) 15_y) ud_14_16))
 (assert
- (let ((?x11677 (+ (ite (and (<= 0_x 19) (>= (+ 0_x 3) 19)) 3 0))))
- (<= ?x11677 makespan)))
+ (= (<= (+ 15_x 3) 13_x) lr_16_14))
 (assert
- (let ((?x11706 (+ (ite (and (<= 1_x 19) (>= (+ 1_x 3) 19)) 4 0))))
- (<= ?x11706 makespan)))
+ (= (<= (+ 15_y 6) 13_y) ud_16_14))
 (assert
- (let ((?x11761 (+ (ite (and (<= 2_x 19) (>= (+ 2_x 3) 19)) 5 0))))
- (<= ?x11761 makespan)))
+ (or lr_14_16 lr_16_14 ud_14_16 ud_16_14))
 (assert
- (let ((?x11834 (+ (ite (and (<= 3_x 19) (>= (+ 3_x 3) 19)) 6 0))))
- (<= ?x11834 makespan)))
+ (let (($x4364 (< makespan 14)))
+ (=> $x4364 (= ud_14_16 false))))
 (assert
- (let ((?x11842 (+ (ite (and (<= 4_x 19) (>= (+ 4_x 3) 19)) 7 0))))
- (<= ?x11842 makespan)))
+ (let (($x4364 (< makespan 14)))
+ (=> $x4364 (= ud_16_14 false))))
 (assert
- (let ((?x8562 (+ (ite (and (<= 5_x 19) (>= (+ 5_x 3) 19)) 8 0))))
- (<= ?x8562 makespan)))
+ (= (<= (+ 13_x 3) 16_x) lr_14_17))
 (assert
- (let ((?x11966 (+ (ite (and (<= 6_x 19) (>= (+ 6_x 3) 19)) 9 0))))
- (<= ?x11966 makespan)))
+ (= (<= (+ 13_y 8) 16_y) ud_14_17))
 (assert
- (let ((?x12020 (+ (ite (and (<= 7_x 19) (>= (+ 7_x 3) 19)) 10 0))))
- (<= ?x12020 makespan)))
+ (= (<= (+ 16_x 3) 13_x) lr_17_14))
 (assert
- (let ((?x12048 (+ (ite (and (<= 8_x 19) (>= (+ 8_x 3) 19)) 11 0))))
- (<= ?x12048 makespan)))
+ (= (<= (+ 16_y 5) 13_y) ud_17_14))
 (assert
- (let ((?x12118 (+ (ite (and (<= 9_x 19) (>= (+ 9_x 3) 19)) 13 0))))
- (<= ?x12118 makespan)))
+ (or lr_14_17 lr_17_14 ud_14_17 ud_17_14))
 (assert
- (let ((?x12212 (+ (ite (and (<= 10_x 19) (>= (+ 10_x 3) 19)) 14 0))))
- (<= ?x12212 makespan)))
+ (let (($x4485 (< makespan 13)))
+ (=> $x4485 (= ud_14_17 false))))
 (assert
- (let ((?x12345 (+ (ite (and (<= 11_x 19) (>= (+ 11_x 3) 19)) 17 0))))
- (<= ?x12345 makespan)))
+ (let (($x4485 (< makespan 13)))
+ (=> $x4485 (= ud_17_14 false))))
 (assert
- (let ((?x12456 (+ (ite (and (<= 12_x 19) (>= (+ 12_x 3) 19)) 18 0))))
- (<= ?x12456 makespan)))
+ (= (<= (+ 13_x 3) 17_x) lr_14_18))
 (assert
- (let ((?x9441 (+ (ite (and (<= 13_x 19) (>= (+ 13_x 3) 19)) 19 0))))
- (<= ?x9441 makespan)))
+ (= (<= (+ 13_y 8) 17_y) ud_14_18))
 (assert
- (let ((?x7075 (+ (ite (and (<= 14_x 19) (>= (+ 14_x 3) 19)) 25 0))))
- (<= ?x7075 makespan)))
+ (= (<= (+ 17_x 3) 13_x) lr_18_14))
 (assert
- (let ((?x7753 (+ (ite (and (<= 15_x 19) (>= (+ 15_x 4) 19)) 5 0))))
- (<= ?x7753 makespan)))
+ (= (<= (+ 17_y 4) 13_y) ud_18_14))
 (assert
- (let ((?x7858 (+ (ite (and (<= 16_x 19) (>= (+ 16_x 4) 19)) 7 0))))
- (<= ?x7858 makespan)))
+ (or lr_14_18 lr_18_14 ud_14_18 ud_18_14))
 (assert
- (let ((?x3134 (+ (ite (and (<= 17_x 19) (>= (+ 17_x 4) 19)) 13 0))))
- (<= ?x3134 makespan)))
+ (let (($x4625 (< makespan 12)))
+ (=> $x4625 (= ud_14_18 false))))
 (assert
- (let ((?x3291 (+ (ite (and (<= 18_x 19) (>= (+ 18_x 6) 19)) 3 0))))
- (<= ?x3291 makespan)))
+ (let (($x4625 (< makespan 12)))
+ (=> $x4625 (= ud_18_14 false))))
 (assert
- (let ((?x2265 (+ (ite (and (<= 0_x 20) (>= (+ 0_x 3) 20)) 3 0))))
- (<= ?x2265 makespan)))
+ (= (<= (+ 13_x 3) 18_x) lr_14_19))
 (assert
- (let ((?x3375 (+ (ite (and (<= 1_x 20) (>= (+ 1_x 3) 20)) 4 0))))
- (<= ?x3375 makespan)))
+ (= (<= (+ 13_y 8) 18_y) ud_14_19))
 (assert
- (let ((?x7149 (+ (ite (and (<= 2_x 20) (>= (+ 2_x 3) 20)) 5 0))))
- (<= ?x7149 makespan)))
+ (= (<= (+ 18_x 3) 13_x) lr_19_14))
 (assert
- (let ((?x6282 (+ (ite (and (<= 3_x 20) (>= (+ 3_x 3) 20)) 6 0))))
- (<= ?x6282 makespan)))
+ (= (<= (+ 18_y 3) 13_y) ud_19_14))
 (assert
- (let ((?x1984 (+ (ite (and (<= 4_x 20) (>= (+ 4_x 3) 20)) 7 0))))
- (<= ?x1984 makespan)))
+ (or lr_14_19 lr_19_14 ud_14_19 ud_19_14))
 (assert
- (let ((?x3592 (+ (ite (and (<= 5_x 20) (>= (+ 5_x 3) 20)) 8 0))))
- (<= ?x3592 makespan)))
+ (let (($x4767 (< makespan 11)))
+ (=> $x4767 (= ud_14_19 false))))
 (assert
- (let ((?x2177 (+ (ite (and (<= 6_x 20) (>= (+ 6_x 3) 20)) 9 0))))
- (<= ?x2177 makespan)))
+ (let (($x4767 (< makespan 11)))
+ (=> $x4767 (= ud_19_14 false))))
 (assert
- (let ((?x2630 (+ (ite (and (<= 7_x 20) (>= (+ 7_x 3) 20)) 10 0))))
- (<= ?x2630 makespan)))
+ (= (<= (+ 14_x 3) 15_x) lr_15_16))
 (assert
- (let ((?x312 (+ (ite (and (<= 8_x 20) (>= (+ 8_x 3) 20)) 11 0))))
- (<= ?x312 makespan)))
+ (= (<= (+ 14_y 7) 15_y) ud_15_16))
 (assert
- (let ((?x427 (+ (ite (and (<= 9_x 20) (>= (+ 9_x 3) 20)) 13 0))))
- (<= ?x427 makespan)))
+ (= (<= (+ 15_x 3) 14_x) lr_16_15))
 (assert
- (let ((?x6591 (+ (ite (and (<= 10_x 20) (>= (+ 10_x 3) 20)) 14 0))))
- (<= ?x6591 makespan)))
+ (= (<= (+ 15_y 6) 14_y) ud_16_15))
 (assert
- (let ((?x7094 (+ (ite (and (<= 11_x 20) (>= (+ 11_x 3) 20)) 17 0))))
- (<= ?x7094 makespan)))
+ (or lr_15_16 lr_16_15 ud_15_16 ud_16_15))
 (assert
- (let ((?x7863 (+ (ite (and (<= 12_x 20) (>= (+ 12_x 3) 20)) 18 0))))
- (<= ?x7863 makespan)))
+ (let (($x4485 (< makespan 13)))
+ (=> $x4485 (= ud_15_16 false))))
 (assert
- (let ((?x7924 (+ (ite (and (<= 13_x 20) (>= (+ 13_x 3) 20)) 19 0))))
- (<= ?x7924 makespan)))
+ (let (($x4485 (< makespan 13)))
+ (=> $x4485 (= ud_16_15 false))))
 (assert
- (let ((?x4324 (+ (ite (and (<= 14_x 20) (>= (+ 14_x 3) 20)) 25 0))))
- (<= ?x4324 makespan)))
+ (= (<= (+ 14_x 3) 16_x) lr_15_17))
 (assert
- (let ((?x4654 (+ (ite (and (<= 15_x 20) (>= (+ 15_x 4) 20)) 5 0))))
- (<= ?x4654 makespan)))
+ (= (<= (+ 14_y 7) 16_y) ud_15_17))
 (assert
- (let ((?x778 (+ (ite (and (<= 16_x 20) (>= (+ 16_x 4) 20)) 7 0))))
- (<= ?x778 makespan)))
+ (= (<= (+ 16_x 3) 14_x) lr_17_15))
 (assert
- (let ((?x1852 (+ (ite (and (<= 17_x 20) (>= (+ 17_x 4) 20)) 13 0))))
- (<= ?x1852 makespan)))
+ (= (<= (+ 16_y 5) 14_y) ud_17_15))
 (assert
- (let ((?x5006 (+ (ite (and (<= 18_x 20) (>= (+ 18_x 6) 20)) 3 0))))
- (<= ?x5006 makespan)))
+ (or lr_15_17 lr_17_15 ud_15_17 ud_17_15))
 (assert
- (let ((?x4460 (+ (ite (and (<= 0_x 21) (>= (+ 0_x 3) 21)) 3 0))))
- (<= ?x4460 makespan)))
+ (let (($x4625 (< makespan 12)))
+ (=> $x4625 (= ud_15_17 false))))
 (assert
- (let ((?x6478 (+ (ite (and (<= 1_x 21) (>= (+ 1_x 3) 21)) 4 0))))
- (<= ?x6478 makespan)))
+ (let (($x4625 (< makespan 12)))
+ (=> $x4625 (= ud_17_15 false))))
 (assert
- (let ((?x7027 (+ (ite (and (<= 2_x 21) (>= (+ 2_x 3) 21)) 5 0))))
- (<= ?x7027 makespan)))
+ (= (<= (+ 14_x 3) 17_x) lr_15_18))
 (assert
- (let ((?x7217 (+ (ite (and (<= 3_x 21) (>= (+ 3_x 3) 21)) 6 0))))
- (<= ?x7217 makespan)))
+ (= (<= (+ 14_y 7) 17_y) ud_15_18))
 (assert
- (let ((?x2770 (+ (ite (and (<= 4_x 21) (>= (+ 4_x 3) 21)) 7 0))))
- (<= ?x2770 makespan)))
+ (= (<= (+ 17_x 3) 14_x) lr_18_15))
 (assert
- (let ((?x8807 (+ (ite (and (<= 5_x 21) (>= (+ 5_x 3) 21)) 8 0))))
- (<= ?x8807 makespan)))
+ (= (<= (+ 17_y 4) 14_y) ud_18_15))
 (assert
- (let ((?x8816 (+ (ite (and (<= 6_x 21) (>= (+ 6_x 3) 21)) 9 0))))
- (<= ?x8816 makespan)))
+ (or lr_15_18 lr_18_15 ud_15_18 ud_18_15))
 (assert
- (let ((?x8875 (+ (ite (and (<= 7_x 21) (>= (+ 7_x 3) 21)) 10 0))))
- (<= ?x8875 makespan)))
+ (let (($x4767 (< makespan 11)))
+ (=> $x4767 (= ud_15_18 false))))
 (assert
- (let ((?x8951 (+ (ite (and (<= 8_x 21) (>= (+ 8_x 3) 21)) 11 0))))
- (<= ?x8951 makespan)))
+ (let (($x4767 (< makespan 11)))
+ (=> $x4767 (= ud_18_15 false))))
 (assert
- (let ((?x8961 (+ (ite (and (<= 9_x 21) (>= (+ 9_x 3) 21)) 13 0))))
- (<= ?x8961 makespan)))
+ (= (<= (+ 14_x 3) 18_x) lr_15_19))
 (assert
- (let ((?x9036 (+ (ite (and (<= 10_x 21) (>= (+ 10_x 3) 21)) 14 0))))
- (<= ?x9036 makespan)))
+ (= (<= (+ 14_y 7) 18_y) ud_15_19))
 (assert
- (let ((?x9094 (+ (ite (and (<= 11_x 21) (>= (+ 11_x 3) 21)) 17 0))))
- (<= ?x9094 makespan)))
+ (= (<= (+ 18_x 3) 14_x) lr_19_15))
 (assert
- (let ((?x9152 (+ (ite (and (<= 12_x 21) (>= (+ 12_x 3) 21)) 18 0))))
- (<= ?x9152 makespan)))
+ (= (<= (+ 18_y 3) 14_y) ud_19_15))
 (assert
- (let ((?x9163 (+ (ite (and (<= 13_x 21) (>= (+ 13_x 3) 21)) 19 0))))
- (<= ?x9163 makespan)))
+ (or lr_15_19 lr_19_15 ud_15_19 ud_19_15))
 (assert
- (let ((?x9234 (+ (ite (and (<= 14_x 21) (>= (+ 14_x 3) 21)) 25 0))))
- (<= ?x9234 makespan)))
+ (let (($x2994 (< makespan 10)))
+ (=> $x2994 (= ud_15_19 false))))
 (assert
- (let ((?x9304 (+ (ite (and (<= 15_x 21) (>= (+ 15_x 4) 21)) 5 0))))
- (<= ?x9304 makespan)))
+ (let (($x2994 (< makespan 10)))
+ (=> $x2994 (= ud_19_15 false))))
 (assert
- (let ((?x8650 (+ (ite (and (<= 16_x 21) (>= (+ 16_x 4) 21)) 7 0))))
- (<= ?x8650 makespan)))
+ (= (<= (+ 15_x 3) 16_x) lr_16_17))
 (assert
- (let ((?x9349 (+ (ite (and (<= 17_x 21) (>= (+ 17_x 4) 21)) 13 0))))
- (<= ?x9349 makespan)))
+ (= (<= (+ 15_y 6) 16_y) ud_16_17))
 (assert
- (let ((?x9499 (+ (ite (and (<= 18_x 21) (>= (+ 18_x 6) 21)) 3 0))))
- (<= ?x9499 makespan)))
+ (= (<= (+ 16_x 3) 15_x) lr_17_16))
 (assert
- (let ((?x9632 (+ (ite (and (<= 0_x 22) (>= (+ 0_x 3) 22)) 3 0))))
- (<= ?x9632 makespan)))
+ (= (<= (+ 16_y 5) 15_y) ud_17_16))
 (assert
- (let ((?x9725 (+ (ite (and (<= 1_x 22) (>= (+ 1_x 3) 22)) 4 0))))
- (<= ?x9725 makespan)))
+ (or lr_16_17 lr_17_16 ud_16_17 ud_17_16))
 (assert
- (let ((?x8480 (+ (ite (and (<= 2_x 22) (>= (+ 2_x 3) 22)) 5 0))))
- (<= ?x8480 makespan)))
+ (let (($x4767 (< makespan 11)))
+ (=> $x4767 (= ud_16_17 false))))
 (assert
- (let ((?x12559 (+ (ite (and (<= 3_x 22) (>= (+ 3_x 3) 22)) 6 0))))
- (<= ?x12559 makespan)))
+ (let (($x4767 (< makespan 11)))
+ (=> $x4767 (= ud_17_16 false))))
 (assert
- (let ((?x12570 (+ (ite (and (<= 4_x 22) (>= (+ 4_x 3) 22)) 7 0))))
- (<= ?x12570 makespan)))
+ (= (<= (+ 15_x 3) 17_x) lr_16_18))
 (assert
- (let ((?x12581 (+ (ite (and (<= 5_x 22) (>= (+ 5_x 3) 22)) 8 0))))
- (<= ?x12581 makespan)))
+ (= (<= (+ 15_y 6) 17_y) ud_16_18))
 (assert
- (let ((?x12592 (+ (ite (and (<= 6_x 22) (>= (+ 6_x 3) 22)) 9 0))))
- (<= ?x12592 makespan)))
+ (= (<= (+ 17_x 3) 15_x) lr_18_16))
 (assert
- (let ((?x12603 (+ (ite (and (<= 7_x 22) (>= (+ 7_x 3) 22)) 10 0))))
- (<= ?x12603 makespan)))
+ (= (<= (+ 17_y 4) 15_y) ud_18_16))
 (assert
- (let ((?x12614 (+ (ite (and (<= 8_x 22) (>= (+ 8_x 3) 22)) 11 0))))
- (<= ?x12614 makespan)))
+ (or lr_16_18 lr_18_16 ud_16_18 ud_18_16))
 (assert
- (let ((?x12625 (+ (ite (and (<= 9_x 22) (>= (+ 9_x 3) 22)) 13 0))))
- (<= ?x12625 makespan)))
+ (let (($x2994 (< makespan 10)))
+ (=> $x2994 (= ud_16_18 false))))
 (assert
- (let ((?x12636 (+ (ite (and (<= 10_x 22) (>= (+ 10_x 3) 22)) 14 0))))
- (<= ?x12636 makespan)))
+ (let (($x2994 (< makespan 10)))
+ (=> $x2994 (= ud_18_16 false))))
 (assert
- (let ((?x12647 (+ (ite (and (<= 11_x 22) (>= (+ 11_x 3) 22)) 17 0))))
- (<= ?x12647 makespan)))
+ (= (<= (+ 15_x 3) 18_x) lr_16_19))
 (assert
- (let ((?x12658 (+ (ite (and (<= 12_x 22) (>= (+ 12_x 3) 22)) 18 0))))
- (<= ?x12658 makespan)))
+ (= (<= (+ 15_y 6) 18_y) ud_16_19))
 (assert
- (let ((?x12669 (+ (ite (and (<= 13_x 22) (>= (+ 13_x 3) 22)) 19 0))))
- (<= ?x12669 makespan)))
+ (= (<= (+ 18_x 3) 15_x) lr_19_16))
 (assert
- (let ((?x12680 (+ (ite (and (<= 14_x 22) (>= (+ 14_x 3) 22)) 25 0))))
- (<= ?x12680 makespan)))
+ (= (<= (+ 18_y 3) 15_y) ud_19_16))
 (assert
- (let ((?x12692 (+ (ite (and (<= 15_x 22) (>= (+ 15_x 4) 22)) 5 0))))
- (<= ?x12692 makespan)))
+ (or lr_16_19 lr_19_16 ud_16_19 ud_19_16))
 (assert
- (let ((?x12704 (+ (ite (and (<= 16_x 22) (>= (+ 16_x 4) 22)) 7 0))))
- (<= ?x12704 makespan)))
+ (let (($x4991 (< makespan 9)))
+ (=> $x4991 (= ud_16_19 false))))
 (assert
- (let ((?x12716 (+ (ite (and (<= 17_x 22) (>= (+ 17_x 4) 22)) 13 0))))
- (<= ?x12716 makespan)))
+ (let (($x4991 (< makespan 9)))
+ (=> $x4991 (= ud_19_16 false))))
 (assert
- (let ((?x12728 (+ (ite (and (<= 18_x 22) (>= (+ 18_x 6) 22)) 3 0))))
- (<= ?x12728 makespan)))
+ (= (<= (+ 16_x 3) 17_x) lr_17_18))
 (assert
- (let ((?x12740 (+ (ite (and (<= 0_x 23) (>= (+ 0_x 3) 23)) 3 0))))
- (<= ?x12740 makespan)))
+ (= (<= (+ 16_y 5) 17_y) ud_17_18))
 (assert
- (let ((?x12752 (+ (ite (and (<= 1_x 23) (>= (+ 1_x 3) 23)) 4 0))))
- (<= ?x12752 makespan)))
+ (= (<= (+ 17_x 3) 16_x) lr_18_17))
 (assert
- (let ((?x12764 (+ (ite (and (<= 2_x 23) (>= (+ 2_x 3) 23)) 5 0))))
- (<= ?x12764 makespan)))
+ (= (<= (+ 17_y 4) 16_y) ud_18_17))
 (assert
- (let ((?x12776 (+ (ite (and (<= 3_x 23) (>= (+ 3_x 3) 23)) 6 0))))
- (<= ?x12776 makespan)))
+ (or lr_17_18 lr_18_17 ud_17_18 ud_18_17))
 (assert
- (let ((?x12788 (+ (ite (and (<= 4_x 23) (>= (+ 4_x 3) 23)) 7 0))))
- (<= ?x12788 makespan)))
+ (let (($x4991 (< makespan 9)))
+ (=> $x4991 (= ud_17_18 false))))
 (assert
- (let ((?x12800 (+ (ite (and (<= 5_x 23) (>= (+ 5_x 3) 23)) 8 0))))
- (<= ?x12800 makespan)))
+ (let (($x4991 (< makespan 9)))
+ (=> $x4991 (= ud_18_17 false))))
 (assert
- (let ((?x12812 (+ (ite (and (<= 6_x 23) (>= (+ 6_x 3) 23)) 9 0))))
- (<= ?x12812 makespan)))
+ (= (<= (+ 16_x 3) 18_x) lr_17_19))
 (assert
- (let ((?x12824 (+ (ite (and (<= 7_x 23) (>= (+ 7_x 3) 23)) 10 0))))
- (<= ?x12824 makespan)))
+ (= (<= (+ 16_y 5) 18_y) ud_17_19))
 (assert
- (let ((?x12836 (+ (ite (and (<= 8_x 23) (>= (+ 8_x 3) 23)) 11 0))))
- (<= ?x12836 makespan)))
+ (= (<= (+ 18_x 3) 16_x) lr_19_17))
 (assert
- (let ((?x12848 (+ (ite (and (<= 9_x 23) (>= (+ 9_x 3) 23)) 13 0))))
- (<= ?x12848 makespan)))
+ (= (<= (+ 18_y 3) 16_y) ud_19_17))
 (assert
- (let ((?x12860 (+ (ite (and (<= 10_x 23) (>= (+ 10_x 3) 23)) 14 0))))
- (<= ?x12860 makespan)))
+ (or lr_17_19 lr_19_17 ud_17_19 ud_19_17))
 (assert
- (let ((?x12872 (+ (ite (and (<= 11_x 23) (>= (+ 11_x 3) 23)) 17 0))))
- (<= ?x12872 makespan)))
+ (let (($x2453 (< makespan 8)))
+ (=> $x2453 (= ud_17_19 false))))
 (assert
- (let ((?x12884 (+ (ite (and (<= 12_x 23) (>= (+ 12_x 3) 23)) 18 0))))
- (<= ?x12884 makespan)))
+ (let (($x2453 (< makespan 8)))
+ (=> $x2453 (= ud_19_17 false))))
 (assert
- (let ((?x12896 (+ (ite (and (<= 13_x 23) (>= (+ 13_x 3) 23)) 19 0))))
- (<= ?x12896 makespan)))
+ (= (<= (+ 17_x 3) 18_x) lr_18_19))
 (assert
- (let ((?x12908 (+ (ite (and (<= 14_x 23) (>= (+ 14_x 3) 23)) 25 0))))
- (<= ?x12908 makespan)))
+ (= (<= (+ 17_y 4) 18_y) ud_18_19))
 (assert
- (let ((?x12920 (+ (ite (and (<= 15_x 23) (>= (+ 15_x 4) 23)) 5 0))))
- (<= ?x12920 makespan)))
+ (= (<= (+ 18_x 3) 17_x) lr_19_18))
 (assert
- (let ((?x12932 (+ (ite (and (<= 16_x 23) (>= (+ 16_x 4) 23)) 7 0))))
- (<= ?x12932 makespan)))
+ (= (<= (+ 18_y 3) 17_y) ud_19_18))
 (assert
- (let ((?x12944 (+ (ite (and (<= 17_x 23) (>= (+ 17_x 4) 23)) 13 0))))
- (<= ?x12944 makespan)))
+ (or lr_18_19 lr_19_18 ud_18_19 ud_19_18))
 (assert
- (let ((?x12956 (+ (ite (and (<= 18_x 23) (>= (+ 18_x 6) 23)) 3 0))))
- (<= ?x12956 makespan)))
+ (let (($x5230 (< makespan 7)))
+ (=> $x5230 (= ud_18_19 false))))
 (assert
- (let ((?x12968 (+ (ite (and (<= 0_x 24) (>= (+ 0_x 3) 24)) 3 0))))
- (<= ?x12968 makespan)))
-(assert
- (let ((?x12980 (+ (ite (and (<= 1_x 24) (>= (+ 1_x 3) 24)) 4 0))))
- (<= ?x12980 makespan)))
-(assert
- (let ((?x12992 (+ (ite (and (<= 2_x 24) (>= (+ 2_x 3) 24)) 5 0))))
- (<= ?x12992 makespan)))
-(assert
- (let ((?x13004 (+ (ite (and (<= 3_x 24) (>= (+ 3_x 3) 24)) 6 0))))
- (<= ?x13004 makespan)))
-(assert
- (let ((?x13016 (+ (ite (and (<= 4_x 24) (>= (+ 4_x 3) 24)) 7 0))))
- (<= ?x13016 makespan)))
-(assert
- (let ((?x13028 (+ (ite (and (<= 5_x 24) (>= (+ 5_x 3) 24)) 8 0))))
- (<= ?x13028 makespan)))
-(assert
- (let ((?x13040 (+ (ite (and (<= 6_x 24) (>= (+ 6_x 3) 24)) 9 0))))
- (<= ?x13040 makespan)))
-(assert
- (let ((?x13052 (+ (ite (and (<= 7_x 24) (>= (+ 7_x 3) 24)) 10 0))))
- (<= ?x13052 makespan)))
-(assert
- (let ((?x13064 (+ (ite (and (<= 8_x 24) (>= (+ 8_x 3) 24)) 11 0))))
- (<= ?x13064 makespan)))
-(assert
- (let ((?x13076 (+ (ite (and (<= 9_x 24) (>= (+ 9_x 3) 24)) 13 0))))
- (<= ?x13076 makespan)))
-(assert
- (let ((?x13088 (+ (ite (and (<= 10_x 24) (>= (+ 10_x 3) 24)) 14 0))))
- (<= ?x13088 makespan)))
-(assert
- (let ((?x13100 (+ (ite (and (<= 11_x 24) (>= (+ 11_x 3) 24)) 17 0))))
- (<= ?x13100 makespan)))
-(assert
- (let ((?x13112 (+ (ite (and (<= 12_x 24) (>= (+ 12_x 3) 24)) 18 0))))
- (<= ?x13112 makespan)))
-(assert
- (let ((?x13124 (+ (ite (and (<= 13_x 24) (>= (+ 13_x 3) 24)) 19 0))))
- (<= ?x13124 makespan)))
-(assert
- (let ((?x13136 (+ (ite (and (<= 14_x 24) (>= (+ 14_x 3) 24)) 25 0))))
- (<= ?x13136 makespan)))
-(assert
- (let ((?x13148 (+ (ite (and (<= 15_x 24) (>= (+ 15_x 4) 24)) 5 0))))
- (<= ?x13148 makespan)))
-(assert
- (let ((?x13160 (+ (ite (and (<= 16_x 24) (>= (+ 16_x 4) 24)) 7 0))))
- (<= ?x13160 makespan)))
-(assert
- (let ((?x13172 (+ (ite (and (<= 17_x 24) (>= (+ 17_x 4) 24)) 13 0))))
- (<= ?x13172 makespan)))
-(assert
- (let ((?x13184 (+ (ite (and (<= 18_x 24) (>= (+ 18_x 6) 24)) 3 0))))
- (<= ?x13184 makespan)))
+ (let (($x5230 (< makespan 7)))
+ (=> $x5230 (= ud_19_18 false))))
 (check-sat)

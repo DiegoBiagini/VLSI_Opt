@@ -1,7 +1,7 @@
 from argparse import ArgumentParser
 from pathlib import Path
 import glob
-from smt_utils import VLSI_Instance
+from smt_utils import VLSI_Instance, BL_algorithm
 import logging
 import os
 import math
@@ -12,22 +12,29 @@ from z3 import Int, Or, And, Implies, IntVector, IntSort, ArraySort, If, Bool, S
 
 
 def write_smtlib(instance: VLSI_Instance, output_folder : Path = Path(__file__).parent / "smtlib_decl"):
+    naive_sol = BL_algorithm(instance)
+    # Compute upper bound from naive solution1
+    ub = int(np.max([s[0][1]+s[1][1] for s in naive_sol]))
+
     # Capacity lower bound
-    lb = math.ceil(np.sum([instance.get_c_width(i)*instance.get_c_height(i)/instance.max_width for i in range(instance.n_circuits)]))
+    lb = math.ceil(np.sum([instance.get_c_width(i)*instance.get_c_height(i) for i in range(instance.n_circuits)])/instance.max_width)
 
     # Naive upper bound
-    ub = int(np.sum([instance.get_c_height(i) for i in range(instance.n_circuits)]))
+    # ub = int(np.sum([instance.get_c_height(i) for i in range(instance.n_circuits)]))
+
+    widest_idx = np.argmax([instance.get_c_width(i) for i in range(instance.n_circuits)])
+    tallest_idx = np.argmax([instance.get_c_height(i) for i in range(instance.n_circuits)])
 
     ###########
     # Variables
     corner_x = [Int(str(i) + "_x") for i in range(instance.n_circuits)]
     corner_y = [Int(str(i) + "_y") for i in range(instance.n_circuits)]
 
+    lr = [[Bool(f"lr_{i+1}_{j+1}") if i != j else 0 for j in range(instance.n_circuits)] for i in range(instance.n_circuits)]
+    ud = [[Bool(f"ud_{i+1}_{j+1}") if i != j else 0 for j in range(instance.n_circuits)] for i in range(instance.n_circuits)]
+
     makespan = Int("makespan")
 
-    # Find the widest block
-    widest_idx = np.argmax([s[1] for s in instance.circuits])
-    widest = instance.get_c_width(widest_idx)
 
     #############
     # Constraints
@@ -36,60 +43,48 @@ def write_smtlib(instance: VLSI_Instance, output_folder : Path = Path(__file__).
     solv.add(lb <= makespan)
     solv.add(makespan <= ub)
 
-
-    # Put the widest block in the bottom left corner if it's bigger than max_width/2
-    if widest > instance.max_width /2:
-        solv.add_soft(corner_x[widest_idx] == 0)
-        solv.add_soft(corner_y[widest_idx] == 0)
-
-
     # Element-wise constraints
     for i in range(instance.n_circuits):
         solv.add(corner_y[i]+instance.get_c_height(i) <= makespan)
         solv.add(corner_x[i]+instance.get_c_width(i) <= instance.max_width)
-
 
         solv.add(corner_x[i] >= 0)
         # Make use of bounds
         solv.add(corner_y[i] <= ub - instance.get_c_height(i))
         solv.add(corner_y[i] >= 0)
 
+        # Supposed symmetry break
+        if i == widest_idx:
+            solv.add(corner_x[i]<=(instance.max_width-instance.get_c_width(i))//2)
+        elif instance.get_c_width(i)>(instance.max_width - instance.get_c_width(widest_idx))//2:
+            solv.add(lr[i][widest_idx] == False)
+
+        if i == tallest_idx:
+            solv.add(corner_y[i]<=(ub-instance.get_c_height(i))//2)
+        elif instance.get_c_height(i)>(ub - instance.get_c_height(tallest_idx))//2:
+            solv.add(ud[i][tallest_idx] == False)
+
 
     # Pairwise constraints
     for i in range(instance.n_circuits):
         for j in range(i+1, instance.n_circuits):
             # Non overlapping constraints
-            solv.add(Or(
-                corner_x[i]+instance.get_c_width(i) <= corner_x[j],
-                corner_y[i]+instance.get_c_height(i) <= corner_y[j],
-                corner_x[j]+instance.get_c_width(j) <= corner_x[i],
-                corner_y[j]+instance.get_c_height(j) <= corner_y[i],
-            ))
-            """
-            # Symmetry breaking constraints
-            solv.add(Implies(And(corner_x[i]==corner_x[j], instance.get_c_width(i)==instance.get_c_width(j)), corner_y[i] <= corner_y[j]))
-            solv.add(Implies(And(corner_y[i]==corner_y[j], instance.get_c_height(i)==instance.get_c_height(j)), corner_x[i] <= corner_x[j]))
-            """
-    # Cumulative constraints
-    for i in range(ub):
-        for j in range(instance.n_circuits):
-            solv.add(
-                Sum([If(And(corner_y[j]<= i, i <= corner_y[j]+instance.get_c_height(j)), 
-                        instance.get_c_width(j), 
-                        0)])
-                <= instance.max_width
-            )
-    
-    for i in range(instance.max_width):
-        for j in range(instance.n_circuits):
-            solv.add(
-                Sum([If(And(corner_x[j]<= i, i <= corner_x[j]+instance.get_c_width(j)), 
-                        instance.get_c_height(j), 
-                        0)])
-                <= makespan
-            )
-    out_smtlib = output_folder / (instance.name +".smt2")
+            solv.add((corner_x[i]+instance.get_c_width(i) <= corner_x[j]) == lr[i][j])
+            solv.add((corner_y[i]+instance.get_c_height(i) <= corner_y[j])== ud[i][j])
+            solv.add((corner_x[j]+instance.get_c_width(j) <= corner_x[i]) == lr[j][i])
+            solv.add((corner_y[j]+instance.get_c_height(j) <= corner_y[i])==ud[j][i])
 
+            solv.add(Or(lr[i][j], lr[j][i], ud[i][j], ud[j][i]))
+
+            # Rectangle pair incompatibilities
+            if instance.get_c_width(i) + instance.get_c_width(j) > instance.max_width:
+                solv.add(lr[i][j] == False)
+                solv.add(lr[j][i] == False)
+            #if instance.get_c_height(i) + instance.get_c_height(j) > ub:
+            solv.add(Implies(instance.get_c_height(i) + instance.get_c_height(j) > makespan, ud[i][j] == False))
+            solv.add(Implies(instance.get_c_height(j) + instance.get_c_height(i) > makespan, ud[j][i] == False))
+
+    out_smtlib = output_folder / (instance.name + ".smt2")
     with open(out_smtlib, "w") as f:
         f.writelines(solv.to_smt2())
 

@@ -13,7 +13,7 @@ from itertools import chain, combinations
 
 
 from z3 import Int, Optimize, Or, And, Implies, IntVector, IntSort, ArraySort, If, Bool, Sum, BitVec , set_param, Extract, Product, Not
-
+import z3
 
 
 def start_solving(instance : VLSI_Instance, timeout : int):
@@ -37,7 +37,6 @@ def start_solving(instance : VLSI_Instance, timeout : int):
 
 def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__).parent / "out"):
     set_param("sat.random_seed", 25)
-
     naive_sol = BL_algorithm(instance)
     # Compute upper bound from naive solution1
     ub = int(np.max([s[0][1]+s[1][1] for s in naive_sol]))
@@ -106,10 +105,9 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
             if instance.get_c_width(i) + instance.get_c_width(j) > instance.max_width:
                 opt.add(lr[i][j] == False)
                 opt.add(lr[j][i] == False)
-            #if instance.get_c_height(i) + instance.get_c_height(j) > ub:
-            opt.add(Implies(instance.get_c_height(i) + instance.get_c_height(j) > makespan, ud[i][j] == False))
-            opt.add(Implies(instance.get_c_height(j) + instance.get_c_height(i) > makespan, ud[j][i] == False))
-
+            if instance.get_c_height(i) + instance.get_c_height(j) > ub:
+                opt.add(Implies(instance.get_c_height(i) + instance.get_c_height(j) > makespan, ud[i][j] == False))
+                opt.add(Implies(instance.get_c_height(j) + instance.get_c_height(i) > makespan, ud[j][i] == False))
 
     opt.minimize(makespan)
     

@@ -100,25 +100,6 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
             opt.add(Implies(heights[j] + heights[i] > makespan, ud[j][i] == False))
 
 
-    # Cumulative constraints
-    
-    cum1 = [[Bool(f"{i}_{j}_cum1") for j in range(instance.n_circuits)] for i in range(ub)]
-    for i in range(ub):
-        for j in range(instance.n_circuits):
-            opt.add(And(i>=corner_y[j], i <= corner_y[j]+heights[j]) == cum1[i][j])
-            opt.add(cum1[i][j]*widths[j] <= instance.max_width)
-            
-        #opt.add(Sum([cum1[i][j]* instance.get_c_width(j) for j in range(instance.n_circuits)])<=instance.max_width)
-        opt.add(Sum(cum1[i])<=instance.max_width)
-
-    cum2 = [[Bool(f"{i}_{j}_cum2") for j in range(instance.n_circuits)] for i in range(instance.max_width)]
-    for i in range(instance.max_width):
-        for j in range(instance.n_circuits):
-            opt.add(And(i >= corner_x[j], i <= corner_x[j]+widths[j]) == cum2[i][j])
-            opt.add(cum2[i][j]*heights[j] <= makespan)
-            
-        #opt.add(Sum([cum2[i][j]*instance.get_c_height(j) for j in range(instance.n_circuits)])<= makespan)
-        opt.add(Sum(cum2[i])<=makespan)
     
     # Rotation constraints
     for i in range(instance.n_circuits):
