@@ -23,7 +23,7 @@ def start_solving(instance : Path):
     print("-"*20)
     print("Solving " + instance)
 
-    result = subprocess.run(cmd, stdout=subprocess.PIPE, cwd=os.getcwd(), shell=True, universal_newlines=True, capture_output=True, text=True)
+    result = subprocess.run(cmd, stdout=subprocess.PIPE, cwd=os.getcwd(), shell=True, universal_newlines=True, text=True)
     print(result.stdout)
 
 if __name__ == "__main__":
