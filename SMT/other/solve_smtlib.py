@@ -24,6 +24,7 @@ def start_solving(instance : Path):
     print("Solving " + instance)
 
     result = subprocess.run(cmd, stdout=subprocess.PIPE, cwd=os.getcwd(), shell=True, universal_newlines=True)
+    print(result)
 
 if __name__ == "__main__":
     parser = ArgumentParser(description='Solve one or more VLSI instances')
