@@ -23,8 +23,8 @@ def start_solving(instance : Path):
     print("-"*20)
     print("Solving " + instance)
 
-    result = subprocess.run(cmd, stdout=subprocess.PIPE, cwd=os.getcwd(), shell=True, universal_newlines=True)
-    print(result)
+    result = subprocess.run(cmd, stdout=subprocess.PIPE, cwd=os.getcwd(), shell=True, universal_newlines=True, capture_output=True, text=True)
+    print(result.stdout)
 
 if __name__ == "__main__":
     parser = ArgumentParser(description='Solve one or more VLSI instances')
