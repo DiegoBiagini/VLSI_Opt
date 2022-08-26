@@ -12,7 +12,7 @@ import json
 import os
 import subprocess
 
-def start_solving(instance : Path, solver):
+def start_solving(instance : Path, solver, timeout):
     # Read json file
     inst_info = {}
     with open(instance, "r") as f:
@@ -23,7 +23,7 @@ def start_solving(instance : Path, solver):
     print("-"*20)
     print("Solving " + instance)
     start = time.time()
-    result = subprocess.run(cmd, stdout=subprocess.PIPE, cwd=os.getcwd(), shell=True, universal_newlines=True, text=True)
+    result = subprocess.run(cmd, stdout=subprocess.PIPE, cwd=os.getcwd(), shell=True, universal_newlines=True, text=True,timeout=timeout)
     print(result.stdout)
     print(f"Time elapsed:{time.time()-start}")
 
@@ -43,12 +43,12 @@ if __name__ == "__main__":
         #os.chdir(args["instance"])
         for file in glob.glob(str(args["instance"]/"*.json")):
             try:
-                start_solving(file, args["solver"])
+                start_solving(file, args["solver"], args["timeout"])
             except Exception as e:
                 logging.error(f"File:{file} is malformed\n" + str(e))
     else:
         try:
-            start_solving(args["instance"], args["solver"])
+            start_solving(args["instance"], args["solver"], args["timeout"])
         except Exception as e:
             logging.error(f"File:{args['instance']} is malformed\n" + str(e))
         
