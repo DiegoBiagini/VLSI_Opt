@@ -115,6 +115,7 @@ def solve_instance(instance: VLSI_Instance, output_folder : Path = Path(__file__
     m = opt.model()
     instance.register_solution(m, corner_x, corner_y, makespan)
 
+    output_folder.mkdir(exist_ok=True)
     sol_out = instance.solution_to_output_format()
 
     instance.solution_to_txt(output_folder)

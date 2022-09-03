@@ -165,7 +165,7 @@ def SAT_solve(instance : VLSI_Instance):
 
         # Decrease by 1 the allowed max height
         s.add(ph[lb+tries])
-        
+
     m = s.model()
     sol_px, sol_py = sat_to_coordinates(m, px, py)
     makespan = np.max([sol_py[i]+height[i] for i in range(len(sol_py))]) # Compute makespan
