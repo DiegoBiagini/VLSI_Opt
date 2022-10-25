@@ -17,7 +17,7 @@ In particular four different technologies have been adopted to address the probl
 - **Propositional satisfiability** (SAT), using the Z3 solver and its python inference
 - **Satisifability Modulo Theory** (SMT), using Z3 as well as other solvers thanks to SMTLIB
 - **Mixed-Integer Linear Programming** (MIP), using the Gurobi solver with its python interface
-- 
+
 ## Execution
 
 The programs were developed and ran on python 3.x.
@@ -36,7 +36,7 @@ Optional arguments are:
 The converted instances are found in a newly created folder called "DZN_instances"
 
 The model which solves an instance without rotations is "src/VLSI_model.mzn", the one which allows rotations is "src/VLSI_model_rotation.mzn".  
-Once we you have the instances in .dzn format to **solve** them you can either run the model in the minizinc IDE or use the python command line utility "src/Utils/solve_cp.py".  
+Once you have the instances in .dzn format to **solve** them you can either run the model in the minizinc IDE or use the python command line utility "src/Utils/solve_cp.py".  
 
 It requires the following arguments:
 - Instance: the path to either a folder containing a set of instances or a single instance in .dzn format
